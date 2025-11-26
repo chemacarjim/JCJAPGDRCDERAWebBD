@@ -28,7 +28,23 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 	[VSShell::PackageRegistration(RegisterUsing = VSShell::RegistrationMethod.Assembly, UseManagedResourcesOnly = true, AllowsBackgroundLoading = true)]
 	[VSShell::ProvideToolWindow(typeof(JCJAPGDRCDERAWebBDExplorerToolWindow), MultiInstances = false, Style = VSShell::VsDockStyle.Tabbed, Orientation = VSShell::ToolWindowOrientation.Right, Window = "{3AE79031-E1BC-11D0-8F78-00A0C9110057}")]
 	[VSShell::ProvideToolWindowVisibility(typeof(JCJAPGDRCDERAWebBDExplorerToolWindow), Constants.JCJAPGDRCDERAWebBDEditorFactoryId)]
-	[VSShell::ProvideStaticToolboxGroup("@JCJAPGDRCDERAWebBDToolboxTab;UPM_IPS.JCJAPGDRCDERAWebBD.Dsl.dll", "UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDToolboxTab")]
+	[VSShell::ProvideStaticToolboxGroup("@Herramientas DERAToolboxTab;UPM_IPS.JCJAPGDRCDERAWebBD.Dsl.dll", "UPM_IPS.JCJAPGDRCDERAWebBD.Herramientas DERAToolboxTab")]
+	[VSShell::ProvideStaticToolboxItem("UPM_IPS.JCJAPGDRCDERAWebBD.Herramientas DERAToolboxTab",
+					"@EntidadToolToolboxItem;UPM_IPS.JCJAPGDRCDERAWebBD.Dsl.dll", 
+					"UPM_IPS.JCJAPGDRCDERAWebBD.EntidadToolToolboxItem", 
+					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
+					"EntidadTool", 
+					"@EntidadToolToolboxBitmap;UPM_IPS.JCJAPGDRCDERAWebBD.Dsl.dll", 
+					0xff00ff,
+					Index = 0)]
+	[VSShell::ProvideStaticToolboxItem("UPM_IPS.JCJAPGDRCDERAWebBD.Herramientas DERAToolboxTab",
+					"@RelacionToolToolboxItem;UPM_IPS.JCJAPGDRCDERAWebBD.Dsl.dll", 
+					"UPM_IPS.JCJAPGDRCDERAWebBD.RelacionToolToolboxItem", 
+					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
+					"RelacionTool", 
+					"@RelacionToolToolboxBitmap;UPM_IPS.JCJAPGDRCDERAWebBD.Dsl.dll", 
+					0xff00ff,
+					Index = 1)]
 	[VSShell::ProvideEditorFactory(typeof(JCJAPGDRCDERAWebBDEditorFactory), 103, TrustLevel = VSShellInterop::__VSEDITORTRUSTLEVEL.ETL_AlwaysTrusted)]
 	[VSShell::ProvideEditorExtension(typeof(JCJAPGDRCDERAWebBDEditorFactory), "." + Constants.DesignerFileExtension, 50)]
 	[VSShell::ProvideEditorLogicalView(typeof(JCJAPGDRCDERAWebBDEditorFactory), "{7651A702-06E5-11D1-8EBD-00A0C90F26EA}")] // Designer logical view GUID i.e. VSConstants.LOGVIEWID_Designer

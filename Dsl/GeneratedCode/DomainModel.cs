@@ -93,6 +93,12 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 				typeof(AtributoHasRestriccion),
 				typeof(AtributoHasEstiloCampo),
 				typeof(JCJAPGDRCDERAWebBDDiagram),
+				typeof(LineaConnector),
+				typeof(EntidadShape),
+				typeof(AtributoShape),
+				typeof(RelacionShape),
+				typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.FixUpDiagram),
+				typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.ConnectorRolePlayerChanged),
 			};
 		}
 		/// <summary>
@@ -185,7 +191,7 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 	
 			if (createElementMap == null)
 			{
-				createElementMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(14);
+				createElementMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(18);
 				createElementMap.Add(typeof(DERAWebBDModel), 0);
 				createElementMap.Add(typeof(Entidad), 1);
 				createElementMap.Add(typeof(Relacion), 2);
@@ -199,6 +205,10 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 				createElementMap.Add(typeof(EstiloPagina), 10);
 				createElementMap.Add(typeof(EstiloCampo), 11);
 				createElementMap.Add(typeof(JCJAPGDRCDERAWebBDDiagram), 12);
+				createElementMap.Add(typeof(LineaConnector), 13);
+				createElementMap.Add(typeof(EntidadShape), 14);
+				createElementMap.Add(typeof(AtributoShape), 15);
+				createElementMap.Add(typeof(RelacionShape), 16);
 			}
 			int index;
 			if (!createElementMap.TryGetValue(elementType, out index))
@@ -225,6 +235,10 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 				case 10: return new EstiloPagina(partition, propertyAssignments);
 				case 11: return new EstiloCampo(partition, propertyAssignments);
 				case 12: return new JCJAPGDRCDERAWebBDDiagram(partition, propertyAssignments);
+				case 13: return new LineaConnector(partition, propertyAssignments);
+				case 14: return new EntidadShape(partition, propertyAssignments);
+				case 15: return new AtributoShape(partition, propertyAssignments);
+				case 16: return new RelacionShape(partition, propertyAssignments);
 				default: return null;
 			}
 		}
@@ -366,6 +380,7 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 					DslModeling::ChainingElementVisitorFilter copyFilter = new DslModeling::ChainingElementVisitorFilter();
 					copyFilter.AddFilter(new JCJAPGDRCDERAWebBDCopyClosure());
 					copyFilter.AddFilter(new DslModeling::CoreCopyClosure());
+					copyFilter.AddFilter(new DslDiagrams::CoreDesignSurfaceCopyClosure());
 					
 					JCJAPGDRCDERAWebBDDomainModel.copyClosure = copyFilter;
 				}
@@ -385,6 +400,7 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 					DslModeling::ChainingElementVisitorFilter removeFilter = new DslModeling::ChainingElementVisitorFilter();
 					removeFilter.AddFilter(new JCJAPGDRCDERAWebBDDeleteClosure());
 					removeFilter.AddFilter(new DslModeling::CoreDeleteClosure());
+					removeFilter.AddFilter(new DslDiagrams::CoreDesignSurfaceDeleteClosure());
 		
 					JCJAPGDRCDERAWebBDDomainModel.removeClosure = removeFilter;
 				}
@@ -403,6 +419,8 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 			if(store == null) throw new global::System.ArgumentNullException("store");
 			
 			DslModeling::RuleManager ruleManager = store.RuleManager;
+			ruleManager.EnableRule(typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.FixUpDiagram));
+			ruleManager.EnableRule(typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.ConnectorRolePlayerChanged));
 		}
 		
 		/// <summary>
@@ -413,6 +431,8 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 			if(store == null) throw new global::System.ArgumentNullException("store");
 			
 			DslModeling::RuleManager ruleManager = store.RuleManager;
+			ruleManager.DisableRule(typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.FixUpDiagram));
+			ruleManager.DisableRule(typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.ConnectorRolePlayerChanged));
 		}
 		#endregion
 	}

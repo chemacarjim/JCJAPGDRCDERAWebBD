@@ -941,6 +941,50 @@
     <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.MinCardinalidad.Uno</value>
     <comment>Description for EnumerationLiteral &apos;Uno&apos; on DomainEnumeration &apos;MinCardinalidad&apos;</comment>
   </data>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.EntidadShape.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.EntidadShape</value>
+    <comment>Description for DomainClass &apos;EntidadShape&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.EntidadShape.DisplayName" xml:space="preserve">
+    <value>Entidad Shape</value>
+    <comment>DisplayName for DomainClass &apos;EntidadShape&apos;</comment>
+  </data>
+  <data name="EntidadShapeNameDecoratorDefaultText" xml:space="preserve">
+    <value>NameDecorator</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.AtributoShape.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.AtributoShape</value>
+    <comment>Description for DomainClass &apos;AtributoShape&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.AtributoShape.DisplayName" xml:space="preserve">
+    <value>Atributo Shape</value>
+    <comment>DisplayName for DomainClass &apos;AtributoShape&apos;</comment>
+  </data>
+  <data name="AtributoShapeNameDecoratorDefaultText" xml:space="preserve">
+    <value>NameDecorator</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.RelacionShape.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.RelacionShape</value>
+    <comment>Description for DomainClass &apos;RelacionShape&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.RelacionShape.DisplayName" xml:space="preserve">
+    <value>Relacion Shape</value>
+    <comment>DisplayName for DomainClass &apos;RelacionShape&apos;</comment>
+  </data>
+  <data name="RelacionShapeNameDecoratorDefaultText" xml:space="preserve">
+    <value>NameDecorator</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.LineaConnector.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.LineaConnector</value>
+    <comment>Description for DomainClass &apos;LineaConnector&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.LineaConnector.DisplayName" xml:space="preserve">
+    <value>Linea Connector</value>
+    <comment>DisplayName for DomainClass &apos;LineaConnector&apos;</comment>
+  </data>
   <data name="FormatList" xml:space="preserve">
     <value>JCJAPGDRCDERAWebBD (*.JCJAPGDRC_DSLDERAWebBD)|*.JCJAPGDRC_DSLDERAWebBD</value>
     <comment>A list of file format specifiers for the Save dialog box</comment>
@@ -957,9 +1001,25 @@
     <value>Minimal Language Diagram</value>
     <comment>DisplayName for DomainClass &apos;JCJAPGDRCDERAWebBDDiagram&apos;</comment>
   </data>
-  <data name="JCJAPGDRCDERAWebBDToolboxTab" xml:space="preserve">
-    <value>JCJAPGDRCDERAWebBD</value>
+  <data name="Herramientas DERAToolboxTab" xml:space="preserve">
+    <value>Herramientas DERA</value>
     <comment>Toolbox item tab name</comment>
+  </data>
+  <data name="EntidadToolToolboxItem" xml:space="preserve">
+    <value>Entidad</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="EntidadToolToolboxTooltip" xml:space="preserve">
+    <value>Entidad Tool</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="RelacionToolToolboxItem" xml:space="preserve">
+    <value>Relacion</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="RelacionToolToolboxTooltip" xml:space="preserve">
+    <value>Relacion Tool</value>
+    <comment>Toolbox tooltip text</comment>
   </data>
   <data name="UnresolvedToolboxItem" xml:space="preserve">
     <value>ToolboxItem {0} was not found</value>
@@ -1084,6 +1144,19 @@ A DomainClass can be serialized as a moniker only if
   <data name="UnloadableSaveValidationFailed" xml:space="preserve">
     <value>There were validation errors. Continuing to save may cause the file to become unloadable, do you want to continue?</value>
     <comment>Message when validation errors are found on save that will cause file to become unloadable</comment>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="RelacionShapeImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\rombo.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>RelacionShape shape image</comment>
+  </data>
+  <data name="EntidadToolToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\entidad.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="RelacionToolToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\relacion.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
   </data>
 </root>
 
