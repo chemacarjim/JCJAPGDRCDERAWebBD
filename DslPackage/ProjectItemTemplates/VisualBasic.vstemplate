@@ -1,0 +1,17 @@
+﻿<!--DSL Tools Language Template-->
+<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<TemplateData>
+		<TemplateID>{10107c03-b47f-4f7b-b857-c4d452f2ec75}</TemplateID>
+		<Name Package="{94163d09-a286-450e-ac1d-84d3fbbfe323}" ID="103"/>
+		<Description Package="{94163d09-a286-450e-ac1d-84d3fbbfe323}" ID="102"/>
+		<Icon Package="{94163d09-a286-450e-ac1d-84d3fbbfe323}" ID="201" />
+		<ProjectType>VisualBasic</ProjectType>
+		<SortOrder>360</SortOrder>
+		<DefaultName>JCJAPGDRCDERAWebBD.JCJAPGDRC_DSLDERAWebBD</DefaultName>
+	</TemplateData>
+	<TemplateContent>
+		<ProjectItem TargetFileName="$fileinputname$.JCJAPGDRC_DSLDERAWebBD">JCJAPGDRC_DSLDERAWebBD.JCJAPGDRC_DSLDERAWebBD</ProjectItem>
+		<ProjectItem TargetFileName="$fileinputname$.JCJAPGDRC_DSLDERAWebBD.diagram">JCJAPGDRC_DSLDERAWebBD.diagram</ProjectItem>
+	</TemplateContent>
+</VSTemplate>
+
