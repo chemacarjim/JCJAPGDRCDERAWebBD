@@ -367,7 +367,7 @@
     </DomainRelationship>
     <DomainRelationship Id="543d7985-23b5-40b9-8b06-a4588f73408f" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasEstiloPortal" Name="DERAWebBDModelHasEstiloPortal" DisplayName="DERAWeb BDModel Has Estilo Portal" Namespace="UPM_IPS.JCJAPGDRCDERAWebBD" IsEmbedding="true">
       <Source>
-        <DomainRole Id="be5a7db4-e94a-4748-b8ff-6f655e629325" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasEstiloPortal.DERAWebBDModel" Name="DERAWebBDModel" DisplayName="DERAWeb BDModel" PropertyName="EstiloPortal" Multiplicity="One" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Estilo Portal">
+        <DomainRole Id="be5a7db4-e94a-4748-b8ff-6f655e629325" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasEstiloPortal.DERAWebBDModel" Name="DERAWebBDModel" DisplayName="DERAWeb BDModel" PropertyName="EstiloPortal" Multiplicity="ZeroOne" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Estilo Portal">
           <RolePlayer>
             <DomainClassMoniker Name="DERAWebBDModel" />
           </RolePlayer>
@@ -431,7 +431,7 @@
     </DomainRelationship>
     <DomainRelationship Id="5e6dc20e-8873-44bf-b49d-87840b40de1b" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.EntidadHasEstiloPagina" Name="EntidadHasEstiloPagina" DisplayName="Entidad Has Estilo Pagina" Namespace="UPM_IPS.JCJAPGDRCDERAWebBD" IsEmbedding="true">
       <Source>
-        <DomainRole Id="c781e742-c4d3-4926-b52a-c57469425cc0" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.EntidadHasEstiloPagina.Entidad" Name="Entidad" DisplayName="Entidad" PropertyName="EstiloPagina" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Estilo Pagina">
+        <DomainRole Id="c781e742-c4d3-4926-b52a-c57469425cc0" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.EntidadHasEstiloPagina.Entidad" Name="Entidad" DisplayName="Entidad" PropertyName="EstiloPagina" Multiplicity="ZeroOne" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Estilo Pagina">
           <RolePlayer>
             <DomainClassMoniker Name="Entidad" />
           </RolePlayer>
@@ -463,7 +463,7 @@
     </DomainRelationship>
     <DomainRelationship Id="1338880e-6478-45d9-a06f-3dcbe982bae7" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.AtributoHasEstiloCampo" Name="AtributoHasEstiloCampo" DisplayName="Atributo Has Estilo Campo" Namespace="UPM_IPS.JCJAPGDRCDERAWebBD" IsEmbedding="true">
       <Source>
-        <DomainRole Id="064e0ee2-1d86-4ee9-a041-cf953b718e80" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.AtributoHasEstiloCampo.Atributo" Name="Atributo" DisplayName="Atributo" PropertyName="EstiloCampo" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Estilo Campo">
+        <DomainRole Id="064e0ee2-1d86-4ee9-a041-cf953b718e80" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.AtributoHasEstiloCampo.Atributo" Name="Atributo" DisplayName="Atributo" PropertyName="EstiloCampo" Multiplicity="ZeroOne" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Estilo Campo">
           <RolePlayer>
             <DomainClassMoniker Name="Atributo" />
           </RolePlayer>
@@ -530,6 +530,31 @@
       </Literals>
     </DomainEnumeration>
   </Types>
+  <Shapes>
+    <CompartmentShape Id="950537f0-8abf-4b96-ac82-48c4882b4eca" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.EntidadShape" Name="EntidadShape" DisplayName="Entidad Shape" Namespace="UPM_IPS.JCJAPGDRCDERAWebBD" FixedTooltipText="Entidad Shape" InitialHeight="1" Geometry="Rectangle">
+      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
+        <TextDecorator Name="NameDecorator" DisplayName="Name Decorator" DefaultText="NameDecorator" />
+      </ShapeHasDecorators>
+      <Compartment Name="EstilosEntidad" />
+    </CompartmentShape>
+    <CompartmentShape Id="38cda4bd-f256-4f61-bec1-45ce45052b16" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.AtributoShape" Name="AtributoShape" DisplayName="Atributo Shape" Namespace="UPM_IPS.JCJAPGDRCDERAWebBD" FixedTooltipText="Atributo Shape" InitialHeight="1" Geometry="Rectangle">
+      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
+        <TextDecorator Name="NameDecorator" DisplayName="Name Decorator" DefaultText="NameDecorator" />
+      </ShapeHasDecorators>
+      <Compartment Name="EstilosAtributo" />
+      <Compartment Name="RestriccionAtributo" />
+    </CompartmentShape>
+    <GeometryShape Id="d20d4a8a-abb8-4313-8d16-d0c992e3e9ec" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.AtributoClaveShape" Name="AtributoClaveShape" DisplayName="Atributo Clave Shape" Namespace="UPM_IPS.JCJAPGDRCDERAWebBD" FixedTooltipText="Atributo Clave Shape" InitialHeight="1" Geometry="Rectangle">
+      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
+        <TextDecorator Name="NameDecorator" DisplayName="Name Decorator" DefaultText="NameDecorator" />
+      </ShapeHasDecorators>
+    </GeometryShape>
+    <GeometryShape Id="5c68134c-43a5-40aa-a4e2-220c4b2e0cff" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.RelacionShape" Name="RelacionShape" DisplayName="Relacion Shape" Namespace="UPM_IPS.JCJAPGDRCDERAWebBD" FixedTooltipText="Relacion Shape" InitialHeight="1" Geometry="Rectangle">
+      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
+        <TextDecorator Name="NameDecorator" DisplayName="Name Decorator" DefaultText="NameDecorator" />
+      </ShapeHasDecorators>
+    </GeometryShape>
+  </Shapes>
   <XmlSerializationBehavior Name="JCJAPGDRCDERAWebBDSerializationBehavior" Namespace="UPM_IPS.JCJAPGDRCDERAWebBD">
     <ClassData>
       <XmlClassData TypeName="DERAWebBDModel" MonikerAttributeName="" SerializeId="true" MonikerElementName="dERAWebBDModelMoniker" ElementName="dERAWebBDModel" MonikerTypeName="DERAWebBDModelMoniker">
@@ -746,6 +771,18 @@
       <XmlClassData TypeName="AtributoHasEstiloCampo" MonikerAttributeName="" SerializeId="true" MonikerElementName="atributoHasEstiloCampoMoniker" ElementName="atributoHasEstiloCampo" MonikerTypeName="AtributoHasEstiloCampoMoniker">
         <DomainRelationshipMoniker Name="AtributoHasEstiloCampo" />
       </XmlClassData>
+      <XmlClassData TypeName="EntidadShape" MonikerAttributeName="" SerializeId="true" MonikerElementName="entidadShapeMoniker" ElementName="entidadShape" MonikerTypeName="EntidadShapeMoniker">
+        <CompartmentShapeMoniker Name="EntidadShape" />
+      </XmlClassData>
+      <XmlClassData TypeName="AtributoShape" MonikerAttributeName="" SerializeId="true" MonikerElementName="atributoShapeMoniker" ElementName="atributoShape" MonikerTypeName="AtributoShapeMoniker">
+        <CompartmentShapeMoniker Name="AtributoShape" />
+      </XmlClassData>
+      <XmlClassData TypeName="AtributoClaveShape" MonikerAttributeName="" SerializeId="true" MonikerElementName="atributoClaveShapeMoniker" ElementName="atributoClaveShape" MonikerTypeName="AtributoClaveShapeMoniker">
+        <GeometryShapeMoniker Name="AtributoClaveShape" />
+      </XmlClassData>
+      <XmlClassData TypeName="RelacionShape" MonikerAttributeName="" SerializeId="true" MonikerElementName="relacionShapeMoniker" ElementName="relacionShape" MonikerTypeName="RelacionShapeMoniker">
+        <GeometryShapeMoniker Name="RelacionShape" />
+      </XmlClassData>
     </ClassData>
   </XmlSerializationBehavior>
   <ExplorerBehavior Name="JCJAPGDRCDERAWebBDExplorer" />
@@ -774,6 +811,38 @@
     <Class>
       <DomainClassMoniker Name="DERAWebBDModel" />
     </Class>
+    <ShapeMaps>
+      <ShapeMap HasCustomParentElement="true">
+        <DomainClassMoniker Name="AtributoClave" />
+        <ParentElementPath>
+          <DomainPath />
+        </ParentElementPath>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="AtributoClaveShape/NameDecorator" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="Atributo/Name" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+        <GeometryShapeMoniker Name="AtributoClaveShape" />
+      </ShapeMap>
+      <ShapeMap>
+        <DomainClassMoniker Name="Relacion" />
+        <ParentElementPath>
+          <DomainPath>DERAWebBDModelHasRelaciones.DERAWebBDModel/!DERAWebBDModel</DomainPath>
+        </ParentElementPath>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="RelacionShape/NameDecorator" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="Relacion/Name" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+        <GeometryShapeMoniker Name="RelacionShape" />
+      </ShapeMap>
+    </ShapeMaps>
   </Diagram>
   <Designer CopyPasteGeneration="CopyPasteOnly" FileExtension="JCJAPGDRC_DSLDERAWebBD" EditorGuid="08e46840-0731-446c-b041-ebc58434a71c">
     <RootClass>
