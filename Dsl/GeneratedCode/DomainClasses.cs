@@ -495,11 +495,6 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 			{
 				DslModeling::DomainClassInfo rootElementDomainInfo = this.Partition.DomainDataDirectory.GetDomainClass(rootElement.DomainClassId);
 				
-				if (rootElementDomainInfo.IsDerivedFrom(global::UPM_IPS.JCJAPGDRCDERAWebBD.Atributo.DomainClassId)) 
-				{
-					return true;
-				}
-				
 				if (rootElementDomainInfo.IsDerivedFrom(global::UPM_IPS.JCJAPGDRCDERAWebBD.EstiloPagina.DomainClassId)) 
 				{
 					// Check that creating a link with this path doesn't cause multiplicity overflow: EntidadHasEstiloPagina.EstiloPagina
@@ -507,6 +502,11 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 					{
 						return false;
 					}
+					return true;
+				}
+				
+				if (rootElementDomainInfo.IsDerivedFrom(global::UPM_IPS.JCJAPGDRCDERAWebBD.Atributo.DomainClassId)) 
+				{
 					return true;
 				}
 				
@@ -544,21 +544,18 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 			if ( sourceElement == null ) throw new global::System.ArgumentNullException("sourceElement");
 		
 				
-			global::UPM_IPS.JCJAPGDRCDERAWebBD.Atributo sourceAtributo1 = sourceElement as global::UPM_IPS.JCJAPGDRCDERAWebBD.Atributo;
-			if (sourceAtributo1 != null)
+			global::UPM_IPS.JCJAPGDRCDERAWebBD.EstiloPagina sourceEstiloPagina1 = sourceElement as global::UPM_IPS.JCJAPGDRCDERAWebBD.EstiloPagina;
+			if (sourceEstiloPagina1 != null)
 			{
-				// Create link for path EntidadHasAtributoEntidad.AtributoEntidad
-				this.AtributoEntidad.Add(sourceAtributo1);
+				// Create link for path EntidadHasEstiloPagina.EstiloPagina
+				this.EstiloPagina = sourceEstiloPagina1;
 
 				return;
 			}
 				
-			global::UPM_IPS.JCJAPGDRCDERAWebBD.EstiloPagina sourceEstiloPagina2 = sourceElement as global::UPM_IPS.JCJAPGDRCDERAWebBD.EstiloPagina;
-			if (sourceEstiloPagina2 != null)
+			global::UPM_IPS.JCJAPGDRCDERAWebBD.Atributo sourceAtributo2 = sourceElement as global::UPM_IPS.JCJAPGDRCDERAWebBD.Atributo;
+			if (sourceAtributo2 != null)
 			{
-				// Create link for path EntidadHasEstiloPagina.EstiloPagina
-				this.EstiloPagina = sourceEstiloPagina2;
-
 				return;
 			}
 				
@@ -593,31 +590,23 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 		{
 			if (sourceElement == null) throw new global::System.ArgumentNullException("sourceElement");
 				
-			global::UPM_IPS.JCJAPGDRCDERAWebBD.Atributo sourceAtributo1 = sourceElement as global::UPM_IPS.JCJAPGDRCDERAWebBD.Atributo;
-			if (sourceAtributo1 != null)
-			{
-				// Delete link for path EntidadHasAtributoEntidad.AtributoEntidad
-				
-				foreach (DslModeling::ElementLink link in global::UPM_IPS.JCJAPGDRCDERAWebBD.EntidadHasAtributoEntidad.GetLinks((global::UPM_IPS.JCJAPGDRCDERAWebBD.Entidad)this, sourceAtributo1))
-				{
-					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
-					link.Delete(global::UPM_IPS.JCJAPGDRCDERAWebBD.EntidadHasAtributoEntidad.EntidadDomainRoleId, global::UPM_IPS.JCJAPGDRCDERAWebBD.EntidadHasAtributoEntidad.AtributoDomainRoleId);
-				}
-
-				return;
-			}
-				
-			global::UPM_IPS.JCJAPGDRCDERAWebBD.EstiloPagina sourceEstiloPagina2 = sourceElement as global::UPM_IPS.JCJAPGDRCDERAWebBD.EstiloPagina;
-			if (sourceEstiloPagina2 != null)
+			global::UPM_IPS.JCJAPGDRCDERAWebBD.EstiloPagina sourceEstiloPagina1 = sourceElement as global::UPM_IPS.JCJAPGDRCDERAWebBD.EstiloPagina;
+			if (sourceEstiloPagina1 != null)
 			{
 				// Delete link for path EntidadHasEstiloPagina.EstiloPagina
 				
-				foreach (DslModeling::ElementLink link in global::UPM_IPS.JCJAPGDRCDERAWebBD.EntidadHasEstiloPagina.GetLinks((global::UPM_IPS.JCJAPGDRCDERAWebBD.Entidad)this, sourceEstiloPagina2))
+				foreach (DslModeling::ElementLink link in global::UPM_IPS.JCJAPGDRCDERAWebBD.EntidadHasEstiloPagina.GetLinks((global::UPM_IPS.JCJAPGDRCDERAWebBD.Entidad)this, sourceEstiloPagina1))
 				{
 					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
 					link.Delete(global::UPM_IPS.JCJAPGDRCDERAWebBD.EntidadHasEstiloPagina.EntidadDomainRoleId, global::UPM_IPS.JCJAPGDRCDERAWebBD.EntidadHasEstiloPagina.EstiloPaginaDomainRoleId);
 				}
 
+				return;
+			}
+				
+			global::UPM_IPS.JCJAPGDRCDERAWebBD.Atributo sourceAtributo2 = sourceElement as global::UPM_IPS.JCJAPGDRCDERAWebBD.Atributo;
+			if (sourceAtributo2 != null)
+			{
 				return;
 			}
 				
@@ -2705,17 +2694,21 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 		}
 		#endregion
 		#region RestriccionEnum opposite domain role accessor
-		
 		/// <summary>
-		/// Gets a list of RestriccionEnum.
+		/// Gets or sets RestriccionEnum.
 		/// Description for UPM_IPS.JCJAPGDRCDERAWebBD.AtributoHasRestriccionEnum.Atributo
 		/// </summary>
-		public virtual DslModeling::LinkedElementCollection<RestriccionEnum> RestriccionEnum
+		public virtual RestriccionEnum RestriccionEnum
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<RestriccionEnum>, RestriccionEnum>(global::UPM_IPS.JCJAPGDRCDERAWebBD.AtributoHasRestriccionEnum.AtributoDomainRoleId);
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::UPM_IPS.JCJAPGDRCDERAWebBD.AtributoHasRestriccionEnum.AtributoDomainRoleId) as RestriccionEnum;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::UPM_IPS.JCJAPGDRCDERAWebBD.AtributoHasRestriccionEnum.AtributoDomainRoleId, value);
 			}
 		}
 		#endregion
@@ -2746,6 +2739,11 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 				
 				if (rootElementDomainInfo.IsDerivedFrom(global::UPM_IPS.JCJAPGDRCDERAWebBD.RestriccionEnum.DomainClassId)) 
 				{
+					// Check that creating a link with this path doesn't cause multiplicity overflow: AtributoHasRestriccionEnum.RestriccionEnum
+					if (this.RestriccionEnum != null)
+					{
+						return false;
+					}
 					return true;
 				}
 			}
@@ -2786,7 +2784,7 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 			if (sourceRestriccionEnum2 != null)
 			{
 				// Create link for path AtributoHasRestriccionEnum.RestriccionEnum
-				this.RestriccionEnum.Add(sourceRestriccionEnum2);
+				this.RestriccionEnum = sourceRestriccionEnum2;
 
 				return;
 			}

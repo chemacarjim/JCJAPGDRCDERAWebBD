@@ -1085,6 +1085,30 @@
     <value>JCJAPGDRCDERAWebBD</value>
     <comment>Toolbox item tab name</comment>
   </data>
+  <data name="EntidadToolToolboxItem" xml:space="preserve">
+    <value>Entidad</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="EntidadToolToolboxTooltip" xml:space="preserve">
+    <value>Entidad Tool</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="RelacionToolToolboxItem" xml:space="preserve">
+    <value>Relacion</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="RelacionToolToolboxTooltip" xml:space="preserve">
+    <value>Relacion Tool</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="EstiloPortalToolToolboxItem" xml:space="preserve">
+    <value>EstiloPortal</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="EstiloPortalToolToolboxTooltip" xml:space="preserve">
+    <value>Estilo Portal Tool</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
   <data name="UnresolvedToolboxItem" xml:space="preserve">
     <value>ToolboxItem {0} was not found</value>
     <comment>Invalid toolId</comment>
@@ -1211,8 +1235,20 @@ A DomainClass can be serialized as a moniker only if
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="RelacionShapeImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
-    <value>..\Resources\rombo.bmp;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Resources\rombo.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>RelacionShape shape image</comment>
+  </data>
+  <data name="EntidadToolToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\entidad.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="RelacionToolToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\relacion.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="EstiloPortalToolToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\estiloportal.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
   </data>
 </root>
 

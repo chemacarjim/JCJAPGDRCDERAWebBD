@@ -6834,7 +6834,7 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 						else
 						{
 							DslModeling::SerializationUtilities.SkipToFirstChild(reader);  // Skip the open tag of <restriccionEnum>
-							ReadAtributoHasRestriccionEnumInstances(serializationContext, element, reader);
+							ReadAtributoHasRestriccionEnumInstance(serializationContext, element, reader);
 							DslModeling::SerializationUtilities.Skip(reader);  // Skip the close tag of </restriccionEnum>
 						}
 						break;
@@ -6891,18 +6891,25 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 		}
 	
 		/// <summary>
-		/// Reads all instances of relationship AtributoHasRestriccionEnum.
+		/// Reads instance of relationship AtributoHasRestriccionEnum.
 		/// </summary>
 		/// <remarks>
 		/// The caller will position the reader at the open tag of the first XML element inside the relationship tag, so it can be
-		/// either the first instance, or a bogus tag. This method will deserialize all instances and ignore all bogus tags. When the
-		/// method returns, the reader will be positioned at the end tag of the relationship (or EOF if somehow that happens).
+		/// either the first instance, or a bogus tag. This method will deserialize only the first valid instance and ignore all the
+		/// rest tags (because the multiplicity allows only one instance). When the method returns, the reader will be positioned at 
+		/// the end tag of the relationship (or EOF if somehow that happens).
 		/// </remarks>
 		/// <param name="serializationContext">Serialization context.</param>
 		/// <param name="element">In-memory Atributo instance that will get the deserialized data.</param>
 		/// <param name="reader">XmlReader to read serialized data from.</param>
-		private static void ReadAtributoHasRestriccionEnumInstances(DslModeling::SerializationContext serializationContext, Atributo element, global::System.Xml.XmlReader reader)
+		private static void ReadAtributoHasRestriccionEnumInstance(DslModeling::SerializationContext serializationContext, Atributo element, global::System.Xml.XmlReader reader)
 		{
+			if (DslModeling::DomainRoleInfo.GetElementLinks<AtributoHasRestriccionEnum> (element, AtributoHasRestriccionEnum.AtributoDomainRoleId).Count > 0)
+			{	// Only allow one instance, which already exists, so skip everything
+				DslModeling::SerializationUtilities.Skip(reader);	// Moniker contains no child XML elements, so just skip.
+				return;
+			}
+	
 			while (!serializationContext.Result.Failed && !reader.EOF && reader.NodeType == global::System.Xml.XmlNodeType.Element)
 			{
 				DslModeling::DomainClassXmlSerializer newAtributoHasRestriccionEnumSerializer = serializationContext.Directory.GetSerializer(AtributoHasRestriccionEnum.DomainClassId);
@@ -6914,6 +6921,7 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 					DslModeling::DomainClassXmlSerializer targetSerializer = serializationContext.Directory.GetSerializer (newAtributoHasRestriccionEnum.GetDomainClass().Id);	
 					global::System.Diagnostics.Debug.Assert (targetSerializer != null, "Cannot find serializer for " + newAtributoHasRestriccionEnum.GetDomainClass().Name + "!");
 					targetSerializer.Read(serializationContext, newAtributoHasRestriccionEnum, reader);
+					break;	// Only allow one instance.
 				}
 				else
 				{	// Maybe the relationship is serialized in short-form by mistake.
@@ -6923,10 +6931,11 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 					if (newRestriccionEnumOfAtributoHasRestriccionEnum != null)
 					{
 						JCJAPGDRCDERAWebBDSerializationBehaviorSerializationMessages.ExpectingFullFormRelationship(serializationContext, reader, typeof(AtributoHasRestriccionEnum));
-						element.RestriccionEnum.Add(newRestriccionEnumOfAtributoHasRestriccionEnum);
+						element.RestriccionEnum = newRestriccionEnumOfAtributoHasRestriccionEnum;
 						DslModeling::DomainClassXmlSerializer targetSerializer = serializationContext.Directory.GetSerializer (newRestriccionEnumOfAtributoHasRestriccionEnum.GetDomainClass().Id);	
 						global::System.Diagnostics.Debug.Assert (targetSerializer != null, "Cannot find serializer for " + newRestriccionEnumOfAtributoHasRestriccionEnum.GetDomainClass().Name + "!");
 						targetSerializer.Read(serializationContext, newRestriccionEnumOfAtributoHasRestriccionEnum, reader);
+						break;	// Only allow one instance.
 					}
 					else
 					{	// Unknown element, skip.
@@ -7396,19 +7405,13 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 			}
 	
 			// AtributoHasRestriccionEnum
-			global::System.Collections.ObjectModel.ReadOnlyCollection<AtributoHasRestriccionEnum> allAtributoHasRestriccionEnumInstances = AtributoHasRestriccionEnum.GetLinksToRestriccionEnum(element);
-			if (!serializationContext.Result.Failed && allAtributoHasRestriccionEnumInstances.Count > 0)
+			AtributoHasRestriccionEnum theAtributoHasRestriccionEnumInstance = AtributoHasRestriccionEnum.GetLinkToRestriccionEnum(element);
+			if (!serializationContext.Result.Failed && theAtributoHasRestriccionEnumInstance != null)
 			{
 				writer.WriteStartElement("restriccionEnum");
-				foreach (AtributoHasRestriccionEnum eachAtributoHasRestriccionEnumInstance in allAtributoHasRestriccionEnumInstances)
-				{
-					if (serializationContext.Result.Failed)
-						break;
-	
-					DslModeling::DomainClassXmlSerializer relSerializer = serializationContext.Directory.GetSerializer(eachAtributoHasRestriccionEnumInstance.GetDomainClass().Id);
-					global::System.Diagnostics.Debug.Assert(relSerializer != null, "Cannot find serializer for " + eachAtributoHasRestriccionEnumInstance.GetDomainClass().Name + "!");
-					relSerializer.Write(serializationContext, eachAtributoHasRestriccionEnumInstance, writer);
-				}
+				DslModeling::DomainClassXmlSerializer relSerializer = serializationContext.Directory.GetSerializer(theAtributoHasRestriccionEnumInstance.GetDomainClass().Id);
+				global::System.Diagnostics.Debug.Assert(relSerializer != null, "Cannot find serializer for " + theAtributoHasRestriccionEnumInstance.GetDomainClass().Name + "!");
+				relSerializer.Write(serializationContext, theAtributoHasRestriccionEnumInstance, writer);
 				writer.WriteEndElement();
 			}
 	

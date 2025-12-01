@@ -48,19 +48,16 @@
         </ElementMergeDirective>
         <ElementMergeDirective>
           <Index>
-            <DomainClassMoniker Name="Atributo" />
-          </Index>
-          <LinkCreationPaths>
-            <DomainPath>EntidadHasAtributoEntidad.AtributoEntidad</DomainPath>
-          </LinkCreationPaths>
-        </ElementMergeDirective>
-        <ElementMergeDirective>
-          <Index>
             <DomainClassMoniker Name="EstiloPagina" />
           </Index>
           <LinkCreationPaths>
             <DomainPath>EntidadHasEstiloPagina.EstiloPagina</DomainPath>
           </LinkCreationPaths>
+        </ElementMergeDirective>
+        <ElementMergeDirective>
+          <Index>
+            <DomainClassMoniker Name="Atributo" />
+          </Index>
         </ElementMergeDirective>
       </ElementMergeDirectives>
     </DomainClass>
@@ -454,7 +451,7 @@
     </DomainRelationship>
     <DomainRelationship Id="9674c88a-fe31-447f-a9b7-671ad30f3e78" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.AtributoHasRestriccionEnum" Name="AtributoHasRestriccionEnum" DisplayName="Atributo Has Restriccion Enum" Namespace="UPM_IPS.JCJAPGDRCDERAWebBD" IsEmbedding="true">
       <Source>
-        <DomainRole Id="8c795296-23ff-494e-aaf0-ce72fa92538c" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.AtributoHasRestriccionEnum.Atributo" Name="Atributo" DisplayName="Atributo" PropertyName="RestriccionEnum" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Restriccion Enum">
+        <DomainRole Id="8c795296-23ff-494e-aaf0-ce72fa92538c" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.AtributoHasRestriccionEnum.Atributo" Name="Atributo" DisplayName="Atributo" PropertyName="RestriccionEnum" Multiplicity="One" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Restriccion Enum">
           <RolePlayer>
             <DomainClassMoniker Name="Atributo" />
           </RolePlayer>
@@ -538,9 +535,9 @@
     </DomainEnumeration>
   </Types>
   <Shapes>
-    <GeometryShape Id="fffb1144-38ed-47ae-abe8-739809cf32a3" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.EntidadShape" Name="EntidadShape" DisplayName="Entidad Shape" Namespace="UPM_IPS.JCJAPGDRCDERAWebBD" FixedTooltipText="Entidad Shape" FillColor="NavajoWhite" InitialHeight="1" Geometry="RoundedRectangle">
-      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
-        <TextDecorator Name="NameDecorator" DisplayName="Name Decorator" DefaultText="NameDecorator" />
+    <GeometryShape Id="fffb1144-38ed-47ae-abe8-739809cf32a3" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.EntidadShape" Name="EntidadShape" DisplayName="Entidad Shape" Namespace="UPM_IPS.JCJAPGDRCDERAWebBD" FixedTooltipText="Entidad Shape" FillColor="Snow" InitialHeight="1" OutlineThickness="0.01" Geometry="Rectangle">
+      <ShapeHasDecorators Position="Center" HorizontalOffset="0" VerticalOffset="0">
+        <TextDecorator Name="NameDecorator" DisplayName="Name Decorator" DefaultText="NameDecorator" FontSize="12" />
       </ShapeHasDecorators>
     </GeometryShape>
     <GeometryShape Id="bf80bd1c-51e5-4bec-9b23-840939296ada" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.RestriccionRangoShape" Name="RestriccionRangoShape" DisplayName="Restriccion Rango Shape" Namespace="UPM_IPS.JCJAPGDRCDERAWebBD" FixedTooltipText="Restriccion Rango Shape" FillColor="Purple" InitialHeight="1" Geometry="Circle">
@@ -561,9 +558,9 @@
     </GeometryShape>
     <GeometryShape Id="35a2ef65-8d9f-4084-8115-7ae4a843ab61" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.EstiloCampoShape" Name="EstiloCampoShape" DisplayName="Estilo Campo Shape" Namespace="UPM_IPS.JCJAPGDRCDERAWebBD" FixedTooltipText="Estilo Campo Shape" FillColor="OliveDrab" InitialHeight="1" Geometry="Circle" />
     <GeometryShape Id="4c783b62-720a-4a37-90f4-d57b94a9c203" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.EstiloPaginaShape" Name="EstiloPaginaShape" DisplayName="Estilo Pagina Shape" Namespace="UPM_IPS.JCJAPGDRCDERAWebBD" FixedTooltipText="Estilo Pagina Shape" FillColor="Yellow" InitialHeight="1" Geometry="Circle" />
-    <ImageShape Id="3a281757-6bd1-4275-a72d-b23e176ddfd7" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.RelacionShape" Name="RelacionShape" DisplayName="Relacion Shape" Namespace="UPM_IPS.JCJAPGDRCDERAWebBD" FixedTooltipText="Relacion Shape" InitialHeight="1" Image="Resources\rombo.bmp">
-      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
-        <TextDecorator Name="NameDecorator" DisplayName="Name Decorator" DefaultText="NameDecorator" />
+    <ImageShape Id="3a281757-6bd1-4275-a72d-b23e176ddfd7" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.RelacionShape" Name="RelacionShape" DisplayName="Relacion Shape" Namespace="UPM_IPS.JCJAPGDRCDERAWebBD" FixedTooltipText="Relacion Shape" InitialHeight="1" Image="Resources\rombo.png">
+      <ShapeHasDecorators Position="Center" HorizontalOffset="0" VerticalOffset="0">
+        <TextDecorator Name="NameDecorator" DisplayName="Name Decorator" DefaultText="NameDecorator" FontSize="12" />
       </ShapeHasDecorators>
     </ImageShape>
     <GeometryShape Id="889c3f4f-06bb-4c65-bbfc-10917328fdd4" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.CardinalidadShape" Name="CardinalidadShape" DisplayName="Cardinalidad Shape" Namespace="UPM_IPS.JCJAPGDRCDERAWebBD" FixedTooltipText="Cardinalidad Shape" FillColor="Pink" InitialHeight="1" Geometry="Ellipse">
@@ -571,9 +568,9 @@
         <TextDecorator Name="NameDecorator" DisplayName="Name Decorator" DefaultText="NameDecorator" />
       </ShapeHasDecorators>
     </GeometryShape>
-    <GeometryShape Id="3043f948-be34-467c-a0a5-fce0432f886f" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.EstiloPortalShape" Name="EstiloPortalShape" DisplayName="Estilo Portal Shape" Namespace="UPM_IPS.JCJAPGDRCDERAWebBD" FixedTooltipText="Estilo Portal Shape" InitialHeight="1" Geometry="Rectangle" />
+    <GeometryShape Id="3043f948-be34-467c-a0a5-fce0432f886f" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.EstiloPortalShape" Name="EstiloPortalShape" DisplayName="Estilo Portal Shape" Namespace="UPM_IPS.JCJAPGDRCDERAWebBD" FixedTooltipText="Estilo Portal Shape" InitialHeight="1" Geometry="RoundedRectangle" />
     <GeometryShape Id="283e095c-d4ad-41f4-ab67-11921f189e85" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.AtributoShape" Name="AtributoShape" DisplayName="Atributo Shape" Namespace="UPM_IPS.JCJAPGDRCDERAWebBD" FixedTooltipText="Atributo Shape" TextColor="White" FillColor="Maroon" InitialHeight="1" Geometry="Ellipse">
-      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
+      <ShapeHasDecorators Position="Center" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="NameDecorator" DisplayName="Name Decorator" DefaultText="NameDecorator" />
       </ShapeHasDecorators>
     </GeometryShape>
@@ -1011,7 +1008,17 @@
     <XmlSerializationDefinition CustomPostLoad="false">
       <XmlSerializationBehaviorMoniker Name="JCJAPGDRCDERAWebBDSerializationBehavior" />
     </XmlSerializationDefinition>
-    <ToolboxTab TabText="JCJAPGDRCDERAWebBD" />
+    <ToolboxTab TabText="JCJAPGDRCDERAWebBD">
+      <ElementTool Name="EntidadTool" ToolboxIcon="Resources\entidad.bmp" Caption="Entidad" Tooltip="Entidad Tool" HelpKeyword="EntidadTool">
+        <DomainClassMoniker Name="Entidad" />
+      </ElementTool>
+      <ElementTool Name="RelacionTool" ToolboxIcon="Resources\relacion.bmp" Caption="Relacion" Tooltip="Relacion Tool" HelpKeyword="RelacionTool">
+        <DomainClassMoniker Name="Relacion" />
+      </ElementTool>
+      <ElementTool Name="EstiloPortalTool" ToolboxIcon="Resources\estiloportal.bmp" Caption="EstiloPortal" Tooltip="Estilo Portal Tool" HelpKeyword="EstiloPortalTool">
+        <DomainClassMoniker Name="EstiloPortal" />
+      </ElementTool>
+    </ToolboxTab>
     <Validation UsesMenu="false" UsesOpen="false" UsesSave="false" UsesLoad="false" />
     <DiagramMoniker Name="JCJAPGDRCDERAWebBDDiagram" />
   </Designer>

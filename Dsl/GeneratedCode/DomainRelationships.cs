@@ -2791,7 +2791,7 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 		/// </summary>
 		[DslDesign::DisplayNameResource("UPM_IPS.JCJAPGDRCDERAWebBD.AtributoHasRestriccionEnum/Atributo.DisplayName", typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDDomainModel), "UPM_IPS.JCJAPGDRCDERAWebBD.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("UPM_IPS.JCJAPGDRCDERAWebBD.AtributoHasRestriccionEnum/Atributo.Description", typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDDomainModel), "UPM_IPS.JCJAPGDRCDERAWebBD.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "RestriccionEnum", PropertyDisplayNameKey="UPM_IPS.JCJAPGDRCDERAWebBD.AtributoHasRestriccionEnum/Atributo.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "RestriccionEnum", PropertyDisplayNameKey="UPM_IPS.JCJAPGDRCDERAWebBD.AtributoHasRestriccionEnum/Atributo.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.One)]
 		[DslModeling::DomainObjectId("8c795296-23ff-494e-aaf0-ce72fa92538c")]
 		public virtual Atributo Atributo
 		{
@@ -2862,24 +2862,43 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 		#endregion
 		#region Static methods to access RestriccionEnum of a Atributo
 		/// <summary>
-		/// Gets a list of RestriccionEnum.
+		/// Gets RestriccionEnum.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static DslModeling::LinkedElementCollection<RestriccionEnum> GetRestriccionEnum(Atributo element)
+		public static RestriccionEnum GetRestriccionEnum(Atributo element)
 		{
-			return GetRoleCollection<DslModeling::LinkedElementCollection<RestriccionEnum>, RestriccionEnum>(element, AtributoDomainRoleId);
+			return DslModeling::DomainRoleInfo.GetLinkedElement(element, AtributoDomainRoleId) as RestriccionEnum;
+		}
+		
+		/// <summary>
+		/// Sets RestriccionEnum.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static void SetRestriccionEnum(Atributo element, RestriccionEnum newRestriccionEnum)
+		{
+			DslModeling::DomainRoleInfo.SetLinkedElement(element, AtributoDomainRoleId, newRestriccionEnum);
 		}
 		#endregion
 		#region Atributo link accessor
 		/// <summary>
-		/// Get the list of AtributoHasRestriccionEnum links to a Atributo.
+		/// Get the AtributoHasRestriccionEnum link to a Atributo.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.JCJAPGDRCDERAWebBD.AtributoHasRestriccionEnum> GetLinksToRestriccionEnum ( global::UPM_IPS.JCJAPGDRCDERAWebBD.Atributo atributoInstance )
+		public static global::UPM_IPS.JCJAPGDRCDERAWebBD.AtributoHasRestriccionEnum GetLinkToRestriccionEnum (global::UPM_IPS.JCJAPGDRCDERAWebBD.Atributo atributoInstance)
 		{
-			return DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.JCJAPGDRCDERAWebBD.AtributoHasRestriccionEnum>(atributoInstance, global::UPM_IPS.JCJAPGDRCDERAWebBD.AtributoHasRestriccionEnum.AtributoDomainRoleId);
+			global::System.Collections.Generic.IList<global::UPM_IPS.JCJAPGDRCDERAWebBD.AtributoHasRestriccionEnum> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.JCJAPGDRCDERAWebBD.AtributoHasRestriccionEnum>(atributoInstance, global::UPM_IPS.JCJAPGDRCDERAWebBD.AtributoHasRestriccionEnum.AtributoDomainRoleId);
+			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of Atributo not obeyed.");
+			if ( links.Count == 0 )
+			{
+				return null;
+			}
+			else
+			{
+				return links[0];
+			}
 		}
 		#endregion
 		#region RestriccionEnum link accessor
