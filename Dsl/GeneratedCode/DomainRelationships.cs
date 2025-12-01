@@ -3222,3 +3222,753 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 		#endregion
 	}
 }
+namespace UPM_IPS.JCJAPGDRCDERAWebBD
+{
+	/// <summary>
+	/// DomainRelationship RelacionReferencesEntidad
+	/// Description for UPM_IPS.JCJAPGDRCDERAWebBD.RelacionReferencesEntidad
+	/// </summary>
+	[DslDesign::DisplayNameResource("UPM_IPS.JCJAPGDRCDERAWebBD.RelacionReferencesEntidad.DisplayName", typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDDomainModel), "UPM_IPS.JCJAPGDRCDERAWebBD.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("UPM_IPS.JCJAPGDRCDERAWebBD.RelacionReferencesEntidad.Description", typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDDomainModel), "UPM_IPS.JCJAPGDRCDERAWebBD.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainRelationship()]
+	[DslModeling::DomainObjectId("516d87dc-c4fe-4c0a-9746-ab3ce18a2cfc")]
+	public partial class RelacionReferencesEntidad : DslModeling::ElementLink
+	{
+		#region Constructors, domain class Id
+		
+		/// <summary>
+		/// RelacionReferencesEntidad domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x516d87dc, 0xc4fe, 0x4c0a, 0x97, 0x46, 0xab, 0x3c, 0xe1, 0x8a, 0x2c, 0xfc);
+	
+				
+		/// <summary>
+		/// Constructor
+		/// Creates a RelacionReferencesEntidad link in the same Partition as the given Relacion
+		/// </summary>
+		/// <param name="source">Relacion to use as the source of the relationship.</param>
+		/// <param name="target">Entidad to use as the target of the relationship.</param>
+		public RelacionReferencesEntidad(Relacion source, Entidad target)
+			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(RelacionReferencesEntidad.RelacionDomainRoleId, source), new DslModeling::RoleAssignment(RelacionReferencesEntidad.EntidadDomainRoleId, target)}, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public RelacionReferencesEntidad(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public RelacionReferencesEntidad(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public RelacionReferencesEntidad(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(partition, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public RelacionReferencesEntidad(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, roleAssignments, propertyAssignments)
+		{
+		}
+		#endregion
+		#region Relacion domain role code
+		
+		/// <summary>
+		/// Relacion domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid RelacionDomainRoleId = new global::System.Guid(0x43733f20, 0xd9d9, 0x4018, 0xb3, 0xa4, 0x2a, 0xd4, 0x36, 0xd8, 0x54, 0x3c);
+		
+		/// <summary>
+		/// DomainRole Relacion
+		/// Description for UPM_IPS.JCJAPGDRCDERAWebBD.RelacionReferencesEntidad.Relacion
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.JCJAPGDRCDERAWebBD.RelacionReferencesEntidad/Relacion.DisplayName", typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDDomainModel), "UPM_IPS.JCJAPGDRCDERAWebBD.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.JCJAPGDRCDERAWebBD.RelacionReferencesEntidad/Relacion.Description", typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDDomainModel), "UPM_IPS.JCJAPGDRCDERAWebBD.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Entidad", PropertyDisplayNameKey="UPM_IPS.JCJAPGDRCDERAWebBD.RelacionReferencesEntidad/Relacion.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslModeling::DomainObjectId("43733f20-d9d9-4018-b3a4-2ad436d8543c")]
+		public virtual Relacion Relacion
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (Relacion)DslModeling::DomainRoleInfo.GetRolePlayer(this, RelacionDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, RelacionDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access Relacion of a Entidad
+		/// <summary>
+		/// Gets a list of Relacion.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static DslModeling::LinkedElementCollection<Relacion> GetRelacion(Entidad element)
+		{
+			return GetRoleCollection<DslModeling::LinkedElementCollection<Relacion>, Relacion>(element, EntidadDomainRoleId);
+		}
+		#endregion
+		#region Entidad domain role code
+		
+		/// <summary>
+		/// Entidad domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid EntidadDomainRoleId = new global::System.Guid(0x66d9089e, 0x752f, 0x4c51, 0x9e, 0x9b, 0xd1, 0x91, 0x38, 0x03, 0x41, 0xd2);
+		
+		/// <summary>
+		/// DomainRole Entidad
+		/// Description for UPM_IPS.JCJAPGDRCDERAWebBD.RelacionReferencesEntidad.Entidad
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.JCJAPGDRCDERAWebBD.RelacionReferencesEntidad/Entidad.DisplayName", typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDDomainModel), "UPM_IPS.JCJAPGDRCDERAWebBD.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.JCJAPGDRCDERAWebBD.RelacionReferencesEntidad/Entidad.Description", typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDDomainModel), "UPM_IPS.JCJAPGDRCDERAWebBD.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "Relacion", PropertyDisplayNameKey="UPM_IPS.JCJAPGDRCDERAWebBD.RelacionReferencesEntidad/Entidad.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslModeling::DomainObjectId("66d9089e-752f-4c51-9e9b-d191380341d2")]
+		public virtual Entidad Entidad
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (Entidad)DslModeling::DomainRoleInfo.GetRolePlayer(this, EntidadDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, EntidadDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access Entidad of a Relacion
+		/// <summary>
+		/// Gets a list of Entidad.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static DslModeling::LinkedElementCollection<Entidad> GetEntidad(Relacion element)
+		{
+			return GetRoleCollection<DslModeling::LinkedElementCollection<Entidad>, Entidad>(element, RelacionDomainRoleId);
+		}
+		#endregion
+		#region cardinalidad domain property code
+		
+		/// <summary>
+		/// cardinalidad domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid cardinalidadDomainPropertyId = new global::System.Guid(0x6712e0e0, 0x1c93, 0x4de6, 0x82, 0xee, 0xdf, 0xcf, 0xb5, 0x9e, 0xf6, 0x9c);
+		
+		/// <summary>
+		/// Storage for cardinalidad
+		/// </summary>
+		private global::System.String cardinalidadPropertyStorage = string.Empty;
+		
+		/// <summary>
+		/// Gets or sets the value of cardinalidad domain property.
+		/// Description for
+		/// UPM_IPS.JCJAPGDRCDERAWebBD.RelacionReferencesEntidad.Cardinalidad
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.JCJAPGDRCDERAWebBD.RelacionReferencesEntidad/cardinalidad.DisplayName", typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDDomainModel), "UPM_IPS.JCJAPGDRCDERAWebBD.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.JCJAPGDRCDERAWebBD.RelacionReferencesEntidad/cardinalidad.Description", typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDDomainModel), "UPM_IPS.JCJAPGDRCDERAWebBD.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("6712e0e0-1c93-4de6-82ee-dfcfb59ef69c")]
+		public global::System.String cardinalidad
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return cardinalidadPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				cardinalidadPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the RelacionReferencesEntidad.cardinalidad domain property.
+		/// </summary>
+		internal sealed partial class cardinalidadPropertyHandler : DslModeling::DomainPropertyValueHandler<RelacionReferencesEntidad, global::System.String>
+		{
+			private cardinalidadPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the RelacionReferencesEntidad.cardinalidad domain property value handler.
+			/// </summary>
+			public static readonly cardinalidadPropertyHandler Instance = new cardinalidadPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the RelacionReferencesEntidad.cardinalidad domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return cardinalidadDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(RelacionReferencesEntidad element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.cardinalidadPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(RelacionReferencesEntidad element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.cardinalidadPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
+		#region Relacion link accessor
+		/// <summary>
+		/// Get the list of RelacionReferencesEntidad links to a Relacion.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.JCJAPGDRCDERAWebBD.RelacionReferencesEntidad> GetLinksToEntidad ( global::UPM_IPS.JCJAPGDRCDERAWebBD.Relacion relacionInstance )
+		{
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.JCJAPGDRCDERAWebBD.RelacionReferencesEntidad>(relacionInstance, global::UPM_IPS.JCJAPGDRCDERAWebBD.RelacionReferencesEntidad.RelacionDomainRoleId);
+		}
+		#endregion
+		#region Entidad link accessor
+		/// <summary>
+		/// Get the list of RelacionReferencesEntidad links to a Entidad.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.JCJAPGDRCDERAWebBD.RelacionReferencesEntidad> GetLinksToRelacion ( global::UPM_IPS.JCJAPGDRCDERAWebBD.Entidad entidadInstance )
+		{
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.JCJAPGDRCDERAWebBD.RelacionReferencesEntidad>(entidadInstance, global::UPM_IPS.JCJAPGDRCDERAWebBD.RelacionReferencesEntidad.EntidadDomainRoleId);
+		}
+		#endregion
+		#region RelacionReferencesEntidad instance accessors
+		
+		/// <summary>
+		/// Get any RelacionReferencesEntidad links between a given Relacion and a Entidad.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.JCJAPGDRCDERAWebBD.RelacionReferencesEntidad> GetLinks( global::UPM_IPS.JCJAPGDRCDERAWebBD.Relacion source, global::UPM_IPS.JCJAPGDRCDERAWebBD.Entidad target )
+		{
+			global::System.Collections.Generic.List<global::UPM_IPS.JCJAPGDRCDERAWebBD.RelacionReferencesEntidad> outLinks = new global::System.Collections.Generic.List<global::UPM_IPS.JCJAPGDRCDERAWebBD.RelacionReferencesEntidad>();
+			global::System.Collections.Generic.IList<global::UPM_IPS.JCJAPGDRCDERAWebBD.RelacionReferencesEntidad> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.JCJAPGDRCDERAWebBD.RelacionReferencesEntidad>(source, global::UPM_IPS.JCJAPGDRCDERAWebBD.RelacionReferencesEntidad.RelacionDomainRoleId);
+			foreach ( global::UPM_IPS.JCJAPGDRCDERAWebBD.RelacionReferencesEntidad link in links )
+			{
+				if ( target.Equals(link.Entidad) )
+				{
+					outLinks.Add(link);
+				}
+			}
+			return outLinks.AsReadOnly();
+		}
+		/// <summary>
+		/// Get the one RelacionReferencesEntidad link between a given Relacionand a Entidad.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::UPM_IPS.JCJAPGDRCDERAWebBD.RelacionReferencesEntidad GetLink( global::UPM_IPS.JCJAPGDRCDERAWebBD.Relacion source, global::UPM_IPS.JCJAPGDRCDERAWebBD.Entidad target )
+		{
+			global::System.Collections.Generic.IList<global::UPM_IPS.JCJAPGDRCDERAWebBD.RelacionReferencesEntidad> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.JCJAPGDRCDERAWebBD.RelacionReferencesEntidad>(source, global::UPM_IPS.JCJAPGDRCDERAWebBD.RelacionReferencesEntidad.RelacionDomainRoleId);
+			foreach ( global::UPM_IPS.JCJAPGDRCDERAWebBD.RelacionReferencesEntidad link in links )
+			{
+				if ( target.Equals(link.Entidad) )
+				{
+					return link;
+				}
+			}
+			return null;
+		}
+		
+		#endregion
+	}
+}
+namespace UPM_IPS.JCJAPGDRCDERAWebBD
+{
+	/// <summary>
+	/// DomainRelationship DERAWebBDModelReferencesAtributo
+	/// Description for UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelReferencesAtributo
+	/// </summary>
+	[DslDesign::DisplayNameResource("UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelReferencesAtributo.DisplayName", typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDDomainModel), "UPM_IPS.JCJAPGDRCDERAWebBD.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelReferencesAtributo.Description", typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDDomainModel), "UPM_IPS.JCJAPGDRCDERAWebBD.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainRelationship()]
+	[DslModeling::DomainObjectId("905e23f4-d191-4117-9a5e-19424fc26c72")]
+	public partial class DERAWebBDModelReferencesAtributo : DslModeling::ElementLink
+	{
+		#region Constructors, domain class Id
+		
+		/// <summary>
+		/// DERAWebBDModelReferencesAtributo domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x905e23f4, 0xd191, 0x4117, 0x9a, 0x5e, 0x19, 0x42, 0x4f, 0xc2, 0x6c, 0x72);
+	
+				
+		/// <summary>
+		/// Constructor
+		/// Creates a DERAWebBDModelReferencesAtributo link in the same Partition as the given DERAWebBDModel
+		/// </summary>
+		/// <param name="source">DERAWebBDModel to use as the source of the relationship.</param>
+		/// <param name="target">Atributo to use as the target of the relationship.</param>
+		public DERAWebBDModelReferencesAtributo(DERAWebBDModel source, Atributo target)
+			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(DERAWebBDModelReferencesAtributo.DERAWebBDModelDomainRoleId, source), new DslModeling::RoleAssignment(DERAWebBDModelReferencesAtributo.AtributoDomainRoleId, target)}, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public DERAWebBDModelReferencesAtributo(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public DERAWebBDModelReferencesAtributo(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public DERAWebBDModelReferencesAtributo(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(partition, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public DERAWebBDModelReferencesAtributo(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, roleAssignments, propertyAssignments)
+		{
+		}
+		#endregion
+		#region DERAWebBDModel domain role code
+		
+		/// <summary>
+		/// DERAWebBDModel domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid DERAWebBDModelDomainRoleId = new global::System.Guid(0x1cd920b8, 0x9ddc, 0x46c7, 0x9a, 0xe7, 0xec, 0x33, 0x1a, 0x8f, 0x5b, 0x66);
+		
+		/// <summary>
+		/// DomainRole DERAWebBDModel
+		/// Description for
+		/// UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelReferencesAtributo.DERAWebBDModel
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelReferencesAtributo/DERAWebBDModel.DisplayName", typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDDomainModel), "UPM_IPS.JCJAPGDRCDERAWebBD.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelReferencesAtributo/DERAWebBDModel.Description", typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDDomainModel), "UPM_IPS.JCJAPGDRCDERAWebBD.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Atributo", PropertyDisplayNameKey="UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelReferencesAtributo/DERAWebBDModel.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslModeling::DomainObjectId("1cd920b8-9ddc-46c7-9ae7-ec331a8f5b66")]
+		public virtual DERAWebBDModel DERAWebBDModel
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (DERAWebBDModel)DslModeling::DomainRoleInfo.GetRolePlayer(this, DERAWebBDModelDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, DERAWebBDModelDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access DERAWebBDModel of a Atributo
+		/// <summary>
+		/// Gets a list of DERAWebBDModel.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static DslModeling::LinkedElementCollection<DERAWebBDModel> GetDERAWebBDModel(Atributo element)
+		{
+			return GetRoleCollection<DslModeling::LinkedElementCollection<DERAWebBDModel>, DERAWebBDModel>(element, AtributoDomainRoleId);
+		}
+		#endregion
+		#region Atributo domain role code
+		
+		/// <summary>
+		/// Atributo domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid AtributoDomainRoleId = new global::System.Guid(0x274ccd7e, 0x295c, 0x444b, 0xbb, 0xb3, 0xd5, 0x72, 0xcf, 0xae, 0x9d, 0x91);
+		
+		/// <summary>
+		/// DomainRole Atributo
+		/// Description for
+		/// UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelReferencesAtributo.Atributo
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelReferencesAtributo/Atributo.DisplayName", typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDDomainModel), "UPM_IPS.JCJAPGDRCDERAWebBD.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelReferencesAtributo/Atributo.Description", typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDDomainModel), "UPM_IPS.JCJAPGDRCDERAWebBD.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "DERAWebBDModel", PropertyDisplayNameKey="UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelReferencesAtributo/Atributo.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslModeling::DomainObjectId("274ccd7e-295c-444b-bbb3-d572cfae9d91")]
+		public virtual Atributo Atributo
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (Atributo)DslModeling::DomainRoleInfo.GetRolePlayer(this, AtributoDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, AtributoDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access Atributo of a DERAWebBDModel
+		/// <summary>
+		/// Gets a list of Atributo.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static DslModeling::LinkedElementCollection<Atributo> GetAtributo(DERAWebBDModel element)
+		{
+			return GetRoleCollection<DslModeling::LinkedElementCollection<Atributo>, Atributo>(element, DERAWebBDModelDomainRoleId);
+		}
+		#endregion
+		#region DERAWebBDModel link accessor
+		/// <summary>
+		/// Get the list of DERAWebBDModelReferencesAtributo links to a DERAWebBDModel.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelReferencesAtributo> GetLinksToAtributo ( global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModel dERAWebBDModelInstance )
+		{
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelReferencesAtributo>(dERAWebBDModelInstance, global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelReferencesAtributo.DERAWebBDModelDomainRoleId);
+		}
+		#endregion
+		#region Atributo link accessor
+		/// <summary>
+		/// Get the list of DERAWebBDModelReferencesAtributo links to a Atributo.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelReferencesAtributo> GetLinksToDERAWebBDModel ( global::UPM_IPS.JCJAPGDRCDERAWebBD.Atributo atributoInstance )
+		{
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelReferencesAtributo>(atributoInstance, global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelReferencesAtributo.AtributoDomainRoleId);
+		}
+		#endregion
+		#region DERAWebBDModelReferencesAtributo instance accessors
+		
+		/// <summary>
+		/// Get any DERAWebBDModelReferencesAtributo links between a given DERAWebBDModel and a Atributo.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelReferencesAtributo> GetLinks( global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModel source, global::UPM_IPS.JCJAPGDRCDERAWebBD.Atributo target )
+		{
+			global::System.Collections.Generic.List<global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelReferencesAtributo> outLinks = new global::System.Collections.Generic.List<global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelReferencesAtributo>();
+			global::System.Collections.Generic.IList<global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelReferencesAtributo> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelReferencesAtributo>(source, global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelReferencesAtributo.DERAWebBDModelDomainRoleId);
+			foreach ( global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelReferencesAtributo link in links )
+			{
+				if ( target.Equals(link.Atributo) )
+				{
+					outLinks.Add(link);
+				}
+			}
+			return outLinks.AsReadOnly();
+		}
+		/// <summary>
+		/// Get the one DERAWebBDModelReferencesAtributo link between a given DERAWebBDModeland a Atributo.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelReferencesAtributo GetLink( global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModel source, global::UPM_IPS.JCJAPGDRCDERAWebBD.Atributo target )
+		{
+			global::System.Collections.Generic.IList<global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelReferencesAtributo> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelReferencesAtributo>(source, global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelReferencesAtributo.DERAWebBDModelDomainRoleId);
+			foreach ( global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelReferencesAtributo link in links )
+			{
+				if ( target.Equals(link.Atributo) )
+				{
+					return link;
+				}
+			}
+			return null;
+		}
+		
+		#endregion
+	}
+}
+namespace UPM_IPS.JCJAPGDRCDERAWebBD
+{
+	/// <summary>
+	/// DomainRelationship EntidadReferencesAtributo
+	/// Description for UPM_IPS.JCJAPGDRCDERAWebBD.EntidadReferencesAtributo
+	/// </summary>
+	[DslDesign::DisplayNameResource("UPM_IPS.JCJAPGDRCDERAWebBD.EntidadReferencesAtributo.DisplayName", typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDDomainModel), "UPM_IPS.JCJAPGDRCDERAWebBD.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("UPM_IPS.JCJAPGDRCDERAWebBD.EntidadReferencesAtributo.Description", typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDDomainModel), "UPM_IPS.JCJAPGDRCDERAWebBD.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainRelationship()]
+	[DslModeling::DomainObjectId("cb39338c-85d5-4db1-bba4-64ae935b633d")]
+	public partial class EntidadReferencesAtributo : DslModeling::ElementLink
+	{
+		#region Constructors, domain class Id
+		
+		/// <summary>
+		/// EntidadReferencesAtributo domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xcb39338c, 0x85d5, 0x4db1, 0xbb, 0xa4, 0x64, 0xae, 0x93, 0x5b, 0x63, 0x3d);
+	
+				
+		/// <summary>
+		/// Constructor
+		/// Creates a EntidadReferencesAtributo link in the same Partition as the given Entidad
+		/// </summary>
+		/// <param name="source">Entidad to use as the source of the relationship.</param>
+		/// <param name="target">Atributo to use as the target of the relationship.</param>
+		public EntidadReferencesAtributo(Entidad source, Atributo target)
+			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(EntidadReferencesAtributo.EntidadDomainRoleId, source), new DslModeling::RoleAssignment(EntidadReferencesAtributo.AtributoDomainRoleId, target)}, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public EntidadReferencesAtributo(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public EntidadReferencesAtributo(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public EntidadReferencesAtributo(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(partition, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public EntidadReferencesAtributo(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, roleAssignments, propertyAssignments)
+		{
+		}
+		#endregion
+		#region Entidad domain role code
+		
+		/// <summary>
+		/// Entidad domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid EntidadDomainRoleId = new global::System.Guid(0xb8f66687, 0x515d, 0x4d16, 0xb5, 0xc8, 0x51, 0x89, 0x81, 0x17, 0x1c, 0xf8);
+		
+		/// <summary>
+		/// DomainRole Entidad
+		/// Description for UPM_IPS.JCJAPGDRCDERAWebBD.EntidadReferencesAtributo.Entidad
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.JCJAPGDRCDERAWebBD.EntidadReferencesAtributo/Entidad.DisplayName", typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDDomainModel), "UPM_IPS.JCJAPGDRCDERAWebBD.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.JCJAPGDRCDERAWebBD.EntidadReferencesAtributo/Entidad.Description", typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDDomainModel), "UPM_IPS.JCJAPGDRCDERAWebBD.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Atributo", PropertyDisplayNameKey="UPM_IPS.JCJAPGDRCDERAWebBD.EntidadReferencesAtributo/Entidad.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslModeling::DomainObjectId("b8f66687-515d-4d16-b5c8-518981171cf8")]
+		public virtual Entidad Entidad
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (Entidad)DslModeling::DomainRoleInfo.GetRolePlayer(this, EntidadDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, EntidadDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access Entidad of a Atributo
+		/// <summary>
+		/// Gets a list of Entidad.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static DslModeling::LinkedElementCollection<Entidad> GetEntidad(Atributo element)
+		{
+			return GetRoleCollection<DslModeling::LinkedElementCollection<Entidad>, Entidad>(element, AtributoDomainRoleId);
+		}
+		#endregion
+		#region Atributo domain role code
+		
+		/// <summary>
+		/// Atributo domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid AtributoDomainRoleId = new global::System.Guid(0x058440e3, 0x34fe, 0x4a8b, 0x9b, 0x03, 0xee, 0xc8, 0x7e, 0x79, 0x2c, 0xf6);
+		
+		/// <summary>
+		/// DomainRole Atributo
+		/// Description for UPM_IPS.JCJAPGDRCDERAWebBD.EntidadReferencesAtributo.Atributo
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.JCJAPGDRCDERAWebBD.EntidadReferencesAtributo/Atributo.DisplayName", typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDDomainModel), "UPM_IPS.JCJAPGDRCDERAWebBD.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.JCJAPGDRCDERAWebBD.EntidadReferencesAtributo/Atributo.Description", typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDDomainModel), "UPM_IPS.JCJAPGDRCDERAWebBD.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "Entidad", PropertyDisplayNameKey="UPM_IPS.JCJAPGDRCDERAWebBD.EntidadReferencesAtributo/Atributo.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslModeling::DomainObjectId("058440e3-34fe-4a8b-9b03-eec87e792cf6")]
+		public virtual Atributo Atributo
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (Atributo)DslModeling::DomainRoleInfo.GetRolePlayer(this, AtributoDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, AtributoDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access Atributo of a Entidad
+		/// <summary>
+		/// Gets a list of Atributo.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static DslModeling::LinkedElementCollection<Atributo> GetAtributo(Entidad element)
+		{
+			return GetRoleCollection<DslModeling::LinkedElementCollection<Atributo>, Atributo>(element, EntidadDomainRoleId);
+		}
+		#endregion
+		#region Entidad link accessor
+		/// <summary>
+		/// Get the list of EntidadReferencesAtributo links to a Entidad.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.JCJAPGDRCDERAWebBD.EntidadReferencesAtributo> GetLinksToAtributo ( global::UPM_IPS.JCJAPGDRCDERAWebBD.Entidad entidadInstance )
+		{
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.JCJAPGDRCDERAWebBD.EntidadReferencesAtributo>(entidadInstance, global::UPM_IPS.JCJAPGDRCDERAWebBD.EntidadReferencesAtributo.EntidadDomainRoleId);
+		}
+		#endregion
+		#region Atributo link accessor
+		/// <summary>
+		/// Get the list of EntidadReferencesAtributo links to a Atributo.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.JCJAPGDRCDERAWebBD.EntidadReferencesAtributo> GetLinksToEntidad ( global::UPM_IPS.JCJAPGDRCDERAWebBD.Atributo atributoInstance )
+		{
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.JCJAPGDRCDERAWebBD.EntidadReferencesAtributo>(atributoInstance, global::UPM_IPS.JCJAPGDRCDERAWebBD.EntidadReferencesAtributo.AtributoDomainRoleId);
+		}
+		#endregion
+		#region EntidadReferencesAtributo instance accessors
+		
+		/// <summary>
+		/// Get any EntidadReferencesAtributo links between a given Entidad and a Atributo.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.JCJAPGDRCDERAWebBD.EntidadReferencesAtributo> GetLinks( global::UPM_IPS.JCJAPGDRCDERAWebBD.Entidad source, global::UPM_IPS.JCJAPGDRCDERAWebBD.Atributo target )
+		{
+			global::System.Collections.Generic.List<global::UPM_IPS.JCJAPGDRCDERAWebBD.EntidadReferencesAtributo> outLinks = new global::System.Collections.Generic.List<global::UPM_IPS.JCJAPGDRCDERAWebBD.EntidadReferencesAtributo>();
+			global::System.Collections.Generic.IList<global::UPM_IPS.JCJAPGDRCDERAWebBD.EntidadReferencesAtributo> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.JCJAPGDRCDERAWebBD.EntidadReferencesAtributo>(source, global::UPM_IPS.JCJAPGDRCDERAWebBD.EntidadReferencesAtributo.EntidadDomainRoleId);
+			foreach ( global::UPM_IPS.JCJAPGDRCDERAWebBD.EntidadReferencesAtributo link in links )
+			{
+				if ( target.Equals(link.Atributo) )
+				{
+					outLinks.Add(link);
+				}
+			}
+			return outLinks.AsReadOnly();
+		}
+		/// <summary>
+		/// Get the one EntidadReferencesAtributo link between a given Entidadand a Atributo.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::UPM_IPS.JCJAPGDRCDERAWebBD.EntidadReferencesAtributo GetLink( global::UPM_IPS.JCJAPGDRCDERAWebBD.Entidad source, global::UPM_IPS.JCJAPGDRCDERAWebBD.Atributo target )
+		{
+			global::System.Collections.Generic.IList<global::UPM_IPS.JCJAPGDRCDERAWebBD.EntidadReferencesAtributo> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.JCJAPGDRCDERAWebBD.EntidadReferencesAtributo>(source, global::UPM_IPS.JCJAPGDRCDERAWebBD.EntidadReferencesAtributo.EntidadDomainRoleId);
+			foreach ( global::UPM_IPS.JCJAPGDRCDERAWebBD.EntidadReferencesAtributo link in links )
+			{
+				if ( target.Equals(link.Atributo) )
+				{
+					return link;
+				}
+			}
+			return null;
+		}
+		
+		#endregion
+	}
+}

@@ -481,6 +481,61 @@
         </DomainRole>
       </Target>
     </DomainRelationship>
+    <DomainRelationship Id="516d87dc-c4fe-4c0a-9746-ab3ce18a2cfc" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.RelacionReferencesEntidad" Name="RelacionReferencesEntidad" DisplayName="Relacion References Entidad" Namespace="UPM_IPS.JCJAPGDRCDERAWebBD">
+      <Properties>
+        <DomainProperty Id="6712e0e0-1c93-4de6-82ee-dfcfb59ef69c" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.RelacionReferencesEntidad.Cardinalidad" Name="cardinalidad" DisplayName="Cardinalidad">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+      </Properties>
+      <Source>
+        <DomainRole Id="43733f20-d9d9-4018-b3a4-2ad436d8543c" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.RelacionReferencesEntidad.Relacion" Name="Relacion" DisplayName="Relacion" PropertyName="Entidad" PropertyDisplayName="Entidad">
+          <RolePlayer>
+            <DomainClassMoniker Name="Relacion" />
+          </RolePlayer>
+        </DomainRole>
+      </Source>
+      <Target>
+        <DomainRole Id="66d9089e-752f-4c51-9e9b-d191380341d2" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.RelacionReferencesEntidad.Entidad" Name="Entidad" DisplayName="Entidad" PropertyName="Relacion" PropertyDisplayName="Relacion">
+          <RolePlayer>
+            <DomainClassMoniker Name="Entidad" />
+          </RolePlayer>
+        </DomainRole>
+      </Target>
+    </DomainRelationship>
+    <DomainRelationship Id="905e23f4-d191-4117-9a5e-19424fc26c72" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelReferencesAtributo" Name="DERAWebBDModelReferencesAtributo" DisplayName="DERAWeb BDModel References Atributo" Namespace="UPM_IPS.JCJAPGDRCDERAWebBD">
+      <Source>
+        <DomainRole Id="1cd920b8-9ddc-46c7-9ae7-ec331a8f5b66" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelReferencesAtributo.DERAWebBDModel" Name="DERAWebBDModel" DisplayName="DERAWeb BDModel" PropertyName="Atributo" PropertyDisplayName="Atributo">
+          <RolePlayer>
+            <DomainClassMoniker Name="DERAWebBDModel" />
+          </RolePlayer>
+        </DomainRole>
+      </Source>
+      <Target>
+        <DomainRole Id="274ccd7e-295c-444b-bbb3-d572cfae9d91" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelReferencesAtributo.Atributo" Name="Atributo" DisplayName="Atributo" PropertyName="DERAWebBDModel" PropertyDisplayName="DERAWeb BDModel">
+          <RolePlayer>
+            <DomainClassMoniker Name="Atributo" />
+          </RolePlayer>
+        </DomainRole>
+      </Target>
+    </DomainRelationship>
+    <DomainRelationship Id="cb39338c-85d5-4db1-bba4-64ae935b633d" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.EntidadReferencesAtributo" Name="EntidadReferencesAtributo" DisplayName="Entidad References Atributo" Namespace="UPM_IPS.JCJAPGDRCDERAWebBD">
+      <Source>
+        <DomainRole Id="b8f66687-515d-4d16-b5c8-518981171cf8" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.EntidadReferencesAtributo.Entidad" Name="Entidad" DisplayName="Entidad" PropertyName="Atributo" PropertyDisplayName="Atributo">
+          <RolePlayer>
+            <DomainClassMoniker Name="Entidad" />
+          </RolePlayer>
+        </DomainRole>
+      </Source>
+      <Target>
+        <DomainRole Id="058440e3-34fe-4a8b-9b03-eec87e792cf6" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.EntidadReferencesAtributo.Atributo" Name="Atributo" DisplayName="Atributo" PropertyName="Entidad" PropagatesDelete="true" PropertyDisplayName="Entidad">
+          <RolePlayer>
+            <DomainClassMoniker Name="Atributo" />
+          </RolePlayer>
+        </DomainRole>
+      </Target>
+    </DomainRelationship>
   </Relationships>
   <Types>
     <ExternalType Name="DateTime" Namespace="System" />
@@ -582,6 +637,11 @@
   </Shapes>
   <Connectors>
     <Connector Id="051b03fb-ce8e-46ab-9d12-4fe5735daf59" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.EntidadConectaAtributo" Name="EntidadConectaAtributo" DisplayName="Entidad Conecta Atributo" Namespace="UPM_IPS.JCJAPGDRCDERAWebBD" FixedTooltipText="Entidad Conecta Atributo" TextColor="Gold" />
+    <Connector Id="efe33cc0-6ea4-4774-8863-181e862f45e9" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.EntidadRelacionConnector" Name="EntidadRelacionConnector" DisplayName="Entidad Relacion Connector" Namespace="UPM_IPS.JCJAPGDRCDERAWebBD" FixedTooltipText="Entidad Relacion Connector">
+      <ConnectorHasDecorators Position="SourceTop" OffsetFromShape="0" OffsetFromLine="0">
+        <TextDecorator Name="CardDecorator" DisplayName="Card Decorator" DefaultText="CardDecorator" />
+      </ConnectorHasDecorators>
+    </Connector>
   </Connectors>
   <XmlSerializationBehavior Name="JCJAPGDRCDERAWebBDSerializationBehavior" Namespace="UPM_IPS.JCJAPGDRCDERAWebBD">
     <ClassData>
@@ -596,6 +656,9 @@
           </XmlRelationshipData>
           <XmlRelationshipData UseFullForm="true" RoleElementName="estiloPortal">
             <DomainRelationshipMoniker Name="DERAWebBDModelHasEstiloPortal" />
+          </XmlRelationshipData>
+          <XmlRelationshipData UseFullForm="true" RoleElementName="atributo">
+            <DomainRelationshipMoniker Name="DERAWebBDModelReferencesAtributo" />
           </XmlRelationshipData>
         </ElementData>
       </XmlClassData>
@@ -617,6 +680,9 @@
           <XmlRelationshipData UseFullForm="true" RoleElementName="estiloPagina">
             <DomainRelationshipMoniker Name="EntidadHasEstiloPagina" />
           </XmlRelationshipData>
+          <XmlRelationshipData UseFullForm="true" RoleElementName="atributo">
+            <DomainRelationshipMoniker Name="EntidadReferencesAtributo" />
+          </XmlRelationshipData>
         </ElementData>
       </XmlClassData>
       <XmlClassData TypeName="DERAWebBDModelHasEntidades" MonikerAttributeName="" SerializeId="true" MonikerElementName="dERAWebBDModelHasEntidadesMoniker" ElementName="dERAWebBDModelHasEntidades" MonikerTypeName="DERAWebBDModelHasEntidadesMoniker">
@@ -633,6 +699,9 @@
           </XmlRelationshipData>
           <XmlRelationshipData UseFullForm="true" RoleElementName="atributoRelacion">
             <DomainRelationshipMoniker Name="RelacionHasAtributoRelacion" />
+          </XmlRelationshipData>
+          <XmlRelationshipData UseFullForm="true" RoleElementName="entidad">
+            <DomainRelationshipMoniker Name="RelacionReferencesEntidad" />
           </XmlRelationshipData>
         </ElementData>
       </XmlClassData>
@@ -828,6 +897,23 @@
       <XmlClassData TypeName="AtributoClaveShape" MonikerAttributeName="" SerializeId="true" MonikerElementName="atributoClaveShapeMoniker" ElementName="atributoClaveShape" MonikerTypeName="AtributoClaveShapeMoniker">
         <GeometryShapeMoniker Name="AtributoClaveShape" />
       </XmlClassData>
+      <XmlClassData TypeName="RelacionReferencesEntidad" MonikerAttributeName="" SerializeId="true" MonikerElementName="relacionReferencesEntidadMoniker" ElementName="relacionReferencesEntidad" MonikerTypeName="RelacionReferencesEntidadMoniker">
+        <DomainRelationshipMoniker Name="RelacionReferencesEntidad" />
+        <ElementData>
+          <XmlPropertyData XmlName="cardinalidad">
+            <DomainPropertyMoniker Name="RelacionReferencesEntidad/cardinalidad" />
+          </XmlPropertyData>
+        </ElementData>
+      </XmlClassData>
+      <XmlClassData TypeName="EntidadRelacionConnector" MonikerAttributeName="" SerializeId="true" MonikerElementName="entidadRelacionConnectorMoniker" ElementName="entidadRelacionConnector" MonikerTypeName="EntidadRelacionConnectorMoniker">
+        <ConnectorMoniker Name="EntidadRelacionConnector" />
+      </XmlClassData>
+      <XmlClassData TypeName="DERAWebBDModelReferencesAtributo" MonikerAttributeName="" SerializeId="true" MonikerElementName="dERAWebBDModelReferencesAtributoMoniker" ElementName="dERAWebBDModelReferencesAtributo" MonikerTypeName="DERAWebBDModelReferencesAtributoMoniker">
+        <DomainRelationshipMoniker Name="DERAWebBDModelReferencesAtributo" />
+      </XmlClassData>
+      <XmlClassData TypeName="EntidadReferencesAtributo" MonikerAttributeName="" SerializeId="true" MonikerElementName="entidadReferencesAtributoMoniker" ElementName="entidadReferencesAtributo" MonikerTypeName="EntidadReferencesAtributoMoniker">
+        <DomainRelationshipMoniker Name="EntidadReferencesAtributo" />
+      </XmlClassData>
     </ClassData>
   </XmlSerializationBehavior>
   <ExplorerBehavior Name="JCJAPGDRCDERAWebBDExplorer" />
@@ -846,6 +932,63 @@
           <RolePlayerConnectDirective>
             <AcceptingClass>
               <DomainClassMoniker Name="Entidad" />
+            </AcceptingClass>
+          </RolePlayerConnectDirective>
+        </TargetDirectives>
+      </LinkConnectDirective>
+    </ConnectionBuilder>
+    <ConnectionBuilder Name="RelacionReferencesEntidadBuilder">
+      <LinkConnectDirective>
+        <DomainRelationshipMoniker Name="RelacionReferencesEntidad" />
+        <SourceDirectives>
+          <RolePlayerConnectDirective>
+            <AcceptingClass>
+              <DomainClassMoniker Name="Relacion" />
+            </AcceptingClass>
+          </RolePlayerConnectDirective>
+        </SourceDirectives>
+        <TargetDirectives>
+          <RolePlayerConnectDirective>
+            <AcceptingClass>
+              <DomainClassMoniker Name="Entidad" />
+            </AcceptingClass>
+          </RolePlayerConnectDirective>
+        </TargetDirectives>
+      </LinkConnectDirective>
+    </ConnectionBuilder>
+    <ConnectionBuilder Name="DERAWebBDModelReferencesAtributoBuilder">
+      <LinkConnectDirective>
+        <DomainRelationshipMoniker Name="DERAWebBDModelReferencesAtributo" />
+        <SourceDirectives>
+          <RolePlayerConnectDirective>
+            <AcceptingClass>
+              <DomainClassMoniker Name="DERAWebBDModel" />
+            </AcceptingClass>
+          </RolePlayerConnectDirective>
+        </SourceDirectives>
+        <TargetDirectives>
+          <RolePlayerConnectDirective>
+            <AcceptingClass>
+              <DomainClassMoniker Name="Atributo" />
+            </AcceptingClass>
+          </RolePlayerConnectDirective>
+        </TargetDirectives>
+      </LinkConnectDirective>
+    </ConnectionBuilder>
+    <ConnectionBuilder Name="EntidadReferencesAtributoBuilder">
+      <LinkConnectDirective>
+        <DomainRelationshipMoniker Name="EntidadReferencesAtributo" />
+        <SourceDirectives>
+          <RolePlayerConnectDirective>
+            <AcceptingClass>
+              <DomainClassMoniker Name="Entidad" />
+            </AcceptingClass>
+          </RolePlayerConnectDirective>
+        </SourceDirectives>
+        <TargetDirectives>
+          <RolePlayerConnectDirective>
+            <AcceptingClass>
+              <DomainClassMoniker Name="Atributo" />
             </AcceptingClass>
           </RolePlayerConnectDirective>
         </TargetDirectives>
@@ -980,24 +1123,36 @@
         <GeometryShapeMoniker Name="EstiloPortalShape" />
       </ShapeMap>
       <ShapeMap>
-        <DomainClassMoniker Name="Atributo" />
-        <ParentElementPath>
-          <DomainPath>EntidadHasAtributoEntidad.EntidadDeAtributo/!Entidad/DERAWebBDModelHasEntidades.DERAWebBDModel/!DERAWebBDModel</DomainPath>
-        </ParentElementPath>
-        <GeometryShapeMoniker Name="AtributoShape" />
-      </ShapeMap>
-      <ShapeMap>
         <DomainClassMoniker Name="AtributoClave" />
         <ParentElementPath>
           <DomainPath>EntidadHasAtributoClave.EntidadDeAtributoClave/!Entidad/DERAWebBDModelHasEntidades.DERAWebBDModel/!DERAWebBDModel</DomainPath>
         </ParentElementPath>
         <GeometryShapeMoniker Name="AtributoClaveShape" />
       </ShapeMap>
+      <ShapeMap>
+        <DomainClassMoniker Name="Atributo" />
+        <ParentElementPath>
+          <DomainPath>EntidadHasAtributoEntidad.EntidadDeAtributo/!Entidad/DERAWebBDModelHasEntidades.DERAWebBDModel/!DERAWebBDModel</DomainPath>
+        </ParentElementPath>
+        <GeometryShapeMoniker Name="AtributoShape" />
+      </ShapeMap>
     </ShapeMaps>
     <ConnectorMaps>
       <ConnectorMap>
         <ConnectorMoniker Name="EntidadConectaAtributo" />
         <DomainRelationshipMoniker Name="EntidadHasAtributoEntidad" />
+      </ConnectorMap>
+      <ConnectorMap>
+        <ConnectorMoniker Name="EntidadRelacionConnector" />
+        <DomainRelationshipMoniker Name="RelacionReferencesEntidad" />
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="EntidadRelacionConnector/CardDecorator" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="RelacionReferencesEntidad/cardinalidad" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
       </ConnectorMap>
     </ConnectorMaps>
   </Diagram>
@@ -1018,6 +1173,12 @@
       <ElementTool Name="EstiloPortalTool" ToolboxIcon="Resources\estiloportal.bmp" Caption="EstiloPortal" Tooltip="Estilo Portal Tool" HelpKeyword="EstiloPortalTool">
         <DomainClassMoniker Name="EstiloPortal" />
       </ElementTool>
+      <ConnectionTool Name="ConectarRelacionEntidad" ToolboxIcon="Resources\relacion.bmp" Caption="ConectarRelacionEntidad" Tooltip="Conectar Relacion Entidad" HelpKeyword="ConectarRelacionEntidad">
+        <ConnectionBuilderMoniker Name="JCJAPGDRCDERAWebBD/RelacionReferencesEntidadBuilder" />
+      </ConnectionTool>
+      <ConnectionTool Name="EntidadAtributoConectar" ToolboxIcon="Resources\relacion.bmp" Caption="EntidadAtributoConectar" Tooltip="Entidad Atributo Conectar" HelpKeyword="EntidadAtributoConectar">
+        <ConnectionBuilderMoniker Name="JCJAPGDRCDERAWebBD/EntidadReferencesAtributoBuilder" />
+      </ConnectionTool>
     </ToolboxTab>
     <Validation UsesMenu="false" UsesOpen="false" UsesSave="false" UsesLoad="false" />
     <DiagramMoniker Name="JCJAPGDRCDERAWebBDDiagram" />

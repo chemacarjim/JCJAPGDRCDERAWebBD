@@ -2,7 +2,24 @@
 <dERAWebBDModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="824b8638-e2c0-46fc-aa80-550e676d6392" xmlns="http://schemas.microsoft.com/dsltools/JCJAPGDRCDERAWebBD">
   <entidades>
     <dERAWebBDModelHasEntidades Id="f5288d45-d775-4c1f-89a0-7892802e02a8">
-      <entidad Id="9a176029-0bad-4ab0-9b6f-9b4ec8c56578" name="" />
+      <entidad Id="9a176029-0bad-4ab0-9b6f-9b4ec8c56578" name="Clase" />
+    </dERAWebBDModelHasEntidades>
+    <dERAWebBDModelHasEntidades Id="0c91596f-6857-4205-a58b-1bca691f332e">
+      <entidad Id="cac42890-ae69-4bc6-a02d-c7c39aafa749" name="ESTUDIANTE " />
     </dERAWebBDModelHasEntidades>
   </entidades>
+  <relaciones>
+    <dERAWebBDModelHasRelaciones Id="18b150b1-25da-4c53-9bd4-ad2ef008f748">
+      <relacion Id="aec839f9-52bf-4bfa-bdac-3419f62e6257" name="Pertenece">
+        <entidad>
+          <relacionReferencesEntidad Id="f86233aa-180f-469c-9714-bea0a10cb69b" cardinalidad="1..*">
+            <entidadMoniker name="/824b8638-e2c0-46fc-aa80-550e676d6392/ESTUDIANTE " />
+          </relacionReferencesEntidad>
+          <relacionReferencesEntidad Id="bc2972a5-9f35-4eac-b5fc-3bc7ffeab93c" cardinalidad="1..*">
+            <entidadMoniker name="/824b8638-e2c0-46fc-aa80-550e676d6392/Clase" />
+          </relacionReferencesEntidad>
+        </entidad>
+      </relacion>
+    </dERAWebBDModelHasRelaciones>
+  </relaciones>
 </dERAWebBDModel>

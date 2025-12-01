@@ -344,6 +344,11 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 				global::UPM_IPS.JCJAPGDRCDERAWebBD.EntidadConectaAtributo newShape = new global::UPM_IPS.JCJAPGDRCDERAWebBD.EntidadConectaAtributo(this.Partition);
 				return newShape;
 			}
+			if(element is global::UPM_IPS.JCJAPGDRCDERAWebBD.RelacionReferencesEntidad)
+			{
+				global::UPM_IPS.JCJAPGDRCDERAWebBD.EntidadRelacionConnector newShape = new global::UPM_IPS.JCJAPGDRCDERAWebBD.EntidadRelacionConnector(this.Partition);
+				return newShape;
+			}
 			return base.CreateChildShape(element);
 		}
 		#endregion
@@ -361,6 +366,7 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 			global::UPM_IPS.JCJAPGDRCDERAWebBD.RestriccionRangoShape.DecoratorsInitialized += RestriccionRangoShapeDecoratorMap.OnDecoratorsInitialized;
 			global::UPM_IPS.JCJAPGDRCDERAWebBD.RelacionShape.DecoratorsInitialized += RelacionShapeDecoratorMap.OnDecoratorsInitialized;
 			global::UPM_IPS.JCJAPGDRCDERAWebBD.CardinalidadShape.DecoratorsInitialized += CardinalidadShapeDecoratorMap.OnDecoratorsInitialized;
+			global::UPM_IPS.JCJAPGDRCDERAWebBD.EntidadRelacionConnector.DecoratorsInitialized += EntidadRelacionConnectorDecoratorMap.OnDecoratorsInitialized;
 		}
 		
 		/// <summary>
@@ -471,6 +477,116 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 			}
 		}
 		
+		/// <summary>
+		/// Class containing decorator path traversal methods for EntidadRelacionConnector.
+		/// </summary>
+		internal static partial class EntidadRelacionConnectorDecoratorMap
+		{
+			/// <summary>
+			/// Event handler called when decorator initialization is complete for EntidadRelacionConnector.  Adds decorator mappings for this shape or connector.
+			/// </summary>
+			public static void OnDecoratorsInitialized(object sender, global::System.EventArgs e)
+			{
+				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
+				DslDiagrams::AssociatedPropertyInfo propertyInfo;
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.JCJAPGDRCDERAWebBD.RelacionReferencesEntidad.cardinalidadDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "CardDecorator").AssociateValueWith(shape.Store, propertyInfo);
+			}
+		}
+		
+		#endregion
+		
+		#region Connect actions
+		private bool changingMouseAction;
+		private global::UPM_IPS.JCJAPGDRCDERAWebBD.ConectarRelacionEntidadConnectAction conectarRelacionEntidadConnectAction;
+		private global::UPM_IPS.JCJAPGDRCDERAWebBD.EntidadAtributoConectarConnectAction entidadAtributoConectarConnectAction;
+		/// <summary>
+		/// Virtual method to provide a filter when to select the mouse action
+		/// </summary>
+		/// <param name="activeView">Currently active view</param>
+		/// <param name="filter">filter string used to filter the toolbox items</param>
+		protected virtual bool SelectedToolboxItemSupportsFilterString(DslDiagrams::DiagramView activeView, string filter)
+		{
+			return activeView.SelectedToolboxItemSupportsFilterString(filter);
+		}
+		/// <summary>
+		/// Override to provide the right mouse action when trying
+		/// to create links on the diagram
+		/// </summary>
+		/// <param name="pointArgs"></param>
+		public override void OnViewMouseEnter(DslDiagrams::DiagramPointEventArgs pointArgs)
+		{
+			if (pointArgs  == null) throw new global::System.ArgumentNullException("pointArgs");
+		
+			DslDiagrams::DiagramView activeView = this.ActiveDiagramView;
+			if(activeView != null)
+			{
+				DslDiagrams::MouseAction action = null;
+				if (SelectedToolboxItemSupportsFilterString(activeView, global::UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDToolboxHelper.ConectarRelacionEntidadFilterString))
+				{
+					if (this.conectarRelacionEntidadConnectAction == null)
+					{
+						this.conectarRelacionEntidadConnectAction = new global::UPM_IPS.JCJAPGDRCDERAWebBD.ConectarRelacionEntidadConnectAction(this);
+						this.conectarRelacionEntidadConnectAction.MouseActionDeactivated += new DslDiagrams::MouseAction.MouseActionDeactivatedEventHandler(OnConnectActionDeactivated);
+					}
+					action = this.conectarRelacionEntidadConnectAction;
+				} 
+				else if (SelectedToolboxItemSupportsFilterString(activeView, global::UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDToolboxHelper.EntidadAtributoConectarFilterString))
+				{
+					if (this.entidadAtributoConectarConnectAction == null)
+					{
+						this.entidadAtributoConectarConnectAction = new global::UPM_IPS.JCJAPGDRCDERAWebBD.EntidadAtributoConectarConnectAction(this);
+						this.entidadAtributoConectarConnectAction.MouseActionDeactivated += new DslDiagrams::MouseAction.MouseActionDeactivatedEventHandler(OnConnectActionDeactivated);
+					}
+					action = this.entidadAtributoConectarConnectAction;
+				} 
+				else
+				{
+					action = null;
+				}
+				
+				if (pointArgs.DiagramClientView.ActiveMouseAction != action)
+				{
+					try
+					{
+						this.changingMouseAction = true;
+						pointArgs.DiagramClientView.ActiveMouseAction = action;
+					}
+					finally
+					{
+						this.changingMouseAction = false;
+					}
+				}
+			}
+		}
+		
+		/// <summary>
+		/// Snap toolbox selection back to regular pointer after using a custom connect action.
+		/// </summary>
+		private void OnConnectActionDeactivated(object sender, DslDiagrams::DiagramEventArgs e)
+		{
+			OnMouseActionDeactivated();
+		}
+		
+		/// <summary>
+		/// Overridable method to manage the mouse deactivation. The default implementation snap stoolbox selection back to regular pointer 
+		/// after using a custom connect action.
+		/// </summary>
+		protected virtual void OnMouseActionDeactivated()
+		{
+			DslDiagrams::DiagramView activeView = this.ActiveDiagramView;
+		
+			if (activeView != null && activeView.Toolbox != null)
+			{
+				// If we're not changing mouse action due to changing toolbox selection change,
+				// reset toolbox selection.
+				if (!this.changingMouseAction)
+				{
+					activeView.Toolbox.SelectedToolboxItemUsed();
+				}
+			}
+		}
 		#endregion
 		
 		/// <summary>
@@ -482,6 +598,16 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 			{
 				if(disposing)
 				{
+					if(this.conectarRelacionEntidadConnectAction != null)
+					{
+						this.conectarRelacionEntidadConnectAction.Dispose();
+						this.conectarRelacionEntidadConnectAction = null;
+					}
+					if(this.entidadAtributoConectarConnectAction != null)
+					{
+						this.entidadAtributoConectarConnectAction.Dispose();
+						this.entidadAtributoConectarConnectAction = null;
+					}
 					this.UnsubscribeCompartmentItemsEvents();
 				}
 			}
@@ -548,6 +674,7 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.Cardinalidad), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.AtributoClave), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.EntidadHasAtributoEntidad), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.RelacionReferencesEntidad), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		internal sealed partial class FixUpDiagram : FixUpDiagramBase
 		{
 			[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
@@ -712,20 +839,20 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 				if ( result == null ) return null;
 				return result;
 			}
-			public static global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModel GetParentForAtributo( global::UPM_IPS.JCJAPGDRCDERAWebBD.Atributo root )
+			public static global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModel GetParentForAtributoClave( global::UPM_IPS.JCJAPGDRCDERAWebBD.AtributoClave root )
 			{
 				// Segments 0 and 1
-				global::UPM_IPS.JCJAPGDRCDERAWebBD.Entidad root2 = root.EntidadDeAtributo;
+				global::UPM_IPS.JCJAPGDRCDERAWebBD.Entidad root2 = root.EntidadDeAtributoClave;
 				if ( root2 == null ) return null;
 				// Segments 2 and 3
 				global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModel result = root2.DERAWebBDModel;
 				if ( result == null ) return null;
 				return result;
 			}
-			public static global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModel GetParentForAtributoClave( global::UPM_IPS.JCJAPGDRCDERAWebBD.AtributoClave root )
+			public static global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModel GetParentForAtributo( global::UPM_IPS.JCJAPGDRCDERAWebBD.Atributo root )
 			{
 				// Segments 0 and 1
-				global::UPM_IPS.JCJAPGDRCDERAWebBD.Entidad root2 = root.EntidadDeAtributoClave;
+				global::UPM_IPS.JCJAPGDRCDERAWebBD.Entidad root2 = root.EntidadDeAtributo;
 				if ( root2 == null ) return null;
 				// Segments 2 and 3
 				global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModel result = root2.DERAWebBDModel;
@@ -1031,9 +1158,33 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 		}
 	
 		/// <summary>
+		/// A rule which fires when data mapped to outer text decorators has changed,
+		/// so we can update the decorator host's bounds.
+		/// </summary>
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.RelacionReferencesEntidad), InitiallyDisabled=true)]
+		internal sealed class DecoratorPropertyChanged : DslModeling::ChangeRule
+		{
+			[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification = "Generated code.")]
+			public override void ElementPropertyChanged(DslModeling::ElementPropertyChangedEventArgs e)
+			{
+				if(e == null) throw new global::System.ArgumentNullException("e");
+				
+				if (e.DomainProperty.Id == global::UPM_IPS.JCJAPGDRCDERAWebBD.RelacionReferencesEntidad.cardinalidadDomainPropertyId)
+				{
+					DslDiagrams::Decorator decorator = global::UPM_IPS.JCJAPGDRCDERAWebBD.EntidadRelacionConnector.FindEntidadRelacionConnectorDecorator("CardDecorator");
+					if(decorator != null)
+					{
+						decorator.UpdateDecoratorHostShapes(e.ModelElement, global::UPM_IPS.JCJAPGDRCDERAWebBD.RelacionReferencesEntidad.DomainClassId);
+					}
+				}
+			}
+		}
+	
+		/// <summary>
 		/// Reroute a connector when the role players of its underlying relationship change
 		/// </summary>
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.EntidadHasAtributoEntidad), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.RelacionReferencesEntidad), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		internal sealed class ConnectorRolePlayerChanged : DslModeling::RolePlayerChangeRule
 		{
 			/// <summary>
