@@ -72,7 +72,6 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 				typeof(Relacion),
 				typeof(AtributoClave),
 				typeof(Cardinalidad),
-				typeof(Restriccion),
 				typeof(RestriccionRango),
 				typeof(RestriccionEnum),
 				typeof(EstiloPortal),
@@ -80,6 +79,7 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 				typeof(ValoresEnum),
 				typeof(EstiloPagina),
 				typeof(EstiloCampo),
+				typeof(Estilos),
 				typeof(DERAWebBDModelHasEntidades),
 				typeof(DERAWebBDModelHasRelaciones),
 				typeof(EntidadHasAtributoClave),
@@ -90,9 +90,29 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 				typeof(RestriccionEnumHasValoresEnum),
 				typeof(RelacionHasAtributoRelacion),
 				typeof(EntidadHasEstiloPagina),
-				typeof(AtributoHasRestriccion),
-				typeof(AtributoHasEstiloCampo),
+				typeof(AtributoHasRestriccionRango),
+				typeof(AtributoHasRestriccionEnum),
+				typeof(AtributoClaveHasEstiloCampo),
 				typeof(JCJAPGDRCDERAWebBDDiagram),
+				typeof(EntidadConectaAtributo),
+				typeof(EntidadShape),
+				typeof(RestriccionRangoShape),
+				typeof(ValoresEnumShape),
+				typeof(EstiloCampoShape),
+				typeof(EstiloPaginaShape),
+				typeof(CardinalidadShape),
+				typeof(EstiloPortalShape),
+				typeof(AtributoShape),
+				typeof(AtributoClaveShape),
+				typeof(RestriccionEnumShape),
+				typeof(RelacionShape),
+				typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.FixUpDiagram),
+				typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.ConnectorRolePlayerChanged),
+				typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.CompartmentItemAddRule),
+				typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.CompartmentItemDeleteRule),
+				typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.CompartmentItemRolePlayerChangeRule),
+				typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.CompartmentItemRolePlayerPositionChangeRule),
+				typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.CompartmentItemChangeRule),
 			};
 		}
 		/// <summary>
@@ -106,30 +126,25 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 			{
 				new DomainMemberInfo(typeof(Entidad), "Name", Entidad.NameDomainPropertyId, typeof(Entidad.NamePropertyHandler)),
 				new DomainMemberInfo(typeof(Relacion), "Name", Relacion.NameDomainPropertyId, typeof(Relacion.NamePropertyHandler)),
+				new DomainMemberInfo(typeof(AtributoClave), "Nombre", AtributoClave.NombreDomainPropertyId, typeof(AtributoClave.NombrePropertyHandler)),
+				new DomainMemberInfo(typeof(AtributoClave), "TipoDato", AtributoClave.TipoDatoDomainPropertyId, typeof(AtributoClave.TipoDatoPropertyHandler)),
 				new DomainMemberInfo(typeof(Cardinalidad), "Minimo", Cardinalidad.MinimoDomainPropertyId, typeof(Cardinalidad.MinimoPropertyHandler)),
 				new DomainMemberInfo(typeof(Cardinalidad), "Maximo", Cardinalidad.MaximoDomainPropertyId, typeof(Cardinalidad.MaximoPropertyHandler)),
+				new DomainMemberInfo(typeof(Cardinalidad), "Card", Cardinalidad.CardDomainPropertyId, typeof(Cardinalidad.CardPropertyHandler)),
 				new DomainMemberInfo(typeof(RestriccionRango), "ValorMinimo", RestriccionRango.ValorMinimoDomainPropertyId, typeof(RestriccionRango.ValorMinimoPropertyHandler)),
 				new DomainMemberInfo(typeof(RestriccionRango), "ValorMaximo", RestriccionRango.ValorMaximoDomainPropertyId, typeof(RestriccionRango.ValorMaximoPropertyHandler)),
+				new DomainMemberInfo(typeof(RestriccionRango), "Nombre", RestriccionRango.NombreDomainPropertyId, typeof(RestriccionRango.NombrePropertyHandler)),
 				new DomainMemberInfo(typeof(RestriccionEnum), "Valor", RestriccionEnum.ValorDomainPropertyId, typeof(RestriccionEnum.ValorPropertyHandler)),
+				new DomainMemberInfo(typeof(RestriccionEnum), "Nombre", RestriccionEnum.NombreDomainPropertyId, typeof(RestriccionEnum.NombrePropertyHandler)),
 				new DomainMemberInfo(typeof(EstiloPortal), "TextoTitulo", EstiloPortal.TextoTituloDomainPropertyId, typeof(EstiloPortal.TextoTituloPropertyHandler)),
-				new DomainMemberInfo(typeof(EstiloPortal), "ColorTitulo", EstiloPortal.ColorTituloDomainPropertyId, typeof(EstiloPortal.ColorTituloPropertyHandler)),
-				new DomainMemberInfo(typeof(EstiloPortal), "TamanioTitulo", EstiloPortal.TamanioTituloDomainPropertyId, typeof(EstiloPortal.TamanioTituloPropertyHandler)),
-				new DomainMemberInfo(typeof(EstiloPortal), "FuenteTitulo", EstiloPortal.FuenteTituloDomainPropertyId, typeof(EstiloPortal.FuenteTituloPropertyHandler)),
 				new DomainMemberInfo(typeof(EstiloPortal), "ColorFondo", EstiloPortal.ColorFondoDomainPropertyId, typeof(EstiloPortal.ColorFondoPropertyHandler)),
-				new DomainMemberInfo(typeof(EstiloPortal), "AlineacionTitulo", EstiloPortal.AlineacionTituloDomainPropertyId, typeof(EstiloPortal.AlineacionTituloPropertyHandler)),
-				new DomainMemberInfo(typeof(Atributo), "Name", Atributo.NameDomainPropertyId, typeof(Atributo.NamePropertyHandler)),
-				new DomainMemberInfo(typeof(Atributo), "Tipo", Atributo.TipoDomainPropertyId, typeof(Atributo.TipoPropertyHandler)),
 				new DomainMemberInfo(typeof(Atributo), "Nulo", Atributo.NuloDomainPropertyId, typeof(Atributo.NuloPropertyHandler)),
 				new DomainMemberInfo(typeof(ValoresEnum), "Valor", ValoresEnum.ValorDomainPropertyId, typeof(ValoresEnum.ValorPropertyHandler)),
-				new DomainMemberInfo(typeof(EstiloPagina), "ColorTitulo", EstiloPagina.ColorTituloDomainPropertyId, typeof(EstiloPagina.ColorTituloPropertyHandler)),
-				new DomainMemberInfo(typeof(EstiloPagina), "TamanioTitulo", EstiloPagina.TamanioTituloDomainPropertyId, typeof(EstiloPagina.TamanioTituloPropertyHandler)),
-				new DomainMemberInfo(typeof(EstiloPagina), "FuenteTitulo", EstiloPagina.FuenteTituloDomainPropertyId, typeof(EstiloPagina.FuenteTituloPropertyHandler)),
-				new DomainMemberInfo(typeof(EstiloPagina), "AlineacionTitulo", EstiloPagina.AlineacionTituloDomainPropertyId, typeof(EstiloPagina.AlineacionTituloPropertyHandler)),
-				new DomainMemberInfo(typeof(EstiloCampo), "ColorLetra", EstiloCampo.ColorLetraDomainPropertyId, typeof(EstiloCampo.ColorLetraPropertyHandler)),
-				new DomainMemberInfo(typeof(EstiloCampo), "FuenteLetra", EstiloCampo.FuenteLetraDomainPropertyId, typeof(EstiloCampo.FuenteLetraPropertyHandler)),
-				new DomainMemberInfo(typeof(EstiloCampo), "TamanioLetra", EstiloCampo.TamanioLetraDomainPropertyId, typeof(EstiloCampo.TamanioLetraPropertyHandler)),
-				new DomainMemberInfo(typeof(EstiloCampo), "AlineacionLetra", EstiloCampo.AlineacionLetraDomainPropertyId, typeof(EstiloCampo.AlineacionLetraPropertyHandler)),
 				new DomainMemberInfo(typeof(EstiloCampo), "TipoCampo", EstiloCampo.TipoCampoDomainPropertyId, typeof(EstiloCampo.TipoCampoPropertyHandler)),
+				new DomainMemberInfo(typeof(Estilos), "Color", Estilos.ColorDomainPropertyId, typeof(Estilos.ColorPropertyHandler)),
+				new DomainMemberInfo(typeof(Estilos), "Tamanio", Estilos.TamanioDomainPropertyId, typeof(Estilos.TamanioPropertyHandler)),
+				new DomainMemberInfo(typeof(Estilos), "Fuente", Estilos.FuenteDomainPropertyId, typeof(Estilos.FuentePropertyHandler)),
+				new DomainMemberInfo(typeof(Estilos), "Alineacion", Estilos.AlineacionDomainPropertyId, typeof(Estilos.AlineacionPropertyHandler)),
 			};
 		}
 		/// <summary>
@@ -160,10 +175,12 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 				new DomainRolePlayerInfo(typeof(RelacionHasAtributoRelacion), "Atributo", RelacionHasAtributoRelacion.AtributoDomainRoleId),
 				new DomainRolePlayerInfo(typeof(EntidadHasEstiloPagina), "Entidad", EntidadHasEstiloPagina.EntidadDomainRoleId),
 				new DomainRolePlayerInfo(typeof(EntidadHasEstiloPagina), "EstiloPagina", EntidadHasEstiloPagina.EstiloPaginaDomainRoleId),
-				new DomainRolePlayerInfo(typeof(AtributoHasRestriccion), "Atributo", AtributoHasRestriccion.AtributoDomainRoleId),
-				new DomainRolePlayerInfo(typeof(AtributoHasRestriccion), "Restriccion", AtributoHasRestriccion.RestriccionDomainRoleId),
-				new DomainRolePlayerInfo(typeof(AtributoHasEstiloCampo), "Atributo", AtributoHasEstiloCampo.AtributoDomainRoleId),
-				new DomainRolePlayerInfo(typeof(AtributoHasEstiloCampo), "EstiloCampo", AtributoHasEstiloCampo.EstiloCampoDomainRoleId),
+				new DomainRolePlayerInfo(typeof(AtributoHasRestriccionRango), "Atributo", AtributoHasRestriccionRango.AtributoDomainRoleId),
+				new DomainRolePlayerInfo(typeof(AtributoHasRestriccionRango), "RestriccionRango", AtributoHasRestriccionRango.RestriccionRangoDomainRoleId),
+				new DomainRolePlayerInfo(typeof(AtributoHasRestriccionEnum), "Atributo", AtributoHasRestriccionEnum.AtributoDomainRoleId),
+				new DomainRolePlayerInfo(typeof(AtributoHasRestriccionEnum), "RestriccionEnum", AtributoHasRestriccionEnum.RestriccionEnumDomainRoleId),
+				new DomainRolePlayerInfo(typeof(AtributoClaveHasEstiloCampo), "AtributoClave", AtributoClaveHasEstiloCampo.AtributoClaveDomainRoleId),
+				new DomainRolePlayerInfo(typeof(AtributoClaveHasEstiloCampo), "EstiloCampo", AtributoClaveHasEstiloCampo.EstiloCampoDomainRoleId),
 			};
 		}
 		#endregion
@@ -185,7 +202,7 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 	
 			if (createElementMap == null)
 			{
-				createElementMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(14);
+				createElementMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(26);
 				createElementMap.Add(typeof(DERAWebBDModel), 0);
 				createElementMap.Add(typeof(Entidad), 1);
 				createElementMap.Add(typeof(Relacion), 2);
@@ -199,6 +216,18 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 				createElementMap.Add(typeof(EstiloPagina), 10);
 				createElementMap.Add(typeof(EstiloCampo), 11);
 				createElementMap.Add(typeof(JCJAPGDRCDERAWebBDDiagram), 12);
+				createElementMap.Add(typeof(EntidadConectaAtributo), 13);
+				createElementMap.Add(typeof(EntidadShape), 14);
+				createElementMap.Add(typeof(RestriccionRangoShape), 15);
+				createElementMap.Add(typeof(ValoresEnumShape), 16);
+				createElementMap.Add(typeof(EstiloCampoShape), 17);
+				createElementMap.Add(typeof(EstiloPaginaShape), 18);
+				createElementMap.Add(typeof(CardinalidadShape), 19);
+				createElementMap.Add(typeof(EstiloPortalShape), 20);
+				createElementMap.Add(typeof(AtributoShape), 21);
+				createElementMap.Add(typeof(AtributoClaveShape), 22);
+				createElementMap.Add(typeof(RestriccionEnumShape), 23);
+				createElementMap.Add(typeof(RelacionShape), 24);
 			}
 			int index;
 			if (!createElementMap.TryGetValue(elementType, out index))
@@ -225,6 +254,18 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 				case 10: return new EstiloPagina(partition, propertyAssignments);
 				case 11: return new EstiloCampo(partition, propertyAssignments);
 				case 12: return new JCJAPGDRCDERAWebBDDiagram(partition, propertyAssignments);
+				case 13: return new EntidadConectaAtributo(partition, propertyAssignments);
+				case 14: return new EntidadShape(partition, propertyAssignments);
+				case 15: return new RestriccionRangoShape(partition, propertyAssignments);
+				case 16: return new ValoresEnumShape(partition, propertyAssignments);
+				case 17: return new EstiloCampoShape(partition, propertyAssignments);
+				case 18: return new EstiloPaginaShape(partition, propertyAssignments);
+				case 19: return new CardinalidadShape(partition, propertyAssignments);
+				case 20: return new EstiloPortalShape(partition, propertyAssignments);
+				case 21: return new AtributoShape(partition, propertyAssignments);
+				case 22: return new AtributoClaveShape(partition, propertyAssignments);
+				case 23: return new RestriccionEnumShape(partition, propertyAssignments);
+				case 24: return new RelacionShape(partition, propertyAssignments);
 				default: return null;
 			}
 		}
@@ -247,7 +288,7 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 	
 			if (createElementLinkMap == null)
 			{
-				createElementLinkMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(12);
+				createElementLinkMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(13);
 				createElementLinkMap.Add(typeof(DERAWebBDModelHasEntidades), 0);
 				createElementLinkMap.Add(typeof(DERAWebBDModelHasRelaciones), 1);
 				createElementLinkMap.Add(typeof(EntidadHasAtributoClave), 2);
@@ -258,8 +299,9 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 				createElementLinkMap.Add(typeof(RestriccionEnumHasValoresEnum), 7);
 				createElementLinkMap.Add(typeof(RelacionHasAtributoRelacion), 8);
 				createElementLinkMap.Add(typeof(EntidadHasEstiloPagina), 9);
-				createElementLinkMap.Add(typeof(AtributoHasRestriccion), 10);
-				createElementLinkMap.Add(typeof(AtributoHasEstiloCampo), 11);
+				createElementLinkMap.Add(typeof(AtributoHasRestriccionRango), 10);
+				createElementLinkMap.Add(typeof(AtributoHasRestriccionEnum), 11);
+				createElementLinkMap.Add(typeof(AtributoClaveHasEstiloCampo), 12);
 			}
 			int index;
 			if (!createElementLinkMap.TryGetValue(elementLinkType, out index))
@@ -284,8 +326,9 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 				case 7: return new RestriccionEnumHasValoresEnum(partition, roleAssignments, propertyAssignments);
 				case 8: return new RelacionHasAtributoRelacion(partition, roleAssignments, propertyAssignments);
 				case 9: return new EntidadHasEstiloPagina(partition, roleAssignments, propertyAssignments);
-				case 10: return new AtributoHasRestriccion(partition, roleAssignments, propertyAssignments);
-				case 11: return new AtributoHasEstiloCampo(partition, roleAssignments, propertyAssignments);
+				case 10: return new AtributoHasRestriccionRango(partition, roleAssignments, propertyAssignments);
+				case 11: return new AtributoHasRestriccionEnum(partition, roleAssignments, propertyAssignments);
+				case 12: return new AtributoClaveHasEstiloCampo(partition, roleAssignments, propertyAssignments);
 				default: return null;
 			}
 		}
@@ -366,6 +409,7 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 					DslModeling::ChainingElementVisitorFilter copyFilter = new DslModeling::ChainingElementVisitorFilter();
 					copyFilter.AddFilter(new JCJAPGDRCDERAWebBDCopyClosure());
 					copyFilter.AddFilter(new DslModeling::CoreCopyClosure());
+					copyFilter.AddFilter(new DslDiagrams::CoreDesignSurfaceCopyClosure());
 					
 					JCJAPGDRCDERAWebBDDomainModel.copyClosure = copyFilter;
 				}
@@ -385,6 +429,7 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 					DslModeling::ChainingElementVisitorFilter removeFilter = new DslModeling::ChainingElementVisitorFilter();
 					removeFilter.AddFilter(new JCJAPGDRCDERAWebBDDeleteClosure());
 					removeFilter.AddFilter(new DslModeling::CoreDeleteClosure());
+					removeFilter.AddFilter(new DslDiagrams::CoreDesignSurfaceDeleteClosure());
 		
 					JCJAPGDRCDERAWebBDDomainModel.removeClosure = removeFilter;
 				}
@@ -403,6 +448,13 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 			if(store == null) throw new global::System.ArgumentNullException("store");
 			
 			DslModeling::RuleManager ruleManager = store.RuleManager;
+			ruleManager.EnableRule(typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.FixUpDiagram));
+			ruleManager.EnableRule(typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.ConnectorRolePlayerChanged));
+			ruleManager.EnableRule(typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.CompartmentItemAddRule));
+			ruleManager.EnableRule(typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.CompartmentItemDeleteRule));
+			ruleManager.EnableRule(typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.CompartmentItemRolePlayerChangeRule));
+			ruleManager.EnableRule(typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.CompartmentItemRolePlayerPositionChangeRule));
+			ruleManager.EnableRule(typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.CompartmentItemChangeRule));
 		}
 		
 		/// <summary>
@@ -413,6 +465,13 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 			if(store == null) throw new global::System.ArgumentNullException("store");
 			
 			DslModeling::RuleManager ruleManager = store.RuleManager;
+			ruleManager.DisableRule(typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.FixUpDiagram));
+			ruleManager.DisableRule(typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.ConnectorRolePlayerChanged));
+			ruleManager.DisableRule(typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.CompartmentItemAddRule));
+			ruleManager.DisableRule(typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.CompartmentItemDeleteRule));
+			ruleManager.DisableRule(typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.CompartmentItemRolePlayerChangeRule));
+			ruleManager.DisableRule(typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.CompartmentItemRolePlayerPositionChangeRule));
+			ruleManager.DisableRule(typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.CompartmentItemChangeRule));
 		}
 		#endregion
 	}
@@ -457,8 +516,9 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 			DomainRoles.Add(global::UPM_IPS.JCJAPGDRCDERAWebBD.RestriccionEnumHasValoresEnum.ValoresEnumDomainRoleId, true);
 			DomainRoles.Add(global::UPM_IPS.JCJAPGDRCDERAWebBD.RelacionHasAtributoRelacion.AtributoDomainRoleId, true);
 			DomainRoles.Add(global::UPM_IPS.JCJAPGDRCDERAWebBD.EntidadHasEstiloPagina.EstiloPaginaDomainRoleId, true);
-			DomainRoles.Add(global::UPM_IPS.JCJAPGDRCDERAWebBD.AtributoHasRestriccion.RestriccionDomainRoleId, true);
-			DomainRoles.Add(global::UPM_IPS.JCJAPGDRCDERAWebBD.AtributoHasEstiloCampo.EstiloCampoDomainRoleId, true);
+			DomainRoles.Add(global::UPM_IPS.JCJAPGDRCDERAWebBD.AtributoHasRestriccionRango.RestriccionRangoDomainRoleId, true);
+			DomainRoles.Add(global::UPM_IPS.JCJAPGDRCDERAWebBD.AtributoHasRestriccionEnum.RestriccionEnumDomainRoleId, true);
+			DomainRoles.Add(global::UPM_IPS.JCJAPGDRCDERAWebBD.AtributoClaveHasEstiloCampo.EstiloCampoDomainRoleId, true);
 			#endregion
 		}
 		/// <summary>

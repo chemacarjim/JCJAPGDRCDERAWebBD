@@ -86,6 +86,410 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 			}
 		}
 		#endregion
+		#region Compartment support
+		/// <summary>
+		/// Whether compartment items change events are subscribed to.
+		/// </summary>
+		private bool subscribedCompartmentItemsEvents;
+		
+		/// <summary>
+		/// Subscribe to events fired when compartment items changes.
+		/// </summary>
+		public void SubscribeCompartmentItemsEvents()
+		{
+			if (!subscribedCompartmentItemsEvents && this.Store != null)
+			{
+				subscribedCompartmentItemsEvents = true;
+				this.Store.EventManagerDirectory.ElementAdded.Add(new global::System.EventHandler<DslModeling::ElementAddedEventArgs>(this.CompartmentItemAdded));
+				this.Store.EventManagerDirectory.ElementDeleted.Add(new global::System.EventHandler<DslModeling::ElementDeletedEventArgs>(this.CompartmentItemDeleted));
+				this.Store.EventManagerDirectory.ElementPropertyChanged.Add(new global::System.EventHandler<DslModeling::ElementPropertyChangedEventArgs>(this.CompartmentItemPropertyChanged));
+				this.Store.EventManagerDirectory.RolePlayerChanged.Add(new global::System.EventHandler<DslModeling::RolePlayerChangedEventArgs>(this.CompartmentItemRolePlayerChanged));
+				this.Store.EventManagerDirectory.RolePlayerOrderChanged.Add(new global::System.EventHandler<DslModeling::RolePlayerOrderChangedEventArgs>(this.CompartmentItemRolePlayerOrderChanged));
+			}
+		}
+		
+		/// <summary>
+		/// Unsubscribe to events fired when compartment items changes.
+		/// </summary>
+		public void UnsubscribeCompartmentItemsEvents()
+		{
+			if (subscribedCompartmentItemsEvents)
+			{
+				this.Store.EventManagerDirectory.ElementAdded.Remove(new global::System.EventHandler<DslModeling::ElementAddedEventArgs>(this.CompartmentItemAdded));
+				this.Store.EventManagerDirectory.ElementDeleted.Remove(new global::System.EventHandler<DslModeling::ElementDeletedEventArgs>(this.CompartmentItemDeleted));
+				this.Store.EventManagerDirectory.ElementPropertyChanged.Remove(new global::System.EventHandler<DslModeling::ElementPropertyChangedEventArgs>(this.CompartmentItemPropertyChanged));
+				this.Store.EventManagerDirectory.RolePlayerChanged.Remove(new global::System.EventHandler<DslModeling::RolePlayerChangedEventArgs>(this.CompartmentItemRolePlayerChanged));
+				this.Store.EventManagerDirectory.RolePlayerOrderChanged.Remove(new global::System.EventHandler<DslModeling::RolePlayerOrderChangedEventArgs>(this.CompartmentItemRolePlayerOrderChanged));
+				subscribedCompartmentItemsEvents = false;
+			}
+		}
+		
+		#region Event handlers
+		/// <summary>
+		/// Event for element added.
+		/// </summary>
+		private void CompartmentItemAdded(object sender, DslModeling::ElementAddedEventArgs e)
+		{
+			// If in Undo, Redo or Rollback the compartment item rules are not run so we must refresh the compartment list at this point if required
+			bool repaintOnly = !e.ModelElement.Store.InUndoRedoOrRollback;
+			CompartmentItemAddRule.ElementAdded(e, repaintOnly);
+		}
+		/// <summary>
+		/// Event for element deleted.
+		/// </summary>
+		private void CompartmentItemDeleted(object sender, DslModeling::ElementDeletedEventArgs e)
+		{
+			bool repaintOnly = !e.ModelElement.Store.InUndoRedoOrRollback;
+			CompartmentItemDeleteRule.ElementDeleted(e, repaintOnly);
+		}
+		/// <summary>
+		/// Event for element property changed.
+		/// </summary>
+		private void CompartmentItemPropertyChanged(object sender, DslModeling::ElementPropertyChangedEventArgs e)
+		{
+			bool repaintOnly = !e.ModelElement.Store.InUndoRedoOrRollback;
+			CompartmentItemChangeRule.ElementPropertyChanged(e, repaintOnly);
+		}
+		/// <summary>
+		/// Event for role-player changed.
+		/// </summary>
+		private void CompartmentItemRolePlayerChanged(object sender, DslModeling::RolePlayerChangedEventArgs e)
+		{
+			bool repaintOnly = !e.ElementLink.Store.InUndoRedoOrRollback;
+			CompartmentItemRolePlayerChangeRule.RolePlayerChanged(e, repaintOnly);
+		}
+		/// <summary>
+		/// Event for role-player order changed.
+		/// </summary>
+		private void CompartmentItemRolePlayerOrderChanged(object sender, DslModeling::RolePlayerOrderChangedEventArgs e)
+		{
+			bool repaintOnly = !e.Link.Store.InUndoRedoOrRollback;
+			CompartmentItemRolePlayerPositionChangeRule.RolePlayerPositionChanged(e, repaintOnly);
+		}
+		#endregion
+		#endregion
+		#region Shape mapping
+		/// <summary>
+		/// Called during view fixup to ask the parent whether a shape should be created for the given child element.
+		/// </summary>
+		/// <remarks>
+		/// Always return true, since we assume there is only one diagram per model file for DSL scenarios.
+		/// </remarks>
+		protected override bool ShouldAddShapeForElement(DslModeling::ModelElement element)
+		{
+			return true;
+		}
+		
+		/// <summary>
+		/// Called during view fixup to configure the given child element, after it has been created.
+		/// </summary>
+		/// <remarks>
+		/// Custom code for choosing the shapes attached to either end of a connector is called from here.
+		/// </remarks>
+		protected override void OnChildConfiguring(DslDiagrams::ShapeElement child, bool createdDuringViewFixup)
+		{
+			DslDiagrams::NodeShape sourceShape;
+			DslDiagrams::NodeShape targetShape;
+			DslDiagrams::BinaryLinkShape connector = child as DslDiagrams::BinaryLinkShape;
+			if(connector == null)
+			{
+				base.OnChildConfiguring(child, createdDuringViewFixup);
+				return;
+			}
+			this.GetSourceAndTargetForConnector(connector, out sourceShape, out targetShape);
+			
+			global::System.Diagnostics.Debug.Assert(sourceShape != null && targetShape != null, "Unable to find source and target shapes for connector.");
+			connector.Connect(sourceShape, targetShape);
+		}
+		
+		/// <summary>
+		/// helper method to find the shapes for either end of a connector, including calling the user's custom code
+		/// </summary>
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
+		internal void GetSourceAndTargetForConnector(DslDiagrams::BinaryLinkShape connector, out DslDiagrams::NodeShape sourceShape, out DslDiagrams::NodeShape targetShape)
+		{
+			sourceShape = null;
+			targetShape = null;
+			
+			if (sourceShape == null || targetShape == null)
+			{
+				DslDiagrams::NodeShape[] endShapes = GetEndShapesForConnector(connector);
+				if(sourceShape == null)
+				{
+					sourceShape = endShapes[0];
+				}
+				if(targetShape == null)
+				{
+					targetShape = endShapes[1];
+				}
+			}
+		}
+		
+		/// <summary>
+		/// Helper method to find shapes for either end of a connector by looking for shapes associated with either end of the relationship mapped to the connector.
+		/// </summary>
+		private DslDiagrams::NodeShape[] GetEndShapesForConnector(DslDiagrams::BinaryLinkShape connector)
+		{
+			DslModeling::ElementLink link = connector.ModelElement as DslModeling::ElementLink;
+			DslDiagrams::NodeShape sourceShape = null, targetShape = null;
+			if (link != null)
+			{
+				global::System.Collections.ObjectModel.ReadOnlyCollection<DslModeling::ModelElement> linkedElements = link.LinkedElements;
+				if (linkedElements.Count == 2)
+				{
+					DslDiagrams::Diagram currentDiagram = this.Diagram;
+					DslModeling::LinkedElementCollection<DslDiagrams::PresentationElement> presentationElements = DslDiagrams::PresentationViewsSubject.GetPresentation(linkedElements[0]);
+					foreach (DslDiagrams::PresentationElement presentationElement in presentationElements)
+					{
+						DslDiagrams::NodeShape shape = presentationElement as DslDiagrams::NodeShape;
+						if (shape != null && shape.Diagram == currentDiagram)
+						{
+							sourceShape = shape;
+							break;
+						}
+					}
+					
+					presentationElements = DslDiagrams::PresentationViewsSubject.GetPresentation(linkedElements[1]);
+					foreach (DslDiagrams::PresentationElement presentationElement in presentationElements)
+					{
+						DslDiagrams::NodeShape shape = presentationElement as DslDiagrams::NodeShape;
+						if (shape != null && shape.Diagram == currentDiagram)
+						{
+							targetShape = shape;
+							break;
+						}
+					}
+		
+				}
+			}
+			
+			return new DslDiagrams::NodeShape[] { sourceShape, targetShape };
+		}
+		
+		/// <summary>
+		/// Creates a new shape for the given model element as part of view fixup
+		/// </summary>
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily", Justification = "Generated code.")]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Generated code.")]
+		protected override DslDiagrams::ShapeElement CreateChildShape(DslModeling::ModelElement element)
+		{
+			if(element is global::UPM_IPS.JCJAPGDRCDERAWebBD.EstiloCampo)
+			{
+				global::UPM_IPS.JCJAPGDRCDERAWebBD.EstiloCampoShape newShape = new global::UPM_IPS.JCJAPGDRCDERAWebBD.EstiloCampoShape(this.Partition);
+				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
+				return newShape;
+			}
+			if(element is global::UPM_IPS.JCJAPGDRCDERAWebBD.EstiloPagina)
+			{
+				global::UPM_IPS.JCJAPGDRCDERAWebBD.EstiloPaginaShape newShape = new global::UPM_IPS.JCJAPGDRCDERAWebBD.EstiloPaginaShape(this.Partition);
+				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
+				return newShape;
+			}
+			if(element is global::UPM_IPS.JCJAPGDRCDERAWebBD.EstiloPortal)
+			{
+				global::UPM_IPS.JCJAPGDRCDERAWebBD.EstiloPortalShape newShape = new global::UPM_IPS.JCJAPGDRCDERAWebBD.EstiloPortalShape(this.Partition);
+				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
+				return newShape;
+			}
+			if(element is global::UPM_IPS.JCJAPGDRCDERAWebBD.Atributo)
+			{
+				global::UPM_IPS.JCJAPGDRCDERAWebBD.AtributoShape newShape = new global::UPM_IPS.JCJAPGDRCDERAWebBD.AtributoShape(this.Partition);
+				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
+				return newShape;
+			}
+			if(element is global::UPM_IPS.JCJAPGDRCDERAWebBD.Entidad)
+			{
+				global::UPM_IPS.JCJAPGDRCDERAWebBD.EntidadShape newShape = new global::UPM_IPS.JCJAPGDRCDERAWebBD.EntidadShape(this.Partition);
+				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
+				return newShape;
+			}
+			if(element is global::UPM_IPS.JCJAPGDRCDERAWebBD.RestriccionEnum)
+			{
+				global::UPM_IPS.JCJAPGDRCDERAWebBD.RestriccionEnumShape newShape = new global::UPM_IPS.JCJAPGDRCDERAWebBD.RestriccionEnumShape(this.Partition);
+				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
+				return newShape;
+			}
+			if(element is global::UPM_IPS.JCJAPGDRCDERAWebBD.ValoresEnum)
+			{
+				global::UPM_IPS.JCJAPGDRCDERAWebBD.ValoresEnumShape newShape = new global::UPM_IPS.JCJAPGDRCDERAWebBD.ValoresEnumShape(this.Partition);
+				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
+				return newShape;
+			}
+			if(element is global::UPM_IPS.JCJAPGDRCDERAWebBD.RestriccionRango)
+			{
+				global::UPM_IPS.JCJAPGDRCDERAWebBD.RestriccionRangoShape newShape = new global::UPM_IPS.JCJAPGDRCDERAWebBD.RestriccionRangoShape(this.Partition);
+				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
+				return newShape;
+			}
+			if(element is global::UPM_IPS.JCJAPGDRCDERAWebBD.Relacion)
+			{
+				global::UPM_IPS.JCJAPGDRCDERAWebBD.RelacionShape newShape = new global::UPM_IPS.JCJAPGDRCDERAWebBD.RelacionShape(this.Partition);
+				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
+				return newShape;
+			}
+			if(element is global::UPM_IPS.JCJAPGDRCDERAWebBD.Cardinalidad)
+			{
+				global::UPM_IPS.JCJAPGDRCDERAWebBD.CardinalidadShape newShape = new global::UPM_IPS.JCJAPGDRCDERAWebBD.CardinalidadShape(this.Partition);
+				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
+				return newShape;
+			}
+			if(element is global::UPM_IPS.JCJAPGDRCDERAWebBD.AtributoClave)
+			{
+				global::UPM_IPS.JCJAPGDRCDERAWebBD.AtributoClaveShape newShape = new global::UPM_IPS.JCJAPGDRCDERAWebBD.AtributoClaveShape(this.Partition);
+				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
+				return newShape;
+			}
+			if(element is global::UPM_IPS.JCJAPGDRCDERAWebBD.EntidadHasAtributoEntidad)
+			{
+				global::UPM_IPS.JCJAPGDRCDERAWebBD.EntidadConectaAtributo newShape = new global::UPM_IPS.JCJAPGDRCDERAWebBD.EntidadConectaAtributo(this.Partition);
+				return newShape;
+			}
+			return base.CreateChildShape(element);
+		}
+		#endregion
+		#region Decorator mapping
+		/// <summary>
+		/// Initialize shape decorator mappings.  This is done here rather than in individual shapes because decorator maps
+		/// are defined per diagram type rather than per shape type.
+		/// </summary>
+		protected override void InitializeShapeFields(global::System.Collections.Generic.IList<DslDiagrams::ShapeField> shapeFields)
+		{
+			base.InitializeShapeFields(shapeFields);
+			global::UPM_IPS.JCJAPGDRCDERAWebBD.EntidadShape.DecoratorsInitialized += EntidadShapeDecoratorMap.OnDecoratorsInitialized;
+			global::UPM_IPS.JCJAPGDRCDERAWebBD.RestriccionEnumShape.DecoratorsInitialized += RestriccionEnumShapeDecoratorMap.OnDecoratorsInitialized;
+			global::UPM_IPS.JCJAPGDRCDERAWebBD.ValoresEnumShape.DecoratorsInitialized += ValoresEnumShapeDecoratorMap.OnDecoratorsInitialized;
+			global::UPM_IPS.JCJAPGDRCDERAWebBD.RestriccionRangoShape.DecoratorsInitialized += RestriccionRangoShapeDecoratorMap.OnDecoratorsInitialized;
+			global::UPM_IPS.JCJAPGDRCDERAWebBD.RelacionShape.DecoratorsInitialized += RelacionShapeDecoratorMap.OnDecoratorsInitialized;
+			global::UPM_IPS.JCJAPGDRCDERAWebBD.CardinalidadShape.DecoratorsInitialized += CardinalidadShapeDecoratorMap.OnDecoratorsInitialized;
+		}
+		
+		/// <summary>
+		/// Class containing decorator path traversal methods for EntidadShape.
+		/// </summary>
+		internal static partial class EntidadShapeDecoratorMap
+		{
+			/// <summary>
+			/// Event handler called when decorator initialization is complete for EntidadShape.  Adds decorator mappings for this shape or connector.
+			/// </summary>
+			public static void OnDecoratorsInitialized(object sender, global::System.EventArgs e)
+			{
+				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
+				DslDiagrams::AssociatedPropertyInfo propertyInfo;
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.JCJAPGDRCDERAWebBD.Entidad.NameDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "NameDecorator").AssociateValueWith(shape.Store, propertyInfo);
+			}
+		}
+		
+		/// <summary>
+		/// Class containing decorator path traversal methods for RestriccionEnumShape.
+		/// </summary>
+		internal static partial class RestriccionEnumShapeDecoratorMap
+		{
+			/// <summary>
+			/// Event handler called when decorator initialization is complete for RestriccionEnumShape.  Adds decorator mappings for this shape or connector.
+			/// </summary>
+			public static void OnDecoratorsInitialized(object sender, global::System.EventArgs e)
+			{
+				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
+				DslDiagrams::AssociatedPropertyInfo propertyInfo;
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.JCJAPGDRCDERAWebBD.RestriccionEnum.NombreDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "NameDecorator").AssociateValueWith(shape.Store, propertyInfo);
+			}
+		}
+		
+		/// <summary>
+		/// Class containing decorator path traversal methods for ValoresEnumShape.
+		/// </summary>
+		internal static partial class ValoresEnumShapeDecoratorMap
+		{
+			/// <summary>
+			/// Event handler called when decorator initialization is complete for ValoresEnumShape.  Adds decorator mappings for this shape or connector.
+			/// </summary>
+			public static void OnDecoratorsInitialized(object sender, global::System.EventArgs e)
+			{
+				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
+				DslDiagrams::AssociatedPropertyInfo propertyInfo;
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.JCJAPGDRCDERAWebBD.ValoresEnum.ValorDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "NameDecorator").AssociateValueWith(shape.Store, propertyInfo);
+			}
+		}
+		
+		/// <summary>
+		/// Class containing decorator path traversal methods for RestriccionRangoShape.
+		/// </summary>
+		internal static partial class RestriccionRangoShapeDecoratorMap
+		{
+			/// <summary>
+			/// Event handler called when decorator initialization is complete for RestriccionRangoShape.  Adds decorator mappings for this shape or connector.
+			/// </summary>
+			public static void OnDecoratorsInitialized(object sender, global::System.EventArgs e)
+			{
+				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
+				DslDiagrams::AssociatedPropertyInfo propertyInfo;
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.JCJAPGDRCDERAWebBD.RestriccionRango.NombreDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "NameDecorator").AssociateValueWith(shape.Store, propertyInfo);
+			}
+		}
+		
+		/// <summary>
+		/// Class containing decorator path traversal methods for RelacionShape.
+		/// </summary>
+		internal static partial class RelacionShapeDecoratorMap
+		{
+			/// <summary>
+			/// Event handler called when decorator initialization is complete for RelacionShape.  Adds decorator mappings for this shape or connector.
+			/// </summary>
+			public static void OnDecoratorsInitialized(object sender, global::System.EventArgs e)
+			{
+				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
+				DslDiagrams::AssociatedPropertyInfo propertyInfo;
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.JCJAPGDRCDERAWebBD.Relacion.NameDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "NameDecorator").AssociateValueWith(shape.Store, propertyInfo);
+			}
+		}
+		
+		/// <summary>
+		/// Class containing decorator path traversal methods for CardinalidadShape.
+		/// </summary>
+		internal static partial class CardinalidadShapeDecoratorMap
+		{
+			/// <summary>
+			/// Event handler called when decorator initialization is complete for CardinalidadShape.  Adds decorator mappings for this shape or connector.
+			/// </summary>
+			public static void OnDecoratorsInitialized(object sender, global::System.EventArgs e)
+			{
+				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
+				DslDiagrams::AssociatedPropertyInfo propertyInfo;
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.JCJAPGDRCDERAWebBD.Cardinalidad.CardDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "NameDecorator").AssociateValueWith(shape.Store, propertyInfo);
+			}
+		}
+		
+		#endregion
+		
+		/// <summary>
+		/// Dispose of connect actions.
+		/// </summary>
+		protected override void Dispose(bool disposing)
+		{
+			try
+			{
+				if(disposing)
+				{
+					this.UnsubscribeCompartmentItemsEvents();
+				}
+			}
+			finally
+			{
+				base.Dispose(disposing);
+			}
+		}
 		#region Constructors, domain class Id
 	
 		/// <summary>
@@ -117,4 +521,568 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 namespace UPM_IPS.JCJAPGDRCDERAWebBD
 {
 	
+		/// <summary>
+		/// Double derived implementation for the rule that initiates view fixup when an element that has an associated shape is added to the model.
+		/// This now enables the DSL author to everride the SkipFixUp() method 
+		/// </summary>
+		internal partial class FixUpDiagramBase : DslModeling::AddRule
+		{
+			protected virtual bool SkipFixup(DslModeling::ModelElement childElement)
+			{
+				return childElement.IsDeleted;
+			}
+		}
+	
+		/// <summary>
+		/// Rule that initiates view fixup when an element that has an associated shape is added to the model. 
+		/// </summary>
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.EstiloCampo), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.EstiloPagina), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.EstiloPortal), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.Atributo), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.Entidad), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.RestriccionEnum), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.ValoresEnum), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.RestriccionRango), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.Relacion), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.Cardinalidad), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.AtributoClave), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.EntidadHasAtributoEntidad), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		internal sealed partial class FixUpDiagram : FixUpDiagramBase
+		{
+			[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
+			public override void ElementAdded(DslModeling::ElementAddedEventArgs e)
+			{
+				if(e == null) throw new global::System.ArgumentNullException("e");
+			
+				DslModeling::ModelElement childElement = e.ModelElement;
+				if (this.SkipFixup(childElement))
+					return;
+				DslModeling::ModelElement parentElement;
+				if(childElement is DslModeling::ElementLink)
+				{
+					parentElement = GetParentForRelationship((DslModeling::ElementLink)childElement);
+				} else
+				if(childElement is global::UPM_IPS.JCJAPGDRCDERAWebBD.EstiloCampo)
+				{
+					parentElement = GetParentForEstiloCampo((global::UPM_IPS.JCJAPGDRCDERAWebBD.EstiloCampo)childElement);
+				} else
+				if(childElement is global::UPM_IPS.JCJAPGDRCDERAWebBD.EstiloPagina)
+				{
+					parentElement = GetParentForEstiloPagina((global::UPM_IPS.JCJAPGDRCDERAWebBD.EstiloPagina)childElement);
+				} else
+				if(childElement is global::UPM_IPS.JCJAPGDRCDERAWebBD.EstiloPortal)
+				{
+					parentElement = GetParentForEstiloPortal((global::UPM_IPS.JCJAPGDRCDERAWebBD.EstiloPortal)childElement);
+				} else
+				if(childElement is global::UPM_IPS.JCJAPGDRCDERAWebBD.Atributo)
+				{
+					parentElement = GetParentForAtributo((global::UPM_IPS.JCJAPGDRCDERAWebBD.Atributo)childElement);
+				} else
+				if(childElement is global::UPM_IPS.JCJAPGDRCDERAWebBD.Entidad)
+				{
+					parentElement = GetParentForEntidad((global::UPM_IPS.JCJAPGDRCDERAWebBD.Entidad)childElement);
+				} else
+				if(childElement is global::UPM_IPS.JCJAPGDRCDERAWebBD.RestriccionEnum)
+				{
+					parentElement = GetParentForRestriccionEnum((global::UPM_IPS.JCJAPGDRCDERAWebBD.RestriccionEnum)childElement);
+				} else
+				if(childElement is global::UPM_IPS.JCJAPGDRCDERAWebBD.ValoresEnum)
+				{
+					parentElement = GetParentForValoresEnum((global::UPM_IPS.JCJAPGDRCDERAWebBD.ValoresEnum)childElement);
+				} else
+				if(childElement is global::UPM_IPS.JCJAPGDRCDERAWebBD.RestriccionRango)
+				{
+					parentElement = GetParentForRestriccionRango((global::UPM_IPS.JCJAPGDRCDERAWebBD.RestriccionRango)childElement);
+				} else
+				if(childElement is global::UPM_IPS.JCJAPGDRCDERAWebBD.Relacion)
+				{
+					parentElement = GetParentForRelacion((global::UPM_IPS.JCJAPGDRCDERAWebBD.Relacion)childElement);
+				} else
+				if(childElement is global::UPM_IPS.JCJAPGDRCDERAWebBD.Cardinalidad)
+				{
+					parentElement = GetParentForCardinalidad((global::UPM_IPS.JCJAPGDRCDERAWebBD.Cardinalidad)childElement);
+				} else
+				if(childElement is global::UPM_IPS.JCJAPGDRCDERAWebBD.AtributoClave)
+				{
+					parentElement = GetParentForAtributoClave((global::UPM_IPS.JCJAPGDRCDERAWebBD.AtributoClave)childElement);
+				} else
+				{
+					parentElement = null;
+				}
+				
+				if(parentElement != null)
+				{
+					DslDiagrams::Diagram.FixUpDiagram(parentElement, childElement);
+				}
+			}
+			public static global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModel GetParentForEntidad( global::UPM_IPS.JCJAPGDRCDERAWebBD.Entidad root )
+			{
+				// Segments 0 and 1
+				global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModel result = root.DERAWebBDModel;
+				if ( result == null ) return null;
+				return result;
+			}
+			public static global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModel GetParentForRestriccionEnum( global::UPM_IPS.JCJAPGDRCDERAWebBD.RestriccionEnum root )
+			{
+				// Segments 0 and 1
+				global::UPM_IPS.JCJAPGDRCDERAWebBD.Atributo root2 = root.Atributo;
+				if ( root2 == null ) return null;
+				// Segments 2 and 3
+				global::UPM_IPS.JCJAPGDRCDERAWebBD.Entidad root4 = root2.EntidadDeAtributo;
+				if ( root4 == null ) return null;
+				// Segments 4 and 5
+				global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModel result = root4.DERAWebBDModel;
+				if ( result == null ) return null;
+				return result;
+			}
+			public static global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModel GetParentForValoresEnum( global::UPM_IPS.JCJAPGDRCDERAWebBD.ValoresEnum root )
+			{
+				// Segments 0 and 1
+				global::UPM_IPS.JCJAPGDRCDERAWebBD.RestriccionEnum root2 = root.RestriccionEnum;
+				if ( root2 == null ) return null;
+				// Segments 2 and 3
+				global::UPM_IPS.JCJAPGDRCDERAWebBD.Atributo root4 = root2.Atributo;
+				if ( root4 == null ) return null;
+				// Segments 4 and 5
+				global::UPM_IPS.JCJAPGDRCDERAWebBD.Entidad root6 = root4.EntidadDeAtributo;
+				if ( root6 == null ) return null;
+				// Segments 6 and 7
+				global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModel result = root6.DERAWebBDModel;
+				if ( result == null ) return null;
+				return result;
+			}
+			public static global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModel GetParentForRestriccionRango( global::UPM_IPS.JCJAPGDRCDERAWebBD.RestriccionRango root )
+			{
+				// Segments 0 and 1
+				global::UPM_IPS.JCJAPGDRCDERAWebBD.Atributo root2 = root.Atributo;
+				if ( root2 == null ) return null;
+				// Segments 2 and 3
+				global::UPM_IPS.JCJAPGDRCDERAWebBD.Entidad root4 = root2.EntidadDeAtributo;
+				if ( root4 == null ) return null;
+				// Segments 4 and 5
+				global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModel result = root4.DERAWebBDModel;
+				if ( result == null ) return null;
+				return result;
+			}
+			public static global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModel GetParentForEstiloCampo( global::UPM_IPS.JCJAPGDRCDERAWebBD.EstiloCampo root )
+			{
+				// Segments 0 and 1
+				global::UPM_IPS.JCJAPGDRCDERAWebBD.AtributoClave root2 = root.AtributoClave;
+				if ( root2 == null ) return null;
+				// Segments 2 and 3
+				global::UPM_IPS.JCJAPGDRCDERAWebBD.Entidad root4 = root2.EntidadDeAtributoClave;
+				if ( root4 == null ) return null;
+				// Segments 4 and 5
+				global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModel result = root4.DERAWebBDModel;
+				if ( result == null ) return null;
+				return result;
+			}
+			public static global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModel GetParentForEstiloPagina( global::UPM_IPS.JCJAPGDRCDERAWebBD.EstiloPagina root )
+			{
+				// Segments 0 and 1
+				global::UPM_IPS.JCJAPGDRCDERAWebBD.Entidad root2 = root.Entidad;
+				if ( root2 == null ) return null;
+				// Segments 2 and 3
+				global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModel result = root2.DERAWebBDModel;
+				if ( result == null ) return null;
+				return result;
+			}
+			public static global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModel GetParentForRelacion( global::UPM_IPS.JCJAPGDRCDERAWebBD.Relacion root )
+			{
+				// Segments 0 and 1
+				global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModel result = root.DERAWebBDModel;
+				if ( result == null ) return null;
+				return result;
+			}
+			public static global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModel GetParentForCardinalidad( global::UPM_IPS.JCJAPGDRCDERAWebBD.Cardinalidad root )
+			{
+				// Segments 0 and 1
+				global::UPM_IPS.JCJAPGDRCDERAWebBD.Relacion root2 = root.Relacion;
+				if ( root2 == null ) return null;
+				// Segments 2 and 3
+				global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModel result = root2.DERAWebBDModel;
+				if ( result == null ) return null;
+				return result;
+			}
+			public static global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModel GetParentForEstiloPortal( global::UPM_IPS.JCJAPGDRCDERAWebBD.EstiloPortal root )
+			{
+				// Segments 0 and 1
+				global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModel result = root.DERAWebBDModel;
+				if ( result == null ) return null;
+				return result;
+			}
+			public static global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModel GetParentForAtributo( global::UPM_IPS.JCJAPGDRCDERAWebBD.Atributo root )
+			{
+				// Segments 0 and 1
+				global::UPM_IPS.JCJAPGDRCDERAWebBD.Entidad root2 = root.EntidadDeAtributo;
+				if ( root2 == null ) return null;
+				// Segments 2 and 3
+				global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModel result = root2.DERAWebBDModel;
+				if ( result == null ) return null;
+				return result;
+			}
+			public static global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModel GetParentForAtributoClave( global::UPM_IPS.JCJAPGDRCDERAWebBD.AtributoClave root )
+			{
+				// Segments 0 and 1
+				global::UPM_IPS.JCJAPGDRCDERAWebBD.Entidad root2 = root.EntidadDeAtributoClave;
+				if ( root2 == null ) return null;
+				// Segments 2 and 3
+				global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModel result = root2.DERAWebBDModel;
+				if ( result == null ) return null;
+				return result;
+			}
+			private static DslModeling::ModelElement GetParentForRelationship(DslModeling::ElementLink elementLink)
+			{
+				global::System.Collections.ObjectModel.ReadOnlyCollection<DslModeling::ModelElement> linkedElements = elementLink.LinkedElements;
+	
+				if (linkedElements.Count == 2)
+				{
+					DslDiagrams::ShapeElement sourceShape = linkedElements[0] as DslDiagrams::ShapeElement;
+					DslDiagrams::ShapeElement targetShape = linkedElements[1] as DslDiagrams::ShapeElement;
+	
+					if(sourceShape == null)
+					{
+						DslModeling::LinkedElementCollection<DslDiagrams::PresentationElement> presentationElements = DslDiagrams::PresentationViewsSubject.GetPresentation(linkedElements[0]);
+						foreach (DslDiagrams::PresentationElement presentationElement in presentationElements)
+						{
+							DslDiagrams::ShapeElement shape = presentationElement as DslDiagrams::ShapeElement;
+							if (shape != null)
+							{
+								sourceShape = shape;
+								break;
+							}
+						}
+					}
+					
+					if(targetShape == null)
+					{
+						DslModeling::LinkedElementCollection<DslDiagrams::PresentationElement> presentationElements = DslDiagrams::PresentationViewsSubject.GetPresentation(linkedElements[1]);
+						foreach (DslDiagrams::PresentationElement presentationElement in presentationElements)
+						{
+							DslDiagrams::ShapeElement shape = presentationElement as DslDiagrams::ShapeElement;
+							if (shape != null)
+							{
+								targetShape = shape;
+								break;
+							}
+						}
+					}
+					
+					if(sourceShape == null || targetShape == null)
+					{
+						global::System.Diagnostics.Debug.Fail("Unable to find source and/or target shape for view fixup.");
+						return null;
+					}
+	
+					DslDiagrams::ShapeElement sourceParent = sourceShape.ParentShape;
+					DslDiagrams::ShapeElement targetParent = targetShape.ParentShape;
+	
+					while (sourceParent != targetParent && sourceParent != null)
+					{
+						DslDiagrams::ShapeElement curParent = targetParent;
+						while (sourceParent != curParent && curParent != null)
+						{
+							curParent = curParent.ParentShape;
+						}
+	
+						if(sourceParent == curParent)
+						{
+							break;
+						}
+						else
+						{
+							sourceParent = sourceParent.ParentShape;
+						}
+					}
+	
+					while (sourceParent != null)
+					{
+						// ensure that the parent can parent connectors (i.e., a diagram or a swimlane).
+						if(sourceParent is DslDiagrams::Diagram || sourceParent is DslDiagrams::SwimlaneShape)
+						{
+							break;
+						}
+						else
+						{
+							sourceParent = sourceParent.ParentShape;
+						}
+					}
+	
+					global::System.Diagnostics.Debug.Assert(sourceParent != null && sourceParent.ModelElement != null, "Unable to find common parent for view fixup.");
+					return sourceParent.ModelElement;
+				}
+	
+				return null;
+			}
+		}
+		
+		/// <summary>
+		/// Rule to update compartments when an item is added to the list
+		/// </summary>
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.RestriccionEnumHasValoresEnum), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
+		internal sealed class CompartmentItemAddRule : DslModeling::AddRule
+		{
+			/// <summary>
+			/// Called when an element is added. 
+			/// </summary>
+			/// <param name="e"></param>
+			public override void ElementAdded(DslModeling::ElementAddedEventArgs e)
+			{
+				ElementAdded(e, false);
+			}
+	
+			internal static void ElementAdded(DslModeling::ElementAddedEventArgs e, bool repaintOnly)
+			{
+				if(e==null) throw new global::System.ArgumentNullException("e");
+				if (e.ModelElement.IsDeleted)
+					return;
+				if(e.ModelElement is global::UPM_IPS.JCJAPGDRCDERAWebBD.RestriccionEnumHasValoresEnum)
+				{
+					global::System.Collections.IEnumerable elements = GetRestriccionEnumForRestriccionEnumShapeEnumValoresFromLastLink((global::UPM_IPS.JCJAPGDRCDERAWebBD.RestriccionEnumHasValoresEnum)e.ModelElement);
+					UpdateCompartments(elements, typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.RestriccionEnumShape), "EnumValores", repaintOnly);
+				}
+			}
+			
+			#region static DomainPath traversal methods to get the list of compartments to update
+			internal static global::System.Collections.ICollection GetRestriccionEnumForRestriccionEnumShapeEnumValoresFromLastLink(global::UPM_IPS.JCJAPGDRCDERAWebBD.RestriccionEnumHasValoresEnum root)
+			{
+				// Segment 0
+				global::UPM_IPS.JCJAPGDRCDERAWebBD.RestriccionEnum result = root.RestriccionEnum;
+				if ( result == null ) return new DslModeling::ModelElement[0];
+				return new DslModeling::ModelElement[] {result};
+			}
+			internal static global::System.Collections.ICollection GetRestriccionEnumForRestriccionEnumShapeEnumValores(global::UPM_IPS.JCJAPGDRCDERAWebBD.ValoresEnum root)
+			{
+				// Segments 1 and 0
+				global::UPM_IPS.JCJAPGDRCDERAWebBD.RestriccionEnum result = root.RestriccionEnum;
+				if ( result == null ) return new DslModeling::ModelElement[0];
+				return new DslModeling::ModelElement[] {result};
+			}
+			#endregion
+	
+			#region helper method to update compartments 
+			/// <summary>
+			/// Updates the compartments for the shapes associated to the given list of model elements
+			/// </summary>
+			/// <param name="elements">List of model elements</param>
+			/// <param name="shapeType">The type of shape that needs updating</param>
+			/// <param name="compartmentName">The name of the compartment to update</param>
+			/// <param name="repaintOnly">If true, the method will only invalidate the shape for a repaint, without re-initializing the shape.</param>
+			internal static void UpdateCompartments(global::System.Collections.IEnumerable elements, global::System.Type shapeType, string compartmentName, bool repaintOnly)
+			{
+				foreach (DslModeling::ModelElement element in elements)
+				{
+					DslModeling::LinkedElementCollection<DslDiagrams::PresentationElement> pels = DslDiagrams::PresentationViewsSubject.GetPresentation(element);
+					foreach (DslDiagrams::PresentationElement pel in pels)
+					{
+						DslDiagrams::CompartmentShape compartmentShape = pel as DslDiagrams::CompartmentShape;
+						if (compartmentShape != null && shapeType.IsAssignableFrom(compartmentShape.GetType()))
+						{
+							if (repaintOnly)
+							{
+								compartmentShape.Invalidate();
+							}
+							else
+							{
+								foreach(DslDiagrams::CompartmentMapping mapping in compartmentShape.GetCompartmentMappings())
+								{
+									if(mapping.CompartmentId==compartmentName)
+									{
+										mapping.InitializeCompartmentShape(compartmentShape);
+										break;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			#endregion
+		}
+		
+		/// <summary>
+		/// Rule to update compartments when an items is removed from the list
+		/// </summary>
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.RestriccionEnumHasValoresEnum), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
+		internal sealed class CompartmentItemDeleteRule : DslModeling::DeleteRule
+		{
+			/// <summary>
+			/// Called when an element is deleted
+			/// </summary>
+			/// <param name="e"></param>
+			public override void ElementDeleted(DslModeling::ElementDeletedEventArgs e)
+			{
+				ElementDeleted(e, false);
+			}
+			
+			internal static void ElementDeleted(DslModeling::ElementDeletedEventArgs e, bool repaintOnly)
+			{
+				if(e==null) throw new global::System.ArgumentNullException("e");
+				if(e.ModelElement is global::UPM_IPS.JCJAPGDRCDERAWebBD.RestriccionEnumHasValoresEnum)
+				{
+					global::System.Collections.ICollection elements = CompartmentItemAddRule.GetRestriccionEnumForRestriccionEnumShapeEnumValoresFromLastLink((global::UPM_IPS.JCJAPGDRCDERAWebBD.RestriccionEnumHasValoresEnum)e.ModelElement);
+					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.RestriccionEnumShape), "EnumValores", repaintOnly);
+				}
+			}
+		}
+		
+		/// <summary>
+		/// Rule to update compartments when the property on an item being displayed changes.
+		/// </summary>
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.ValoresEnum), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
+		internal sealed class CompartmentItemChangeRule : DslModeling::ChangeRule 
+		{
+			/// <summary>
+			/// Called when an element is changed
+			/// </summary>
+			/// <param name="e"></param>
+			public override void ElementPropertyChanged(DslModeling::ElementPropertyChangedEventArgs e)
+			{
+				ElementPropertyChanged(e, false);
+			}
+			
+			internal static void ElementPropertyChanged(DslModeling::ElementPropertyChangedEventArgs e, bool repaintOnly)
+			{
+				if(e==null) throw new global::System.ArgumentNullException("e");
+				if(e.ModelElement is global::UPM_IPS.JCJAPGDRCDERAWebBD.ValoresEnum && e.DomainProperty.Id == global::UPM_IPS.JCJAPGDRCDERAWebBD.ValoresEnum.ValorDomainPropertyId)
+				{
+					global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetRestriccionEnumForRestriccionEnumShapeEnumValores((global::UPM_IPS.JCJAPGDRCDERAWebBD.ValoresEnum)e.ModelElement);
+					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.RestriccionEnumShape), "EnumValores", repaintOnly);
+				}
+			}
+		}
+		
+		/// <summary>
+		/// Rule to update compartments when a roleplayer change happens
+		/// </summary>
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.RestriccionEnumHasValoresEnum), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
+		internal sealed class CompartmentItemRolePlayerChangeRule : DslModeling::RolePlayerChangeRule 
+		{
+			/// <summary>
+			/// Called when the roleplayer on a link changes.
+			/// </summary>
+			/// <param name="e"></param>
+			public override void RolePlayerChanged(DslModeling::RolePlayerChangedEventArgs e)
+			{
+				RolePlayerChanged(e, false);
+			}
+			
+			internal static void RolePlayerChanged(DslModeling::RolePlayerChangedEventArgs e, bool repaintOnly)
+			{
+				if(e==null) throw new global::System.ArgumentNullException("e");
+				if(typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.RestriccionEnumHasValoresEnum).IsAssignableFrom(e.DomainRelationship.ImplementationClass))
+				{
+					if(e.DomainRole.IsSource)
+					{
+						//global::System.Collections.IEnumerable oldElements = CompartmentItemAddRule.GetRestriccionEnumForRestriccionEnumShapeEnumValoresFromLastLink((global::UPM_IPS.JCJAPGDRCDERAWebBD.ValoresEnum)e.OldRolePlayer);
+						//foreach(DslModeling::ModelElement element in oldElements)
+						//{
+						//	DslModeling::LinkedElementCollection<DslDiagrams::PresentationElement> pels = DslDiagrams::PresentationViewsSubject.GetPresentation(element);
+						//	foreach(DslDiagrams::PresentationElement pel in pels)
+						//	{
+						//		global::UPM_IPS.JCJAPGDRCDERAWebBD.RestriccionEnumShape compartmentShape = pel as global::UPM_IPS.JCJAPGDRCDERAWebBD.RestriccionEnumShape;
+						//		if(compartmentShape != null)
+						//		{
+						//			compartmentShape.GetCompartmentMappings()[0].InitializeCompartmentShape(compartmentShape);
+						//		}
+						//	}
+						//}
+						
+						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetRestriccionEnumForRestriccionEnumShapeEnumValoresFromLastLink((global::UPM_IPS.JCJAPGDRCDERAWebBD.RestriccionEnumHasValoresEnum)e.ElementLink);
+						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.RestriccionEnumShape), "EnumValores", repaintOnly);
+					}
+					else 
+					{
+						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetRestriccionEnumForRestriccionEnumShapeEnumValores((global::UPM_IPS.JCJAPGDRCDERAWebBD.ValoresEnum)e.NewRolePlayer);
+						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.RestriccionEnumShape), "EnumValores", repaintOnly);
+					}
+				}
+			}
+		}
+	
+		/// <summary>
+		/// Rule to update compartments when the order of items in the list changes.
+		/// </summary>
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.RestriccionEnumHasValoresEnum), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
+		internal sealed class CompartmentItemRolePlayerPositionChangeRule : DslModeling::RolePlayerPositionChangeRule 
+		{
+			/// <summary>
+			/// Called when the order of a roleplayer in a relationship changes
+			/// </summary>
+			/// <param name="e"></param>
+			public override void RolePlayerPositionChanged(DslModeling::RolePlayerOrderChangedEventArgs e)
+			{
+				RolePlayerPositionChanged(e, false);
+			}
+			
+			internal static void RolePlayerPositionChanged(DslModeling::RolePlayerOrderChangedEventArgs e, bool repaintOnly)
+			{
+				if(e==null) throw new global::System.ArgumentNullException("e");
+				if(typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.RestriccionEnumHasValoresEnum).IsAssignableFrom(e.DomainRelationship.ImplementationClass))
+				{
+					if(!e.CounterpartDomainRole.IsSource)
+					{
+						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetRestriccionEnumForRestriccionEnumShapeEnumValores((global::UPM_IPS.JCJAPGDRCDERAWebBD.ValoresEnum)e.CounterpartRolePlayer);
+						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.RestriccionEnumShape), "EnumValores", repaintOnly);
+					}
+				}
+			}
+		}
+	
+		/// <summary>
+		/// Reroute a connector when the role players of its underlying relationship change
+		/// </summary>
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.EntidadHasAtributoEntidad), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		internal sealed class ConnectorRolePlayerChanged : DslModeling::RolePlayerChangeRule
+		{
+			/// <summary>
+			/// Reroute a connector when the role players of its underlying relationship change
+			/// </summary>
+			public override void RolePlayerChanged(DslModeling::RolePlayerChangedEventArgs e)
+			{
+				if (e == null) throw new global::System.ArgumentNullException("e");
+	
+				global::System.Collections.ObjectModel.ReadOnlyCollection<DslDiagrams::PresentationViewsSubject> connectorLinks = DslDiagrams::PresentationViewsSubject.GetLinksToPresentation(e.ElementLink);
+				foreach (DslDiagrams::PresentationViewsSubject connectorLink in connectorLinks)
+				{
+					// Fix up any binary link shapes attached to the element link.
+					DslDiagrams::BinaryLinkShape linkShape = connectorLink.Presentation as DslDiagrams::BinaryLinkShape;
+					if (linkShape != null)
+					{
+						global::UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDDiagram diagram = linkShape.Diagram as global::UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDDiagram;
+						if (diagram != null)
+						{
+							if (e.NewRolePlayer != null)
+							{
+								DslDiagrams::NodeShape fromShape;
+								DslDiagrams::NodeShape toShape;
+								diagram.GetSourceAndTargetForConnector(linkShape, out fromShape, out toShape);
+								if (fromShape != null && toShape != null)
+								{
+									if (!object.Equals(fromShape, linkShape.FromShape))
+									{
+										linkShape.FromShape = fromShape;
+									}
+									if (!object.Equals(linkShape.ToShape, toShape))
+									{
+										linkShape.ToShape = toShape;
+									}
+								}
+								else
+								{
+									// delete the connector if we cannot find an appropriate target shape.
+									linkShape.Delete();
+								}
+							}
+							else
+							{
+								// delete the connector if the new role player is null.
+								linkShape.Delete();
+							}
+						}
+					}
+				}
+			}
+		}
 	}
