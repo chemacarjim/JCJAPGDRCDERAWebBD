@@ -51,6 +51,10 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 		/// Toolbox item filter string used to identify ConectarRelacionEntidad connector tool.
 		/// </summary>
 		public const string ConectarRelacionEntidadFilterString = "ConectarRelacionEntidad.1.0";
+		/// <summary>
+		/// Toolbox item filter string used to identify EntidadAtributoTool connector tool.
+		/// </summary>
+		public const string EntidadAtributoToolFilterString = "EntidadAtributoTool.1.0";
 
 	
 		private global::System.Collections.Generic.Dictionary<string, DslDesign::ModelingToolboxItem> toolboxItemCache = new global::System.Collections.Generic.Dictionary<string, DslDesign::ModelingToolboxItem>();
@@ -98,7 +102,7 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 		{
 			get
 			{
-				return 5;
+				return 7;
 			}
 		}
 		
@@ -227,6 +231,40 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 						CreateElementToolPrototype(store, global::UPM_IPS.JCJAPGDRCDERAWebBD.Atributo.DomainClassId), // ElementGroupPrototype (data object) representing model element on the toolbox.
 						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
 						new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require) 
+						});
+					break;
+				case "UPM_IPS.JCJAPGDRCDERAWebBD.ClavePrimariaToolToolboxItem":
+					// Add ClavePrimariaTool shape tool.
+					result = new DslDesign::ModelingToolboxItem(
+						"UPM_IPS.JCJAPGDRCDERAWebBD.ClavePrimariaToolToolboxItem", // Unique identifier (non-localized) for the toolbox item.
+						6, // Position relative to other items in the same toolbox tab.
+						resourceManager.GetString("ClavePrimariaToolToolboxItem", resourceCulture), // Localized display name for the item.
+						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("ClavePrimariaToolToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.
+						"UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
+						resourceManager.GetString("JCJAPGDRCDERAWebBDToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
+						"ClavePrimariaTool", // F1 help keyword for the toolbox item.
+						resourceManager.GetString("ClavePrimariaToolToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
+						CreateElementToolPrototype(store, global::UPM_IPS.JCJAPGDRCDERAWebBD.AtributoClave.DomainClassId), // ElementGroupPrototype (data object) representing model element on the toolbox.
+						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
+						new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require) 
+						});
+					break;
+				case "UPM_IPS.JCJAPGDRCDERAWebBD.EntidadAtributoToolToolboxItem":
+
+					// Add EntidadAtributoTool connector tool.
+					result = new DslDesign::ModelingToolboxItem(
+						"UPM_IPS.JCJAPGDRCDERAWebBD.EntidadAtributoToolToolboxItem", // Unique identifier (non-localized) for the toolbox item.
+						7, // Position relative to other items in the same toolbox tab.
+						resourceManager.GetString("EntidadAtributoToolToolboxItem", resourceCulture), // Localized display name for the item.
+						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("EntidadAtributoToolToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.				
+						"UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
+						resourceManager.GetString("JCJAPGDRCDERAWebBDToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
+						"EntidadAtributoTool", // F1 help keyword for the toolbox item.
+						resourceManager.GetString("EntidadAtributoToolToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
+						null, // Connector toolbox items do not have an underlying data object.
+						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
+							new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require), 
+							new global::System.ComponentModel.ToolboxItemFilterAttribute(EntidadAtributoToolFilterString)
 						});
 					break;
 				default:

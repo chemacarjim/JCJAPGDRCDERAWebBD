@@ -142,7 +142,7 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 			classStyleSet.OverridePen(DslDiagrams::DiagramPens.ShapeOutline, outlinePen);
 			// Fill brush settings for this shape.
 			DslDiagrams::BrushSettings backgroundBrush = new DslDiagrams::BrushSettings();
-			backgroundBrush.Color = global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.Snow);
+			backgroundBrush.Color = global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.PowderBlue);
 			classStyleSet.OverrideBrush(DslDiagrams::DiagramBrushes.ShapeBackground, backgroundBrush);
 		
 			// Custom font styles
@@ -160,18 +160,7 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 		{
 			get
 			{
-				return true;
-			}
-		}
-		
-		/// <summary>
-		/// Indicates the direction of the gradient.
-		/// </summary>
-		public override global::System.Drawing.Drawing2D.LinearGradientMode BackgroundGradientMode
-		{
-			get
-			{
-				return global::System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+				return false;
 			}
 		}
 		#endregion
@@ -1479,6 +1468,11 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 		{
 			base.InitializeResources(classStyleSet);
 			
+			// Fill brush settings for this shape.
+			DslDiagrams::BrushSettings backgroundBrush = new DslDiagrams::BrushSettings();
+			backgroundBrush.Color = global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.LightGreen);
+			classStyleSet.OverrideBrush(DslDiagrams::DiagramBrushes.ShapeBackground, backgroundBrush);
+		
 			// Custom font styles
 			DslDiagrams::FontSettings fontSettings;
 			fontSettings = new DslDiagrams::FontSettings();
@@ -2089,16 +2083,21 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 		{
 			base.InitializeResources(classStyleSet);
 			
+			// Outline pen settings for this shape.
+			DslDiagrams::PenSettings outlinePen = new DslDiagrams::PenSettings();
+			outlinePen.Width = 0.01F;
+			classStyleSet.OverridePen(DslDiagrams::DiagramPens.ShapeOutline, outlinePen);
 			// Fill brush settings for this shape.
 			DslDiagrams::BrushSettings backgroundBrush = new DslDiagrams::BrushSettings();
-			backgroundBrush.Color = global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.Maroon);
+			backgroundBrush.Color = global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.LemonChiffon);
 			classStyleSet.OverrideBrush(DslDiagrams::DiagramBrushes.ShapeBackground, backgroundBrush);
 		
-			// Text brush settings for this shape.
-			DslDiagrams::BrushSettings textBrush = new DslDiagrams::BrushSettings();
-			textBrush.Color = global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.White);
-			classStyleSet.OverrideBrush(DslDiagrams::DiagramBrushes.ShapeText, textBrush);
-		
+			// Custom font styles
+			DslDiagrams::FontSettings fontSettings;
+			fontSettings = new DslDiagrams::FontSettings();
+			fontSettings.Style =  global::System.Drawing.FontStyle.Regular ;
+			fontSettings.Size = 14/72.0F;
+			classStyleSet.AddFont(new DslDiagrams::StyleSetResourceId(string.Empty, "ShapeTextRegular14"), DslDiagrams::DiagramFonts.ShapeText, fontSettings);
 		}
 		
 		/// <summary>
@@ -2126,6 +2125,7 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 			field1.AnchoringBehavior.MinimumHeightInLines = 1;
 			field1.AnchoringBehavior.MinimumWidthInCharacters = 1;
 			field1.DefaultAccessibleState = global::System.Windows.Forms.AccessibleStates.Invisible;
+			field1.DefaultFontId = new DslDiagrams::StyleSetResourceId(string.Empty, "ShapeTextRegular14");			
 			shapeFields.Add(field1);
 			
 		}
@@ -2196,15 +2196,15 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 namespace UPM_IPS.JCJAPGDRCDERAWebBD
 {
 	/// <summary>
-	/// DomainClass AtributoClaveShape
-	/// Description for UPM_IPS.JCJAPGDRCDERAWebBD.AtributoClaveShape
+	/// DomainClass AtrClaveShape
+	/// Description for UPM_IPS.JCJAPGDRCDERAWebBD.AtrClaveShape
 	/// </summary>
-	[DslDesign::DisplayNameResource("UPM_IPS.JCJAPGDRCDERAWebBD.AtributoClaveShape.DisplayName", typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDDomainModel), "UPM_IPS.JCJAPGDRCDERAWebBD.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("UPM_IPS.JCJAPGDRCDERAWebBD.AtributoClaveShape.Description", typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDDomainModel), "UPM_IPS.JCJAPGDRCDERAWebBD.GeneratedCode.DomainModelResx")]
+	[DslDesign::DisplayNameResource("UPM_IPS.JCJAPGDRCDERAWebBD.AtrClaveShape.DisplayName", typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDDomainModel), "UPM_IPS.JCJAPGDRCDERAWebBD.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("UPM_IPS.JCJAPGDRCDERAWebBD.AtrClaveShape.Description", typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDDomainModel), "UPM_IPS.JCJAPGDRCDERAWebBD.GeneratedCode.DomainModelResx")]
 	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDDomainModel))]
 	[global::System.CLSCompliant(true)]
-	[DslModeling::DomainObjectId("22bb9aef-376f-40ab-9531-728d6eaa1631")]
-	public partial class AtributoClaveShape : DslDiagrams::NodeShape
+	[DslModeling::DomainObjectId("e02fd87f-bf99-42a2-b46b-7d6ffb7bd477")]
+	public partial class AtrClaveShape : DslDiagrams::NodeShape
 	{
 		#region DiagramElement boilerplate
 		private static DslDiagrams::StyleSet classStyleSet;
@@ -2269,9 +2269,9 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 		}
 		
 		/// <summary>
-		/// Finds a decorator associated with AtributoClaveShape.
+		/// Finds a decorator associated with AtrClaveShape.
 		/// </summary>
-		public static DslDiagrams::Decorator FindAtributoClaveShapeDecorator(string decoratorName)
+		public static DslDiagrams::Decorator FindAtrClaveShapeDecorator(string decoratorName)
 		{	
 			if(decorators == null) return null;
 			return DslDiagrams::ShapeElement.FindDecorator(decorators, decoratorName);
@@ -2318,11 +2318,21 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 		{
 			base.InitializeResources(classStyleSet);
 			
+			// Outline pen settings for this shape.
+			DslDiagrams::PenSettings outlinePen = new DslDiagrams::PenSettings();
+			outlinePen.Width = 0.03F;
+			classStyleSet.OverridePen(DslDiagrams::DiagramPens.ShapeOutline, outlinePen);
 			// Fill brush settings for this shape.
 			DslDiagrams::BrushSettings backgroundBrush = new DslDiagrams::BrushSettings();
-			backgroundBrush.Color = global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.Tan);
+			backgroundBrush.Color = global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.Gold);
 			classStyleSet.OverrideBrush(DslDiagrams::DiagramBrushes.ShapeBackground, backgroundBrush);
 		
+			// Custom font styles
+			DslDiagrams::FontSettings fontSettings;
+			fontSettings = new DslDiagrams::FontSettings();
+			fontSettings.Style =  global::System.Drawing.FontStyle.Bold |  global::System.Drawing.FontStyle.Italic |  global::System.Drawing.FontStyle.Underline ;
+			fontSettings.Size = 14/72.0F;
+			classStyleSet.AddFont(new DslDiagrams::StyleSetResourceId(string.Empty, "ShapeTextBold, Italic, Underline14"), DslDiagrams::DiagramFonts.ShapeText, fontSettings);
 		}
 		
 		/// <summary>
@@ -2343,13 +2353,14 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 		protected override void InitializeShapeFields(global::System.Collections.Generic.IList<DslDiagrams::ShapeField> shapeFields)
 		{
 			base.InitializeShapeFields(shapeFields);
-			DslDiagrams::TextField field1 = new DslDiagrams::TextField("NameDecorator");
-			field1.DefaultText = global::UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDDomainModel.SingletonResourceManager.GetString("AtributoClaveShapeNameDecoratorDefaultText");
+			DslDiagrams::TextField field1 = new DslDiagrams::TextField("Namedecorator");
+			field1.DefaultText = global::UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDDomainModel.SingletonResourceManager.GetString("AtrClaveShapeNamedecoratorDefaultText");
 			field1.DefaultFocusable = true;
 			field1.DefaultAutoSize = true;
 			field1.AnchoringBehavior.MinimumHeightInLines = 1;
 			field1.AnchoringBehavior.MinimumWidthInCharacters = 1;
 			field1.DefaultAccessibleState = global::System.Windows.Forms.AccessibleStates.Invisible;
+			field1.DefaultFontId = new DslDiagrams::StyleSetResourceId(string.Empty, "ShapeTextBold, Italic, Underline14");			
 			shapeFields.Add(field1);
 			
 		}
@@ -2363,8 +2374,8 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 		{
 			base.InitializeDecorators(shapeFields, decorators);
 			
-			DslDiagrams::ShapeField field1 = DslDiagrams::ShapeElement.FindShapeField(shapeFields, "NameDecorator");
-			DslDiagrams::Decorator decorator1 = new DslDiagrams::ShapeDecorator(field1, DslDiagrams::ShapeDecoratorPosition.InnerTopLeft, DslDiagrams::PointD.Empty);
+			DslDiagrams::ShapeField field1 = DslDiagrams::ShapeElement.FindShapeField(shapeFields, "Namedecorator");
+			DslDiagrams::Decorator decorator1 = new DslDiagrams::ShapeDecorator(field1, DslDiagrams::ShapeDecoratorPosition.Center, DslDiagrams::PointD.Empty);
 			decorators.Add(decorator1);
 				
 		}
@@ -2392,15 +2403,15 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 		#region Constructors, domain class Id
 	
 		/// <summary>
-		/// AtributoClaveShape domain class Id.
+		/// AtrClaveShape domain class Id.
 		/// </summary>
-		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x22bb9aef, 0x376f, 0x40ab, 0x95, 0x31, 0x72, 0x8d, 0x6e, 0xaa, 0x16, 0x31);
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xe02fd87f, 0xbf99, 0x42a2, 0xb4, 0x6b, 0x7d, 0x6f, 0xfb, 0x7b, 0xd4, 0x77);
 		/// <summary>
 		/// Constructor
 		/// </summary>
 		/// <param name="store">Store where new element is to be created.</param>
 		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
-		public AtributoClaveShape(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
+		public AtrClaveShape(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
 			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
 		{
 		}
@@ -2410,7 +2421,7 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 		/// </summary>
 		/// <param name="partition">Partition where new element is to be created.</param>
 		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
-		public AtributoClaveShape(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
+		public AtrClaveShape(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
 			: base(partition, propertyAssignments)
 		{
 		}

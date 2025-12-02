@@ -70,6 +70,21 @@
               </xsd:sequence>
             </xsd:complexType>
           </xsd:element>
+          <!-- Relationship: DERAWebBDModelHasAtributoClave -->
+          <xsd:element name="atributoClave" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>Instances of DERAWebBDModelHasAtributoClave</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element ref="dERAWebBDModelHasAtributoClave" minOccurs="0" maxOccurs="unbounded">
+                  <xsd:annotation>
+                    <xsd:documentation>[Instance of DERAWebBDModelHasAtributoClave needs to be serialized in full-form]</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
         </xsd:sequence>
         <!-- Id -->
         <xsd:attribute name="Id" type="xsd:string">
@@ -120,6 +135,21 @@
                 <xsd:element ref="entidadHasEstiloPagina" minOccurs="0" maxOccurs="1">
                   <xsd:annotation>
                     <xsd:documentation>[Instance of EntidadHasEstiloPagina needs to be serialized in full-form]</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+          <!-- Relationship: EntidadReferencesAtributo -->
+          <xsd:element name="atributo" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>Instances of EntidadReferencesAtributo</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element ref="entidadReferencesAtributo" minOccurs="0" maxOccurs="unbounded">
+                  <xsd:annotation>
+                    <xsd:documentation>[Instance of EntidadReferencesAtributo needs to be serialized in full-form]</xsd:documentation>
                   </xsd:annotation>
                 </xsd:element>
               </xsd:sequence>
@@ -383,6 +413,8 @@
             <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
+        <!-- Property: Name -->
+        <xsd:attribute name="name" type="xsd:string" />
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
@@ -392,6 +424,40 @@
   <xsd:complexType name="AtributoMoniker">
     <xsd:annotation>
       <xsd:documentation>Moniker for Atributo instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- AtributoClave -->
+  <xsd:element name="atributoClave" type="AtributoClave" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="AtributoClave">
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: Name -->
+        <xsd:attribute name="name" type="xsd:string" />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- AtributoClave Moniker -->
+  <xsd:element name="atributoClaveMoniker" type="AtributoClaveMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="AtributoClaveMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for AtributoClave instance.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="core:ModelElementMoniker">
@@ -714,6 +780,86 @@
   <xsd:complexType name="DERAWebBDModelHasAtributoMoniker">
     <xsd:annotation>
       <xsd:documentation>Moniker for DERAWebBDModelHasAtributo instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- DERAWebBDModelHasAtributoClave -->
+  <xsd:element name="dERAWebBDModelHasAtributoClave" type="DERAWebBDModelHasAtributoClave" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="DERAWebBDModelHasAtributoClave">
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Target end AtributoClave -->
+          <xsd:element ref="atributoClave" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>[Target role-player]</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- DERAWebBDModelHasAtributoClave Moniker -->
+  <xsd:element name="dERAWebBDModelHasAtributoClaveMoniker" type="DERAWebBDModelHasAtributoClaveMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="DERAWebBDModelHasAtributoClaveMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for DERAWebBDModelHasAtributoClave instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- EntidadReferencesAtributo -->
+  <xsd:element name="entidadReferencesAtributo" type="EntidadReferencesAtributo" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="EntidadReferencesAtributo">
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Target end Atributo -->
+          <xsd:element ref="atributoMoniker" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>[Target role-player]</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- EntidadReferencesAtributo Moniker -->
+  <xsd:element name="entidadReferencesAtributoMoniker" type="EntidadReferencesAtributoMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="EntidadReferencesAtributoMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for EntidadReferencesAtributo instance.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="core:ModelElementMoniker">

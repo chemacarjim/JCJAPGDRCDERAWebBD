@@ -35,6 +35,14 @@
             <DomainPath>DERAWebBDModelHasAtributo.Atributo</DomainPath>
           </LinkCreationPaths>
         </ElementMergeDirective>
+        <ElementMergeDirective>
+          <Index>
+            <DomainClassMoniker Name="AtributoClave" />
+          </Index>
+          <LinkCreationPaths>
+            <DomainPath>DERAWebBDModelHasAtributoClave.AtributoClave</DomainPath>
+          </LinkCreationPaths>
+        </ElementMergeDirective>
       </ElementMergeDirectives>
     </DomainClass>
     <DomainClass Id="bfc2dbde-1007-4642-9ca2-459720911379" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.Entidad" Name="Entidad" DisplayName="Entidad" Namespace="UPM_IPS.JCJAPGDRCDERAWebBD">
@@ -140,7 +148,24 @@
         </DomainProperty>
       </Properties>
     </DomainClass>
-    <DomainClass Id="ad9ee7ff-c9eb-4d01-ac2d-12690b2f6c61" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.Atributo" Name="Atributo" DisplayName="Atributo" Namespace="UPM_IPS.JCJAPGDRCDERAWebBD" />
+    <DomainClass Id="ad9ee7ff-c9eb-4d01-ac2d-12690b2f6c61" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.Atributo" Name="Atributo" DisplayName="Atributo" Namespace="UPM_IPS.JCJAPGDRCDERAWebBD">
+      <Properties>
+        <DomainProperty Id="c6939c58-a001-4e21-bde0-d087a0883c59" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.Atributo.Name" Name="Name" DisplayName="Name">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+      </Properties>
+    </DomainClass>
+    <DomainClass Id="c312c662-0068-4278-9381-250ba852955e" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.AtributoClave" Name="AtributoClave" DisplayName="Atributo Clave" Namespace="UPM_IPS.JCJAPGDRCDERAWebBD">
+      <Properties>
+        <DomainProperty Id="fe5c5157-3ef0-47bc-8d84-78c15f546d8c" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.AtributoClave.Name" Name="Name" DisplayName="Name">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+      </Properties>
+    </DomainClass>
   </Classes>
   <Relationships>
     <DomainRelationship Id="bb3c3db7-9cfd-451a-9dc6-58332ef28fb3" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasEntidades" Name="DERAWebBDModelHasEntidades" DisplayName="DERAWeb BDModel Has Entidades" Namespace="UPM_IPS.JCJAPGDRCDERAWebBD" IsEmbedding="true">
@@ -278,6 +303,38 @@
         </DomainRole>
       </Target>
     </DomainRelationship>
+    <DomainRelationship Id="8488cdb5-7446-4a01-aff4-d4e59bc601f7" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasAtributoClave" Name="DERAWebBDModelHasAtributoClave" DisplayName="DERAWeb BDModel Has Atributo Clave" Namespace="UPM_IPS.JCJAPGDRCDERAWebBD" IsEmbedding="true">
+      <Source>
+        <DomainRole Id="f639fb13-5e79-4fa6-ae9a-00342f55c153" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasAtributoClave.DERAWebBDModel" Name="DERAWebBDModel" DisplayName="DERAWeb BDModel" PropertyName="AtributoClave" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Atributo Clave">
+          <RolePlayer>
+            <DomainClassMoniker Name="DERAWebBDModel" />
+          </RolePlayer>
+        </DomainRole>
+      </Source>
+      <Target>
+        <DomainRole Id="c5a7d119-a527-450c-aba1-fd25250e0927" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasAtributoClave.AtributoClave" Name="AtributoClave" DisplayName="Atributo Clave" PropertyName="DERAWebBDModel" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="DERAWeb BDModel">
+          <RolePlayer>
+            <DomainClassMoniker Name="AtributoClave" />
+          </RolePlayer>
+        </DomainRole>
+      </Target>
+    </DomainRelationship>
+    <DomainRelationship Id="e7a1e63b-4d0a-4852-939b-a2497251a1a8" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.EntidadReferencesAtributo" Name="EntidadReferencesAtributo" DisplayName="Entidad References Atributo" Namespace="UPM_IPS.JCJAPGDRCDERAWebBD">
+      <Source>
+        <DomainRole Id="23ee9abc-b73f-4e61-b6d5-ccc4fb52a2bb" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.EntidadReferencesAtributo.Entidad" Name="Entidad" DisplayName="Entidad" PropertyName="Atributo" PropertyDisplayName="Atributo">
+          <RolePlayer>
+            <DomainClassMoniker Name="Entidad" />
+          </RolePlayer>
+        </DomainRole>
+      </Source>
+      <Target>
+        <DomainRole Id="d15b4d5a-5f4c-47fc-b4fc-3333dee8e2be" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.EntidadReferencesAtributo.Atributo" Name="Atributo" DisplayName="Atributo" PropertyName="Entidad" PropertyDisplayName="Entidad">
+          <RolePlayer>
+            <DomainClassMoniker Name="Atributo" />
+          </RolePlayer>
+        </DomainRole>
+      </Target>
+    </DomainRelationship>
   </Relationships>
   <Types>
     <ExternalType Name="DateTime" Namespace="System" />
@@ -332,7 +389,7 @@
     </DomainEnumeration>
   </Types>
   <Shapes>
-    <GeometryShape Id="fffb1144-38ed-47ae-abe8-739809cf32a3" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.EntidadShape" Name="EntidadShape" DisplayName="Entidad Shape" Namespace="UPM_IPS.JCJAPGDRCDERAWebBD" FixedTooltipText="Entidad Shape" FillColor="Snow" InitialHeight="1" OutlineThickness="0.01" Geometry="Rectangle">
+    <GeometryShape Id="fffb1144-38ed-47ae-abe8-739809cf32a3" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.EntidadShape" Name="EntidadShape" DisplayName="Entidad Shape" Namespace="UPM_IPS.JCJAPGDRCDERAWebBD" FixedTooltipText="Entidad Shape" FillColor="PowderBlue" InitialHeight="1" OutlineThickness="0.01" FillGradientMode="None" Geometry="Rectangle">
       <ShapeHasDecorators Position="Center" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="NameDecorator" DisplayName="Name Decorator" DefaultText="NameDecorator" FontSize="12" />
       </ShapeHasDecorators>
@@ -355,7 +412,7 @@
     </GeometryShape>
     <GeometryShape Id="35a2ef65-8d9f-4084-8115-7ae4a843ab61" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.EstiloCampoShape" Name="EstiloCampoShape" DisplayName="Estilo Campo Shape" Namespace="UPM_IPS.JCJAPGDRCDERAWebBD" FixedTooltipText="Estilo Campo Shape" FillColor="OliveDrab" InitialHeight="1" Geometry="Circle" />
     <GeometryShape Id="4c783b62-720a-4a37-90f4-d57b94a9c203" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.EstiloPaginaShape" Name="EstiloPaginaShape" DisplayName="Estilo Pagina Shape" Namespace="UPM_IPS.JCJAPGDRCDERAWebBD" FixedTooltipText="Estilo Pagina Shape" FillColor="Yellow" InitialHeight="1" Geometry="Circle" />
-    <ImageShape Id="3a281757-6bd1-4275-a72d-b23e176ddfd7" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.RelacionShape" Name="RelacionShape" DisplayName="Relacion Shape" Namespace="UPM_IPS.JCJAPGDRCDERAWebBD" FixedTooltipText="Relacion Shape" InitialHeight="1" Image="Resources\rombo.png">
+    <ImageShape Id="3a281757-6bd1-4275-a72d-b23e176ddfd7" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.RelacionShape" Name="RelacionShape" DisplayName="Relacion Shape" Namespace="UPM_IPS.JCJAPGDRCDERAWebBD" FixedTooltipText="Relacion Shape" FillColor="LightGreen" InitialHeight="1" Image="Resources\rombo.png">
       <ShapeHasDecorators Position="Center" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="NameDecorator" DisplayName="Name Decorator" DefaultText="NameDecorator" FontSize="12" />
       </ShapeHasDecorators>
@@ -366,14 +423,14 @@
       </ShapeHasDecorators>
     </GeometryShape>
     <GeometryShape Id="3043f948-be34-467c-a0a5-fce0432f886f" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.EstiloPortalShape" Name="EstiloPortalShape" DisplayName="Estilo Portal Shape" Namespace="UPM_IPS.JCJAPGDRCDERAWebBD" FixedTooltipText="Estilo Portal Shape" InitialHeight="1" Geometry="RoundedRectangle" />
-    <GeometryShape Id="283e095c-d4ad-41f4-ab67-11921f189e85" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.AtributoShape" Name="AtributoShape" DisplayName="Atributo Shape" Namespace="UPM_IPS.JCJAPGDRCDERAWebBD" FixedTooltipText="Atributo Shape" FillColor="Transparent" InitialHeight="1" Geometry="Ellipse">
+    <GeometryShape Id="283e095c-d4ad-41f4-ab67-11921f189e85" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.AtributoShape" Name="AtributoShape" DisplayName="Atributo Shape" Namespace="UPM_IPS.JCJAPGDRCDERAWebBD" FixedTooltipText="Atributo Shape" FillColor="LemonChiffon" InitialHeight="1" OutlineThickness="0.01" Geometry="Ellipse">
       <ShapeHasDecorators Position="Center" HorizontalOffset="0" VerticalOffset="0">
-        <TextDecorator Name="NameDecorator" DisplayName="Name Decorator" DefaultText="NameDecorator" />
+        <TextDecorator Name="NameDecorator" DisplayName="Name Decorator" DefaultText="NameDecorator" FontSize="14" />
       </ShapeHasDecorators>
     </GeometryShape>
-    <GeometryShape Id="22bb9aef-376f-40ab-9531-728d6eaa1631" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.AtributoClaveShape" Name="AtributoClaveShape" DisplayName="Atributo Clave Shape" Namespace="UPM_IPS.JCJAPGDRCDERAWebBD" FixedTooltipText="Atributo Clave Shape" FillColor="Tan" InitialHeight="1" Geometry="Ellipse">
-      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
-        <TextDecorator Name="NameDecorator" DisplayName="Name Decorator" DefaultText="NameDecorator" />
+    <GeometryShape Id="e02fd87f-bf99-42a2-b46b-7d6ffb7bd477" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.AtrClaveShape" Name="AtrClaveShape" DisplayName="Atr Clave Shape" Namespace="UPM_IPS.JCJAPGDRCDERAWebBD" FixedTooltipText="Atr Clave Shape" FillColor="Gold" InitialHeight="1" OutlineThickness="0.03" Geometry="Ellipse">
+      <ShapeHasDecorators Position="Center" HorizontalOffset="0" VerticalOffset="0">
+        <TextDecorator Name="Namedecorator" DisplayName="Namedecorator" DefaultText="Namedecorator" FontStyle="Bold, Italic, Underline" FontSize="14" />
       </ShapeHasDecorators>
     </GeometryShape>
   </Shapes>
@@ -402,6 +459,9 @@
           <XmlRelationshipData UseFullForm="true" RoleElementName="atributo">
             <DomainRelationshipMoniker Name="DERAWebBDModelHasAtributo" />
           </XmlRelationshipData>
+          <XmlRelationshipData UseFullForm="true" RoleElementName="atributoClave">
+            <DomainRelationshipMoniker Name="DERAWebBDModelHasAtributoClave" />
+          </XmlRelationshipData>
         </ElementData>
       </XmlClassData>
       <XmlClassData TypeName="JCJAPGDRCDERAWebBDDiagram" MonikerAttributeName="" SerializeId="true" MonikerElementName="jCJAPGDRCDERAWebBDDiagramMoniker" ElementName="jCJAPGDRCDERAWebBDDiagram" MonikerTypeName="JCJAPGDRCDERAWebBDDiagramMoniker">
@@ -415,6 +475,9 @@
           </XmlPropertyData>
           <XmlRelationshipData UseFullForm="true" RoleElementName="estiloPagina">
             <DomainRelationshipMoniker Name="EntidadHasEstiloPagina" />
+          </XmlRelationshipData>
+          <XmlRelationshipData UseFullForm="true" RoleElementName="atributo">
+            <DomainRelationshipMoniker Name="EntidadReferencesAtributo" />
           </XmlRelationshipData>
         </ElementData>
       </XmlClassData>
@@ -531,9 +594,6 @@
       <XmlClassData TypeName="AtributoShape" MonikerAttributeName="" SerializeId="true" MonikerElementName="atributoShapeMoniker" ElementName="atributoShape" MonikerTypeName="AtributoShapeMoniker">
         <GeometryShapeMoniker Name="AtributoShape" />
       </XmlClassData>
-      <XmlClassData TypeName="AtributoClaveShape" MonikerAttributeName="" SerializeId="true" MonikerElementName="atributoClaveShapeMoniker" ElementName="atributoClaveShape" MonikerTypeName="AtributoClaveShapeMoniker">
-        <GeometryShapeMoniker Name="AtributoClaveShape" />
-      </XmlClassData>
       <XmlClassData TypeName="RelacionReferencesEntidad" MonikerAttributeName="" SerializeId="true" MonikerElementName="relacionReferencesEntidadMoniker" ElementName="relacionReferencesEntidad" MonikerTypeName="RelacionReferencesEntidadMoniker">
         <DomainRelationshipMoniker Name="RelacionReferencesEntidad" />
         <ElementData>
@@ -547,9 +607,31 @@
       </XmlClassData>
       <XmlClassData TypeName="Atributo" MonikerAttributeName="" SerializeId="true" MonikerElementName="atributoMoniker" ElementName="atributo" MonikerTypeName="AtributoMoniker">
         <DomainClassMoniker Name="Atributo" />
+        <ElementData>
+          <XmlPropertyData XmlName="name">
+            <DomainPropertyMoniker Name="Atributo/Name" />
+          </XmlPropertyData>
+        </ElementData>
       </XmlClassData>
       <XmlClassData TypeName="DERAWebBDModelHasAtributo" MonikerAttributeName="" SerializeId="true" MonikerElementName="dERAWebBDModelHasAtributoMoniker" ElementName="dERAWebBDModelHasAtributo" MonikerTypeName="DERAWebBDModelHasAtributoMoniker">
         <DomainRelationshipMoniker Name="DERAWebBDModelHasAtributo" />
+      </XmlClassData>
+      <XmlClassData TypeName="AtributoClave" MonikerAttributeName="" SerializeId="true" MonikerElementName="atributoClaveMoniker" ElementName="atributoClave" MonikerTypeName="AtributoClaveMoniker">
+        <DomainClassMoniker Name="AtributoClave" />
+        <ElementData>
+          <XmlPropertyData XmlName="name">
+            <DomainPropertyMoniker Name="AtributoClave/Name" />
+          </XmlPropertyData>
+        </ElementData>
+      </XmlClassData>
+      <XmlClassData TypeName="AtrClaveShape" MonikerAttributeName="" SerializeId="true" MonikerElementName="atrClaveShapeMoniker" ElementName="atrClaveShape" MonikerTypeName="AtrClaveShapeMoniker">
+        <GeometryShapeMoniker Name="AtrClaveShape" />
+      </XmlClassData>
+      <XmlClassData TypeName="DERAWebBDModelHasAtributoClave" MonikerAttributeName="" SerializeId="true" MonikerElementName="dERAWebBDModelHasAtributoClaveMoniker" ElementName="dERAWebBDModelHasAtributoClave" MonikerTypeName="DERAWebBDModelHasAtributoClaveMoniker">
+        <DomainRelationshipMoniker Name="DERAWebBDModelHasAtributoClave" />
+      </XmlClassData>
+      <XmlClassData TypeName="EntidadReferencesAtributo" MonikerAttributeName="" SerializeId="true" MonikerElementName="entidadReferencesAtributoMoniker" ElementName="entidadReferencesAtributo" MonikerTypeName="EntidadReferencesAtributoMoniker">
+        <DomainRelationshipMoniker Name="EntidadReferencesAtributo" />
       </XmlClassData>
     </ClassData>
   </XmlSerializationBehavior>
@@ -588,6 +670,25 @@
           <RolePlayerConnectDirective>
             <AcceptingClass>
               <DomainClassMoniker Name="Entidad" />
+            </AcceptingClass>
+          </RolePlayerConnectDirective>
+        </TargetDirectives>
+      </LinkConnectDirective>
+    </ConnectionBuilder>
+    <ConnectionBuilder Name="EntidadReferencesAtributoBuilder">
+      <LinkConnectDirective>
+        <DomainRelationshipMoniker Name="EntidadReferencesAtributo" />
+        <SourceDirectives>
+          <RolePlayerConnectDirective>
+            <AcceptingClass>
+              <DomainClassMoniker Name="Entidad" />
+            </AcceptingClass>
+          </RolePlayerConnectDirective>
+        </SourceDirectives>
+        <TargetDirectives>
+          <RolePlayerConnectDirective>
+            <AcceptingClass>
+              <DomainClassMoniker Name="Atributo" />
             </AcceptingClass>
           </RolePlayerConnectDirective>
         </TargetDirectives>
@@ -663,7 +764,30 @@
         <ParentElementPath>
           <DomainPath>DERAWebBDModelHasAtributo.DERAWebBDModel/!DERAWebBDModel</DomainPath>
         </ParentElementPath>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="AtributoShape/NameDecorator" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="Atributo/Name" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
         <GeometryShapeMoniker Name="AtributoShape" />
+      </ShapeMap>
+      <ShapeMap>
+        <DomainClassMoniker Name="AtributoClave" />
+        <ParentElementPath>
+          <DomainPath>DERAWebBDModelHasAtributoClave.DERAWebBDModel/!DERAWebBDModel</DomainPath>
+        </ParentElementPath>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="AtrClaveShape/Namedecorator" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="AtributoClave/Name" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+        <GeometryShapeMoniker Name="AtrClaveShape" />
       </ShapeMap>
     </ShapeMaps>
     <ConnectorMaps>
@@ -678,6 +802,10 @@
             </PropertyPath>
           </PropertyDisplayed>
         </DecoratorMap>
+      </ConnectorMap>
+      <ConnectorMap>
+        <ConnectorMoniker Name="EntidadConectaAtributo" />
+        <DomainRelationshipMoniker Name="EntidadReferencesAtributo" />
       </ConnectorMap>
     </ConnectorMaps>
   </Diagram>
@@ -704,6 +832,12 @@
       <ElementTool Name="Atributo" ToolboxIcon="Resources\atributo.bmp" Caption="Atributo" Tooltip="Atributo" HelpKeyword="Atributo">
         <DomainClassMoniker Name="Atributo" />
       </ElementTool>
+      <ElementTool Name="ClavePrimariaTool" ToolboxIcon="Resources\clavePrimaria.bmp" Caption="ClavePrimaria" Tooltip="Clave Primaria Tool" HelpKeyword="ClavePrimariaTool">
+        <DomainClassMoniker Name="AtributoClave" />
+      </ElementTool>
+      <ConnectionTool Name="EntidadAtributoTool" ToolboxIcon="Resources\conectar-_1_.bmp" Caption="EntidadAtributoTool" Tooltip="Entidad Atributo Tool" HelpKeyword="EntidadAtributoTool">
+        <ConnectionBuilderMoniker Name="JCJAPGDRCDERAWebBD/EntidadReferencesAtributoBuilder" />
+      </ConnectionTool>
     </ToolboxTab>
     <Validation UsesMenu="false" UsesOpen="false" UsesSave="false" UsesLoad="false" />
     <DiagramMoniker Name="JCJAPGDRCDERAWebBDDiagram" />

@@ -277,6 +277,30 @@
     <value>Atributo</value>
     <comment>DisplayName for DomainClass &apos;Atributo&apos;</comment>
   </data>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.Atributo/Name.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.Atributo.Name</value>
+    <comment>Description for DomainProperty &apos;Name&apos; on DomainClass &apos;Atributo&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.Atributo/Name.DisplayName" xml:space="preserve">
+    <value>Name</value>
+    <comment>DisplayName for DomainProperty &apos;Name&apos; on DomainClass &apos;Atributo&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.AtributoClave.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.AtributoClave</value>
+    <comment>Description for DomainClass &apos;AtributoClave&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.AtributoClave.DisplayName" xml:space="preserve">
+    <value>Atributo Clave</value>
+    <comment>DisplayName for DomainClass &apos;AtributoClave&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.AtributoClave/Name.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.AtributoClave.Name</value>
+    <comment>Description for DomainProperty &apos;Name&apos; on DomainClass &apos;AtributoClave&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.AtributoClave/Name.DisplayName" xml:space="preserve">
+    <value>Name</value>
+    <comment>DisplayName for DomainProperty &apos;Name&apos; on DomainClass &apos;AtributoClave&apos;</comment>
+  </data>
   <data name="UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasEntidades.Description" xml:space="preserve">
     <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasEntidades</value>
     <comment>Description for DomainClass &apos;DERAWebBDModelHasEntidades&apos;</comment>
@@ -541,6 +565,70 @@
     <value>DERAWeb BDModel</value>
     <comment>PropertyDisplayName for DomainRole &apos;Atributo&apos; on DomainRelationship &apos;DERAWebBDModelHasAtributo&apos;</comment>
   </data>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasAtributoClave.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasAtributoClave</value>
+    <comment>Description for DomainClass &apos;DERAWebBDModelHasAtributoClave&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasAtributoClave.DisplayName" xml:space="preserve">
+    <value>DERAWeb BDModel Has Atributo Clave</value>
+    <comment>DisplayName for DomainClass &apos;DERAWebBDModelHasAtributoClave&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasAtributoClave/DERAWebBDModel.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasAtributoClave.DERAWebBDModel</value>
+    <comment>Description for DomainRole &apos;DERAWebBDModel&apos; on DomainRelationship &apos;DERAWebBDModelHasAtributoClave&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasAtributoClave/DERAWebBDModel.DisplayName" xml:space="preserve">
+    <value>DERAWeb BDModel</value>
+    <comment>DisplayName for DomainRole &apos;DERAWebBDModel&apos; on DomainRelationship &apos;DERAWebBDModelHasAtributoClave&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasAtributoClave/DERAWebBDModel.PropertyDisplayName" xml:space="preserve">
+    <value>Atributo Clave</value>
+    <comment>PropertyDisplayName for DomainRole &apos;DERAWebBDModel&apos; on DomainRelationship &apos;DERAWebBDModelHasAtributoClave&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasAtributoClave/AtributoClave.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasAtributoClave.AtributoClave</value>
+    <comment>Description for DomainRole &apos;AtributoClave&apos; on DomainRelationship &apos;DERAWebBDModelHasAtributoClave&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasAtributoClave/AtributoClave.DisplayName" xml:space="preserve">
+    <value>Atributo Clave</value>
+    <comment>DisplayName for DomainRole &apos;AtributoClave&apos; on DomainRelationship &apos;DERAWebBDModelHasAtributoClave&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasAtributoClave/AtributoClave.PropertyDisplayName" xml:space="preserve">
+    <value>DERAWeb BDModel</value>
+    <comment>PropertyDisplayName for DomainRole &apos;AtributoClave&apos; on DomainRelationship &apos;DERAWebBDModelHasAtributoClave&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.EntidadReferencesAtributo.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.EntidadReferencesAtributo</value>
+    <comment>Description for DomainClass &apos;EntidadReferencesAtributo&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.EntidadReferencesAtributo.DisplayName" xml:space="preserve">
+    <value>Entidad References Atributo</value>
+    <comment>DisplayName for DomainClass &apos;EntidadReferencesAtributo&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.EntidadReferencesAtributo/Entidad.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.EntidadReferencesAtributo.Entidad</value>
+    <comment>Description for DomainRole &apos;Entidad&apos; on DomainRelationship &apos;EntidadReferencesAtributo&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.EntidadReferencesAtributo/Entidad.DisplayName" xml:space="preserve">
+    <value>Entidad</value>
+    <comment>DisplayName for DomainRole &apos;Entidad&apos; on DomainRelationship &apos;EntidadReferencesAtributo&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.EntidadReferencesAtributo/Entidad.PropertyDisplayName" xml:space="preserve">
+    <value>Atributo</value>
+    <comment>PropertyDisplayName for DomainRole &apos;Entidad&apos; on DomainRelationship &apos;EntidadReferencesAtributo&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.EntidadReferencesAtributo/Atributo.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.EntidadReferencesAtributo.Atributo</value>
+    <comment>Description for DomainRole &apos;Atributo&apos; on DomainRelationship &apos;EntidadReferencesAtributo&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.EntidadReferencesAtributo/Atributo.DisplayName" xml:space="preserve">
+    <value>Atributo</value>
+    <comment>DisplayName for DomainRole &apos;Atributo&apos; on DomainRelationship &apos;EntidadReferencesAtributo&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.EntidadReferencesAtributo/Atributo.PropertyDisplayName" xml:space="preserve">
+    <value>Entidad</value>
+    <comment>PropertyDisplayName for DomainRole &apos;Atributo&apos; on DomainRelationship &apos;EntidadReferencesAtributo&apos;</comment>
+  </data>
   <data name="UPM_IPS.JCJAPGDRCDERAWebBD.TipoDato/Entero.DisplayName" xml:space="preserve">
     <value>Entero</value>
     <comment>Display name for EnumerationLiteral &apos;Entero&apos; on DomainEnumeration &apos;TipoDato&apos;</comment>
@@ -773,16 +861,16 @@
     <value>NameDecorator</value>
     <comment>Text decorator default text</comment>
   </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.AtributoClaveShape.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.AtributoClaveShape</value>
-    <comment>Description for DomainClass &apos;AtributoClaveShape&apos;</comment>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.AtrClaveShape.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.AtrClaveShape</value>
+    <comment>Description for DomainClass &apos;AtrClaveShape&apos;</comment>
   </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.AtributoClaveShape.DisplayName" xml:space="preserve">
-    <value>Atributo Clave Shape</value>
-    <comment>DisplayName for DomainClass &apos;AtributoClaveShape&apos;</comment>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.AtrClaveShape.DisplayName" xml:space="preserve">
+    <value>Atr Clave Shape</value>
+    <comment>DisplayName for DomainClass &apos;AtrClaveShape&apos;</comment>
   </data>
-  <data name="AtributoClaveShapeNameDecoratorDefaultText" xml:space="preserve">
-    <value>NameDecorator</value>
+  <data name="AtrClaveShapeNamedecoratorDefaultText" xml:space="preserve">
+    <value>Namedecorator</value>
     <comment>Text decorator default text</comment>
   </data>
   <data name="UPM_IPS.JCJAPGDRCDERAWebBD.EntidadConectaAtributo.Description" xml:space="preserve">
@@ -863,6 +951,22 @@
   </data>
   <data name="AtributoToolboxTooltip" xml:space="preserve">
     <value>Atributo</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="ClavePrimariaToolToolboxItem" xml:space="preserve">
+    <value>ClavePrimaria</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="ClavePrimariaToolToolboxTooltip" xml:space="preserve">
+    <value>Clave Primaria Tool</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="EntidadAtributoToolToolboxItem" xml:space="preserve">
+    <value>EntidadAtributoTool</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="EntidadAtributoToolToolboxTooltip" xml:space="preserve">
+    <value>Entidad Atributo Tool</value>
     <comment>Toolbox tooltip text</comment>
   </data>
   <data name="UnresolvedToolboxItem" xml:space="preserve">
@@ -1012,6 +1116,14 @@ A DomainClass can be serialized as a moniker only if
   </data>
   <data name="AtributoToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
     <value>..\Resources\atributo.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="ClavePrimariaToolToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\clavePrimaria.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="EntidadAtributoToolToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\conectar-_1_.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
   </data>
 </root>

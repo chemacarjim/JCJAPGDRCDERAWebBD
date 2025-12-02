@@ -7,6 +7,12 @@
     <dERAWebBDModelHasEntidades Id="0c91596f-6857-4205-a58b-1bca691f332e">
       <entidad Id="cac42890-ae69-4bc6-a02d-c7c39aafa749" name="ESTUDIANTE " />
     </dERAWebBDModelHasEntidades>
+    <dERAWebBDModelHasEntidades Id="c2d54b3a-7d31-4e8b-8e63-f6604f030b4e">
+      <entidad Id="23b1537f-348e-4461-a571-152400677c32" name="Entidad1" />
+    </dERAWebBDModelHasEntidades>
+    <dERAWebBDModelHasEntidades Id="55c352d0-519a-4488-9b4e-d12ca258fadc">
+      <entidad Id="2ad945a3-588f-422d-a88b-88a025c4a7b4" name="Entidad2" />
+    </dERAWebBDModelHasEntidades>
   </entidades>
   <relaciones>
     <dERAWebBDModelHasRelaciones Id="18b150b1-25da-4c53-9bd4-ad2ef008f748">
@@ -18,8 +24,25 @@
           <relacionReferencesEntidad Id="bc2972a5-9f35-4eac-b5fc-3bc7ffeab93c" cardinalidad="1..*">
             <entidadMoniker name="/824b8638-e2c0-46fc-aa80-550e676d6392/Clase" />
           </relacionReferencesEntidad>
+          <relacionReferencesEntidad Id="aff158ac-cb6c-4318-b197-97cac3755042">
+            <entidadMoniker name="/824b8638-e2c0-46fc-aa80-550e676d6392/Entidad1" />
+          </relacionReferencesEntidad>
         </entidad>
       </relacion>
     </dERAWebBDModelHasRelaciones>
   </relaciones>
+  <atributo>
+    <dERAWebBDModelHasAtributo Id="139ecd3b-c79f-499b-ae44-c6f39c0162e4">
+      <atributo Id="7709a706-2cf4-4e97-991c-240eb51b7357" name="nota">
+        <entidad>
+          <atributoReferencesEntidad Id="e7bdc5f5-0dea-40c6-adab-9c11c6702de0">
+            <entidadMoniker name="/824b8638-e2c0-46fc-aa80-550e676d6392/ESTUDIANTE " />
+          </atributoReferencesEntidad>
+          <atributoReferencesEntidad Id="86b59d13-0a0a-4f38-9af1-8068f4dd03ca">
+            <entidadMoniker name="/824b8638-e2c0-46fc-aa80-550e676d6392/Entidad2" />
+          </atributoReferencesEntidad>
+        </entidad>
+      </atributo>
+    </dERAWebBDModelHasAtributo>
+  </atributo>
 </dERAWebBDModel>
