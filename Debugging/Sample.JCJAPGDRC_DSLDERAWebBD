@@ -39,14 +39,25 @@
       </relacion>
     </dERAWebBDModelHasRelaciones>
   </relaciones>
+  <estiloPortal>
+    <dERAWebBDModelHasEstiloPortal Id="7dd7a1b9-fb12-45a1-8b8e-d6570ebf4be2">
+      <estiloPortal Id="70bdbdc2-a1aa-404b-b219-b5db61b8c329" alineacion="Center" />
+    </dERAWebBDModelHasEstiloPortal>
+  </estiloPortal>
   <atributo>
     <dERAWebBDModelHasAtributo Id="3572c82d-1e22-4614-a519-933795555784">
       <atributo Id="6cdfe4a8-bdd6-4d06-a91c-68a605c627b0" name="nota" />
+    </dERAWebBDModelHasAtributo>
+    <dERAWebBDModelHasAtributo Id="0dfda808-9fde-4a6d-963d-7360b188e9a1">
+      <atributo Id="1902a11a-fc80-4841-a9cb-98c70c2fe405" />
     </dERAWebBDModelHasAtributo>
   </atributo>
   <atributoClave>
     <dERAWebBDModelHasAtributoClave Id="1c64d513-1c78-4a4e-9790-f72d79235e5c">
       <atributoClave Id="5953155c-2a82-4018-9651-b15db4e79e6f" name="id" />
+    </dERAWebBDModelHasAtributoClave>
+    <dERAWebBDModelHasAtributoClave Id="80651430-74f9-4f1f-9f82-4bf283621a86">
+      <atributoClave Id="9a8faadf-3790-4766-a909-038b1238eb7c" />
     </dERAWebBDModelHasAtributoClave>
   </atributoClave>
 </dERAWebBDModel>

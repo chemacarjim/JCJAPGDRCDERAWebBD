@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<jCJAPGDRCDERAWebBDDiagram dslVersion="1.0.0.0" Id="03bccc9c-27fb-45a0-bc17-a352aa55435a" absoluteBounds="0, 0, 18, 8.5" name="Sample">
+<jCJAPGDRCDERAWebBDDiagram dslVersion="1.0.0.0" Id="03bccc9c-27fb-45a0-bc17-a352aa55435a" absoluteBounds="0, 0, 20.375, 8.5" name="Sample">
   <dERAWebBDModelMoniker Id="824b8638-e2c0-46fc-aa80-550e676d6392" />
   <nestedChildShapes>
     <entidadShape Id="92826672-8485-4d4d-a1a1-ac1849222f08" absoluteBounds="16.25, 5.125, 1.5, 1">
@@ -11,7 +11,7 @@
     <relacionShape Id="e338af95-6fc5-457f-8b91-c7e7c421e6d5" absoluteBounds="10.5, 4.625, 2.0833332538604736, 2.0833332538604736">
       <relacionMoniker name="/824b8638-e2c0-46fc-aa80-550e676d6392/Pertenece" />
     </relacionShape>
-    <entidadRelacionConnector Id="d9914456-024b-4794-bcad-81f2546ff93a" edgePoints="[(10.5 : 5.5); (7.5 : 5.5)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <entidadRelacionConnector Id="d9914456-024b-4794-bcad-81f2546ff93a" edgePoints="[(10.5 : 5.5); (7.5 : 5.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <relacionReferencesEntidadMoniker Id="f86233aa-180f-469c-9714-bea0a10cb69b" />
       <relativeChildShapes />
       <nodes>
@@ -19,7 +19,7 @@
         <entidadShapeMoniker Id="c4f95855-1533-4018-ad2e-5475c6f78cc1" />
       </nodes>
     </entidadRelacionConnector>
-    <entidadRelacionConnector Id="0d81df98-746d-4cbb-862b-0004678ee1f2" edgePoints="[(12.5833332538605 : 5.625); (16.25 : 5.625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <entidadRelacionConnector Id="0d81df98-746d-4cbb-862b-0004678ee1f2" edgePoints="[(12.5833332538605 : 5.625); (16.25 : 5.625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <relacionReferencesEntidadMoniker Id="bc2972a5-9f35-4eac-b5fc-3bc7ffeab93c" />
       <relativeChildShapes />
       <nodes>
@@ -30,7 +30,7 @@
     <entidadShape Id="9e320da1-2552-42af-b6fb-ab28b8b7f3c0" absoluteBounds="10.375, 2, 1.5, 1">
       <entidadMoniker name="/824b8638-e2c0-46fc-aa80-550e676d6392/Entidad1" />
     </entidadShape>
-    <entidadRelacionConnector Id="b9e19576-6d1a-4aa1-99e4-7af9c415a789" edgePoints="[(11.1875 : 4.625); (11.1875 : 3)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <entidadRelacionConnector Id="b9e19576-6d1a-4aa1-99e4-7af9c415a789" edgePoints="[(11.1875 : 4.625); (11.1875 : 3)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <relacionReferencesEntidadMoniker Id="aff158ac-cb6c-4318-b197-97cac3755042" />
       <relativeChildShapes />
       <nodes>
@@ -58,5 +58,14 @@
         <atributoShapeMoniker Id="621c1885-1da5-42f8-b861-c2ad379ac22e" />
       </nodes>
     </entidadConectaAtributo>
+    <atrClaveShape Id="0e36d8c1-4c0c-43a4-bb5c-7dfc8c7ac1c0" absoluteBounds="16.5, 3.75, 1.25, 0.75">
+      <atributoClaveMoniker Id="9a8faadf-3790-4766-a909-038b1238eb7c" />
+    </atrClaveShape>
+    <atributoShape Id="1c11185e-9f5f-475c-8446-85700bb786e7" absoluteBounds="18.875, 4.75, 1.25, 0.75">
+      <atributoMoniker Id="1902a11a-fc80-4841-a9cb-98c70c2fe405" />
+    </atributoShape>
+    <estiloPortalShape Id="dd4bb89a-916d-4075-ba29-da39f4704b8d" absoluteBounds="3.875, 1.25, 1.5, 1">
+      <estiloPortalMoniker Id="70bdbdc2-a1aa-404b-b219-b5db61b8c329" />
+    </estiloPortalShape>
   </nestedChildShapes>
 </jCJAPGDRCDERAWebBDDiagram>

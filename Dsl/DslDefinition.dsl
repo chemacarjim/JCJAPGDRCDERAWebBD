@@ -439,12 +439,12 @@
       </ShapeHasDecorators>
     </GeometryShape>
     <GeometryShape Id="3043f948-be34-467c-a0a5-fce0432f886f" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.EstiloPortalShape" Name="EstiloPortalShape" DisplayName="Estilo Portal Shape" Namespace="UPM_IPS.JCJAPGDRCDERAWebBD" FixedTooltipText="Estilo Portal Shape" InitialHeight="1" Geometry="RoundedRectangle" />
-    <GeometryShape Id="283e095c-d4ad-41f4-ab67-11921f189e85" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.AtributoShape" Name="AtributoShape" DisplayName="Atributo Shape" Namespace="UPM_IPS.JCJAPGDRCDERAWebBD" FixedTooltipText="Atributo Shape" FillColor="LemonChiffon" InitialWidth="1" InitialHeight="0.7" OutlineThickness="0.01" Geometry="Ellipse">
+    <GeometryShape Id="283e095c-d4ad-41f4-ab67-11921f189e85" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.AtributoShape" Name="AtributoShape" DisplayName="Atributo Shape" Namespace="UPM_IPS.JCJAPGDRCDERAWebBD" FixedTooltipText="Atributo Shape" FillColor="LemonChiffon" InitialWidth="1.2" InitialHeight="0.7" OutlineThickness="0.01" Geometry="Ellipse">
       <ShapeHasDecorators Position="Center" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="NameDecorator" DisplayName="Name Decorator" DefaultText="NameDecorator" FontSize="14" />
       </ShapeHasDecorators>
     </GeometryShape>
-    <GeometryShape Id="e02fd87f-bf99-42a2-b46b-7d6ffb7bd477" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.AtrClaveShape" Name="AtrClaveShape" DisplayName="Atr Clave Shape" Namespace="UPM_IPS.JCJAPGDRCDERAWebBD" FixedTooltipText="Atr Clave Shape" FillColor="255, 255, 128" InitialWidth="1" InitialHeight="0.7" OutlineThickness="0.03" Geometry="Ellipse">
+    <GeometryShape Id="e02fd87f-bf99-42a2-b46b-7d6ffb7bd477" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.AtrClaveShape" Name="AtrClaveShape" DisplayName="Atr Clave Shape" Namespace="UPM_IPS.JCJAPGDRCDERAWebBD" FixedTooltipText="Atr Clave Shape" FillColor="255, 255, 128" InitialWidth="1.2" InitialHeight="0.7" OutlineThickness="0.03" Geometry="Ellipse">
       <ShapeHasDecorators Position="Center" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="Namedecorator" DisplayName="Namedecorator" DefaultText="Namedecorator" FontStyle="Bold, Italic, Underline" FontSize="14" />
       </ShapeHasDecorators>
@@ -861,29 +861,31 @@
     <XmlSerializationDefinition CustomPostLoad="false">
       <XmlSerializationBehaviorMoniker Name="JCJAPGDRCDERAWebBDSerializationBehavior" />
     </XmlSerializationDefinition>
-    <ToolboxTab TabText="JCJAPGDRCDERAWebBD">
-      <ElementTool Name="EntidadTool" ToolboxIcon="Resources\entidad.bmp" Caption="Entidad" Tooltip="Entidad Tool" HelpKeyword="EntidadTool">
+    <ToolboxTab TabText="Crear">
+      <ElementTool Name="EntidadTool" ToolboxIcon="Resources\entidad.bmp" Caption="Crear Entidad" Tooltip="Entidad Tool" HelpKeyword="EntidadTool">
         <DomainClassMoniker Name="Entidad" />
       </ElementTool>
-      <ElementTool Name="RelacionTool" ToolboxIcon="Resources\relacion.bmp" Caption="Relacion" Tooltip="Relacion Tool" HelpKeyword="RelacionTool">
+      <ElementTool Name="RelacionTool" ToolboxIcon="Resources\relacion.bmp" Caption="Crear Relacion" Tooltip="Relacion Tool" HelpKeyword="RelacionTool">
         <DomainClassMoniker Name="Relacion" />
       </ElementTool>
-      <ElementTool Name="EstiloPortalTool" ToolboxIcon="Resources\estiloportal.bmp" Caption="EstiloPortal" Tooltip="Estilo Portal Tool" HelpKeyword="EstiloPortalTool">
+      <ElementTool Name="EstiloPortalTool" ToolboxIcon="Resources\estiloportal.bmp" Caption="Crear Estilo Portal" Tooltip="Estilo Portal Tool" HelpKeyword="EstiloPortalTool">
         <DomainClassMoniker Name="EstiloPortal" />
       </ElementTool>
-      <ConnectionTool Name="ConectarRelacionEntidad" ToolboxIcon="Resources\relacion.bmp" Caption="ConectarRelacionEntidad" Tooltip="Conectar Relacion Entidad" HelpKeyword="ConectarRelacionEntidad">
-        <ConnectionBuilderMoniker Name="JCJAPGDRCDERAWebBD/RelacionReferencesEntidadBuilder" />
-      </ConnectionTool>
-      <ElementTool Name="Atributo" ToolboxIcon="Resources\atributo.bmp" Caption="Atributo" Tooltip="Atributo" HelpKeyword="Atributo">
+      <ElementTool Name="Atributo" ToolboxIcon="Resources\atributo.bmp" Caption="Crear Atributo" Tooltip="Atributo" HelpKeyword="Atributo">
         <DomainClassMoniker Name="Atributo" />
       </ElementTool>
-      <ElementTool Name="ClavePrimariaTool" ToolboxIcon="Resources\candado.bmp" Caption="ClavePrimaria" Tooltip="Clave Primaria Tool" HelpKeyword="ClavePrimariaTool">
+      <ElementTool Name="ClavePrimariaTool" ToolboxIcon="Resources\candado.bmp" Caption="Crear Clave Primaria" Tooltip="Clave Primaria Tool" HelpKeyword="ClavePrimariaTool">
         <DomainClassMoniker Name="AtributoClave" />
       </ElementTool>
-      <ConnectionTool Name="EntidadAtributoTool" ToolboxIcon="Resources\conectar-_1_.bmp" Caption="EntidadAtributoTool" Tooltip="Entidad Atributo Tool" HelpKeyword="EntidadAtributoTool">
+    </ToolboxTab>
+    <ToolboxTab TabText="Conectar">
+      <ConnectionTool Name="ConectarRelacionEntidad" ToolboxIcon="Resources\conectar-_1_.bmp" Caption="Relacion--Entidad" Tooltip="Conectar Relacion Entidad" HelpKeyword="ConectarRelacionEntidad">
+        <ConnectionBuilderMoniker Name="JCJAPGDRCDERAWebBD/RelacionReferencesEntidadBuilder" />
+      </ConnectionTool>
+      <ConnectionTool Name="EntidadAtributoTool" ToolboxIcon="Resources\conectar-_1_.bmp" Caption="Entidad--Atributo" Tooltip="Entidad Atributo Tool" HelpKeyword="EntidadAtributoTool">
         <ConnectionBuilderMoniker Name="JCJAPGDRCDERAWebBD/EntidadReferencesAtributoBuilder" />
       </ConnectionTool>
-      <ConnectionTool Name="EntidadClaveTool" ToolboxIcon="Resources\conectar-_2_-_1_.bmp" Caption="EntidadClaveTool" Tooltip="Entidad Clave Tool" HelpKeyword="EntidadClaveTool">
+      <ConnectionTool Name="EntidadClaveTool" ToolboxIcon="Resources\conectar-_1_.bmp" Caption="Entidad--Clave" Tooltip="Entidad Clave Tool" HelpKeyword="EntidadClaveTool">
         <ConnectionBuilderMoniker Name="JCJAPGDRCDERAWebBD/EntidadReferencesAtributoClaveBuilder" />
       </ConnectionTool>
     </ToolboxTab>

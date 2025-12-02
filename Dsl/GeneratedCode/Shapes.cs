@@ -2070,7 +2070,7 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 		{
 			get
 			{
-				return new DslDiagrams::SizeD(1, 0.7);
+				return new DslDiagrams::SizeD(1.2, 0.7);
 			}
 		}
 		#endregion
@@ -2305,7 +2305,7 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 		{
 			get
 			{
-				return new DslDiagrams::SizeD(1, 0.7);
+				return new DslDiagrams::SizeD(1.2, 0.7);
 			}
 		}
 		#endregion

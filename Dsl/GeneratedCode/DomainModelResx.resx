@@ -941,12 +941,12 @@
     <value>Minimal Language Diagram</value>
     <comment>DisplayName for DomainClass &apos;JCJAPGDRCDERAWebBDDiagram&apos;</comment>
   </data>
-  <data name="JCJAPGDRCDERAWebBDToolboxTab" xml:space="preserve">
-    <value>JCJAPGDRCDERAWebBD</value>
+  <data name="CrearToolboxTab" xml:space="preserve">
+    <value>Crear</value>
     <comment>Toolbox item tab name</comment>
   </data>
   <data name="EntidadToolToolboxItem" xml:space="preserve">
-    <value>Entidad</value>
+    <value>Crear Entidad</value>
     <comment>Toolbox item name</comment>
   </data>
   <data name="EntidadToolToolboxTooltip" xml:space="preserve">
@@ -954,7 +954,7 @@
     <comment>Toolbox tooltip text</comment>
   </data>
   <data name="RelacionToolToolboxItem" xml:space="preserve">
-    <value>Relacion</value>
+    <value>Crear Relacion</value>
     <comment>Toolbox item name</comment>
   </data>
   <data name="RelacionToolToolboxTooltip" xml:space="preserve">
@@ -962,23 +962,15 @@
     <comment>Toolbox tooltip text</comment>
   </data>
   <data name="EstiloPortalToolToolboxItem" xml:space="preserve">
-    <value>EstiloPortal</value>
+    <value>Crear Estilo Portal</value>
     <comment>Toolbox item name</comment>
   </data>
   <data name="EstiloPortalToolToolboxTooltip" xml:space="preserve">
     <value>Estilo Portal Tool</value>
     <comment>Toolbox tooltip text</comment>
   </data>
-  <data name="ConectarRelacionEntidadToolboxItem" xml:space="preserve">
-    <value>ConectarRelacionEntidad</value>
-    <comment>Toolbox item name</comment>
-  </data>
-  <data name="ConectarRelacionEntidadToolboxTooltip" xml:space="preserve">
-    <value>Conectar Relacion Entidad</value>
-    <comment>Toolbox tooltip text</comment>
-  </data>
   <data name="AtributoToolboxItem" xml:space="preserve">
-    <value>Atributo</value>
+    <value>Crear Atributo</value>
     <comment>Toolbox item name</comment>
   </data>
   <data name="AtributoToolboxTooltip" xml:space="preserve">
@@ -986,15 +978,27 @@
     <comment>Toolbox tooltip text</comment>
   </data>
   <data name="ClavePrimariaToolToolboxItem" xml:space="preserve">
-    <value>ClavePrimaria</value>
+    <value>Crear Clave Primaria</value>
     <comment>Toolbox item name</comment>
   </data>
   <data name="ClavePrimariaToolToolboxTooltip" xml:space="preserve">
     <value>Clave Primaria Tool</value>
     <comment>Toolbox tooltip text</comment>
   </data>
+  <data name="ConectarToolboxTab" xml:space="preserve">
+    <value>Conectar</value>
+    <comment>Toolbox item tab name</comment>
+  </data>
+  <data name="ConectarRelacionEntidadToolboxItem" xml:space="preserve">
+    <value>Relacion--Entidad</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="ConectarRelacionEntidadToolboxTooltip" xml:space="preserve">
+    <value>Conectar Relacion Entidad</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
   <data name="EntidadAtributoToolToolboxItem" xml:space="preserve">
-    <value>EntidadAtributoTool</value>
+    <value>Entidad--Atributo</value>
     <comment>Toolbox item name</comment>
   </data>
   <data name="EntidadAtributoToolToolboxTooltip" xml:space="preserve">
@@ -1002,7 +1006,7 @@
     <comment>Toolbox tooltip text</comment>
   </data>
   <data name="EntidadClaveToolToolboxItem" xml:space="preserve">
-    <value>EntidadClaveTool</value>
+    <value>Entidad--Clave</value>
     <comment>Toolbox item name</comment>
   </data>
   <data name="EntidadClaveToolToolboxTooltip" xml:space="preserve">
@@ -1150,10 +1154,6 @@ A DomainClass can be serialized as a moniker only if
     <value>..\Resources\estiloportal.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
   </data>
-  <data name="ConectarRelacionEntidadToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
-    <value>..\Resources\relacion.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-    <comment>Toolbox item image</comment>
-  </data>
   <data name="AtributoToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
     <value>..\Resources\atributo.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
@@ -1162,12 +1162,16 @@ A DomainClass can be serialized as a moniker only if
     <value>..\Resources\candado.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
   </data>
+  <data name="ConectarRelacionEntidadToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\conectar-_1_.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
   <data name="EntidadAtributoToolToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
     <value>..\Resources\conectar-_1_.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
   </data>
   <data name="EntidadClaveToolToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
-    <value>..\Resources\conectar-_2_-_1_.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Resources\conectar-_1_.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
   </data>
 </root>
