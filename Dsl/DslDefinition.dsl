@@ -155,6 +155,11 @@
             <ExternalTypeMoniker Name="/System/String" />
           </Type>
         </DomainProperty>
+        <DomainProperty Id="b96b6b52-ff9a-43f3-8e60-8287bc14aa2f" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.Atributo.Tipo Dato" Name="TipoDato" DisplayName="Tipo Dato">
+          <Type>
+            <DomainEnumerationMoniker Name="TipoDato" />
+          </Type>
+        </DomainProperty>
       </Properties>
     </DomainClass>
     <DomainClass Id="c312c662-0068-4278-9381-250ba852955e" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.AtributoClave" Name="AtributoClave" DisplayName="Atributo Clave" Namespace="UPM_IPS.JCJAPGDRCDERAWebBD">
@@ -351,6 +356,22 @@
         </DomainRole>
       </Target>
     </DomainRelationship>
+    <DomainRelationship Id="c72b0252-02a3-4590-8b0c-54746936be57" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.RelacionReferencesAtributo" Name="RelacionReferencesAtributo" DisplayName="Relacion References Atributo" Namespace="UPM_IPS.JCJAPGDRCDERAWebBD">
+      <Source>
+        <DomainRole Id="92236cee-2c6b-48da-9c69-577e3096fa4c" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.RelacionReferencesAtributo.Relacion" Name="Relacion" DisplayName="Relacion" PropertyName="Atributo" PropertyDisplayName="Atributo">
+          <RolePlayer>
+            <DomainClassMoniker Name="Relacion" />
+          </RolePlayer>
+        </DomainRole>
+      </Source>
+      <Target>
+        <DomainRole Id="b19884ac-2495-40a9-b6a4-e87d35fba73b" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.RelacionReferencesAtributo.Atributo" Name="Atributo" DisplayName="Atributo" PropertyName="Relacion" PropertyDisplayName="Relacion">
+          <RolePlayer>
+            <DomainClassMoniker Name="Atributo" />
+          </RolePlayer>
+        </DomainRole>
+      </Target>
+    </DomainRelationship>
   </Relationships>
   <Types>
     <ExternalType Name="DateTime" Namespace="System" />
@@ -370,10 +391,10 @@
     <ExternalType Name="Char" Namespace="System" />
     <DomainEnumeration Name="TipoDato" Namespace="UPM_IPS.JCJAPGDRCDERAWebBD" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.TipoDato">
       <Literals>
-        <EnumerationLiteral Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.TipoDato.Entero" Name="Entero" Value="2" />
+        <EnumerationLiteral Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.TipoDato.Entero" Name="Entero" Value="1" />
         <EnumerationLiteral Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.TipoDato.Real" Name="Real" Value="3" />
-        <EnumerationLiteral Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.TipoDato.Alfanumerico" Name="Alfanumerico" Value="1" />
-        <EnumerationLiteral Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.TipoDato.Fecha" Name="Fecha" Value="3" />
+        <EnumerationLiteral Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.TipoDato.Alfanumerico" Name="Alfanumerico" Value="0" />
+        <EnumerationLiteral Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.TipoDato.Fecha" Name="Fecha" Value="2" />
       </Literals>
     </DomainEnumeration>
     <DomainEnumeration Name="TiposCampo" Namespace="UPM_IPS.JCJAPGDRCDERAWebBD" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.TiposCampo">
@@ -451,7 +472,7 @@
     </GeometryShape>
   </Shapes>
   <Connectors>
-    <Connector Id="051b03fb-ce8e-46ab-9d12-4fe5735daf59" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.EntidadConectaAtributo" Name="EntidadConectaAtributo" DisplayName="Entidad Conecta Atributo" Namespace="UPM_IPS.JCJAPGDRCDERAWebBD" FixedTooltipText="Entidad Conecta Atributo" TextColor="Gold" Thickness="0.015" RoutingStyle="Straight" targetEndWidth="0.07" />
+    <Connector Id="051b03fb-ce8e-46ab-9d12-4fe5735daf59" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.ConectaAtributo" Name="ConectaAtributo" DisplayName="Conecta Atributo" Namespace="UPM_IPS.JCJAPGDRCDERAWebBD" FixedTooltipText="Conecta Atributo" TextColor="Gold" Thickness="0.015" RoutingStyle="Straight" targetEndWidth="0.07" />
     <Connector Id="efe33cc0-6ea4-4774-8863-181e862f45e9" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.EntidadRelacionConnector" Name="EntidadRelacionConnector" DisplayName="Entidad Relacion Connector" Namespace="UPM_IPS.JCJAPGDRCDERAWebBD" FixedTooltipText="Entidad Relacion Connector">
       <ConnectorHasDecorators Position="SourceTop" OffsetFromShape="0" OffsetFromLine="0">
         <TextDecorator Name="CardDecorator" DisplayName="Card Decorator" DefaultText="CardDecorator" />
@@ -515,6 +536,9 @@
           <XmlRelationshipData UseFullForm="true" RoleElementName="entidad">
             <DomainRelationshipMoniker Name="RelacionReferencesEntidad" />
           </XmlRelationshipData>
+          <XmlRelationshipData UseFullForm="true" RoleElementName="atributo">
+            <DomainRelationshipMoniker Name="RelacionReferencesAtributo" />
+          </XmlRelationshipData>
         </ElementData>
       </XmlClassData>
       <XmlClassData TypeName="DERAWebBDModelHasRelaciones" MonikerAttributeName="" SerializeId="true" MonikerElementName="dERAWebBDModelHasRelacionesMoniker" ElementName="dERAWebBDModelHasRelaciones" MonikerTypeName="DERAWebBDModelHasRelacionesMoniker">
@@ -566,8 +590,8 @@
       <XmlClassData TypeName="EntidadShape" MonikerAttributeName="" SerializeId="true" MonikerElementName="entidadShapeMoniker" ElementName="entidadShape" MonikerTypeName="EntidadShapeMoniker">
         <GeometryShapeMoniker Name="EntidadShape" />
       </XmlClassData>
-      <XmlClassData TypeName="EntidadConectaAtributo" MonikerAttributeName="" SerializeId="true" MonikerElementName="entidadConectaAtributoMoniker" ElementName="entidadConectaAtributo" MonikerTypeName="EntidadConectaAtributoMoniker">
-        <ConnectorMoniker Name="EntidadConectaAtributo" />
+      <XmlClassData TypeName="ConectaAtributo" MonikerAttributeName="" SerializeId="true" MonikerElementName="conectaAtributoMoniker" ElementName="conectaAtributo" MonikerTypeName="ConectaAtributoMoniker">
+        <ConnectorMoniker Name="ConectaAtributo" />
       </XmlClassData>
       <XmlClassData TypeName="RestriccionRangoShape" MonikerAttributeName="" SerializeId="true" MonikerElementName="restriccionRangoShapeMoniker" ElementName="restriccionRangoShape" MonikerTypeName="RestriccionRangoShapeMoniker">
         <GeometryShapeMoniker Name="RestriccionRangoShape" />
@@ -630,6 +654,9 @@
           <XmlPropertyData XmlName="name">
             <DomainPropertyMoniker Name="Atributo/Name" />
           </XmlPropertyData>
+          <XmlPropertyData XmlName="tipoDato">
+            <DomainPropertyMoniker Name="Atributo/TipoDato" />
+          </XmlPropertyData>
         </ElementData>
       </XmlClassData>
       <XmlClassData TypeName="DERAWebBDModelHasAtributo" MonikerAttributeName="" SerializeId="true" MonikerElementName="dERAWebBDModelHasAtributoMoniker" ElementName="dERAWebBDModelHasAtributo" MonikerTypeName="DERAWebBDModelHasAtributoMoniker">
@@ -654,6 +681,9 @@
       </XmlClassData>
       <XmlClassData TypeName="EntidadReferencesAtributoClave" MonikerAttributeName="" SerializeId="true" MonikerElementName="entidadReferencesAtributoClaveMoniker" ElementName="entidadReferencesAtributoClave" MonikerTypeName="EntidadReferencesAtributoClaveMoniker">
         <DomainRelationshipMoniker Name="EntidadReferencesAtributoClave" />
+      </XmlClassData>
+      <XmlClassData TypeName="RelacionReferencesAtributo" MonikerAttributeName="" SerializeId="true" MonikerElementName="relacionReferencesAtributoMoniker" ElementName="relacionReferencesAtributo" MonikerTypeName="RelacionReferencesAtributoMoniker">
+        <DomainRelationshipMoniker Name="RelacionReferencesAtributo" />
       </XmlClassData>
     </ClassData>
   </XmlSerializationBehavior>
@@ -730,6 +760,25 @@
           <RolePlayerConnectDirective>
             <AcceptingClass>
               <DomainClassMoniker Name="AtributoClave" />
+            </AcceptingClass>
+          </RolePlayerConnectDirective>
+        </TargetDirectives>
+      </LinkConnectDirective>
+    </ConnectionBuilder>
+    <ConnectionBuilder Name="RelacionReferencesAtributoBuilder">
+      <LinkConnectDirective>
+        <DomainRelationshipMoniker Name="RelacionReferencesAtributo" />
+        <SourceDirectives>
+          <RolePlayerConnectDirective>
+            <AcceptingClass>
+              <DomainClassMoniker Name="Relacion" />
+            </AcceptingClass>
+          </RolePlayerConnectDirective>
+        </SourceDirectives>
+        <TargetDirectives>
+          <RolePlayerConnectDirective>
+            <AcceptingClass>
+              <DomainClassMoniker Name="Atributo" />
             </AcceptingClass>
           </RolePlayerConnectDirective>
         </TargetDirectives>
@@ -845,12 +894,16 @@
         </DecoratorMap>
       </ConnectorMap>
       <ConnectorMap>
-        <ConnectorMoniker Name="EntidadConectaAtributo" />
+        <ConnectorMoniker Name="ConectaAtributo" />
         <DomainRelationshipMoniker Name="EntidadReferencesAtributo" />
       </ConnectorMap>
       <ConnectorMap>
-        <ConnectorMoniker Name="EntidadConectaAtributo" />
+        <ConnectorMoniker Name="ConectaAtributo" />
         <DomainRelationshipMoniker Name="EntidadReferencesAtributoClave" />
+      </ConnectorMap>
+      <ConnectorMap>
+        <ConnectorMoniker Name="ConectaAtributo" />
+        <DomainRelationshipMoniker Name="RelacionReferencesAtributo" />
       </ConnectorMap>
     </ConnectorMaps>
   </Diagram>
@@ -887,6 +940,9 @@
       </ConnectionTool>
       <ConnectionTool Name="EntidadClaveTool" ToolboxIcon="Resources\conectar-_1_.bmp" Caption="Entidad--Clave" Tooltip="Entidad Clave Tool" HelpKeyword="EntidadClaveTool">
         <ConnectionBuilderMoniker Name="JCJAPGDRCDERAWebBD/EntidadReferencesAtributoClaveBuilder" />
+      </ConnectionTool>
+      <ConnectionTool Name="RelacionAtributoTool" ToolboxIcon="Resources\conectar-_1_.bmp" Caption="Relacion--Atributo" Tooltip="Relacion Atributo Tool" HelpKeyword="RelacionAtributoTool">
+        <ConnectionBuilderMoniker Name="JCJAPGDRCDERAWebBD/RelacionReferencesAtributoBuilder" />
       </ConnectionTool>
     </ToolboxTab>
     <Validation UsesMenu="false" UsesOpen="false" UsesSave="false" UsesLoad="false" />

@@ -14,15 +14,15 @@ using DslDiagrams = global::Microsoft.VisualStudio.Modeling.Diagrams;
 namespace UPM_IPS.JCJAPGDRCDERAWebBD
 {
 	/// <summary>
-	/// DomainClass EntidadConectaAtributo
-	/// Description for UPM_IPS.JCJAPGDRCDERAWebBD.EntidadConectaAtributo
+	/// DomainClass ConectaAtributo
+	/// Description for UPM_IPS.JCJAPGDRCDERAWebBD.ConectaAtributo
 	/// </summary>
-	[DslDesign::DisplayNameResource("UPM_IPS.JCJAPGDRCDERAWebBD.EntidadConectaAtributo.DisplayName", typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDDomainModel), "UPM_IPS.JCJAPGDRCDERAWebBD.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("UPM_IPS.JCJAPGDRCDERAWebBD.EntidadConectaAtributo.Description", typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDDomainModel), "UPM_IPS.JCJAPGDRCDERAWebBD.GeneratedCode.DomainModelResx")]
+	[DslDesign::DisplayNameResource("UPM_IPS.JCJAPGDRCDERAWebBD.ConectaAtributo.DisplayName", typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDDomainModel), "UPM_IPS.JCJAPGDRCDERAWebBD.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("UPM_IPS.JCJAPGDRCDERAWebBD.ConectaAtributo.Description", typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDDomainModel), "UPM_IPS.JCJAPGDRCDERAWebBD.GeneratedCode.DomainModelResx")]
 	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("051b03fb-ce8e-46ab-9d12-4fe5735daf59")]
-	public partial class EntidadConectaAtributo : DslDiagrams::BinaryLinkShape
+	public partial class ConectaAtributo : DslDiagrams::BinaryLinkShape
 	{
 		#region DiagramElement boilerplate
 		private static DslDiagrams::StyleSet classStyleSet;
@@ -87,9 +87,9 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 		}
 		
 		/// <summary>
-		/// Finds a decorator associated with EntidadConectaAtributo.
+		/// Finds a decorator associated with ConectaAtributo.
 		/// </summary>
-		public static DslDiagrams::Decorator FindEntidadConectaAtributoDecorator(string decoratorName)
+		public static DslDiagrams::Decorator FindConectaAtributoDecorator(string decoratorName)
 		{	
 			if(decorators == null) return null;
 			return DslDiagrams::ShapeElement.FindDecorator(decorators, decoratorName);
@@ -132,7 +132,7 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 		#region Constructors, domain class Id
 	
 		/// <summary>
-		/// EntidadConectaAtributo domain class Id.
+		/// ConectaAtributo domain class Id.
 		/// </summary>
 		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x051b03fb, 0xce8e, 0x46ab, 0x9d, 0x12, 0x4f, 0xe5, 0x73, 0x5d, 0xaf, 0x59);
 		/// <summary>
@@ -140,7 +140,7 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 		/// </summary>
 		/// <param name="store">Store where new element is to be created.</param>
 		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
-		public EntidadConectaAtributo(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
+		public ConectaAtributo(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
 			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
 		{
 		}
@@ -150,7 +150,7 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 		/// </summary>
 		/// <param name="partition">Partition where new element is to be created.</param>
 		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
-		public EntidadConectaAtributo(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
+		public ConectaAtributo(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
 			: base(partition, propertyAssignments)
 		{
 		}

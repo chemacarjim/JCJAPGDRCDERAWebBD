@@ -285,6 +285,14 @@
     <value>Name</value>
     <comment>DisplayName for DomainProperty &apos;Name&apos; on DomainClass &apos;Atributo&apos;</comment>
   </data>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.Atributo/TipoDato.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.Atributo.Tipo Dato</value>
+    <comment>Description for DomainProperty &apos;TipoDato&apos; on DomainClass &apos;Atributo&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.Atributo/TipoDato.DisplayName" xml:space="preserve">
+    <value>Tipo Dato</value>
+    <comment>DisplayName for DomainProperty &apos;TipoDato&apos; on DomainClass &apos;Atributo&apos;</comment>
+  </data>
   <data name="UPM_IPS.JCJAPGDRCDERAWebBD.AtributoClave.Description" xml:space="preserve">
     <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.AtributoClave</value>
     <comment>Description for DomainClass &apos;AtributoClave&apos;</comment>
@@ -661,6 +669,38 @@
     <value>Entidad</value>
     <comment>PropertyDisplayName for DomainRole &apos;AtributoClave&apos; on DomainRelationship &apos;EntidadReferencesAtributoClave&apos;</comment>
   </data>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.RelacionReferencesAtributo.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.RelacionReferencesAtributo</value>
+    <comment>Description for DomainClass &apos;RelacionReferencesAtributo&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.RelacionReferencesAtributo.DisplayName" xml:space="preserve">
+    <value>Relacion References Atributo</value>
+    <comment>DisplayName for DomainClass &apos;RelacionReferencesAtributo&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.RelacionReferencesAtributo/Relacion.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.RelacionReferencesAtributo.Relacion</value>
+    <comment>Description for DomainRole &apos;Relacion&apos; on DomainRelationship &apos;RelacionReferencesAtributo&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.RelacionReferencesAtributo/Relacion.DisplayName" xml:space="preserve">
+    <value>Relacion</value>
+    <comment>DisplayName for DomainRole &apos;Relacion&apos; on DomainRelationship &apos;RelacionReferencesAtributo&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.RelacionReferencesAtributo/Relacion.PropertyDisplayName" xml:space="preserve">
+    <value>Atributo</value>
+    <comment>PropertyDisplayName for DomainRole &apos;Relacion&apos; on DomainRelationship &apos;RelacionReferencesAtributo&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.RelacionReferencesAtributo/Atributo.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.RelacionReferencesAtributo.Atributo</value>
+    <comment>Description for DomainRole &apos;Atributo&apos; on DomainRelationship &apos;RelacionReferencesAtributo&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.RelacionReferencesAtributo/Atributo.DisplayName" xml:space="preserve">
+    <value>Atributo</value>
+    <comment>DisplayName for DomainRole &apos;Atributo&apos; on DomainRelationship &apos;RelacionReferencesAtributo&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.RelacionReferencesAtributo/Atributo.PropertyDisplayName" xml:space="preserve">
+    <value>Relacion</value>
+    <comment>PropertyDisplayName for DomainRole &apos;Atributo&apos; on DomainRelationship &apos;RelacionReferencesAtributo&apos;</comment>
+  </data>
   <data name="UPM_IPS.JCJAPGDRCDERAWebBD.TipoDato/Entero.DisplayName" xml:space="preserve">
     <value>Entero</value>
     <comment>Display name for EnumerationLiteral &apos;Entero&apos; on DomainEnumeration &apos;TipoDato&apos;</comment>
@@ -905,13 +945,13 @@
     <value>Namedecorator</value>
     <comment>Text decorator default text</comment>
   </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.EntidadConectaAtributo.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.EntidadConectaAtributo</value>
-    <comment>Description for DomainClass &apos;EntidadConectaAtributo&apos;</comment>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.ConectaAtributo.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.ConectaAtributo</value>
+    <comment>Description for DomainClass &apos;ConectaAtributo&apos;</comment>
   </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.EntidadConectaAtributo.DisplayName" xml:space="preserve">
-    <value>Entidad Conecta Atributo</value>
-    <comment>DisplayName for DomainClass &apos;EntidadConectaAtributo&apos;</comment>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.ConectaAtributo.DisplayName" xml:space="preserve">
+    <value>Conecta Atributo</value>
+    <comment>DisplayName for DomainClass &apos;ConectaAtributo&apos;</comment>
   </data>
   <data name="UPM_IPS.JCJAPGDRCDERAWebBD.EntidadRelacionConnector.Description" xml:space="preserve">
     <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.EntidadRelacionConnector</value>
@@ -1011,6 +1051,14 @@
   </data>
   <data name="EntidadClaveToolToolboxTooltip" xml:space="preserve">
     <value>Entidad Clave Tool</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="RelacionAtributoToolToolboxItem" xml:space="preserve">
+    <value>Relacion--Atributo</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="RelacionAtributoToolToolboxTooltip" xml:space="preserve">
+    <value>Relacion Atributo Tool</value>
     <comment>Toolbox tooltip text</comment>
   </data>
   <data name="UnresolvedToolboxItem" xml:space="preserve">
@@ -1171,6 +1219,10 @@ A DomainClass can be serialized as a moniker only if
     <comment>Toolbox item image</comment>
   </data>
   <data name="EntidadClaveToolToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\conectar-_1_.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="RelacionAtributoToolToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
     <value>..\Resources\conectar-_1_.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
   </data>

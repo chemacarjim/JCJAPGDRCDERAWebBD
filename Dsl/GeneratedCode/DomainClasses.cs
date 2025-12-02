@@ -856,6 +856,21 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 			}
 		}
 		#endregion
+		#region Atributo opposite domain role accessor
+		
+		/// <summary>
+		/// Gets a list of Atributo.
+		/// Description for UPM_IPS.JCJAPGDRCDERAWebBD.RelacionReferencesAtributo.Relacion
+		/// </summary>
+		public virtual DslModeling::LinkedElementCollection<Atributo> Atributo
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return GetRoleCollection<DslModeling::LinkedElementCollection<Atributo>, Atributo>(global::UPM_IPS.JCJAPGDRCDERAWebBD.RelacionReferencesAtributo.RelacionDomainRoleId);
+			}
+		}
+		#endregion
 		#region ElementGroupPrototype Merge methods
 		/// <summary>
 		/// Returns a value indicating whether the source element represented by the
@@ -2075,6 +2090,93 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 		}
 		
 		#endregion
+		#region TipoDato domain property code
+		
+		/// <summary>
+		/// TipoDato domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid TipoDatoDomainPropertyId = new global::System.Guid(0xb96b6b52, 0xff9a, 0x43f3, 0x8e, 0x60, 0x82, 0x87, 0xbc, 0x14, 0xaa, 0x2f);
+		
+		/// <summary>
+		/// Storage for TipoDato
+		/// </summary>
+		private TipoDato tipoDatoPropertyStorage;
+		
+		/// <summary>
+		/// Gets or sets the value of TipoDato domain property.
+		/// Description for UPM_IPS.JCJAPGDRCDERAWebBD.Atributo.Tipo Dato
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.JCJAPGDRCDERAWebBD.Atributo/TipoDato.DisplayName", typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDDomainModel), "UPM_IPS.JCJAPGDRCDERAWebBD.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.JCJAPGDRCDERAWebBD.Atributo/TipoDato.Description", typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDDomainModel), "UPM_IPS.JCJAPGDRCDERAWebBD.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("b96b6b52-ff9a-43f3-8e60-8287bc14aa2f")]
+		public TipoDato TipoDato
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return tipoDatoPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				TipoDatoPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the Atributo.TipoDato domain property.
+		/// </summary>
+		internal sealed partial class TipoDatoPropertyHandler : DslModeling::DomainPropertyValueHandler<Atributo, TipoDato>
+		{
+			private TipoDatoPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the Atributo.TipoDato domain property value handler.
+			/// </summary>
+			public static readonly TipoDatoPropertyHandler Instance = new TipoDatoPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the Atributo.TipoDato domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return TipoDatoDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed TipoDato GetValue(Atributo element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.tipoDatoPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(Atributo element, TipoDato newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				TipoDato oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.tipoDatoPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
 		#region DERAWebBDModel opposite domain role accessor
 		/// <summary>
 		/// Gets or sets DERAWebBDModel.
@@ -2106,6 +2208,21 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 			get
 			{
 				return GetRoleCollection<DslModeling::LinkedElementCollection<Entidad>, Entidad>(global::UPM_IPS.JCJAPGDRCDERAWebBD.EntidadReferencesAtributo.AtributoDomainRoleId);
+			}
+		}
+		#endregion
+		#region Relacion opposite domain role accessor
+		
+		/// <summary>
+		/// Gets a list of Relacion.
+		/// Description for UPM_IPS.JCJAPGDRCDERAWebBD.RelacionReferencesAtributo.Atributo
+		/// </summary>
+		public virtual DslModeling::LinkedElementCollection<Relacion> Relacion
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return GetRoleCollection<DslModeling::LinkedElementCollection<Relacion>, Relacion>(global::UPM_IPS.JCJAPGDRCDERAWebBD.RelacionReferencesAtributo.AtributoDomainRoleId);
 			}
 		}
 		#endregion

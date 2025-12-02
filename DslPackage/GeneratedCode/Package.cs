@@ -94,6 +94,14 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 					"@EntidadClaveToolToolboxBitmap;UPM_IPS.JCJAPGDRCDERAWebBD.Dsl.dll", 
 					0xff00ff,
 					Index = 7)]
+	[VSShell::ProvideStaticToolboxItem("UPM_IPS.JCJAPGDRCDERAWebBD.ConectarToolboxTab",
+					"@RelacionAtributoToolToolboxItem;UPM_IPS.JCJAPGDRCDERAWebBD.Dsl.dll", 
+					"UPM_IPS.JCJAPGDRCDERAWebBD.RelacionAtributoToolToolboxItem", 
+					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
+					"RelacionAtributoTool", 
+					"@RelacionAtributoToolToolboxBitmap;UPM_IPS.JCJAPGDRCDERAWebBD.Dsl.dll", 
+					0xff00ff,
+					Index = 8)]
 	[VSShell::ProvideEditorFactory(typeof(JCJAPGDRCDERAWebBDEditorFactory), 103, TrustLevel = VSShellInterop::__VSEDITORTRUSTLEVEL.ETL_AlwaysTrusted)]
 	[VSShell::ProvideEditorExtension(typeof(JCJAPGDRCDERAWebBDEditorFactory), "." + Constants.DesignerFileExtension, 50)]
 	[VSShell::ProvideEditorLogicalView(typeof(JCJAPGDRCDERAWebBDEditorFactory), "{7651A702-06E5-11D1-8EBD-00A0C90F26EA}")] // Designer logical view GUID i.e. VSConstants.LOGVIEWID_Designer
