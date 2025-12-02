@@ -945,7 +945,7 @@
         <ConnectionBuilderMoniker Name="JCJAPGDRCDERAWebBD/RelacionReferencesAtributoBuilder" />
       </ConnectionTool>
     </ToolboxTab>
-    <Validation UsesMenu="false" UsesOpen="false" UsesSave="false" UsesLoad="false" />
+    <Validation UsesMenu="true" UsesOpen="true" UsesSave="true" UsesLoad="false" />
     <DiagramMoniker Name="JCJAPGDRCDERAWebBDDiagram" />
   </Designer>
   <Explorer ExplorerGuid="4e083ed3-af05-4f3b-8709-84edf3d9fee3" Title="JCJAPGDRCDERAWebBD Explorer">
