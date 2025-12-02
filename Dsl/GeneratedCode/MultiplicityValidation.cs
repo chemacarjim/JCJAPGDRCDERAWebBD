@@ -37,30 +37,6 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 namespace UPM_IPS.JCJAPGDRCDERAWebBD
 {
 	[DslValidation::ValidationState(DslValidation::ValidationState.Enabled)]
-	public partial class Entidad
-	{
-		/// <summary>
-		/// Checks that the relationships that have a multiplicity of One or OneMany do actually have a link.
-		/// </summary>
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Justification = "Generated code.")]
-		[DslValidation::ValidationMethod(DslValidation::ValidationCategories.Open | DslValidation::ValidationCategories.Save | DslValidation::ValidationCategories.Menu)]
-		private void ValidateEntidadMultiplicity (DslValidation::ValidationContext context)
-		{
-			if (this.AtributoClave == null)
-			{
-				context.LogViolation(DslValidation::ViolationType.Error,
-					string.Format(global::System.Globalization.CultureInfo.CurrentCulture, 
-						UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDDomainModel.SingletonResourceManager.GetString("MinimumMultiplicityMissingLink"), 
-						"Entidad", this.Name, "AtributoClave"),
-						"DSL0001", this);
-			}
-		} // ValidateEntidadMultiplicity
-	} // class Entidad
-} // UPM_IPS.JCJAPGDRCDERAWebBD
-
-namespace UPM_IPS.JCJAPGDRCDERAWebBD
-{
-	[DslValidation::ValidationState(DslValidation::ValidationState.Enabled)]
 	public partial class Relacion
 	{
 		/// <summary>
@@ -104,54 +80,6 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 			}
 		} // ValidateCardinalidadMultiplicity
 	} // class Cardinalidad
-} // UPM_IPS.JCJAPGDRCDERAWebBD
-
-namespace UPM_IPS.JCJAPGDRCDERAWebBD
-{
-	[DslValidation::ValidationState(DslValidation::ValidationState.Enabled)]
-	public partial class RestriccionEnum
-	{
-		/// <summary>
-		/// Checks that the relationships that have a multiplicity of One or OneMany do actually have a link.
-		/// </summary>
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Justification = "Generated code.")]
-		[DslValidation::ValidationMethod(DslValidation::ValidationCategories.Open | DslValidation::ValidationCategories.Save | DslValidation::ValidationCategories.Menu)]
-		private void ValidateRestriccionEnumMultiplicity (DslValidation::ValidationContext context)
-		{
-			if (this.ValoresEnum.Count == 0)
-			{
-				context.LogViolation(DslValidation::ViolationType.Error,
-					string.Format(global::System.Globalization.CultureInfo.CurrentCulture, 
-						UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDDomainModel.SingletonResourceManager.GetString("MinimumMultiplicityMissingLink"), 
-						"RestriccionEnum", "", "ValoresEnum"),
-						"DSL0001", this);
-			}
-		} // ValidateRestriccionEnumMultiplicity
-	} // class RestriccionEnum
-} // UPM_IPS.JCJAPGDRCDERAWebBD
-
-namespace UPM_IPS.JCJAPGDRCDERAWebBD
-{
-	[DslValidation::ValidationState(DslValidation::ValidationState.Enabled)]
-	public partial class Atributo
-	{
-		/// <summary>
-		/// Checks that the relationships that have a multiplicity of One or OneMany do actually have a link.
-		/// </summary>
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Justification = "Generated code.")]
-		[DslValidation::ValidationMethod(DslValidation::ValidationCategories.Open | DslValidation::ValidationCategories.Save | DslValidation::ValidationCategories.Menu)]
-		private void ValidateAtributoMultiplicity (DslValidation::ValidationContext context)
-		{
-			if (this.RestriccionEnum == null)
-			{
-				context.LogViolation(DslValidation::ViolationType.Error,
-					string.Format(global::System.Globalization.CultureInfo.CurrentCulture, 
-						UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDDomainModel.SingletonResourceManager.GetString("MinimumMultiplicityMissingLink"), 
-						"Atributo", "", "RestriccionEnum"),
-						"DSL0001", this);
-			}
-		} // ValidateAtributoMultiplicity
-	} // class Atributo
 } // UPM_IPS.JCJAPGDRCDERAWebBD
 
 	

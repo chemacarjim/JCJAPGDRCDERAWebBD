@@ -62,11 +62,11 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 					0xff00ff,
 					Index = 3)]
 	[VSShell::ProvideStaticToolboxItem("UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDToolboxTab",
-					"@EntidadAtributoConectarToolboxItem;UPM_IPS.JCJAPGDRCDERAWebBD.Dsl.dll", 
-					"UPM_IPS.JCJAPGDRCDERAWebBD.EntidadAtributoConectarToolboxItem", 
+					"@AtributoToolboxItem;UPM_IPS.JCJAPGDRCDERAWebBD.Dsl.dll", 
+					"UPM_IPS.JCJAPGDRCDERAWebBD.AtributoToolboxItem", 
 					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
-					"EntidadAtributoConectar", 
-					"@EntidadAtributoConectarToolboxBitmap;UPM_IPS.JCJAPGDRCDERAWebBD.Dsl.dll", 
+					"Atributo", 
+					"@AtributoToolboxBitmap;UPM_IPS.JCJAPGDRCDERAWebBD.Dsl.dll", 
 					0xff00ff,
 					Index = 4)]
 	[VSShell::ProvideEditorFactory(typeof(JCJAPGDRCDERAWebBDEditorFactory), 103, TrustLevel = VSShellInterop::__VSEDITORTRUSTLEVEL.ETL_AlwaysTrusted)]

@@ -27,6 +27,14 @@
             <DomainPath>DERAWebBDModelHasEstiloPortal.EstiloPortal</DomainPath>
           </LinkCreationPaths>
         </ElementMergeDirective>
+        <ElementMergeDirective>
+          <Index>
+            <DomainClassMoniker Name="Atributo" />
+          </Index>
+          <LinkCreationPaths>
+            <DomainPath>DERAWebBDModelHasAtributo.Atributo</DomainPath>
+          </LinkCreationPaths>
+        </ElementMergeDirective>
       </ElementMergeDirectives>
     </DomainClass>
     <DomainClass Id="bfc2dbde-1007-4642-9ca2-459720911379" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.Entidad" Name="Entidad" DisplayName="Entidad" Namespace="UPM_IPS.JCJAPGDRCDERAWebBD">
@@ -40,24 +48,11 @@
       <ElementMergeDirectives>
         <ElementMergeDirective>
           <Index>
-            <DomainClassMoniker Name="AtributoClave" />
-          </Index>
-          <LinkCreationPaths>
-            <DomainPath>EntidadHasAtributoClave.AtributoClave</DomainPath>
-          </LinkCreationPaths>
-        </ElementMergeDirective>
-        <ElementMergeDirective>
-          <Index>
             <DomainClassMoniker Name="EstiloPagina" />
           </Index>
           <LinkCreationPaths>
             <DomainPath>EntidadHasEstiloPagina.EstiloPagina</DomainPath>
           </LinkCreationPaths>
-        </ElementMergeDirective>
-        <ElementMergeDirective>
-          <Index>
-            <DomainClassMoniker Name="Atributo" />
-          </Index>
         </ElementMergeDirective>
       </ElementMergeDirectives>
     </DomainClass>
@@ -76,38 +71,6 @@
           </Index>
           <LinkCreationPaths>
             <DomainPath>RelacionHasCardinalidad.Cardinalidad</DomainPath>
-          </LinkCreationPaths>
-        </ElementMergeDirective>
-        <ElementMergeDirective>
-          <Index>
-            <DomainClassMoniker Name="Atributo" />
-          </Index>
-          <LinkCreationPaths>
-            <DomainPath>RelacionHasAtributoRelacion.AtributoRelacion</DomainPath>
-          </LinkCreationPaths>
-        </ElementMergeDirective>
-      </ElementMergeDirectives>
-    </DomainClass>
-    <DomainClass Id="bbc8b3ac-2ba5-4995-91c6-a1e0d5130518" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.AtributoClave" Name="AtributoClave" DisplayName="Atributo Clave" Namespace="UPM_IPS.JCJAPGDRCDERAWebBD">
-      <Properties>
-        <DomainProperty Id="dba57ac6-2d1a-4426-a067-58f5cade145c" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.AtributoClave.Nombre" Name="Nombre" DisplayName="Nombre">
-          <Type>
-            <ExternalTypeMoniker Name="/System/String" />
-          </Type>
-        </DomainProperty>
-        <DomainProperty Id="48be06c3-5917-4c5f-959f-bc6d17ea73ee" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.AtributoClave.Tipo Dato" Name="TipoDato" DisplayName="Tipo Dato">
-          <Type>
-            <DomainEnumerationMoniker Name="TipoDato" />
-          </Type>
-        </DomainProperty>
-      </Properties>
-      <ElementMergeDirectives>
-        <ElementMergeDirective>
-          <Index>
-            <DomainClassMoniker Name="EstiloCampo" />
-          </Index>
-          <LinkCreationPaths>
-            <DomainPath>AtributoClaveHasEstiloCampo.EstiloCampo</DomainPath>
           </LinkCreationPaths>
         </ElementMergeDirective>
       </ElementMergeDirectives>
@@ -131,49 +94,6 @@
         </DomainProperty>
       </Properties>
     </DomainClass>
-    <DomainClass Id="4150c560-7e3d-4cd2-a5c7-be32f4e79baa" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.RestriccionRango" Name="RestriccionRango" DisplayName="Restriccion Rango" Namespace="UPM_IPS.JCJAPGDRCDERAWebBD">
-      <Properties>
-        <DomainProperty Id="9b899305-fdc7-4a6f-b3b6-8ac995467bb1" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.RestriccionRango.Valor Minimo" Name="ValorMinimo" DisplayName="Valor Minimo">
-          <Type>
-            <ExternalTypeMoniker Name="/System/String" />
-          </Type>
-        </DomainProperty>
-        <DomainProperty Id="13eaba04-55c0-4ef9-817e-bafee1c6e1f4" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.RestriccionRango.Valor Maximo" Name="ValorMaximo" DisplayName="Valor Maximo">
-          <Type>
-            <ExternalTypeMoniker Name="/System/String" />
-          </Type>
-        </DomainProperty>
-        <DomainProperty Id="e8cc76de-e46e-47f2-b00c-5a7b3b0957c2" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.RestriccionRango.Nombre" Name="Nombre" DisplayName="Nombre">
-          <Type>
-            <ExternalTypeMoniker Name="/System/String" />
-          </Type>
-        </DomainProperty>
-      </Properties>
-    </DomainClass>
-    <DomainClass Id="017d640f-cd7f-4d83-b7f0-3827e79b4123" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.RestriccionEnum" Name="RestriccionEnum" DisplayName="Restriccion Enum" Namespace="UPM_IPS.JCJAPGDRCDERAWebBD">
-      <Properties>
-        <DomainProperty Id="1df47566-8a79-4e06-a56d-5a0b900a8458" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.RestriccionEnum.Valor" Name="Valor" DisplayName="Valor">
-          <Type>
-            <ExternalTypeMoniker Name="/System/String" />
-          </Type>
-        </DomainProperty>
-        <DomainProperty Id="ecc125d1-a3c2-4a32-af58-6496c27a8d51" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.RestriccionEnum.Nombre" Name="Nombre" DisplayName="Nombre">
-          <Type>
-            <ExternalTypeMoniker Name="/System/String" />
-          </Type>
-        </DomainProperty>
-      </Properties>
-      <ElementMergeDirectives>
-        <ElementMergeDirective>
-          <Index>
-            <DomainClassMoniker Name="ValoresEnum" />
-          </Index>
-          <LinkCreationPaths>
-            <DomainPath>RestriccionEnumHasValoresEnum.ValoresEnum</DomainPath>
-          </LinkCreationPaths>
-        </ElementMergeDirective>
-      </ElementMergeDirectives>
-    </DomainClass>
     <DomainClass Id="c3f240c1-58e1-4b2e-a5c5-97262a719399" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.EstiloPortal" Name="EstiloPortal" DisplayName="Estilo Portal" Namespace="UPM_IPS.JCJAPGDRCDERAWebBD">
       <BaseClass>
         <DomainClassMoniker Name="Estilos" />
@@ -191,61 +111,10 @@
         </DomainProperty>
       </Properties>
     </DomainClass>
-    <DomainClass Id="2331091f-33bc-43c3-8065-91b800827729" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.Atributo" Name="Atributo" DisplayName="Atributo" Namespace="UPM_IPS.JCJAPGDRCDERAWebBD">
-      <BaseClass>
-        <DomainClassMoniker Name="AtributoClave" />
-      </BaseClass>
-      <Properties>
-        <DomainProperty Id="b73839ed-2c36-4e60-8cdf-9dd1768cd2c1" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.Atributo.Nulo" Name="Nulo" DisplayName="Nulo">
-          <Type>
-            <ExternalTypeMoniker Name="/System/Boolean" />
-          </Type>
-        </DomainProperty>
-      </Properties>
-      <ElementMergeDirectives>
-        <ElementMergeDirective>
-          <Index>
-            <DomainClassMoniker Name="RestriccionRango" />
-          </Index>
-          <LinkCreationPaths>
-            <DomainPath>AtributoHasRestriccionRango.RestriccionRango</DomainPath>
-          </LinkCreationPaths>
-        </ElementMergeDirective>
-        <ElementMergeDirective>
-          <Index>
-            <DomainClassMoniker Name="RestriccionEnum" />
-          </Index>
-          <LinkCreationPaths>
-            <DomainPath>AtributoHasRestriccionEnum.RestriccionEnum</DomainPath>
-          </LinkCreationPaths>
-        </ElementMergeDirective>
-      </ElementMergeDirectives>
-    </DomainClass>
-    <DomainClass Id="6015b894-5260-40ff-90a0-22a0247e5ac4" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.ValoresEnum" Name="ValoresEnum" DisplayName="Valores Enum" Namespace="UPM_IPS.JCJAPGDRCDERAWebBD">
-      <Properties>
-        <DomainProperty Id="3063752a-8328-425a-8f10-e7a02cc7647b" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.ValoresEnum.Valor" Name="Valor" DisplayName="Valor">
-          <Type>
-            <ExternalTypeMoniker Name="/System/String" />
-          </Type>
-        </DomainProperty>
-      </Properties>
-    </DomainClass>
     <DomainClass Id="78ee252c-ef22-41a3-9bb9-142910e15a60" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.EstiloPagina" Name="EstiloPagina" DisplayName="Estilo Pagina" Namespace="UPM_IPS.JCJAPGDRCDERAWebBD">
       <BaseClass>
         <DomainClassMoniker Name="Estilos" />
       </BaseClass>
-    </DomainClass>
-    <DomainClass Id="d8959fa7-fd02-414d-bf81-da2e495ee903" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.EstiloCampo" Name="EstiloCampo" DisplayName="Estilo Campo" Namespace="UPM_IPS.JCJAPGDRCDERAWebBD">
-      <BaseClass>
-        <DomainClassMoniker Name="Estilos" />
-      </BaseClass>
-      <Properties>
-        <DomainProperty Id="810a1196-7a0e-41b1-857b-2c32a6ff9605" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.EstiloCampo.Tipo Campo" Name="TipoCampo" DisplayName="Tipo Campo">
-          <Type>
-            <DomainEnumerationMoniker Name="TiposCampo" />
-          </Type>
-        </DomainProperty>
-      </Properties>
     </DomainClass>
     <DomainClass Id="08d7680a-44fa-4d65-9eea-820a202b8a29" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.Estilos" Name="Estilos" DisplayName="Estilos" InheritanceModifier="Abstract" Namespace="UPM_IPS.JCJAPGDRCDERAWebBD">
       <Properties>
@@ -271,6 +140,7 @@
         </DomainProperty>
       </Properties>
     </DomainClass>
+    <DomainClass Id="ad9ee7ff-c9eb-4d01-ac2d-12690b2f6c61" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.Atributo" Name="Atributo" DisplayName="Atributo" Namespace="UPM_IPS.JCJAPGDRCDERAWebBD" />
   </Classes>
   <Relationships>
     <DomainRelationship Id="bb3c3db7-9cfd-451a-9dc6-58332ef28fb3" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasEntidades" Name="DERAWebBDModelHasEntidades" DisplayName="DERAWeb BDModel Has Entidades" Namespace="UPM_IPS.JCJAPGDRCDERAWebBD" IsEmbedding="true">
@@ -301,22 +171,6 @@
         <DomainRole Id="01f10f7c-2656-4afa-b7d8-e0df1a46ebd7" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasRelaciones.Relacion" Name="Relacion" DisplayName="Relacion" PropertyName="DERAWebBDModel" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="DERAWeb BDModel">
           <RolePlayer>
             <DomainClassMoniker Name="Relacion" />
-          </RolePlayer>
-        </DomainRole>
-      </Target>
-    </DomainRelationship>
-    <DomainRelationship Id="fc3caac0-3d55-4384-bb69-3b33f0dc7878" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.EntidadHasAtributoClave" Name="EntidadHasAtributoClave" DisplayName="Entidad Has Atributo Clave" Namespace="UPM_IPS.JCJAPGDRCDERAWebBD" IsEmbedding="true">
-      <Source>
-        <DomainRole Id="a61d9212-281c-4cb5-b700-82d1bd8af2cb" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.EntidadHasAtributoClave.Entidad" Name="Entidad" DisplayName="Entidad" PropertyName="AtributoClave" Multiplicity="One" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Atributo Clave">
-          <RolePlayer>
-            <DomainClassMoniker Name="Entidad" />
-          </RolePlayer>
-        </DomainRole>
-      </Source>
-      <Target>
-        <DomainRole Id="6360c1ee-9c4e-4ac0-abce-158fa8338350" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.EntidadHasAtributoClave.AtributoClave" Name="AtributoClave" DisplayName="Atributo Clave" PropertyName="EntidadDeAtributoClave" Multiplicity="ZeroOne" PropagatesDelete="true" PropertyDisplayName="Entidad De Atributo Clave">
-          <RolePlayer>
-            <DomainClassMoniker Name="AtributoClave" />
           </RolePlayer>
         </DomainRole>
       </Target>
@@ -369,54 +223,6 @@
         </DomainRole>
       </Target>
     </DomainRelationship>
-    <DomainRelationship Id="01c92108-c1ae-45ff-9610-14bd2ac31521" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.EntidadHasAtributoEntidad" Name="EntidadHasAtributoEntidad" DisplayName="Entidad Has Atributo Entidad" Namespace="UPM_IPS.JCJAPGDRCDERAWebBD" IsEmbedding="true">
-      <Source>
-        <DomainRole Id="e833c709-5ee1-45df-87ad-933d2d1cd8c1" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.EntidadHasAtributoEntidad.Entidad" Name="Entidad" DisplayName="Entidad" PropertyName="AtributoEntidad" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Atributo Entidad">
-          <RolePlayer>
-            <DomainClassMoniker Name="Entidad" />
-          </RolePlayer>
-        </DomainRole>
-      </Source>
-      <Target>
-        <DomainRole Id="4dd415d1-1eeb-4c58-89a1-0f6be27acbee" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.EntidadHasAtributoEntidad.Atributo" Name="Atributo" DisplayName="Atributo" PropertyName="EntidadDeAtributo" Multiplicity="ZeroOne" PropagatesDelete="true" PropertyDisplayName="Entidad De Atributo">
-          <RolePlayer>
-            <DomainClassMoniker Name="Atributo" />
-          </RolePlayer>
-        </DomainRole>
-      </Target>
-    </DomainRelationship>
-    <DomainRelationship Id="e68a03a4-4ccf-4a36-b8b9-0667069bf588" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.RestriccionEnumHasValoresEnum" Name="RestriccionEnumHasValoresEnum" DisplayName="Restriccion Enum Has Valores Enum" Namespace="UPM_IPS.JCJAPGDRCDERAWebBD" IsEmbedding="true">
-      <Source>
-        <DomainRole Id="dcb8534a-a55b-4696-b04e-0e5e935f23f1" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.RestriccionEnumHasValoresEnum.RestriccionEnum" Name="RestriccionEnum" DisplayName="Restriccion Enum" PropertyName="ValoresEnum" Multiplicity="OneMany" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Valores Enum">
-          <RolePlayer>
-            <DomainClassMoniker Name="RestriccionEnum" />
-          </RolePlayer>
-        </DomainRole>
-      </Source>
-      <Target>
-        <DomainRole Id="22148d05-ec72-4215-b23e-57affece0e44" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.RestriccionEnumHasValoresEnum.ValoresEnum" Name="ValoresEnum" DisplayName="Valores Enum" PropertyName="RestriccionEnum" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Restriccion Enum">
-          <RolePlayer>
-            <DomainClassMoniker Name="ValoresEnum" />
-          </RolePlayer>
-        </DomainRole>
-      </Target>
-    </DomainRelationship>
-    <DomainRelationship Id="67baff79-bf22-4c7c-98f9-b72aa946af05" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.RelacionHasAtributoRelacion" Name="RelacionHasAtributoRelacion" DisplayName="Relacion Has Atributo Relacion" Namespace="UPM_IPS.JCJAPGDRCDERAWebBD" IsEmbedding="true">
-      <Source>
-        <DomainRole Id="46e3ab69-2d88-4cd3-b04f-0b8c6eb61333" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.RelacionHasAtributoRelacion.Relacion" Name="Relacion" DisplayName="Relacion" PropertyName="AtributoRelacion" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Atributo Relacion">
-          <RolePlayer>
-            <DomainClassMoniker Name="Relacion" />
-          </RolePlayer>
-        </DomainRole>
-      </Source>
-      <Target>
-        <DomainRole Id="4b0261ae-6700-4fa5-8ef4-b3dd29aa6714" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.RelacionHasAtributoRelacion.Atributo" Name="Atributo" DisplayName="Atributo" PropertyName="Relacion" Multiplicity="ZeroOne" PropagatesDelete="true" PropertyDisplayName="Relacion">
-          <RolePlayer>
-            <DomainClassMoniker Name="Atributo" />
-          </RolePlayer>
-        </DomainRole>
-      </Target>
-    </DomainRelationship>
     <DomainRelationship Id="5e6dc20e-8873-44bf-b49d-87840b40de1b" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.EntidadHasEstiloPagina" Name="EntidadHasEstiloPagina" DisplayName="Entidad Has Estilo Pagina" Namespace="UPM_IPS.JCJAPGDRCDERAWebBD" IsEmbedding="true">
       <Source>
         <DomainRole Id="c781e742-c4d3-4926-b52a-c57469425cc0" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.EntidadHasEstiloPagina.Entidad" Name="Entidad" DisplayName="Entidad" PropertyName="EstiloPagina" Multiplicity="ZeroOne" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Estilo Pagina">
@@ -429,54 +235,6 @@
         <DomainRole Id="8ad58dcf-8b86-4d4d-97ff-37f6f624596a" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.EntidadHasEstiloPagina.EstiloPagina" Name="EstiloPagina" DisplayName="Estilo Pagina" PropertyName="Entidad" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Entidad">
           <RolePlayer>
             <DomainClassMoniker Name="EstiloPagina" />
-          </RolePlayer>
-        </DomainRole>
-      </Target>
-    </DomainRelationship>
-    <DomainRelationship Id="3b561a06-c1d5-450a-ae62-1ee76826dcca" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.AtributoHasRestriccionRango" Name="AtributoHasRestriccionRango" DisplayName="Atributo Has Restriccion Rango" Namespace="UPM_IPS.JCJAPGDRCDERAWebBD" IsEmbedding="true">
-      <Source>
-        <DomainRole Id="46574e53-20cb-4485-8a2f-c5ef3eb41daf" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.AtributoHasRestriccionRango.Atributo" Name="Atributo" DisplayName="Atributo" PropertyName="RestriccionRango" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Restriccion Rango">
-          <RolePlayer>
-            <DomainClassMoniker Name="Atributo" />
-          </RolePlayer>
-        </DomainRole>
-      </Source>
-      <Target>
-        <DomainRole Id="1ff018af-db54-43da-bed6-47b147dbdaf4" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.AtributoHasRestriccionRango.RestriccionRango" Name="RestriccionRango" DisplayName="Restriccion Rango" PropertyName="Atributo" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Atributo">
-          <RolePlayer>
-            <DomainClassMoniker Name="RestriccionRango" />
-          </RolePlayer>
-        </DomainRole>
-      </Target>
-    </DomainRelationship>
-    <DomainRelationship Id="9674c88a-fe31-447f-a9b7-671ad30f3e78" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.AtributoHasRestriccionEnum" Name="AtributoHasRestriccionEnum" DisplayName="Atributo Has Restriccion Enum" Namespace="UPM_IPS.JCJAPGDRCDERAWebBD" IsEmbedding="true">
-      <Source>
-        <DomainRole Id="8c795296-23ff-494e-aaf0-ce72fa92538c" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.AtributoHasRestriccionEnum.Atributo" Name="Atributo" DisplayName="Atributo" PropertyName="RestriccionEnum" Multiplicity="One" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Restriccion Enum">
-          <RolePlayer>
-            <DomainClassMoniker Name="Atributo" />
-          </RolePlayer>
-        </DomainRole>
-      </Source>
-      <Target>
-        <DomainRole Id="f0a44010-aa09-41ec-871a-6088dc883641" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.AtributoHasRestriccionEnum.RestriccionEnum" Name="RestriccionEnum" DisplayName="Restriccion Enum" PropertyName="Atributo" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Atributo">
-          <RolePlayer>
-            <DomainClassMoniker Name="RestriccionEnum" />
-          </RolePlayer>
-        </DomainRole>
-      </Target>
-    </DomainRelationship>
-    <DomainRelationship Id="326e6e89-bd29-4000-a258-48042546231f" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.AtributoClaveHasEstiloCampo" Name="AtributoClaveHasEstiloCampo" DisplayName="Atributo Clave Has Estilo Campo" Namespace="UPM_IPS.JCJAPGDRCDERAWebBD" IsEmbedding="true">
-      <Source>
-        <DomainRole Id="dff2012c-2fac-43b5-bbcc-67415e297243" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.AtributoClaveHasEstiloCampo.AtributoClave" Name="AtributoClave" DisplayName="Atributo Clave" PropertyName="EstiloCampo" Multiplicity="ZeroOne" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Estilo Campo">
-          <RolePlayer>
-            <DomainClassMoniker Name="AtributoClave" />
-          </RolePlayer>
-        </DomainRole>
-      </Source>
-      <Target>
-        <DomainRole Id="aeb22ed0-084f-41a6-8375-d5334ee7033e" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.AtributoClaveHasEstiloCampo.EstiloCampo" Name="EstiloCampo" DisplayName="Estilo Campo" PropertyName="AtributoClave" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Atributo Clave">
-          <RolePlayer>
-            <DomainClassMoniker Name="EstiloCampo" />
           </RolePlayer>
         </DomainRole>
       </Target>
@@ -504,32 +262,16 @@
         </DomainRole>
       </Target>
     </DomainRelationship>
-    <DomainRelationship Id="905e23f4-d191-4117-9a5e-19424fc26c72" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelReferencesAtributo" Name="DERAWebBDModelReferencesAtributo" DisplayName="DERAWeb BDModel References Atributo" Namespace="UPM_IPS.JCJAPGDRCDERAWebBD">
+    <DomainRelationship Id="fa38feab-22ee-4f10-b7c3-f073bcdb4341" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasAtributo" Name="DERAWebBDModelHasAtributo" DisplayName="DERAWeb BDModel Has Atributo" Namespace="UPM_IPS.JCJAPGDRCDERAWebBD" IsEmbedding="true">
       <Source>
-        <DomainRole Id="1cd920b8-9ddc-46c7-9ae7-ec331a8f5b66" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelReferencesAtributo.DERAWebBDModel" Name="DERAWebBDModel" DisplayName="DERAWeb BDModel" PropertyName="Atributo" PropertyDisplayName="Atributo">
+        <DomainRole Id="7cd08304-d541-4a46-8127-3da08da85cd2" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasAtributo.DERAWebBDModel" Name="DERAWebBDModel" DisplayName="DERAWeb BDModel" PropertyName="Atributo" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Atributo">
           <RolePlayer>
             <DomainClassMoniker Name="DERAWebBDModel" />
           </RolePlayer>
         </DomainRole>
       </Source>
       <Target>
-        <DomainRole Id="274ccd7e-295c-444b-bbb3-d572cfae9d91" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelReferencesAtributo.Atributo" Name="Atributo" DisplayName="Atributo" PropertyName="DERAWebBDModel" PropertyDisplayName="DERAWeb BDModel">
-          <RolePlayer>
-            <DomainClassMoniker Name="Atributo" />
-          </RolePlayer>
-        </DomainRole>
-      </Target>
-    </DomainRelationship>
-    <DomainRelationship Id="cb39338c-85d5-4db1-bba4-64ae935b633d" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.EntidadReferencesAtributo" Name="EntidadReferencesAtributo" DisplayName="Entidad References Atributo" Namespace="UPM_IPS.JCJAPGDRCDERAWebBD">
-      <Source>
-        <DomainRole Id="b8f66687-515d-4d16-b5c8-518981171cf8" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.EntidadReferencesAtributo.Entidad" Name="Entidad" DisplayName="Entidad" PropertyName="Atributo" PropertyDisplayName="Atributo">
-          <RolePlayer>
-            <DomainClassMoniker Name="Entidad" />
-          </RolePlayer>
-        </DomainRole>
-      </Source>
-      <Target>
-        <DomainRole Id="058440e3-34fe-4a8b-9b03-eec87e792cf6" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.EntidadReferencesAtributo.Atributo" Name="Atributo" DisplayName="Atributo" PropertyName="Entidad" PropagatesDelete="true" PropertyDisplayName="Entidad">
+        <DomainRole Id="9f2056fe-a5db-4fb1-bb0e-05f7be513791" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasAtributo.Atributo" Name="Atributo" DisplayName="Atributo" PropertyName="DERAWebBDModel" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="DERAWeb BDModel">
           <RolePlayer>
             <DomainClassMoniker Name="Atributo" />
           </RolePlayer>
@@ -624,7 +366,7 @@
       </ShapeHasDecorators>
     </GeometryShape>
     <GeometryShape Id="3043f948-be34-467c-a0a5-fce0432f886f" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.EstiloPortalShape" Name="EstiloPortalShape" DisplayName="Estilo Portal Shape" Namespace="UPM_IPS.JCJAPGDRCDERAWebBD" FixedTooltipText="Estilo Portal Shape" InitialHeight="1" Geometry="RoundedRectangle" />
-    <GeometryShape Id="283e095c-d4ad-41f4-ab67-11921f189e85" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.AtributoShape" Name="AtributoShape" DisplayName="Atributo Shape" Namespace="UPM_IPS.JCJAPGDRCDERAWebBD" FixedTooltipText="Atributo Shape" TextColor="White" FillColor="Maroon" InitialHeight="1" Geometry="Ellipse">
+    <GeometryShape Id="283e095c-d4ad-41f4-ab67-11921f189e85" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.AtributoShape" Name="AtributoShape" DisplayName="Atributo Shape" Namespace="UPM_IPS.JCJAPGDRCDERAWebBD" FixedTooltipText="Atributo Shape" FillColor="Transparent" InitialHeight="1" Geometry="Ellipse">
       <ShapeHasDecorators Position="Center" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="NameDecorator" DisplayName="Name Decorator" DefaultText="NameDecorator" />
       </ShapeHasDecorators>
@@ -658,7 +400,7 @@
             <DomainRelationshipMoniker Name="DERAWebBDModelHasEstiloPortal" />
           </XmlRelationshipData>
           <XmlRelationshipData UseFullForm="true" RoleElementName="atributo">
-            <DomainRelationshipMoniker Name="DERAWebBDModelReferencesAtributo" />
+            <DomainRelationshipMoniker Name="DERAWebBDModelHasAtributo" />
           </XmlRelationshipData>
         </ElementData>
       </XmlClassData>
@@ -671,17 +413,8 @@
           <XmlPropertyData XmlName="name" IsMonikerKey="true">
             <DomainPropertyMoniker Name="Entidad/Name" />
           </XmlPropertyData>
-          <XmlRelationshipData UseFullForm="true" RoleElementName="atributoClave">
-            <DomainRelationshipMoniker Name="EntidadHasAtributoClave" />
-          </XmlRelationshipData>
-          <XmlRelationshipData UseFullForm="true" RoleElementName="atributoEntidad">
-            <DomainRelationshipMoniker Name="EntidadHasAtributoEntidad" />
-          </XmlRelationshipData>
           <XmlRelationshipData UseFullForm="true" RoleElementName="estiloPagina">
             <DomainRelationshipMoniker Name="EntidadHasEstiloPagina" />
-          </XmlRelationshipData>
-          <XmlRelationshipData UseFullForm="true" RoleElementName="atributo">
-            <DomainRelationshipMoniker Name="EntidadReferencesAtributo" />
           </XmlRelationshipData>
         </ElementData>
       </XmlClassData>
@@ -697,9 +430,6 @@
           <XmlRelationshipData UseFullForm="true" RoleElementName="cardinalidad">
             <DomainRelationshipMoniker Name="RelacionHasCardinalidad" />
           </XmlRelationshipData>
-          <XmlRelationshipData UseFullForm="true" RoleElementName="atributoRelacion">
-            <DomainRelationshipMoniker Name="RelacionHasAtributoRelacion" />
-          </XmlRelationshipData>
           <XmlRelationshipData UseFullForm="true" RoleElementName="entidad">
             <DomainRelationshipMoniker Name="RelacionReferencesEntidad" />
           </XmlRelationshipData>
@@ -707,23 +437,6 @@
       </XmlClassData>
       <XmlClassData TypeName="DERAWebBDModelHasRelaciones" MonikerAttributeName="" SerializeId="true" MonikerElementName="dERAWebBDModelHasRelacionesMoniker" ElementName="dERAWebBDModelHasRelaciones" MonikerTypeName="DERAWebBDModelHasRelacionesMoniker">
         <DomainRelationshipMoniker Name="DERAWebBDModelHasRelaciones" />
-      </XmlClassData>
-      <XmlClassData TypeName="AtributoClave" MonikerAttributeName="" SerializeId="true" MonikerElementName="atributoClaveMoniker" ElementName="atributoClave" MonikerTypeName="AtributoClaveMoniker">
-        <DomainClassMoniker Name="AtributoClave" />
-        <ElementData>
-          <XmlPropertyData XmlName="nombre">
-            <DomainPropertyMoniker Name="AtributoClave/Nombre" />
-          </XmlPropertyData>
-          <XmlPropertyData XmlName="tipoDato">
-            <DomainPropertyMoniker Name="AtributoClave/TipoDato" />
-          </XmlPropertyData>
-          <XmlRelationshipData UseFullForm="true" RoleElementName="estiloCampo">
-            <DomainRelationshipMoniker Name="AtributoClaveHasEstiloCampo" />
-          </XmlRelationshipData>
-        </ElementData>
-      </XmlClassData>
-      <XmlClassData TypeName="EntidadHasAtributoClave" MonikerAttributeName="" SerializeId="true" MonikerElementName="entidadHasAtributoClaveMoniker" ElementName="entidadHasAtributoClave" MonikerTypeName="EntidadHasAtributoClaveMoniker">
-        <DomainRelationshipMoniker Name="EntidadHasAtributoClave" />
       </XmlClassData>
       <XmlClassData TypeName="Cardinalidad" MonikerAttributeName="" SerializeId="true" MonikerElementName="cardinalidadMoniker" ElementName="cardinalidad" MonikerTypeName="CardinalidadMoniker">
         <DomainClassMoniker Name="Cardinalidad" />
@@ -748,34 +461,6 @@
       <XmlClassData TypeName="CardinalidadReferencesEntidad" MonikerAttributeName="" SerializeId="true" MonikerElementName="cardinalidadReferencesEntidadMoniker" ElementName="cardinalidadReferencesEntidad" MonikerTypeName="CardinalidadReferencesEntidadMoniker">
         <DomainRelationshipMoniker Name="CardinalidadReferencesEntidad" />
       </XmlClassData>
-      <XmlClassData TypeName="RestriccionRango" MonikerAttributeName="" SerializeId="true" MonikerElementName="restriccionRangoMoniker" ElementName="restriccionRango" MonikerTypeName="RestriccionRangoMoniker">
-        <DomainClassMoniker Name="RestriccionRango" />
-        <ElementData>
-          <XmlPropertyData XmlName="valorMinimo">
-            <DomainPropertyMoniker Name="RestriccionRango/ValorMinimo" />
-          </XmlPropertyData>
-          <XmlPropertyData XmlName="valorMaximo">
-            <DomainPropertyMoniker Name="RestriccionRango/ValorMaximo" />
-          </XmlPropertyData>
-          <XmlPropertyData XmlName="nombre">
-            <DomainPropertyMoniker Name="RestriccionRango/Nombre" />
-          </XmlPropertyData>
-        </ElementData>
-      </XmlClassData>
-      <XmlClassData TypeName="RestriccionEnum" MonikerAttributeName="" SerializeId="true" MonikerElementName="restriccionEnumMoniker" ElementName="restriccionEnum" MonikerTypeName="RestriccionEnumMoniker">
-        <DomainClassMoniker Name="RestriccionEnum" />
-        <ElementData>
-          <XmlPropertyData XmlName="valor">
-            <DomainPropertyMoniker Name="RestriccionEnum/Valor" />
-          </XmlPropertyData>
-          <XmlRelationshipData UseFullForm="true" RoleElementName="valoresEnum">
-            <DomainRelationshipMoniker Name="RestriccionEnumHasValoresEnum" />
-          </XmlRelationshipData>
-          <XmlPropertyData XmlName="nombre">
-            <DomainPropertyMoniker Name="RestriccionEnum/Nombre" />
-          </XmlPropertyData>
-        </ElementData>
-      </XmlClassData>
       <XmlClassData TypeName="EstiloPortal" MonikerAttributeName="" SerializeId="true" MonikerElementName="estiloPortalMoniker" ElementName="estiloPortal" MonikerTypeName="EstiloPortalMoniker">
         <DomainClassMoniker Name="EstiloPortal" />
         <ElementData>
@@ -787,50 +472,11 @@
           </XmlPropertyData>
         </ElementData>
       </XmlClassData>
-      <XmlClassData TypeName="Atributo" MonikerAttributeName="" SerializeId="true" MonikerElementName="atributoMoniker" ElementName="atributo" MonikerTypeName="AtributoMoniker">
-        <DomainClassMoniker Name="Atributo" />
-        <ElementData>
-          <XmlPropertyData XmlName="nulo">
-            <DomainPropertyMoniker Name="Atributo/Nulo" />
-          </XmlPropertyData>
-          <XmlRelationshipData UseFullForm="true" RoleElementName="restriccionRango">
-            <DomainRelationshipMoniker Name="AtributoHasRestriccionRango" />
-          </XmlRelationshipData>
-          <XmlRelationshipData UseFullForm="true" RoleElementName="restriccionEnum">
-            <DomainRelationshipMoniker Name="AtributoHasRestriccionEnum" />
-          </XmlRelationshipData>
-        </ElementData>
-      </XmlClassData>
-      <XmlClassData TypeName="ValoresEnum" MonikerAttributeName="" SerializeId="true" MonikerElementName="valoresEnumMoniker" ElementName="valoresEnum" MonikerTypeName="ValoresEnumMoniker">
-        <DomainClassMoniker Name="ValoresEnum" />
-        <ElementData>
-          <XmlPropertyData XmlName="valor">
-            <DomainPropertyMoniker Name="ValoresEnum/Valor" />
-          </XmlPropertyData>
-        </ElementData>
-      </XmlClassData>
       <XmlClassData TypeName="EstiloPagina" MonikerAttributeName="" SerializeId="true" MonikerElementName="estiloPaginaMoniker" ElementName="estiloPagina" MonikerTypeName="EstiloPaginaMoniker">
         <DomainClassMoniker Name="EstiloPagina" />
       </XmlClassData>
-      <XmlClassData TypeName="EstiloCampo" MonikerAttributeName="" SerializeId="true" MonikerElementName="estiloCampoMoniker" ElementName="estiloCampo" MonikerTypeName="EstiloCampoMoniker">
-        <DomainClassMoniker Name="EstiloCampo" />
-        <ElementData>
-          <XmlPropertyData XmlName="tipoCampo">
-            <DomainPropertyMoniker Name="EstiloCampo/TipoCampo" />
-          </XmlPropertyData>
-        </ElementData>
-      </XmlClassData>
       <XmlClassData TypeName="DERAWebBDModelHasEstiloPortal" MonikerAttributeName="" SerializeId="true" MonikerElementName="dERAWebBDModelHasEstiloPortalMoniker" ElementName="dERAWebBDModelHasEstiloPortal" MonikerTypeName="DERAWebBDModelHasEstiloPortalMoniker">
         <DomainRelationshipMoniker Name="DERAWebBDModelHasEstiloPortal" />
-      </XmlClassData>
-      <XmlClassData TypeName="EntidadHasAtributoEntidad" MonikerAttributeName="" SerializeId="true" MonikerElementName="entidadHasAtributoEntidadMoniker" ElementName="entidadHasAtributoEntidad" MonikerTypeName="EntidadHasAtributoEntidadMoniker">
-        <DomainRelationshipMoniker Name="EntidadHasAtributoEntidad" />
-      </XmlClassData>
-      <XmlClassData TypeName="RestriccionEnumHasValoresEnum" MonikerAttributeName="" SerializeId="true" MonikerElementName="restriccionEnumHasValoresEnumMoniker" ElementName="restriccionEnumHasValoresEnum" MonikerTypeName="RestriccionEnumHasValoresEnumMoniker">
-        <DomainRelationshipMoniker Name="RestriccionEnumHasValoresEnum" />
-      </XmlClassData>
-      <XmlClassData TypeName="RelacionHasAtributoRelacion" MonikerAttributeName="" SerializeId="true" MonikerElementName="relacionHasAtributoRelacionMoniker" ElementName="relacionHasAtributoRelacion" MonikerTypeName="RelacionHasAtributoRelacionMoniker">
-        <DomainRelationshipMoniker Name="RelacionHasAtributoRelacion" />
       </XmlClassData>
       <XmlClassData TypeName="EntidadHasEstiloPagina" MonikerAttributeName="" SerializeId="true" MonikerElementName="entidadHasEstiloPaginaMoniker" ElementName="entidadHasEstiloPagina" MonikerTypeName="EntidadHasEstiloPaginaMoniker">
         <DomainRelationshipMoniker Name="EntidadHasEstiloPagina" />
@@ -861,12 +507,6 @@
           </XmlPropertyData>
         </ElementData>
       </XmlClassData>
-      <XmlClassData TypeName="AtributoHasRestriccionRango" MonikerAttributeName="" SerializeId="true" MonikerElementName="atributoHasRestriccionRangoMoniker" ElementName="atributoHasRestriccionRango" MonikerTypeName="AtributoHasRestriccionRangoMoniker">
-        <DomainRelationshipMoniker Name="AtributoHasRestriccionRango" />
-      </XmlClassData>
-      <XmlClassData TypeName="AtributoHasRestriccionEnum" MonikerAttributeName="" SerializeId="true" MonikerElementName="atributoHasRestriccionEnumMoniker" ElementName="atributoHasRestriccionEnum" MonikerTypeName="AtributoHasRestriccionEnumMoniker">
-        <DomainRelationshipMoniker Name="AtributoHasRestriccionEnum" />
-      </XmlClassData>
       <XmlClassData TypeName="RestriccionEnumShape" MonikerAttributeName="" SerializeId="true" MonikerElementName="restriccionEnumShapeMoniker" ElementName="restriccionEnumShape" MonikerTypeName="RestriccionEnumShapeMoniker">
         <CompartmentShapeMoniker Name="RestriccionEnumShape" />
       </XmlClassData>
@@ -875,9 +515,6 @@
       </XmlClassData>
       <XmlClassData TypeName="EstiloCampoShape" MonikerAttributeName="" SerializeId="true" MonikerElementName="estiloCampoShapeMoniker" ElementName="estiloCampoShape" MonikerTypeName="EstiloCampoShapeMoniker">
         <GeometryShapeMoniker Name="EstiloCampoShape" />
-      </XmlClassData>
-      <XmlClassData TypeName="AtributoClaveHasEstiloCampo" MonikerAttributeName="" SerializeId="true" MonikerElementName="atributoClaveHasEstiloCampoMoniker" ElementName="atributoClaveHasEstiloCampo" MonikerTypeName="AtributoClaveHasEstiloCampoMoniker">
-        <DomainRelationshipMoniker Name="AtributoClaveHasEstiloCampo" />
       </XmlClassData>
       <XmlClassData TypeName="EstiloPaginaShape" MonikerAttributeName="" SerializeId="true" MonikerElementName="estiloPaginaShapeMoniker" ElementName="estiloPaginaShape" MonikerTypeName="EstiloPaginaShapeMoniker">
         <GeometryShapeMoniker Name="EstiloPaginaShape" />
@@ -908,11 +545,11 @@
       <XmlClassData TypeName="EntidadRelacionConnector" MonikerAttributeName="" SerializeId="true" MonikerElementName="entidadRelacionConnectorMoniker" ElementName="entidadRelacionConnector" MonikerTypeName="EntidadRelacionConnectorMoniker">
         <ConnectorMoniker Name="EntidadRelacionConnector" />
       </XmlClassData>
-      <XmlClassData TypeName="DERAWebBDModelReferencesAtributo" MonikerAttributeName="" SerializeId="true" MonikerElementName="dERAWebBDModelReferencesAtributoMoniker" ElementName="dERAWebBDModelReferencesAtributo" MonikerTypeName="DERAWebBDModelReferencesAtributoMoniker">
-        <DomainRelationshipMoniker Name="DERAWebBDModelReferencesAtributo" />
+      <XmlClassData TypeName="Atributo" MonikerAttributeName="" SerializeId="true" MonikerElementName="atributoMoniker" ElementName="atributo" MonikerTypeName="AtributoMoniker">
+        <DomainClassMoniker Name="Atributo" />
       </XmlClassData>
-      <XmlClassData TypeName="EntidadReferencesAtributo" MonikerAttributeName="" SerializeId="true" MonikerElementName="entidadReferencesAtributoMoniker" ElementName="entidadReferencesAtributo" MonikerTypeName="EntidadReferencesAtributoMoniker">
-        <DomainRelationshipMoniker Name="EntidadReferencesAtributo" />
+      <XmlClassData TypeName="DERAWebBDModelHasAtributo" MonikerAttributeName="" SerializeId="true" MonikerElementName="dERAWebBDModelHasAtributoMoniker" ElementName="dERAWebBDModelHasAtributo" MonikerTypeName="DERAWebBDModelHasAtributoMoniker">
+        <DomainRelationshipMoniker Name="DERAWebBDModelHasAtributo" />
       </XmlClassData>
     </ClassData>
   </XmlSerializationBehavior>
@@ -956,44 +593,6 @@
         </TargetDirectives>
       </LinkConnectDirective>
     </ConnectionBuilder>
-    <ConnectionBuilder Name="DERAWebBDModelReferencesAtributoBuilder">
-      <LinkConnectDirective>
-        <DomainRelationshipMoniker Name="DERAWebBDModelReferencesAtributo" />
-        <SourceDirectives>
-          <RolePlayerConnectDirective>
-            <AcceptingClass>
-              <DomainClassMoniker Name="DERAWebBDModel" />
-            </AcceptingClass>
-          </RolePlayerConnectDirective>
-        </SourceDirectives>
-        <TargetDirectives>
-          <RolePlayerConnectDirective>
-            <AcceptingClass>
-              <DomainClassMoniker Name="Atributo" />
-            </AcceptingClass>
-          </RolePlayerConnectDirective>
-        </TargetDirectives>
-      </LinkConnectDirective>
-    </ConnectionBuilder>
-    <ConnectionBuilder Name="EntidadReferencesAtributoBuilder">
-      <LinkConnectDirective>
-        <DomainRelationshipMoniker Name="EntidadReferencesAtributo" />
-        <SourceDirectives>
-          <RolePlayerConnectDirective>
-            <AcceptingClass>
-              <DomainClassMoniker Name="Entidad" />
-            </AcceptingClass>
-          </RolePlayerConnectDirective>
-        </SourceDirectives>
-        <TargetDirectives>
-          <RolePlayerConnectDirective>
-            <AcceptingClass>
-              <DomainClassMoniker Name="Atributo" />
-            </AcceptingClass>
-          </RolePlayerConnectDirective>
-        </TargetDirectives>
-      </LinkConnectDirective>
-    </ConnectionBuilder>
   </ConnectionBuilders>
   <Diagram Id="7d6d74a5-3b0b-4a63-979e-d8a56874e4c5" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDDiagram" Name="JCJAPGDRCDERAWebBDDiagram" DisplayName="Minimal Language Diagram" Namespace="UPM_IPS.JCJAPGDRCDERAWebBD">
     <Class>
@@ -1014,69 +613,6 @@
           </PropertyDisplayed>
         </DecoratorMap>
         <GeometryShapeMoniker Name="EntidadShape" />
-      </ShapeMap>
-      <CompartmentShapeMap>
-        <DomainClassMoniker Name="RestriccionEnum" />
-        <ParentElementPath>
-          <DomainPath>AtributoHasRestriccionEnum.Atributo/!Atributo/EntidadHasAtributoEntidad.EntidadDeAtributo/!Entidad/DERAWebBDModelHasEntidades.DERAWebBDModel/!DERAWebBDModel</DomainPath>
-        </ParentElementPath>
-        <DecoratorMap>
-          <TextDecoratorMoniker Name="RestriccionEnumShape/NameDecorator" />
-          <PropertyDisplayed>
-            <PropertyPath>
-              <DomainPropertyMoniker Name="RestriccionEnum/Nombre" />
-            </PropertyPath>
-          </PropertyDisplayed>
-        </DecoratorMap>
-        <CompartmentShapeMoniker Name="RestriccionEnumShape" />
-        <CompartmentMap>
-          <CompartmentMoniker Name="RestriccionEnumShape/EnumValores" />
-          <ElementsDisplayed>
-            <DomainPath>RestriccionEnumHasValoresEnum.ValoresEnum/!ValoresEnum</DomainPath>
-          </ElementsDisplayed>
-          <PropertyDisplayed>
-            <PropertyPath>
-              <DomainPropertyMoniker Name="ValoresEnum/Valor" />
-            </PropertyPath>
-          </PropertyDisplayed>
-        </CompartmentMap>
-      </CompartmentShapeMap>
-      <ShapeMap>
-        <DomainClassMoniker Name="ValoresEnum" />
-        <ParentElementPath>
-          <DomainPath>RestriccionEnumHasValoresEnum.RestriccionEnum/!RestriccionEnum/AtributoHasRestriccionEnum.Atributo/!Atributo/EntidadHasAtributoEntidad.EntidadDeAtributo/!Entidad/DERAWebBDModelHasEntidades.DERAWebBDModel/!DERAWebBDModel</DomainPath>
-        </ParentElementPath>
-        <DecoratorMap>
-          <TextDecoratorMoniker Name="ValoresEnumShape/NameDecorator" />
-          <PropertyDisplayed>
-            <PropertyPath>
-              <DomainPropertyMoniker Name="ValoresEnum/Valor" />
-            </PropertyPath>
-          </PropertyDisplayed>
-        </DecoratorMap>
-        <GeometryShapeMoniker Name="ValoresEnumShape" />
-      </ShapeMap>
-      <ShapeMap>
-        <DomainClassMoniker Name="RestriccionRango" />
-        <ParentElementPath>
-          <DomainPath>AtributoHasRestriccionRango.Atributo/!Atributo/EntidadHasAtributoEntidad.EntidadDeAtributo/!Entidad/DERAWebBDModelHasEntidades.DERAWebBDModel/!DERAWebBDModel</DomainPath>
-        </ParentElementPath>
-        <DecoratorMap>
-          <TextDecoratorMoniker Name="RestriccionRangoShape/NameDecorator" />
-          <PropertyDisplayed>
-            <PropertyPath>
-              <DomainPropertyMoniker Name="RestriccionRango/Nombre" />
-            </PropertyPath>
-          </PropertyDisplayed>
-        </DecoratorMap>
-        <GeometryShapeMoniker Name="RestriccionRangoShape" />
-      </ShapeMap>
-      <ShapeMap>
-        <DomainClassMoniker Name="EstiloCampo" />
-        <ParentElementPath>
-          <DomainPath>AtributoClaveHasEstiloCampo.AtributoClave/!AtributoClave/EntidadHasAtributoClave.EntidadDeAtributoClave/!Entidad/DERAWebBDModelHasEntidades.DERAWebBDModel/!DERAWebBDModel</DomainPath>
-        </ParentElementPath>
-        <GeometryShapeMoniker Name="EstiloCampoShape" />
       </ShapeMap>
       <ShapeMap>
         <DomainClassMoniker Name="EstiloPagina" />
@@ -1123,25 +659,14 @@
         <GeometryShapeMoniker Name="EstiloPortalShape" />
       </ShapeMap>
       <ShapeMap>
-        <DomainClassMoniker Name="AtributoClave" />
-        <ParentElementPath>
-          <DomainPath>EntidadHasAtributoClave.EntidadDeAtributoClave/!Entidad/DERAWebBDModelHasEntidades.DERAWebBDModel/!DERAWebBDModel</DomainPath>
-        </ParentElementPath>
-        <GeometryShapeMoniker Name="AtributoClaveShape" />
-      </ShapeMap>
-      <ShapeMap>
         <DomainClassMoniker Name="Atributo" />
         <ParentElementPath>
-          <DomainPath>EntidadHasAtributoEntidad.EntidadDeAtributo/!Entidad/DERAWebBDModelHasEntidades.DERAWebBDModel/!DERAWebBDModel</DomainPath>
+          <DomainPath>DERAWebBDModelHasAtributo.DERAWebBDModel/!DERAWebBDModel</DomainPath>
         </ParentElementPath>
         <GeometryShapeMoniker Name="AtributoShape" />
       </ShapeMap>
     </ShapeMaps>
     <ConnectorMaps>
-      <ConnectorMap>
-        <ConnectorMoniker Name="EntidadConectaAtributo" />
-        <DomainRelationshipMoniker Name="EntidadHasAtributoEntidad" />
-      </ConnectorMap>
       <ConnectorMap>
         <ConnectorMoniker Name="EntidadRelacionConnector" />
         <DomainRelationshipMoniker Name="RelacionReferencesEntidad" />
@@ -1176,9 +701,9 @@
       <ConnectionTool Name="ConectarRelacionEntidad" ToolboxIcon="Resources\relacion.bmp" Caption="ConectarRelacionEntidad" Tooltip="Conectar Relacion Entidad" HelpKeyword="ConectarRelacionEntidad">
         <ConnectionBuilderMoniker Name="JCJAPGDRCDERAWebBD/RelacionReferencesEntidadBuilder" />
       </ConnectionTool>
-      <ConnectionTool Name="EntidadAtributoConectar" ToolboxIcon="Resources\relacion.bmp" Caption="EntidadAtributoConectar" Tooltip="Entidad Atributo Conectar" HelpKeyword="EntidadAtributoConectar">
-        <ConnectionBuilderMoniker Name="JCJAPGDRCDERAWebBD/EntidadReferencesAtributoBuilder" />
-      </ConnectionTool>
+      <ElementTool Name="Atributo" ToolboxIcon="Resources\atributo.bmp" Caption="Atributo" Tooltip="Atributo" HelpKeyword="Atributo">
+        <DomainClassMoniker Name="Atributo" />
+      </ElementTool>
     </ToolboxTab>
     <Validation UsesMenu="false" UsesOpen="false" UsesSave="false" UsesLoad="false" />
     <DiagramMoniker Name="JCJAPGDRCDERAWebBDDiagram" />

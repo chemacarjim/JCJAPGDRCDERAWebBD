@@ -756,31 +756,6 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 				// The table contains an array of CompartmentMapping for every Type that this
 				// shape can be mapped to. 
 				compartmentMappings = new global::System.Collections.Generic.Dictionary<global::System.Type, DslDiagrams::CompartmentMapping[]>();
-				{
-					// First we get the mappings defined for the base shape, and add on any mappings defined for this
-					// shape. 
-					DslDiagrams::CompartmentMapping[] baseMappings = base.GetCompartmentMappings(typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.RestriccionEnum));
-					int localCompartmentMappingsOffset = 0;
-					if(baseMappings!=null)
-					{
-						localCompartmentMappingsOffset = baseMappings.Length;
-					}
-					DslDiagrams::CompartmentMapping[] mappings = new DslDiagrams::CompartmentMapping[1+localCompartmentMappingsOffset];
-					
-					if(baseMappings!=null)
-					{
-						baseMappings.CopyTo(mappings, 0);
-					}
-					mappings[localCompartmentMappingsOffset+0] = new DslDiagrams::ElementListCompartmentMapping(
-																				"EnumValores", 
-																				global::UPM_IPS.JCJAPGDRCDERAWebBD.ValoresEnum.ValorDomainPropertyId, 
-																				global::UPM_IPS.JCJAPGDRCDERAWebBD.ValoresEnum.DomainClassId, 
-																				GetElementsFromRestriccionEnumForEnumValores,
-																				null,
-																				null,
-																				null);
-					compartmentMappings.Add(typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.RestriccionEnum), mappings);
-				}
 			}
 			
 			// See if we can find the mapping being requested directly in the table. 
@@ -808,13 +783,6 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 		}
 		
 			#region DomainPath traversal methods to get the list of elements to display in a compartment.
-			internal static global::System.Collections.IList GetElementsFromRestriccionEnumForEnumValores(DslModeling::ModelElement rootElement)
-			{
-				global::UPM_IPS.JCJAPGDRCDERAWebBD.RestriccionEnum root = (global::UPM_IPS.JCJAPGDRCDERAWebBD.RestriccionEnum)rootElement;
-					// Segments 0 and 1
-					DslModeling::LinkedElementCollection<global::UPM_IPS.JCJAPGDRCDERAWebBD.ValoresEnum> result = root.ValoresEnum;
-				return result;
-			}
 			#endregion
 		
 		#endregion
