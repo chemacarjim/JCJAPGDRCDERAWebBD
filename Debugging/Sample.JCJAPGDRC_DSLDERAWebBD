@@ -1,46 +1,129 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <dERAWebBDModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="824b8638-e2c0-46fc-aa80-550e676d6392" xmlns="http://schemas.microsoft.com/dsltools/JCJAPGDRCDERAWebBD">
   <entidades>
-    <dERAWebBDModelHasEntidades Id="f5288d45-d775-4c1f-89a0-7892802e02a8">
-      <entidad Id="9a176029-0bad-4ab0-9b6f-9b4ec8c56578" name="Clase" />
-    </dERAWebBDModelHasEntidades>
-    <dERAWebBDModelHasEntidades Id="0c91596f-6857-4205-a58b-1bca691f332e">
-      <entidad Id="cac42890-ae69-4bc6-a02d-c7c39aafa749" name="ESTUDIANTE ">
+    <dERAWebBDModelHasEntidades Id="7ca4955f-b5c4-4d8e-b7f1-4d8fcb722be6">
+      <entidad Id="36352b14-7dc9-437d-a343-737e2bc3fce0" name="Alumno">
+        <estiloPagina>
+          <entidadHasEstiloPagina Id="d34b8a4f-fa9d-46e4-acd2-51dece5a8f4b">
+            <estiloPagina Id="119529b0-7b97-407f-b95a-7ed3d3b2a4b7" color="Blanco" tamanio="20" fuente="Calibri" alineacion="Center" />
+          </entidadHasEstiloPagina>
+        </estiloPagina>
         <atributo>
-          <entidadReferencesAtributo Id="3069bf1b-0269-4481-b915-f8f089c02cc7">
-            <atributoMoniker Id="6cdfe4a8-bdd6-4d06-a91c-68a605c627b0" />
+          <entidadReferencesAtributo Id="66a6d68e-8185-4a6a-ace9-041d083cfc12">
+            <atributoMoniker Id="7c784e04-1990-48a7-8640-de5664919c4f" />
+          </entidadReferencesAtributo>
+          <entidadReferencesAtributo Id="748c6b2b-11a8-4802-9d4d-e888c920d9b1">
+            <atributoMoniker Id="16f61dd4-108d-4c5b-871b-9e80bd0aebd7" />
           </entidadReferencesAtributo>
         </atributo>
         <atributoClave>
-          <entidadReferencesAtributoClave Id="aa772ab8-61f5-4539-84c8-63091fb22ffb">
-            <atributoClaveMoniker Id="5953155c-2a82-4018-9651-b15db4e79e6f" />
+          <entidadReferencesAtributoClave Id="d2aac552-ecba-4e03-ace0-b25b271b0969">
+            <atributoClaveMoniker Id="f352d290-b7e1-4794-a53e-49a0cd9380b3" />
           </entidadReferencesAtributoClave>
         </atributoClave>
       </entidad>
     </dERAWebBDModelHasEntidades>
-    <dERAWebBDModelHasEntidades Id="c2d54b3a-7d31-4e8b-8e63-f6604f030b4e">
-      <entidad Id="23b1537f-348e-4461-a571-152400677c32" name="Entidad1" />
+    <dERAWebBDModelHasEntidades Id="e04eddbb-6528-4818-8a63-eef81c54b269">
+      <entidad Id="5382aeb8-6e0e-4be6-aa41-0516059f5f6e" name="Asignatura">
+        <atributo>
+          <entidadReferencesAtributo Id="a0ba7ead-4242-4e5f-a8af-756d989385ac">
+            <atributoMoniker Id="9ccf8e08-8436-4760-bc01-c999dcc0aab5" />
+          </entidadReferencesAtributo>
+        </atributo>
+        <atributoClave>
+          <entidadReferencesAtributoClave Id="d01e29f0-0198-490e-becd-296ae0532239">
+            <atributoClaveMoniker Id="649d27e2-a5c5-4398-8737-551ef233d051" />
+          </entidadReferencesAtributoClave>
+        </atributoClave>
+      </entidad>
+    </dERAWebBDModelHasEntidades>
+    <dERAWebBDModelHasEntidades Id="79d18256-635a-4221-bd7a-f36559b73ae7">
+      <entidad Id="bb625163-151b-4a6e-ae2e-c2312f0dcc64" name="Clase">
+        <atributo>
+          <entidadReferencesAtributo Id="01c7ce62-dac4-462b-b71b-1d94aed790ca">
+            <atributoMoniker Id="5d783ff0-6abb-421e-a6b6-fe49d90decab" />
+          </entidadReferencesAtributo>
+        </atributo>
+        <atributoClave>
+          <entidadReferencesAtributoClave Id="505c144e-b23a-4a37-9269-c60b084550fb">
+            <atributoClaveMoniker Id="c76a62ea-cc07-41b1-80b8-0df8576ea75a" />
+          </entidadReferencesAtributoClave>
+        </atributoClave>
+      </entidad>
+    </dERAWebBDModelHasEntidades>
+    <dERAWebBDModelHasEntidades Id="e9e7a884-693d-4b1d-ad45-86e0bdd24ae9">
+      <entidad Id="2869043b-fd64-498b-8fb7-5ce74d832936" name="Profesor">
+        <atributo>
+          <entidadReferencesAtributo Id="57099387-3857-4984-ab71-69e1b9c15782">
+            <atributoMoniker Id="b853aa1a-17aa-4648-a12a-1892e110fac4" />
+          </entidadReferencesAtributo>
+          <entidadReferencesAtributo Id="1aadbf16-d11c-4b83-99a7-949a8dc2f708">
+            <atributoMoniker Id="6cee76dc-c89d-4369-99bc-0b170b7eddc0" />
+          </entidadReferencesAtributo>
+        </atributo>
+        <atributoClave>
+          <entidadReferencesAtributoClave Id="708494eb-3492-4dd6-ae6a-42259000ad2c">
+            <atributoClaveMoniker Id="e4182659-1b89-488c-bbd0-98acbe6a45df" />
+          </entidadReferencesAtributoClave>
+        </atributoClave>
+      </entidad>
     </dERAWebBDModelHasEntidades>
   </entidades>
   <relaciones>
-    <dERAWebBDModelHasRelaciones Id="18b150b1-25da-4c53-9bd4-ad2ef008f748">
-      <relacion Id="aec839f9-52bf-4bfa-bdac-3419f62e6257" name="Pertenece">
+    <dERAWebBDModelHasRelaciones Id="1c0d29cf-ab3f-40cc-8932-e100d46af39e">
+      <relacion Id="f8bc86d1-07cd-4b79-8f1d-94998249e30c" name="matriculado">
         <entidad>
-          <relacionReferencesEntidad Id="f86233aa-180f-469c-9714-bea0a10cb69b" cardinalidad="1..N">
-            <entidadMoniker name="/824b8638-e2c0-46fc-aa80-550e676d6392/ESTUDIANTE " />
+          <relacionReferencesEntidad Id="f0765e8f-e9bf-4b3e-a0a9-b3ab23a243ae" cardinalidad="0..N">
+            <entidadMoniker name="/824b8638-e2c0-46fc-aa80-550e676d6392/Alumno" />
           </relacionReferencesEntidad>
-          <relacionReferencesEntidad Id="bc2972a5-9f35-4eac-b5fc-3bc7ffeab93c" cardinalidad="1..N">
-            <entidadMoniker name="/824b8638-e2c0-46fc-aa80-550e676d6392/Clase" />
-          </relacionReferencesEntidad>
-          <relacionReferencesEntidad Id="aff158ac-cb6c-4318-b197-97cac3755042">
-            <entidadMoniker name="/824b8638-e2c0-46fc-aa80-550e676d6392/Entidad1" />
+          <relacionReferencesEntidad Id="12b81bf6-1a82-4357-8585-cff6cfc562a6" cardinalidad="0..N">
+            <entidadMoniker name="/824b8638-e2c0-46fc-aa80-550e676d6392/Asignatura" />
           </relacionReferencesEntidad>
         </entidad>
         <atributo>
-          <relacionReferencesAtributo Id="223a910a-bb1c-4e0d-9ed2-146284ee6ab6">
-            <atributoMoniker Id="1902a11a-fc80-4841-a9cb-98c70c2fe405" />
+          <relacionReferencesAtributo Id="09a2f6fd-ee1b-4ab0-96d2-75e8a92a5227">
+            <atributoMoniker Id="c837339a-2a5d-42e0-afe4-7a4bcb94e9fd" />
+          </relacionReferencesAtributo>
+          <relacionReferencesAtributo Id="3c0910f6-4956-4cf6-bd5f-e3e35a45dd92">
+            <atributoMoniker Id="6fd62a2f-b8c2-4933-8262-991cdcef4594" />
           </relacionReferencesAtributo>
         </atributo>
+      </relacion>
+    </dERAWebBDModelHasRelaciones>
+    <dERAWebBDModelHasRelaciones Id="e3002e0c-9cb7-4ee3-bcc9-1e6eb53ff0f7">
+      <relacion Id="a3235b26-ba4f-4f63-b6cc-0cf0681e9df4" name="localizada">
+        <entidad>
+          <relacionReferencesEntidad Id="177fc527-f311-42d6-b13f-ce3c67826b8b" cardinalidad="0..N">
+            <entidadMoniker name="/824b8638-e2c0-46fc-aa80-550e676d6392/Asignatura" />
+          </relacionReferencesEntidad>
+          <relacionReferencesEntidad Id="4380fcc4-31b1-447b-b934-525726e3e924" cardinalidad="1..1">
+            <entidadMoniker name="/824b8638-e2c0-46fc-aa80-550e676d6392/Clase" />
+          </relacionReferencesEntidad>
+        </entidad>
+      </relacion>
+    </dERAWebBDModelHasRelaciones>
+    <dERAWebBDModelHasRelaciones Id="e85f231b-ca89-4bd9-b1f0-b6f100180322">
+      <relacion Id="2447cfb8-180f-4499-b479-bac1daafe599" name="imparte">
+        <entidad>
+          <relacionReferencesEntidad Id="d9a6bba3-fe1d-46e1-838f-d8321ee1f767" cardinalidad="1..1">
+            <entidadMoniker name="/824b8638-e2c0-46fc-aa80-550e676d6392/Profesor" />
+          </relacionReferencesEntidad>
+          <relacionReferencesEntidad Id="b0a3634b-b1e6-4f8c-8f1a-9a155473f268" cardinalidad="1..N">
+            <entidadMoniker name="/824b8638-e2c0-46fc-aa80-550e676d6392/Asignatura" />
+          </relacionReferencesEntidad>
+        </entidad>
+      </relacion>
+    </dERAWebBDModelHasRelaciones>
+    <dERAWebBDModelHasRelaciones Id="ece93cc1-2762-47a4-819c-a8c527ac3322">
+      <relacion Id="ef86318b-7f7b-41d0-834b-d5f301d681a1" name="tutoriza">
+        <entidad>
+          <relacionReferencesEntidad Id="655e7d02-c422-47c9-b352-c7b92b867a1b" cardinalidad="1..1">
+            <entidadMoniker name="/824b8638-e2c0-46fc-aa80-550e676d6392/Profesor" />
+          </relacionReferencesEntidad>
+          <relacionReferencesEntidad Id="29371f55-523b-49af-bf42-6b7108425e0d" cardinalidad="0..N">
+            <entidadMoniker name="/824b8638-e2c0-46fc-aa80-550e676d6392/Alumno" />
+          </relacionReferencesEntidad>
+        </entidad>
       </relacion>
     </dERAWebBDModelHasRelaciones>
   </relaciones>
@@ -50,19 +133,49 @@
     </dERAWebBDModelHasEstiloPortal>
   </estiloPortal>
   <atributo>
-    <dERAWebBDModelHasAtributo Id="3572c82d-1e22-4614-a519-933795555784">
-      <atributo Id="6cdfe4a8-bdd6-4d06-a91c-68a605c627b0" name="nota" tipoDato="Alfanumerico" />
+    <dERAWebBDModelHasAtributo Id="e5362e19-5c16-431a-bb51-491894fca0da">
+      <atributo Id="7c784e04-1990-48a7-8640-de5664919c4f" name="Nombre" tipoDato="Alfanumerico" longitud="156">
+        <estiloCampo>
+          <atributoHasEstiloCampo Id="7d11360c-2911-429d-a78b-3a1bf0d3b716">
+            <estiloCampo Id="97700066-9b18-42b2-8fd7-26be5b19cbc8" color="Azul" tamanio="20" fuente="Arial" alineacion="Center" tipoCampo="AreaTexto" />
+          </atributoHasEstiloCampo>
+        </estiloCampo>
+      </atributo>
     </dERAWebBDModelHasAtributo>
-    <dERAWebBDModelHasAtributo Id="0dfda808-9fde-4a6d-963d-7360b188e9a1">
-      <atributo Id="1902a11a-fc80-4841-a9cb-98c70c2fe405" tipoDato="Alfanumerico" />
+    <dERAWebBDModelHasAtributo Id="74b047f9-d4d8-4717-ad16-c48a22abc6fe">
+      <atributo Id="16f61dd4-108d-4c5b-871b-9e80bd0aebd7" name="Apellidos" tipoDato="Alfanumerico" longitud="156" />
+    </dERAWebBDModelHasAtributo>
+    <dERAWebBDModelHasAtributo Id="57f7815b-2074-4b99-b7c3-aeb457521929">
+      <atributo Id="9ccf8e08-8436-4760-bc01-c999dcc0aab5" name="Nombre" tipoDato="Alfanumerico" longitud="156" />
+    </dERAWebBDModelHasAtributo>
+    <dERAWebBDModelHasAtributo Id="dc372f9f-24fc-4f25-bf3c-60d10bafaaa9">
+      <atributo Id="c837339a-2a5d-42e0-afe4-7a4bcb94e9fd" name="Curso" tipoDato="Alfanumerico" longitud="9" />
+    </dERAWebBDModelHasAtributo>
+    <dERAWebBDModelHasAtributo Id="17b4cb2f-3bc6-4ba2-812d-84439bda46c2">
+      <atributo Id="6fd62a2f-b8c2-4933-8262-991cdcef4594" name="Nota" tipoDato="Alfanumerico" longitud="2" />
+    </dERAWebBDModelHasAtributo>
+    <dERAWebBDModelHasAtributo Id="89ead9d0-8381-40e4-8704-e5e2d7fbe2ad">
+      <atributo Id="5d783ff0-6abb-421e-a6b6-fe49d90decab" name="Nombre" tipoDato="Alfanumerico" longitud="4" />
+    </dERAWebBDModelHasAtributo>
+    <dERAWebBDModelHasAtributo Id="965fdb6a-ca6a-4562-99b2-2fbff30d3308">
+      <atributo Id="b853aa1a-17aa-4648-a12a-1892e110fac4" name="Nombre" tipoDato="Alfanumerico" longitud="156" />
+    </dERAWebBDModelHasAtributo>
+    <dERAWebBDModelHasAtributo Id="a1f33641-6856-4851-a487-7b7d4894c26b">
+      <atributo Id="6cee76dc-c89d-4369-99bc-0b170b7eddc0" name="Apellidos" tipoDato="Alfanumerico" longitud="156" />
     </dERAWebBDModelHasAtributo>
   </atributo>
   <atributoClave>
-    <dERAWebBDModelHasAtributoClave Id="1c64d513-1c78-4a4e-9790-f72d79235e5c">
-      <atributoClave Id="5953155c-2a82-4018-9651-b15db4e79e6f" name="id" />
+    <dERAWebBDModelHasAtributoClave Id="0319d111-11f4-411d-b884-97c8506aa07f">
+      <atributoClave Id="f352d290-b7e1-4794-a53e-49a0cd9380b3" name="DNI" />
     </dERAWebBDModelHasAtributoClave>
-    <dERAWebBDModelHasAtributoClave Id="80651430-74f9-4f1f-9f82-4bf283621a86">
-      <atributoClave Id="9a8faadf-3790-4766-a909-038b1238eb7c" />
+    <dERAWebBDModelHasAtributoClave Id="b3ffdbb2-2f5d-43e9-8958-f4e2921d2d5d">
+      <atributoClave Id="649d27e2-a5c5-4398-8737-551ef233d051" name="Código" />
+    </dERAWebBDModelHasAtributoClave>
+    <dERAWebBDModelHasAtributoClave Id="b536af2b-929a-4351-a698-966c489ed14c">
+      <atributoClave Id="c76a62ea-cc07-41b1-80b8-0df8576ea75a" name="ID" />
+    </dERAWebBDModelHasAtributoClave>
+    <dERAWebBDModelHasAtributoClave Id="c54e4e86-ab91-4d29-b3c9-af37b025e6b0">
+      <atributoClave Id="e4182659-1b89-488c-bbd0-98acbe6a45df" name="ID" />
     </dERAWebBDModelHasAtributoClave>
   </atributoClave>
 </dERAWebBDModel>
