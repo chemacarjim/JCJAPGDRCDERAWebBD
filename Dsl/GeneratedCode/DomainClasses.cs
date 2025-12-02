@@ -559,6 +559,22 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 			}
 		}
 		#endregion
+		#region AtributoClave opposite domain role accessor
+		
+		/// <summary>
+		/// Gets a list of AtributoClave.
+		/// Description for
+		/// UPM_IPS.JCJAPGDRCDERAWebBD.EntidadReferencesAtributoClave.Entidad
+		/// </summary>
+		public virtual DslModeling::LinkedElementCollection<AtributoClave> AtributoClave
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return GetRoleCollection<DslModeling::LinkedElementCollection<AtributoClave>, AtributoClave>(global::UPM_IPS.JCJAPGDRCDERAWebBD.EntidadReferencesAtributoClave.EntidadDomainRoleId);
+			}
+		}
+		#endregion
 		#region ElementGroupPrototype Merge methods
 		/// <summary>
 		/// Returns a value indicating whether the source element represented by the
@@ -2238,6 +2254,22 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 			set
 			{
 				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasAtributoClave.AtributoClaveDomainRoleId, value);
+			}
+		}
+		#endregion
+		#region Entidad opposite domain role accessor
+		
+		/// <summary>
+		/// Gets a list of Entidad.
+		/// Description for
+		/// UPM_IPS.JCJAPGDRCDERAWebBD.EntidadReferencesAtributoClave.AtributoClave
+		/// </summary>
+		public virtual DslModeling::LinkedElementCollection<Entidad> Entidad
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return GetRoleCollection<DslModeling::LinkedElementCollection<Entidad>, Entidad>(global::UPM_IPS.JCJAPGDRCDERAWebBD.EntidadReferencesAtributoClave.AtributoClaveDomainRoleId);
 			}
 		}
 		#endregion

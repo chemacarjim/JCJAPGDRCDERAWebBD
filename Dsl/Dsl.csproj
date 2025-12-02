@@ -162,8 +162,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Resources\clavePrimaria.bmp" />
+    <Content Include="Resources\candado.bmp" />
     <Content Include="Resources\conectar-_1_.bmp" />
+    <Content Include="Resources\conectar-_2_-_1_.bmp" />
     <Content Include="Resources\estiloportal.bmp" />
     <Content Include="Resources\relacion.bmp" />
     <Content Include="Resources\rombo.png" />

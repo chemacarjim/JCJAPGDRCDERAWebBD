@@ -86,6 +86,7 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 				typeof(DERAWebBDModelHasAtributo),
 				typeof(DERAWebBDModelHasAtributoClave),
 				typeof(EntidadReferencesAtributo),
+				typeof(EntidadReferencesAtributoClave),
 				typeof(JCJAPGDRCDERAWebBDDiagram),
 				typeof(EntidadConectaAtributo),
 				typeof(EntidadRelacionConnector),
@@ -158,6 +159,8 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 				new DomainRolePlayerInfo(typeof(DERAWebBDModelHasAtributoClave), "AtributoClave", DERAWebBDModelHasAtributoClave.AtributoClaveDomainRoleId),
 				new DomainRolePlayerInfo(typeof(EntidadReferencesAtributo), "Entidad", EntidadReferencesAtributo.EntidadDomainRoleId),
 				new DomainRolePlayerInfo(typeof(EntidadReferencesAtributo), "Atributo", EntidadReferencesAtributo.AtributoDomainRoleId),
+				new DomainRolePlayerInfo(typeof(EntidadReferencesAtributoClave), "Entidad", EntidadReferencesAtributoClave.EntidadDomainRoleId),
+				new DomainRolePlayerInfo(typeof(EntidadReferencesAtributoClave), "AtributoClave", EntidadReferencesAtributoClave.AtributoClaveDomainRoleId),
 			};
 		}
 		#endregion
@@ -259,7 +262,7 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 	
 			if (createElementLinkMap == null)
 			{
-				createElementLinkMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(10);
+				createElementLinkMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(11);
 				createElementLinkMap.Add(typeof(DERAWebBDModelHasEntidades), 0);
 				createElementLinkMap.Add(typeof(DERAWebBDModelHasRelaciones), 1);
 				createElementLinkMap.Add(typeof(RelacionHasCardinalidad), 2);
@@ -270,6 +273,7 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 				createElementLinkMap.Add(typeof(DERAWebBDModelHasAtributo), 7);
 				createElementLinkMap.Add(typeof(DERAWebBDModelHasAtributoClave), 8);
 				createElementLinkMap.Add(typeof(EntidadReferencesAtributo), 9);
+				createElementLinkMap.Add(typeof(EntidadReferencesAtributoClave), 10);
 			}
 			int index;
 			if (!createElementLinkMap.TryGetValue(elementLinkType, out index))
@@ -294,6 +298,7 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 				case 7: return new DERAWebBDModelHasAtributo(partition, roleAssignments, propertyAssignments);
 				case 8: return new DERAWebBDModelHasAtributoClave(partition, roleAssignments, propertyAssignments);
 				case 9: return new EntidadReferencesAtributo(partition, roleAssignments, propertyAssignments);
+				case 10: return new EntidadReferencesAtributoClave(partition, roleAssignments, propertyAssignments);
 				default: return null;
 			}
 		}
