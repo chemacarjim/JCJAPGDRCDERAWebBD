@@ -53,6 +53,11 @@
     </dERAWebBDModelHasEntidades>
     <dERAWebBDModelHasEntidades Id="e9e7a884-693d-4b1d-ad45-86e0bdd24ae9">
       <entidad Id="2869043b-fd64-498b-8fb7-5ce74d832936" name="Profesor">
+        <estiloPagina>
+          <entidadHasEstiloPagina Id="9adbf292-a79a-49ab-9ad4-29e4912e0e43">
+            <estiloPagina Id="196106e8-2c37-4826-ac3b-117afa37e710" color="Azul" tamanio="20" fuente="Arial" alineacion="Center" />
+          </entidadHasEstiloPagina>
+        </estiloPagina>
         <atributo>
           <entidadReferencesAtributo Id="57099387-3857-4984-ab71-69e1b9c15782">
             <atributoMoniker Id="b853aa1a-17aa-4648-a12a-1892e110fac4" />
@@ -134,13 +139,7 @@
   </estiloPortal>
   <atributo>
     <dERAWebBDModelHasAtributo Id="e5362e19-5c16-431a-bb51-491894fca0da">
-      <atributo Id="7c784e04-1990-48a7-8640-de5664919c4f" name="Nombre" tipoDato="Alfanumerico" longitud="156">
-        <estiloCampo>
-          <atributoHasEstiloCampo Id="7d11360c-2911-429d-a78b-3a1bf0d3b716">
-            <estiloCampo Id="97700066-9b18-42b2-8fd7-26be5b19cbc8" color="Azul" tamanio="20" fuente="Arial" alineacion="Center" tipoCampo="AreaTexto" />
-          </atributoHasEstiloCampo>
-        </estiloCampo>
-      </atributo>
+      <atributo Id="7c784e04-1990-48a7-8640-de5664919c4f" name="Nombre" tipoDato="Alfanumerico" longitud="156" />
     </dERAWebBDModelHasAtributo>
     <dERAWebBDModelHasAtributo Id="74b047f9-d4d8-4717-ad16-c48a22abc6fe">
       <atributo Id="16f61dd4-108d-4c5b-871b-9e80bd0aebd7" name="Apellidos" tipoDato="Alfanumerico" longitud="156" />
@@ -152,7 +151,13 @@
       <atributo Id="c837339a-2a5d-42e0-afe4-7a4bcb94e9fd" name="Curso" tipoDato="Alfanumerico" longitud="9" />
     </dERAWebBDModelHasAtributo>
     <dERAWebBDModelHasAtributo Id="17b4cb2f-3bc6-4ba2-812d-84439bda46c2">
-      <atributo Id="6fd62a2f-b8c2-4933-8262-991cdcef4594" name="Nota" tipoDato="Alfanumerico" longitud="2" />
+      <atributo Id="6fd62a2f-b8c2-4933-8262-991cdcef4594" name="Nota" tipoDato="Entero" longitud="2">
+        <restriccion>
+          <atributoHasRestriccion Id="1fc367e8-5117-496a-bb1d-3573b8e0034b">
+            <restriccionRango Id="29ca533a-e5a7-4fe3-a8e0-8f4f4c2905ad" minimo="0" maximo="10" />
+          </atributoHasRestriccion>
+        </restriccion>
+      </atributo>
     </dERAWebBDModelHasAtributo>
     <dERAWebBDModelHasAtributo Id="89ead9d0-8381-40e4-8704-e5e2d7fbe2ad">
       <atributo Id="5d783ff0-6abb-421e-a6b6-fe49d90decab" name="Nombre" tipoDato="Alfanumerico" longitud="4" />

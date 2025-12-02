@@ -1101,13 +1101,29 @@
     <value>CardDecorator</value>
     <comment>Text decorator default text</comment>
   </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.ConectaEstilos.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.ConectaEstilos</value>
-    <comment>Description for DomainClass &apos;ConectaEstilos&apos;</comment>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.ConectaEstiloPagina.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.ConectaEstiloPagina</value>
+    <comment>Description for DomainClass &apos;ConectaEstiloPagina&apos;</comment>
   </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.ConectaEstilos.DisplayName" xml:space="preserve">
-    <value>Conecta Estilos</value>
-    <comment>DisplayName for DomainClass &apos;ConectaEstilos&apos;</comment>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.ConectaEstiloPagina.DisplayName" xml:space="preserve">
+    <value>Conecta Estilo Pagina</value>
+    <comment>DisplayName for DomainClass &apos;ConectaEstiloPagina&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.ConectaEstiloCampo.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.ConectaEstiloCampo</value>
+    <comment>Description for DomainClass &apos;ConectaEstiloCampo&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.ConectaEstiloCampo.DisplayName" xml:space="preserve">
+    <value>Conecta Estilo Campo</value>
+    <comment>DisplayName for DomainClass &apos;ConectaEstiloCampo&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.ConectaAtributoRestriccion.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.ConectaAtributoRestriccion</value>
+    <comment>Description for DomainClass &apos;ConectaAtributoRestriccion&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.ConectaAtributoRestriccion.DisplayName" xml:space="preserve">
+    <value>Conecta Atributo Restriccion</value>
+    <comment>DisplayName for DomainClass &apos;ConectaAtributoRestriccion&apos;</comment>
   </data>
   <data name="FormatList" xml:space="preserve">
     <value>JCJAPGDRCDERAWebBD (*.JCJAPGDRC_DSLDERAWebBD)|*.JCJAPGDRC_DSLDERAWebBD</value>

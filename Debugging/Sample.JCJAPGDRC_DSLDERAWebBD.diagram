@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<jCJAPGDRCDERAWebBDDiagram dslVersion="1.0.0.0" Id="03bccc9c-27fb-45a0-bc17-a352aa55435a" absoluteBounds="0, 0, 19.5, 13.125" name="Sample">
+<jCJAPGDRCDERAWebBDDiagram dslVersion="1.0.0.0" Id="03bccc9c-27fb-45a0-bc17-a352aa55435a" absoluteBounds="0, 0, 19.5, 13.25" name="Sample">
   <dERAWebBDModelMoniker Id="824b8638-e2c0-46fc-aa80-550e676d6392" />
   <nestedChildShapes>
     <estiloPortalShape Id="0f57d7e8-7d5a-4d88-8112-9e7b6258bc24" absoluteBounds="0.5, 2, 1.5, 1">
@@ -14,13 +14,6 @@
     <estiloPaginaShape Id="b2bbf26c-6965-4996-b783-11da5eec9726" absoluteBounds="5.125, 2.125, 1.5, 1.5">
       <estiloPaginaMoniker Id="119529b0-7b97-407f-b95a-7ed3d3b2a4b7" />
     </estiloPaginaShape>
-    <conectaEstilos Id="e93b98e2-033f-4fd0-b692-90ebdbf24da3" edgePoints="[(5.875 : 4.625); (5.875 : 3.625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
-      <entidadHasEstiloPaginaMoniker Id="d34b8a4f-fa9d-46e4-acd2-51dece5a8f4b" />
-      <nodes>
-        <entidadShapeMoniker Id="8151bf84-b74e-479c-8ec6-555666f73079" />
-        <estiloPaginaShapeMoniker Id="b2bbf26c-6965-4996-b783-11da5eec9726" />
-      </nodes>
-    </conectaEstilos>
     <atrClaveShape Id="345111ac-a2e3-4115-81eb-f6bce5a154ca" absoluteBounds="2.75, 5.75, 1.25, 0.75">
       <atributoClaveMoniker Id="f352d290-b7e1-4794-a53e-49a0cd9380b3" />
     </atrClaveShape>
@@ -44,16 +37,13 @@
     <atributoShape Id="c86ea68d-9b21-44c8-bc95-714ad6b26973" absoluteBounds="4.375, 6.75, 1.25, 0.75">
       <atributoMoniker Id="16f61dd4-108d-4c5b-871b-9e80bd0aebd7" />
     </atributoShape>
-    <conectaAtributo Id="44f739ae-66ec-42c6-bd20-5b8a3862b4ae" edgePoints="[(5.4062525 : 5.625); (5.4062525 : 6.84002595513319)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <conectaAtributo Id="44f739ae-66ec-42c6-bd20-5b8a3862b4ae" edgePoints="[(5.4062525 : 5.625); (5.4062525 : 6.84002595513319)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <entidadReferencesAtributoMoniker Id="748c6b2b-11a8-4802-9d4d-e888c920d9b1" />
       <nodes>
         <entidadShapeMoniker Id="8151bf84-b74e-479c-8ec6-555666f73079" />
         <atributoShapeMoniker Id="c86ea68d-9b21-44c8-bc95-714ad6b26973" />
       </nodes>
     </conectaAtributo>
-    <estiloCampoShape Id="72c56c02-0e35-4d1d-b204-25cd2089c932" absoluteBounds="0.5, 3.5, 1.5, 1.5">
-      <estiloCampoMoniker Id="97700066-9b18-42b2-8fd7-26be5b19cbc8" />
-    </estiloCampoShape>
     <atrClaveShape Id="ad241fb5-795b-4e71-8386-f8c4f7938971" absoluteBounds="16.375, 3.125, 1.25, 0.75">
       <atributoClaveMoniker Id="649d27e2-a5c5-4398-8737-551ef233d051" />
     </atrClaveShape>
@@ -67,7 +57,7 @@
     <atributoShape Id="bd81d359-362b-4147-90ac-f059ab536032" absoluteBounds="18, 5.375, 1.25, 0.75">
       <atributoMoniker Id="9ccf8e08-8436-4760-bc01-c999dcc0aab5" />
     </atributoShape>
-    <conectaAtributo Id="96a77237-521c-40f5-a2bf-5b03917938b8" edgePoints="[(16.125 : 5.5625); (18.0837341226347 : 5.5625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <conectaAtributo Id="96a77237-521c-40f5-a2bf-5b03917938b8" edgePoints="[(16.125 : 5.5625); (18.0837341226347 : 5.5625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <entidadReferencesAtributoMoniker Id="a0ba7ead-4242-4e5f-a8af-756d989385ac" />
       <nodes>
         <entidadShapeMoniker Id="a66b3143-dea3-43eb-b412-fbeaf647b62c" />
@@ -85,7 +75,7 @@
         <entidadShapeMoniker Id="8151bf84-b74e-479c-8ec6-555666f73079" />
       </nodes>
     </entidadRelacionConnector>
-    <entidadRelacionConnector Id="26c9dbf0-2857-4d18-bfdd-4ac53a780764" edgePoints="[(12.2083332538605 : 5.25); (14.625 : 5.25)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <entidadRelacionConnector Id="26c9dbf0-2857-4d18-bfdd-4ac53a780764" edgePoints="[(12.2083332538605 : 5.11149296669952); (14.625 : 5.11149296669952)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <relacionReferencesEntidadMoniker Id="12b81bf6-1a82-4357-8585-cff6cfc562a6" />
       <relativeChildShapes />
       <nodes>
@@ -161,7 +151,7 @@
     <relacionShape Id="780431f8-f3a9-43e0-94e7-29b48ff39e4f" absoluteBounds="9.625, 7.75, 2.0833332538604736, 2.0833332538604736">
       <relacionMoniker name="/824b8638-e2c0-46fc-aa80-550e676d6392/imparte" />
     </relacionShape>
-    <entidadRelacionConnector Id="6124ebac-dcd8-4d0e-bfb1-7b6163970eec" edgePoints="[(10.6666666269302 : 9.83333325386047); (10.6666666269302 : 10.7003994230669); (6.875 : 10.7003994230669)]" manuallyRouted="true" fixedFrom="Algorithm" fixedTo="Caller">
+    <entidadRelacionConnector Id="6124ebac-dcd8-4d0e-bfb1-7b6163970eec" edgePoints="[(10.6666666269302 : 9.83333325386047); (10.6666666269302 : 10.7003994230669); (6.875 : 10.7003994230669)]" manuallyRouted="true" fixedFrom="NotFixed" fixedTo="NotFixed">
       <relacionReferencesEntidadMoniker Id="d9a6bba3-fe1d-46e1-838f-d8321ee1f767" />
       <relativeChildShapes />
       <nodes>
@@ -169,7 +159,7 @@
         <entidadShapeMoniker Id="0ed1f7d7-5e1a-4476-ba11-1f8b5146e93c" />
       </nodes>
     </entidadRelacionConnector>
-    <entidadRelacionConnector Id="0e0ac00f-0c9c-4eb4-9e69-2888de2e9a0e" edgePoints="[(10.6666666269302 : 7.75); (10.6666666269302 : 7.32249997377396); (14.067007124424 : 7.32249997377396); (14.067007124424 : 5.59798593339903); (14.625 : 5.59798593339903)]" manuallyRouted="true" fixedFrom="Algorithm" fixedTo="Caller">
+    <entidadRelacionConnector Id="0e0ac00f-0c9c-4eb4-9e69-2888de2e9a0e" edgePoints="[(10.6666666269302 : 7.75); (10.6666666269302 : 7.32249997377396); (14.067007124424 : 7.32249997377396); (14.067007124424 : 5.59798593339903); (14.625 : 5.59798593339903)]" manuallyRouted="true" fixedFrom="NotFixed" fixedTo="NotFixed">
       <relacionReferencesEntidadMoniker Id="b0a3634b-b1e6-4f8c-8f1a-9a155473f268" />
       <relativeChildShapes />
       <nodes>
@@ -180,7 +170,7 @@
     <relacionShape Id="c7294a07-779c-4252-83af-3d61793bb647" absoluteBounds="5.25, 7.125, 2.0833332538604736, 2.0833332538604736">
       <relacionMoniker name="/824b8638-e2c0-46fc-aa80-550e676d6392/tutoriza" />
     </relacionShape>
-    <entidadRelacionConnector Id="530da6e1-61f1-43ff-a8f0-94bb55a9f11d" edgePoints="[(6.125 : 9.20833325386047); (6.125 : 10.125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <entidadRelacionConnector Id="530da6e1-61f1-43ff-a8f0-94bb55a9f11d" edgePoints="[(6.125 : 9.20833325386047); (6.125 : 10.125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <relacionReferencesEntidadMoniker Id="655e7d02-c422-47c9-b352-c7b92b867a1b" />
       <relativeChildShapes />
       <nodes>
@@ -188,7 +178,7 @@
         <entidadShapeMoniker Id="0ed1f7d7-5e1a-4476-ba11-1f8b5146e93c" />
       </nodes>
     </entidadRelacionConnector>
-    <entidadRelacionConnector Id="982f2288-8a27-4448-ae03-30056377f9f5" edgePoints="[(6.15625 : 7.125); (6.15625 : 5.625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <entidadRelacionConnector Id="982f2288-8a27-4448-ae03-30056377f9f5" edgePoints="[(6.15625 : 7.125); (6.15625 : 5.625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <relacionReferencesEntidadMoniker Id="29371f55-523b-49af-bf42-6b7108425e0d" />
       <relativeChildShapes />
       <nodes>
@@ -205,7 +195,7 @@
     <atributoShape Id="fbfa881f-42ce-4cad-9809-666f54158a74" absoluteBounds="3.75, 12.125, 1.25, 0.75">
       <atributoMoniker Id="6cee76dc-c89d-4369-99bc-0b170b7eddc0" />
     </atributoShape>
-    <conectaAtributo Id="7bd33806-0e59-459c-9edd-c520b4bdfd05" edgePoints="[(5.375 : 10.9375); (3.54126587736527 : 10.9375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <conectaAtributo Id="7bd33806-0e59-459c-9edd-c520b4bdfd05" edgePoints="[(5.375 : 10.9375); (3.54126587736527 : 10.9375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <entidadReferencesAtributoClaveMoniker Id="708494eb-3492-4dd6-ae6a-42259000ad2c" />
       <nodes>
         <entidadShapeMoniker Id="0ed1f7d7-5e1a-4476-ba11-1f8b5146e93c" />
@@ -219,12 +209,39 @@
         <atributoShapeMoniker Id="05deb224-3f58-4f54-b702-0fe0bf6b3dc7" />
       </nodes>
     </conectaAtributo>
-    <conectaAtributo Id="2626de14-57ab-4055-8aa5-a1a3488b16ec" edgePoints="[(6.0457857291116 : 11.125); (5 : 12.5)]" fixedFrom="Caller" fixedTo="NotFixed">
+    <conectaAtributo Id="2626de14-57ab-4055-8aa5-a1a3488b16ec" edgePoints="[(5.375 : 11.125); (4.92582366953078 : 12.3228035479179)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <entidadReferencesAtributoMoniker Id="1aadbf16-d11c-4b83-99a7-949a8dc2f708" />
       <nodes>
         <entidadShapeMoniker Id="0ed1f7d7-5e1a-4476-ba11-1f8b5146e93c" />
         <atributoShapeMoniker Id="fbfa881f-42ce-4cad-9809-666f54158a74" />
       </nodes>
     </conectaAtributo>
+    <conectaEstiloPagina Id="5bfcc6cd-951d-4bfa-8929-521f3da6fa15" edgePoints="[(5.875 : 4.625); (5.875 : 3.625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <entidadHasEstiloPaginaMoniker Id="d34b8a4f-fa9d-46e4-acd2-51dece5a8f4b" />
+      <nodes>
+        <entidadShapeMoniker Id="8151bf84-b74e-479c-8ec6-555666f73079" />
+        <estiloPaginaShapeMoniker Id="b2bbf26c-6965-4996-b783-11da5eec9726" />
+      </nodes>
+    </conectaEstiloPagina>
+    <estiloPaginaShape Id="117adb15-195d-4a28-a172-7852bafc08ae" absoluteBounds="7.5, 11.5, 1.5, 1.5">
+      <estiloPaginaMoniker Id="196106e8-2c37-4826-ac3b-117afa37e710" />
+    </estiloPaginaShape>
+    <conectaEstiloPagina Id="2ac4eca2-daa2-4fb3-bca6-5b6c85e78b8c" edgePoints="[(6.1562525 : 11.125); (6.1562525 : 12.25); (7.5 : 12.25)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <entidadHasEstiloPaginaMoniker Id="9adbf292-a79a-49ab-9ad4-29e4912e0e43" />
+      <nodes>
+        <entidadShapeMoniker Id="0ed1f7d7-5e1a-4476-ba11-1f8b5146e93c" />
+        <estiloPaginaShapeMoniker Id="117adb15-195d-4a28-a172-7852bafc08ae" />
+      </nodes>
+    </conectaEstiloPagina>
+    <restriccionRangoShape Id="367c3d58-6a65-4934-9993-38e3102ec3eb" absoluteBounds="13.5, 1.875, 0.875, 0.875">
+      <restriccionRangoMoniker Id="29ca533a-e5a7-4fe3-a8e0-8f4f4c2905ad" />
+    </restriccionRangoShape>
+    <conectaAtributoRestriccion Id="e9790de8-407d-469c-a610-b5cd345d5713" edgePoints="[(13.9375 : 3.37687971108502); (13.9375 : 2.75)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <atributoHasRestriccionMoniker Id="1fc367e8-5117-496a-bb1d-3573b8e0034b" />
+      <nodes>
+        <atributoShapeMoniker Id="7471a023-b3f1-4b2d-89b9-90033e7bf3dc" />
+        <restriccionRangoShapeMoniker Id="367c3d58-6a65-4934-9993-38e3102ec3eb" />
+      </nodes>
+    </conectaAtributoRestriccion>
   </nestedChildShapes>
 </jCJAPGDRCDERAWebBDDiagram>

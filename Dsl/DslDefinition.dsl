@@ -592,7 +592,9 @@
         <TextDecorator Name="CardDecorator" DisplayName="Card Decorator" DefaultText="CardDecorator" />
       </ConnectorHasDecorators>
     </Connector>
-    <Connector Id="b785c05d-86b3-4487-949b-7f805ab41e17" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.ConectaEstilos" Name="ConectaEstilos" DisplayName="Conecta Estilos" Namespace="UPM_IPS.JCJAPGDRCDERAWebBD" FixedTooltipText="Conecta Estilos" />
+    <Connector Id="b785c05d-86b3-4487-949b-7f805ab41e17" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.ConectaEstiloPagina" Name="ConectaEstiloPagina" DisplayName="Conecta Estilo Pagina" Namespace="UPM_IPS.JCJAPGDRCDERAWebBD" FixedTooltipText="Conecta Estilo Pagina" />
+    <Connector Id="d27eed12-bd11-4071-be97-6dc0f9d1ba8d" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.ConectaEstiloCampo" Name="ConectaEstiloCampo" DisplayName="Conecta Estilo Campo" Namespace="UPM_IPS.JCJAPGDRCDERAWebBD" FixedTooltipText="Conecta Estilo Campo" DashStyle="Dot" />
+    <Connector Id="bcdc7b2c-57f9-45bc-b669-cca5147cf7aa" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.ConectaAtributoRestriccion" Name="ConectaAtributoRestriccion" DisplayName="Conecta Atributo Restriccion" Namespace="UPM_IPS.JCJAPGDRCDERAWebBD" FixedTooltipText="Conecta Atributo Restriccion" DashStyle="Dash" />
   </Connectors>
   <XmlSerializationBehavior Name="JCJAPGDRCDERAWebBDSerializationBehavior" Namespace="UPM_IPS.JCJAPGDRCDERAWebBD">
     <ClassData>
@@ -800,8 +802,8 @@
       <XmlClassData TypeName="AtributoClaveHasEstiloCampo" MonikerAttributeName="" SerializeId="true" MonikerElementName="atributoClaveHasEstiloCampoMoniker" ElementName="atributoClaveHasEstiloCampo" MonikerTypeName="AtributoClaveHasEstiloCampoMoniker">
         <DomainRelationshipMoniker Name="AtributoClaveHasEstiloCampo" />
       </XmlClassData>
-      <XmlClassData TypeName="ConectaEstilos" MonikerAttributeName="" SerializeId="true" MonikerElementName="conectaEstilosMoniker" ElementName="conectaEstilos" MonikerTypeName="ConectaEstilosMoniker">
-        <ConnectorMoniker Name="ConectaEstilos" />
+      <XmlClassData TypeName="ConectaEstiloPagina" MonikerAttributeName="" SerializeId="true" MonikerElementName="conectaEstiloPaginaMoniker" ElementName="conectaEstiloPagina" MonikerTypeName="ConectaEstiloPaginaMoniker">
+        <ConnectorMoniker Name="ConectaEstiloPagina" />
       </XmlClassData>
       <XmlClassData TypeName="Restriccion" MonikerAttributeName="" SerializeId="true" MonikerElementName="restriccionMoniker" ElementName="restriccion" MonikerTypeName="RestriccionMoniker">
         <DomainClassMoniker Name="Restriccion" />
@@ -844,6 +846,12 @@
       </XmlClassData>
       <XmlClassData TypeName="AtributoHasRestriccion" MonikerAttributeName="" SerializeId="true" MonikerElementName="atributoHasRestriccionMoniker" ElementName="atributoHasRestriccion" MonikerTypeName="AtributoHasRestriccionMoniker">
         <DomainRelationshipMoniker Name="AtributoHasRestriccion" />
+      </XmlClassData>
+      <XmlClassData TypeName="ConectaEstiloCampo" MonikerAttributeName="" SerializeId="true" MonikerElementName="conectaEstiloCampoMoniker" ElementName="conectaEstiloCampo" MonikerTypeName="ConectaEstiloCampoMoniker">
+        <ConnectorMoniker Name="ConectaEstiloCampo" />
+      </XmlClassData>
+      <XmlClassData TypeName="ConectaAtributoRestriccion" MonikerAttributeName="" SerializeId="true" MonikerElementName="conectaAtributoRestriccionMoniker" ElementName="conectaAtributoRestriccion" MonikerTypeName="ConectaAtributoRestriccionMoniker">
+        <ConnectorMoniker Name="ConectaAtributoRestriccion" />
       </XmlClassData>
     </ClassData>
   </XmlSerializationBehavior>
@@ -1119,12 +1127,16 @@
         <DomainRelationshipMoniker Name="RelacionReferencesAtributo" />
       </ConnectorMap>
       <ConnectorMap>
-        <ConnectorMoniker Name="ConectaEstilos" />
+        <ConnectorMoniker Name="ConectaEstiloPagina" />
+        <DomainRelationshipMoniker Name="EntidadHasEstiloPagina" />
+      </ConnectorMap>
+      <ConnectorMap>
+        <ConnectorMoniker Name="ConectaEstiloCampo" />
         <DomainRelationshipMoniker Name="AtributoClaveHasEstiloCampo" />
       </ConnectorMap>
       <ConnectorMap>
-        <ConnectorMoniker Name="ConectaEstilos" />
-        <DomainRelationshipMoniker Name="EntidadHasEstiloPagina" />
+        <ConnectorMoniker Name="ConectaAtributoRestriccion" />
+        <DomainRelationshipMoniker Name="AtributoHasRestriccion" />
       </ConnectorMap>
     </ConnectorMaps>
   </Diagram>

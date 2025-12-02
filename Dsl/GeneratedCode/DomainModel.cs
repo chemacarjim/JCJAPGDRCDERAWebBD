@@ -97,7 +97,9 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 				typeof(JCJAPGDRCDERAWebBDDiagram),
 				typeof(ConectaAtributo),
 				typeof(EntidadRelacionConnector),
-				typeof(ConectaEstilos),
+				typeof(ConectaEstiloPagina),
+				typeof(ConectaEstiloCampo),
+				typeof(ConectaAtributoRestriccion),
 				typeof(EntidadShape),
 				typeof(RestriccionRangoShape),
 				typeof(ValoresEnumShape),
@@ -206,7 +208,7 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 	
 			if (createElementMap == null)
 			{
-				createElementMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(27);
+				createElementMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(29);
 				createElementMap.Add(typeof(DERAWebBDModel), 0);
 				createElementMap.Add(typeof(Entidad), 1);
 				createElementMap.Add(typeof(Relacion), 2);
@@ -221,17 +223,19 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 				createElementMap.Add(typeof(JCJAPGDRCDERAWebBDDiagram), 11);
 				createElementMap.Add(typeof(ConectaAtributo), 12);
 				createElementMap.Add(typeof(EntidadRelacionConnector), 13);
-				createElementMap.Add(typeof(ConectaEstilos), 14);
-				createElementMap.Add(typeof(EntidadShape), 15);
-				createElementMap.Add(typeof(RestriccionRangoShape), 16);
-				createElementMap.Add(typeof(ValoresEnumShape), 17);
-				createElementMap.Add(typeof(EstiloCampoShape), 18);
-				createElementMap.Add(typeof(EstiloPaginaShape), 19);
-				createElementMap.Add(typeof(EstiloPortalShape), 20);
-				createElementMap.Add(typeof(AtributoShape), 21);
-				createElementMap.Add(typeof(AtrClaveShape), 22);
-				createElementMap.Add(typeof(RestriccionEnumShape), 23);
-				createElementMap.Add(typeof(RelacionShape), 24);
+				createElementMap.Add(typeof(ConectaEstiloPagina), 14);
+				createElementMap.Add(typeof(ConectaEstiloCampo), 15);
+				createElementMap.Add(typeof(ConectaAtributoRestriccion), 16);
+				createElementMap.Add(typeof(EntidadShape), 17);
+				createElementMap.Add(typeof(RestriccionRangoShape), 18);
+				createElementMap.Add(typeof(ValoresEnumShape), 19);
+				createElementMap.Add(typeof(EstiloCampoShape), 20);
+				createElementMap.Add(typeof(EstiloPaginaShape), 21);
+				createElementMap.Add(typeof(EstiloPortalShape), 22);
+				createElementMap.Add(typeof(AtributoShape), 23);
+				createElementMap.Add(typeof(AtrClaveShape), 24);
+				createElementMap.Add(typeof(RestriccionEnumShape), 25);
+				createElementMap.Add(typeof(RelacionShape), 26);
 			}
 			int index;
 			if (!createElementMap.TryGetValue(elementType, out index))
@@ -259,17 +263,19 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 				case 11: return new JCJAPGDRCDERAWebBDDiagram(partition, propertyAssignments);
 				case 12: return new ConectaAtributo(partition, propertyAssignments);
 				case 13: return new EntidadRelacionConnector(partition, propertyAssignments);
-				case 14: return new ConectaEstilos(partition, propertyAssignments);
-				case 15: return new EntidadShape(partition, propertyAssignments);
-				case 16: return new RestriccionRangoShape(partition, propertyAssignments);
-				case 17: return new ValoresEnumShape(partition, propertyAssignments);
-				case 18: return new EstiloCampoShape(partition, propertyAssignments);
-				case 19: return new EstiloPaginaShape(partition, propertyAssignments);
-				case 20: return new EstiloPortalShape(partition, propertyAssignments);
-				case 21: return new AtributoShape(partition, propertyAssignments);
-				case 22: return new AtrClaveShape(partition, propertyAssignments);
-				case 23: return new RestriccionEnumShape(partition, propertyAssignments);
-				case 24: return new RelacionShape(partition, propertyAssignments);
+				case 14: return new ConectaEstiloPagina(partition, propertyAssignments);
+				case 15: return new ConectaEstiloCampo(partition, propertyAssignments);
+				case 16: return new ConectaAtributoRestriccion(partition, propertyAssignments);
+				case 17: return new EntidadShape(partition, propertyAssignments);
+				case 18: return new RestriccionRangoShape(partition, propertyAssignments);
+				case 19: return new ValoresEnumShape(partition, propertyAssignments);
+				case 20: return new EstiloCampoShape(partition, propertyAssignments);
+				case 21: return new EstiloPaginaShape(partition, propertyAssignments);
+				case 22: return new EstiloPortalShape(partition, propertyAssignments);
+				case 23: return new AtributoShape(partition, propertyAssignments);
+				case 24: return new AtrClaveShape(partition, propertyAssignments);
+				case 25: return new RestriccionEnumShape(partition, propertyAssignments);
+				case 26: return new RelacionShape(partition, propertyAssignments);
 				default: return null;
 			}
 		}
