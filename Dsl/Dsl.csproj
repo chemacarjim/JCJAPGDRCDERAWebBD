@@ -76,13 +76,17 @@
     <PackageReference Include="Microsoft.VisualStudio.TextTemplating.Modeling" Version="17.0.*-*" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DesignerCustomization\Estilos.cs" />
+    <Compile Include="DesignerCustomization\RestriccionRango.cs" />
     <Compile Include="Validaciones\AtributosUnicos.cs" />
     <Compile Include="Validaciones\CardinalidadRelacion.cs" />
     <Compile Include="Validaciones\ClavePrimariaEntidad.cs" />
     <Compile Include="Validaciones\EstilosPortal.cs" />
+    <Compile Include="Validaciones\LongitudAtributo.cs" />
     <Compile Include="Validaciones\NombreUnico.cs" />
     <Compile Include="Validaciones\ParticipacionEntidad.cs" />
     <Compile Include="Validaciones\RelacionesUnicas.cs" />
+    <Compile Include="Validaciones\TipoRestriccion.cs" />
     <None Include="..\Key.snk">
       <Link>Key.snk</Link>
     </None>

@@ -37,49 +37,25 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 namespace UPM_IPS.JCJAPGDRCDERAWebBD
 {
 	[DslValidation::ValidationState(DslValidation::ValidationState.Enabled)]
-	public partial class Relacion
+	public partial class RestriccionEnum
 	{
 		/// <summary>
 		/// Checks that the relationships that have a multiplicity of One or OneMany do actually have a link.
 		/// </summary>
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Justification = "Generated code.")]
 		[DslValidation::ValidationMethod(DslValidation::ValidationCategories.Open | DslValidation::ValidationCategories.Save | DslValidation::ValidationCategories.Menu)]
-		private void ValidateRelacionMultiplicity (DslValidation::ValidationContext context)
+		private void ValidateRestriccionEnumMultiplicity (DslValidation::ValidationContext context)
 		{
-			if (this.Cardinalidad.Count == 0)
+			if (this.ValorEnumerado.Count == 0)
 			{
 				context.LogViolation(DslValidation::ViolationType.Error,
 					string.Format(global::System.Globalization.CultureInfo.CurrentCulture, 
 						UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDDomainModel.SingletonResourceManager.GetString("MinimumMultiplicityMissingLink"), 
-						"Relacion", this.Name, "Cardinalidad"),
+						"RestriccionEnum", "", "ValorEnumerado"),
 						"DSL0001", this);
 			}
-		} // ValidateRelacionMultiplicity
-	} // class Relacion
-} // UPM_IPS.JCJAPGDRCDERAWebBD
-
-namespace UPM_IPS.JCJAPGDRCDERAWebBD
-{
-	[DslValidation::ValidationState(DslValidation::ValidationState.Enabled)]
-	public partial class Cardinalidad
-	{
-		/// <summary>
-		/// Checks that the relationships that have a multiplicity of One or OneMany do actually have a link.
-		/// </summary>
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Justification = "Generated code.")]
-		[DslValidation::ValidationMethod(DslValidation::ValidationCategories.Open | DslValidation::ValidationCategories.Save | DslValidation::ValidationCategories.Menu)]
-		private void ValidateCardinalidadMultiplicity (DslValidation::ValidationContext context)
-		{
-			if (this.Entidad == null)
-			{
-				context.LogViolation(DslValidation::ViolationType.Error,
-					string.Format(global::System.Globalization.CultureInfo.CurrentCulture, 
-						UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDDomainModel.SingletonResourceManager.GetString("MinimumMultiplicityMissingLink"), 
-						"Cardinalidad", "", "Entidad"),
-						"DSL0001", this);
-			}
-		} // ValidateCardinalidadMultiplicity
-	} // class Cardinalidad
+		} // ValidateRestriccionEnumMultiplicity
+	} // class RestriccionEnum
 } // UPM_IPS.JCJAPGDRCDERAWebBD
 
 	

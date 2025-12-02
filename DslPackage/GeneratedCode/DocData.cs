@@ -445,6 +445,20 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 			// Validate the document
 			this.ValidationController.Validate(this.GetAllElementsForValidation(), DslValidation::ValidationCategories.Open);
 
+			// Enable CompartmentItems events.
+			global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModel modelRoot = this.RootElement as global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModel;
+			if (modelRoot != null)
+			{
+				global::System.Collections.Generic.IList<DslDiagrams::PresentationElement> diagrams = DslDiagrams::PresentationViewsSubject.GetPresentation(modelRoot);
+				if (diagrams.Count > 0)
+				{
+					global::UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDDiagram diagram = diagrams[0] as global::UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDDiagram;
+					if (diagram != null)
+					{
+						diagram.SubscribeCompartmentItemsEvents();
+					}
+				}
+			}
 		}
 
 

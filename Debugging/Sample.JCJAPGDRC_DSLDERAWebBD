@@ -21,27 +21,15 @@
     <dERAWebBDModelHasEntidades Id="c2d54b3a-7d31-4e8b-8e63-f6604f030b4e">
       <entidad Id="23b1537f-348e-4461-a571-152400677c32" name="Entidad1" />
     </dERAWebBDModelHasEntidades>
-    <dERAWebBDModelHasEntidades Id="19c348cb-de5f-490e-9047-5b27a224aad8">
-      <entidad Id="c2681a83-9acc-4a87-8de7-05866b40d748" name="prueba">
-        <atributo>
-          <entidadReferencesAtributo Id="5b900c5e-a526-4521-8c31-9c306d2edaf1">
-            <atributoMoniker Id="52153f65-4282-4e9d-85fe-9cfd8eae1700" />
-          </entidadReferencesAtributo>
-          <entidadReferencesAtributo Id="62234251-c954-49c9-990e-4b5b1208dba4">
-            <atributoMoniker Id="36b5375d-3d2a-45c3-8c20-79856b665864" />
-          </entidadReferencesAtributo>
-        </atributo>
-      </entidad>
-    </dERAWebBDModelHasEntidades>
   </entidades>
   <relaciones>
     <dERAWebBDModelHasRelaciones Id="18b150b1-25da-4c53-9bd4-ad2ef008f748">
       <relacion Id="aec839f9-52bf-4bfa-bdac-3419f62e6257" name="Pertenece">
         <entidad>
-          <relacionReferencesEntidad Id="f86233aa-180f-469c-9714-bea0a10cb69b" cardinalidad="1..*">
+          <relacionReferencesEntidad Id="f86233aa-180f-469c-9714-bea0a10cb69b" cardinalidad="1..N">
             <entidadMoniker name="/824b8638-e2c0-46fc-aa80-550e676d6392/ESTUDIANTE " />
           </relacionReferencesEntidad>
-          <relacionReferencesEntidad Id="bc2972a5-9f35-4eac-b5fc-3bc7ffeab93c" cardinalidad="1..*">
+          <relacionReferencesEntidad Id="bc2972a5-9f35-4eac-b5fc-3bc7ffeab93c" cardinalidad="1..N">
             <entidadMoniker name="/824b8638-e2c0-46fc-aa80-550e676d6392/Clase" />
           </relacionReferencesEntidad>
           <relacionReferencesEntidad Id="aff158ac-cb6c-4318-b197-97cac3755042">
@@ -57,8 +45,8 @@
     </dERAWebBDModelHasRelaciones>
   </relaciones>
   <estiloPortal>
-    <dERAWebBDModelHasEstiloPortal Id="7dd7a1b9-fb12-45a1-8b8e-d6570ebf4be2">
-      <estiloPortal Id="70bdbdc2-a1aa-404b-b219-b5db61b8c329" alineacion="Center" />
+    <dERAWebBDModelHasEstiloPortal Id="82b1803c-0273-4ca7-a291-cd462e4ab0f8">
+      <estiloPortal Id="82935eab-c43a-4be6-8b91-1bf1b7ad5e46" color="Marron" tamanio="20" fuente="Arial" alineacion="Center" textoTitulo="XXX" colorFondo="Blanco" />
     </dERAWebBDModelHasEstiloPortal>
   </estiloPortal>
   <atributo>
@@ -67,12 +55,6 @@
     </dERAWebBDModelHasAtributo>
     <dERAWebBDModelHasAtributo Id="0dfda808-9fde-4a6d-963d-7360b188e9a1">
       <atributo Id="1902a11a-fc80-4841-a9cb-98c70c2fe405" tipoDato="Alfanumerico" />
-    </dERAWebBDModelHasAtributo>
-    <dERAWebBDModelHasAtributo Id="a01f38db-1422-42fd-8f9c-4e989ca09b87">
-      <atributo Id="52153f65-4282-4e9d-85fe-9cfd8eae1700" name="turtle" tipoDato="Alfanumerico" />
-    </dERAWebBDModelHasAtributo>
-    <dERAWebBDModelHasAtributo Id="421e8078-4172-4f15-91d6-d93f776c897c">
-      <atributo Id="36b5375d-3d2a-45c3-8c20-79856b665864" name="turtle" tipoDato="Alfanumerico" />
     </dERAWebBDModelHasAtributo>
   </atributo>
   <atributoClave>

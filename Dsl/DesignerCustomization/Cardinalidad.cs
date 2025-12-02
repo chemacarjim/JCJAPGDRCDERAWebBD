@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace UPM_IPS.JCJAPGDRCDERAWebBD
 {
+    /*
     public partial class Cardinalidad
     {
         public string GetCardValue()
@@ -13,4 +14,5 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
             return string.Format("{0} .. {1}", this.Minimo, this.Maximo);
         }
     }
+    */
 }

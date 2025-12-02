@@ -1,7 +1,9 @@
 ﻿using Microsoft.VisualStudio.Modeling;
 using Microsoft.VisualStudio.Modeling.Validation;
 using System;
+using System.Text.RegularExpressions;
 using UPM_IPS.JCJAPGDRCDERAWebBD;
+using System.Text.RegularExpressions;
 
 namespace UPM_IPS.JCJAPGDRCDERAWebBD
 {
@@ -14,7 +16,9 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
             ValidationCategories.Menu)]
         private void CardinalidadRelacion(ValidationContext context)
         {
-            if (this.Entidad.Count < 2)
+            var enlaces = RelacionReferencesEntidad.GetLinksToEntidad(this);
+
+            if (enlaces.Count < 2)
             {
                 context.LogError(
                     $"La relación '{this.Name}' debe conectar al menos dos entidades.",
@@ -22,32 +26,25 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
                     this);
             }
 
-            if (this.Cardinalidad.Count < this.Entidad.Count)
+            foreach (var enlace in enlaces)
             {
-                context.LogError(
-                    $"La relación '{this.Name}' debe tener una cardinalidad definida para cada entidad participante.",
-                    "RELACION_CARDINALIDAD_INCOMPLETA",
-                    this);
-            }
-            else
-            {
-                foreach (var card in this.Cardinalidad)
-                {
-                    var enlace = CardinalidadReferencesEntidad.GetLinkToEntidad(card);
-                    if (enlace == null || enlace.LinkedElements.Count == 0)
-                    {
-                        context.LogError(
-                            $"En la relación '{this.Name}' hay una cardinalidad sin entidad asociada.",
-                            "CARDINALIDAD_SIN_ENTIDAD",
-                            card);
-                    }
+                var cardValue = enlace.cardinalidad;
 
-                    if (card.Minimo == null || card.Maximo == null)
+                if(string.IsNullOrEmpty(cardValue))
+                {
+                    context.LogError($"La relación '{this.Name}' debe definir una cardinalidad para la entidad '{enlace.Entidad.Name}'.",
+                        "RELACION_CARDINALIDAD_INCOMPLETA",
+                        enlace);
+                }
+                else
+                {
+                    var patron = @"^(0|1)\.\.(1|N)$";
+                    if (!Regex.IsMatch(cardValue, patron))
                     {
                         context.LogError(
-                            $"La cardinalidad de la relación '{this.Name}' debe tener definidos los valores mínimo y máximo.",
-                            "CARDINALIDAD_VALORES_NULOS",
-                            card);
+                            $"La cardinalidad '{cardValue}' entre la relación '{this.Name}' y la entidad '{enlace.Entidad.Name}' no es válida. Debe ser 0..1, 0..N, 1..1 ó 1..N",
+                            "RELACION_CARDINALIDAD_INVALIDA",
+                            enlace);
                     }
                 }
             }
