@@ -2,6 +2,13 @@
 <Dsl xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="e88bbe60-548e-495c-a1d9-2502188490ac" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBD" Name="JCJAPGDRCDERAWebBD" DisplayName="JCJAPGDRCDERAWebBD" Namespace="UPM_IPS.JCJAPGDRCDERAWebBD" ProductName="JCJAPGDRCDERAWebBD" CompanyName="UPM_IPS" PackageGuid="94163d09-a286-450e-ac1d-84d3fbbfe323" PackageNamespace="UPM_IPS.JCJAPGDRCDERAWebBD" xmlns="http://schemas.microsoft.com/VisualStudio/2005/DslTools/DslDefinitionModel">
   <Classes>
     <DomainClass Id="0a0e9f60-c074-4f93-b382-cb845bbc42b1" Description="The root in which all other elements are embedded. Appears as a diagram." Name="DERAWebBDModel" DisplayName="DERAWeb BDModel" Namespace="UPM_IPS.JCJAPGDRCDERAWebBD">
+      <Properties>
+        <DomainProperty Id="1a4f7d5d-6708-43ed-a13e-4ebe7a32bf81" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModel.Name" Name="Name" DisplayName="Name">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+      </Properties>
       <ElementMergeDirectives>
         <ElementMergeDirective>
           <Index>
@@ -33,14 +40,6 @@
           </Index>
           <LinkCreationPaths>
             <DomainPath>DERAWebBDModelHasAtributo.Atributo</DomainPath>
-          </LinkCreationPaths>
-        </ElementMergeDirective>
-        <ElementMergeDirective>
-          <Index>
-            <DomainClassMoniker Name="AtributoClave" />
-          </Index>
-          <LinkCreationPaths>
-            <DomainPath>DERAWebBDModelHasAtributoClave.AtributoClave</DomainPath>
           </LinkCreationPaths>
         </ElementMergeDirective>
       </ElementMergeDirectives>
@@ -162,23 +161,9 @@
       </ElementMergeDirectives>
     </DomainClass>
     <DomainClass Id="c312c662-0068-4278-9381-250ba852955e" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.AtributoClave" Name="AtributoClave" DisplayName="Atributo Clave" Namespace="UPM_IPS.JCJAPGDRCDERAWebBD">
-      <Properties>
-        <DomainProperty Id="fe5c5157-3ef0-47bc-8d84-78c15f546d8c" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.AtributoClave.Name" Name="Name" DisplayName="Name">
-          <Type>
-            <ExternalTypeMoniker Name="/System/String" />
-          </Type>
-        </DomainProperty>
-      </Properties>
-      <ElementMergeDirectives>
-        <ElementMergeDirective>
-          <Index>
-            <DomainClassMoniker Name="EstiloCampo" />
-          </Index>
-          <LinkCreationPaths>
-            <DomainPath>AtributoClaveHasEstiloCampo.EstiloCampo</DomainPath>
-          </LinkCreationPaths>
-        </ElementMergeDirective>
-      </ElementMergeDirectives>
+      <BaseClass>
+        <DomainClassMoniker Name="Atributo" />
+      </BaseClass>
     </DomainClass>
     <DomainClass Id="4ba57cb2-13a5-4fd7-a5c9-92ebea46581a" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.EstiloCampo" Name="EstiloCampo" DisplayName="Estilo Campo" Namespace="UPM_IPS.JCJAPGDRCDERAWebBD">
       <BaseClass>
@@ -351,22 +336,6 @@
         </DomainRole>
       </Target>
     </DomainRelationship>
-    <DomainRelationship Id="8488cdb5-7446-4a01-aff4-d4e59bc601f7" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasAtributoClave" Name="DERAWebBDModelHasAtributoClave" DisplayName="DERAWeb BDModel Has Atributo Clave" Namespace="UPM_IPS.JCJAPGDRCDERAWebBD" IsEmbedding="true">
-      <Source>
-        <DomainRole Id="f639fb13-5e79-4fa6-ae9a-00342f55c153" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasAtributoClave.DERAWebBDModel" Name="DERAWebBDModel" DisplayName="DERAWeb BDModel" PropertyName="AtributoClave" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Atributo Clave">
-          <RolePlayer>
-            <DomainClassMoniker Name="DERAWebBDModel" />
-          </RolePlayer>
-        </DomainRole>
-      </Source>
-      <Target>
-        <DomainRole Id="c5a7d119-a527-450c-aba1-fd25250e0927" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasAtributoClave.AtributoClave" Name="AtributoClave" DisplayName="Atributo Clave" PropertyName="DERAWebBDModel" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="DERAWeb BDModel">
-          <RolePlayer>
-            <DomainClassMoniker Name="AtributoClave" />
-          </RolePlayer>
-        </DomainRole>
-      </Target>
-    </DomainRelationship>
     <DomainRelationship Id="e7a1e63b-4d0a-4852-939b-a2497251a1a8" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.EntidadReferencesAtributo" Name="EntidadReferencesAtributo" DisplayName="Entidad References Atributo" Namespace="UPM_IPS.JCJAPGDRCDERAWebBD">
       <Source>
         <DomainRole Id="23ee9abc-b73f-4e61-b6d5-ccc4fb52a2bb" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.EntidadReferencesAtributo.Entidad" Name="Entidad" DisplayName="Entidad" PropertyName="Atributo" PropertyDisplayName="Atributo">
@@ -379,22 +348,6 @@
         <DomainRole Id="d15b4d5a-5f4c-47fc-b4fc-3333dee8e2be" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.EntidadReferencesAtributo.Atributo" Name="Atributo" DisplayName="Atributo" PropertyName="Entidad" PropertyDisplayName="Entidad">
           <RolePlayer>
             <DomainClassMoniker Name="Atributo" />
-          </RolePlayer>
-        </DomainRole>
-      </Target>
-    </DomainRelationship>
-    <DomainRelationship Id="bc9381ed-ca58-4965-a8d1-37737ab4e487" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.EntidadReferencesAtributoClave" Name="EntidadReferencesAtributoClave" DisplayName="Entidad References Atributo Clave" Namespace="UPM_IPS.JCJAPGDRCDERAWebBD">
-      <Source>
-        <DomainRole Id="01b4469d-fbcb-4fc1-9a75-4f68b63d05b2" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.EntidadReferencesAtributoClave.Entidad" Name="Entidad" DisplayName="Entidad" PropertyName="AtributoClave" PropertyDisplayName="Atributo Clave">
-          <RolePlayer>
-            <DomainClassMoniker Name="Entidad" />
-          </RolePlayer>
-        </DomainRole>
-      </Source>
-      <Target>
-        <DomainRole Id="f9944501-e4ea-4ee5-9173-6c07c8c066d8" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.EntidadReferencesAtributoClave.AtributoClave" Name="AtributoClave" DisplayName="Atributo Clave" PropertyName="Entidad" PropertyDisplayName="Entidad">
-          <RolePlayer>
-            <DomainClassMoniker Name="AtributoClave" />
           </RolePlayer>
         </DomainRole>
       </Target>
@@ -425,22 +378,6 @@
       </Source>
       <Target>
         <DomainRole Id="c9779a28-7b20-4df3-b526-600c22999f44" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.AtributoHasEstiloCampo.EstiloCampo" Name="EstiloCampo" DisplayName="Estilo Campo" PropertyName="Atributo" Multiplicity="ZeroOne" PropagatesDelete="true" PropertyDisplayName="Atributo">
-          <RolePlayer>
-            <DomainClassMoniker Name="EstiloCampo" />
-          </RolePlayer>
-        </DomainRole>
-      </Target>
-    </DomainRelationship>
-    <DomainRelationship Id="7f41a458-8157-4c23-9f48-9c51b2780183" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.AtributoClaveHasEstiloCampo" Name="AtributoClaveHasEstiloCampo" DisplayName="Atributo Clave Has Estilo Campo" Namespace="UPM_IPS.JCJAPGDRCDERAWebBD" IsEmbedding="true">
-      <Source>
-        <DomainRole Id="e5d241ec-28a4-4afe-a78e-0daf495619e0" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.AtributoClaveHasEstiloCampo.AtributoClave" Name="AtributoClave" DisplayName="Atributo Clave" PropertyName="EstiloCampo" Multiplicity="ZeroOne" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Estilo Campo">
-          <RolePlayer>
-            <DomainClassMoniker Name="AtributoClave" />
-          </RolePlayer>
-        </DomainRole>
-      </Source>
-      <Target>
-        <DomainRole Id="fb941fdf-5167-4d0e-a542-bc0f7ebddaac" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.AtributoClaveHasEstiloCampo.EstiloCampo" Name="EstiloCampo" DisplayName="Estilo Campo" PropertyName="AtributoClave" Multiplicity="ZeroOne" PropagatesDelete="true" PropertyDisplayName="Atributo Clave">
           <RolePlayer>
             <DomainClassMoniker Name="EstiloCampo" />
           </RolePlayer>
@@ -613,9 +550,9 @@
           <XmlRelationshipData UseFullForm="true" RoleElementName="atributo">
             <DomainRelationshipMoniker Name="DERAWebBDModelHasAtributo" />
           </XmlRelationshipData>
-          <XmlRelationshipData UseFullForm="true" RoleElementName="atributoClave">
-            <DomainRelationshipMoniker Name="DERAWebBDModelHasAtributoClave" />
-          </XmlRelationshipData>
+          <XmlPropertyData XmlName="name">
+            <DomainPropertyMoniker Name="DERAWebBDModel/Name" />
+          </XmlPropertyData>
         </ElementData>
       </XmlClassData>
       <XmlClassData TypeName="JCJAPGDRCDERAWebBDDiagram" MonikerAttributeName="" SerializeId="true" MonikerElementName="jCJAPGDRCDERAWebBDDiagramMoniker" ElementName="jCJAPGDRCDERAWebBDDiagram" MonikerTypeName="JCJAPGDRCDERAWebBDDiagramMoniker">
@@ -632,9 +569,6 @@
           </XmlRelationshipData>
           <XmlRelationshipData UseFullForm="true" RoleElementName="atributo">
             <DomainRelationshipMoniker Name="EntidadReferencesAtributo" />
-          </XmlRelationshipData>
-          <XmlRelationshipData UseFullForm="true" RoleElementName="atributoClave">
-            <DomainRelationshipMoniker Name="EntidadReferencesAtributoClave" />
           </XmlRelationshipData>
         </ElementData>
       </XmlClassData>
@@ -764,26 +698,12 @@
       </XmlClassData>
       <XmlClassData TypeName="AtributoClave" MonikerAttributeName="" SerializeId="true" MonikerElementName="atributoClaveMoniker" ElementName="atributoClave" MonikerTypeName="AtributoClaveMoniker">
         <DomainClassMoniker Name="AtributoClave" />
-        <ElementData>
-          <XmlPropertyData XmlName="name">
-            <DomainPropertyMoniker Name="AtributoClave/Name" />
-          </XmlPropertyData>
-          <XmlRelationshipData UseFullForm="true" RoleElementName="estiloCampo">
-            <DomainRelationshipMoniker Name="AtributoClaveHasEstiloCampo" />
-          </XmlRelationshipData>
-        </ElementData>
       </XmlClassData>
       <XmlClassData TypeName="AtrClaveShape" MonikerAttributeName="" SerializeId="true" MonikerElementName="atrClaveShapeMoniker" ElementName="atrClaveShape" MonikerTypeName="AtrClaveShapeMoniker">
         <GeometryShapeMoniker Name="AtrClaveShape" />
       </XmlClassData>
-      <XmlClassData TypeName="DERAWebBDModelHasAtributoClave" MonikerAttributeName="" SerializeId="true" MonikerElementName="dERAWebBDModelHasAtributoClaveMoniker" ElementName="dERAWebBDModelHasAtributoClave" MonikerTypeName="DERAWebBDModelHasAtributoClaveMoniker">
-        <DomainRelationshipMoniker Name="DERAWebBDModelHasAtributoClave" />
-      </XmlClassData>
       <XmlClassData TypeName="EntidadReferencesAtributo" MonikerAttributeName="" SerializeId="true" MonikerElementName="entidadReferencesAtributoMoniker" ElementName="entidadReferencesAtributo" MonikerTypeName="EntidadReferencesAtributoMoniker">
         <DomainRelationshipMoniker Name="EntidadReferencesAtributo" />
-      </XmlClassData>
-      <XmlClassData TypeName="EntidadReferencesAtributoClave" MonikerAttributeName="" SerializeId="true" MonikerElementName="entidadReferencesAtributoClaveMoniker" ElementName="entidadReferencesAtributoClave" MonikerTypeName="EntidadReferencesAtributoClaveMoniker">
-        <DomainRelationshipMoniker Name="EntidadReferencesAtributoClave" />
       </XmlClassData>
       <XmlClassData TypeName="RelacionReferencesAtributo" MonikerAttributeName="" SerializeId="true" MonikerElementName="relacionReferencesAtributoMoniker" ElementName="relacionReferencesAtributo" MonikerTypeName="RelacionReferencesAtributoMoniker">
         <DomainRelationshipMoniker Name="RelacionReferencesAtributo" />
@@ -798,9 +718,6 @@
       </XmlClassData>
       <XmlClassData TypeName="AtributoHasEstiloCampo" MonikerAttributeName="" SerializeId="true" MonikerElementName="atributoHasEstiloCampoMoniker" ElementName="atributoHasEstiloCampo" MonikerTypeName="AtributoHasEstiloCampoMoniker">
         <DomainRelationshipMoniker Name="AtributoHasEstiloCampo" />
-      </XmlClassData>
-      <XmlClassData TypeName="AtributoClaveHasEstiloCampo" MonikerAttributeName="" SerializeId="true" MonikerElementName="atributoClaveHasEstiloCampoMoniker" ElementName="atributoClaveHasEstiloCampo" MonikerTypeName="AtributoClaveHasEstiloCampoMoniker">
-        <DomainRelationshipMoniker Name="AtributoClaveHasEstiloCampo" />
       </XmlClassData>
       <XmlClassData TypeName="ConectaEstiloPagina" MonikerAttributeName="" SerializeId="true" MonikerElementName="conectaEstiloPaginaMoniker" ElementName="conectaEstiloPagina" MonikerTypeName="ConectaEstiloPaginaMoniker">
         <ConnectorMoniker Name="ConectaEstiloPagina" />
@@ -890,25 +807,6 @@
           <RolePlayerConnectDirective>
             <AcceptingClass>
               <DomainClassMoniker Name="Atributo" />
-            </AcceptingClass>
-          </RolePlayerConnectDirective>
-        </TargetDirectives>
-      </LinkConnectDirective>
-    </ConnectionBuilder>
-    <ConnectionBuilder Name="EntidadReferencesAtributoClaveBuilder">
-      <LinkConnectDirective>
-        <DomainRelationshipMoniker Name="EntidadReferencesAtributoClave" />
-        <SourceDirectives>
-          <RolePlayerConnectDirective>
-            <AcceptingClass>
-              <DomainClassMoniker Name="Entidad" />
-            </AcceptingClass>
-          </RolePlayerConnectDirective>
-        </SourceDirectives>
-        <TargetDirectives>
-          <RolePlayerConnectDirective>
-            <AcceptingClass>
-              <DomainClassMoniker Name="AtributoClave" />
             </AcceptingClass>
           </RolePlayerConnectDirective>
         </TargetDirectives>
@@ -1017,13 +915,14 @@
       <ShapeMap>
         <DomainClassMoniker Name="AtributoClave" />
         <ParentElementPath>
-          <DomainPath>DERAWebBDModelHasAtributoClave.DERAWebBDModel/!DERAWebBDModel</DomainPath>
+          <DomainPath>DERAWebBDModelHasAtributo.DERAWebBDModel/!DERAWebBDModel</DomainPath>
         </ParentElementPath>
         <DecoratorMap>
           <TextDecoratorMoniker Name="AtrClaveShape/Namedecorator" />
           <PropertyDisplayed>
             <PropertyPath>
-              <DomainPropertyMoniker Name="AtributoClave/Name" />
+              <DomainPropertyMoniker Name="Atributo/Name" />
+              <DomainPath>DERAWebBDModelHasAtributo.DERAWebBDModel/!DERAWebBDModel/.Atributo/!Atributo</DomainPath>
             </PropertyPath>
           </PropertyDisplayed>
         </DecoratorMap>
@@ -1120,19 +1019,11 @@
       </ConnectorMap>
       <ConnectorMap>
         <ConnectorMoniker Name="ConectaAtributo" />
-        <DomainRelationshipMoniker Name="EntidadReferencesAtributoClave" />
-      </ConnectorMap>
-      <ConnectorMap>
-        <ConnectorMoniker Name="ConectaAtributo" />
         <DomainRelationshipMoniker Name="RelacionReferencesAtributo" />
       </ConnectorMap>
       <ConnectorMap>
         <ConnectorMoniker Name="ConectaEstiloPagina" />
         <DomainRelationshipMoniker Name="EntidadHasEstiloPagina" />
-      </ConnectorMap>
-      <ConnectorMap>
-        <ConnectorMoniker Name="ConectaEstiloCampo" />
-        <DomainRelationshipMoniker Name="AtributoClaveHasEstiloCampo" />
       </ConnectorMap>
       <ConnectorMap>
         <ConnectorMoniker Name="ConectaAtributoRestriccion" />
@@ -1187,7 +1078,7 @@
         <ConnectionBuilderMoniker Name="JCJAPGDRCDERAWebBD/EntidadReferencesAtributoBuilder" />
       </ConnectionTool>
       <ConnectionTool Name="EntidadClaveTool" ToolboxIcon="Resources\conectar-_1_.bmp" Caption="Entidad--Clave" Tooltip="Entidad Clave Tool" HelpKeyword="EntidadClaveTool">
-        <ConnectionBuilderMoniker Name="JCJAPGDRCDERAWebBD/EntidadReferencesAtributoClaveBuilder" />
+        <ConnectionBuilderMoniker Name="JCJAPGDRCDERAWebBD/EntidadReferencesAtributoBuilder" />
       </ConnectionTool>
       <ConnectionTool Name="RelacionAtributoTool" ToolboxIcon="Resources\conectar-_1_.bmp" Caption="Relacion--Atributo" Tooltip="Relacion Atributo Tool" HelpKeyword="RelacionAtributoTool">
         <ConnectionBuilderMoniker Name="JCJAPGDRCDERAWebBD/RelacionReferencesAtributoBuilder" />

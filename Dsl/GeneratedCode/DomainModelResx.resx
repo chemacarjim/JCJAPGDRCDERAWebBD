@@ -133,6 +133,14 @@
     <value>DERAWeb BDModel</value>
     <comment>DisplayName for DomainClass &apos;DERAWebBDModel&apos;</comment>
   </data>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModel/Name.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModel.Name</value>
+    <comment>Description for DomainProperty &apos;Name&apos; on DomainClass &apos;DERAWebBDModel&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModel/Name.DisplayName" xml:space="preserve">
+    <value>Name</value>
+    <comment>DisplayName for DomainProperty &apos;Name&apos; on DomainClass &apos;DERAWebBDModel&apos;</comment>
+  </data>
   <data name="UPM_IPS.JCJAPGDRCDERAWebBD.Entidad.Description" xml:space="preserve">
     <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.Entidad</value>
     <comment>Description for DomainClass &apos;Entidad&apos;</comment>
@@ -284,14 +292,6 @@
   <data name="UPM_IPS.JCJAPGDRCDERAWebBD.AtributoClave.DisplayName" xml:space="preserve">
     <value>Atributo Clave</value>
     <comment>DisplayName for DomainClass &apos;AtributoClave&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.AtributoClave/Name.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.AtributoClave.Name</value>
-    <comment>Description for DomainProperty &apos;Name&apos; on DomainClass &apos;AtributoClave&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.AtributoClave/Name.DisplayName" xml:space="preserve">
-    <value>Name</value>
-    <comment>DisplayName for DomainProperty &apos;Name&apos; on DomainClass &apos;AtributoClave&apos;</comment>
   </data>
   <data name="UPM_IPS.JCJAPGDRCDERAWebBD.EstiloCampo.Description" xml:space="preserve">
     <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.EstiloCampo</value>
@@ -581,38 +581,6 @@
     <value>DERAWeb BDModel</value>
     <comment>PropertyDisplayName for DomainRole &apos;Atributo&apos; on DomainRelationship &apos;DERAWebBDModelHasAtributo&apos;</comment>
   </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasAtributoClave.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasAtributoClave</value>
-    <comment>Description for DomainClass &apos;DERAWebBDModelHasAtributoClave&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasAtributoClave.DisplayName" xml:space="preserve">
-    <value>DERAWeb BDModel Has Atributo Clave</value>
-    <comment>DisplayName for DomainClass &apos;DERAWebBDModelHasAtributoClave&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasAtributoClave/DERAWebBDModel.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasAtributoClave.DERAWebBDModel</value>
-    <comment>Description for DomainRole &apos;DERAWebBDModel&apos; on DomainRelationship &apos;DERAWebBDModelHasAtributoClave&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasAtributoClave/DERAWebBDModel.DisplayName" xml:space="preserve">
-    <value>DERAWeb BDModel</value>
-    <comment>DisplayName for DomainRole &apos;DERAWebBDModel&apos; on DomainRelationship &apos;DERAWebBDModelHasAtributoClave&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasAtributoClave/DERAWebBDModel.PropertyDisplayName" xml:space="preserve">
-    <value>Atributo Clave</value>
-    <comment>PropertyDisplayName for DomainRole &apos;DERAWebBDModel&apos; on DomainRelationship &apos;DERAWebBDModelHasAtributoClave&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasAtributoClave/AtributoClave.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasAtributoClave.AtributoClave</value>
-    <comment>Description for DomainRole &apos;AtributoClave&apos; on DomainRelationship &apos;DERAWebBDModelHasAtributoClave&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasAtributoClave/AtributoClave.DisplayName" xml:space="preserve">
-    <value>Atributo Clave</value>
-    <comment>DisplayName for DomainRole &apos;AtributoClave&apos; on DomainRelationship &apos;DERAWebBDModelHasAtributoClave&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasAtributoClave/AtributoClave.PropertyDisplayName" xml:space="preserve">
-    <value>DERAWeb BDModel</value>
-    <comment>PropertyDisplayName for DomainRole &apos;AtributoClave&apos; on DomainRelationship &apos;DERAWebBDModelHasAtributoClave&apos;</comment>
-  </data>
   <data name="UPM_IPS.JCJAPGDRCDERAWebBD.EntidadReferencesAtributo.Description" xml:space="preserve">
     <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.EntidadReferencesAtributo</value>
     <comment>Description for DomainClass &apos;EntidadReferencesAtributo&apos;</comment>
@@ -644,38 +612,6 @@
   <data name="UPM_IPS.JCJAPGDRCDERAWebBD.EntidadReferencesAtributo/Atributo.PropertyDisplayName" xml:space="preserve">
     <value>Entidad</value>
     <comment>PropertyDisplayName for DomainRole &apos;Atributo&apos; on DomainRelationship &apos;EntidadReferencesAtributo&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.EntidadReferencesAtributoClave.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.EntidadReferencesAtributoClave</value>
-    <comment>Description for DomainClass &apos;EntidadReferencesAtributoClave&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.EntidadReferencesAtributoClave.DisplayName" xml:space="preserve">
-    <value>Entidad References Atributo Clave</value>
-    <comment>DisplayName for DomainClass &apos;EntidadReferencesAtributoClave&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.EntidadReferencesAtributoClave/Entidad.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.EntidadReferencesAtributoClave.Entidad</value>
-    <comment>Description for DomainRole &apos;Entidad&apos; on DomainRelationship &apos;EntidadReferencesAtributoClave&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.EntidadReferencesAtributoClave/Entidad.DisplayName" xml:space="preserve">
-    <value>Entidad</value>
-    <comment>DisplayName for DomainRole &apos;Entidad&apos; on DomainRelationship &apos;EntidadReferencesAtributoClave&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.EntidadReferencesAtributoClave/Entidad.PropertyDisplayName" xml:space="preserve">
-    <value>Atributo Clave</value>
-    <comment>PropertyDisplayName for DomainRole &apos;Entidad&apos; on DomainRelationship &apos;EntidadReferencesAtributoClave&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.EntidadReferencesAtributoClave/AtributoClave.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.EntidadReferencesAtributoClave.AtributoClave</value>
-    <comment>Description for DomainRole &apos;AtributoClave&apos; on DomainRelationship &apos;EntidadReferencesAtributoClave&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.EntidadReferencesAtributoClave/AtributoClave.DisplayName" xml:space="preserve">
-    <value>Atributo Clave</value>
-    <comment>DisplayName for DomainRole &apos;AtributoClave&apos; on DomainRelationship &apos;EntidadReferencesAtributoClave&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.EntidadReferencesAtributoClave/AtributoClave.PropertyDisplayName" xml:space="preserve">
-    <value>Entidad</value>
-    <comment>PropertyDisplayName for DomainRole &apos;AtributoClave&apos; on DomainRelationship &apos;EntidadReferencesAtributoClave&apos;</comment>
   </data>
   <data name="UPM_IPS.JCJAPGDRCDERAWebBD.RelacionReferencesAtributo.Description" xml:space="preserve">
     <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.RelacionReferencesAtributo</value>
@@ -740,38 +676,6 @@
   <data name="UPM_IPS.JCJAPGDRCDERAWebBD.AtributoHasEstiloCampo/EstiloCampo.PropertyDisplayName" xml:space="preserve">
     <value>Atributo</value>
     <comment>PropertyDisplayName for DomainRole &apos;EstiloCampo&apos; on DomainRelationship &apos;AtributoHasEstiloCampo&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.AtributoClaveHasEstiloCampo.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.AtributoClaveHasEstiloCampo</value>
-    <comment>Description for DomainClass &apos;AtributoClaveHasEstiloCampo&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.AtributoClaveHasEstiloCampo.DisplayName" xml:space="preserve">
-    <value>Atributo Clave Has Estilo Campo</value>
-    <comment>DisplayName for DomainClass &apos;AtributoClaveHasEstiloCampo&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.AtributoClaveHasEstiloCampo/AtributoClave.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.AtributoClaveHasEstiloCampo.AtributoClave</value>
-    <comment>Description for DomainRole &apos;AtributoClave&apos; on DomainRelationship &apos;AtributoClaveHasEstiloCampo&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.AtributoClaveHasEstiloCampo/AtributoClave.DisplayName" xml:space="preserve">
-    <value>Atributo Clave</value>
-    <comment>DisplayName for DomainRole &apos;AtributoClave&apos; on DomainRelationship &apos;AtributoClaveHasEstiloCampo&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.AtributoClaveHasEstiloCampo/AtributoClave.PropertyDisplayName" xml:space="preserve">
-    <value>Estilo Campo</value>
-    <comment>PropertyDisplayName for DomainRole &apos;AtributoClave&apos; on DomainRelationship &apos;AtributoClaveHasEstiloCampo&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.AtributoClaveHasEstiloCampo/EstiloCampo.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.AtributoClaveHasEstiloCampo.EstiloCampo</value>
-    <comment>Description for DomainRole &apos;EstiloCampo&apos; on DomainRelationship &apos;AtributoClaveHasEstiloCampo&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.AtributoClaveHasEstiloCampo/EstiloCampo.DisplayName" xml:space="preserve">
-    <value>Estilo Campo</value>
-    <comment>DisplayName for DomainRole &apos;EstiloCampo&apos; on DomainRelationship &apos;AtributoClaveHasEstiloCampo&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.AtributoClaveHasEstiloCampo/EstiloCampo.PropertyDisplayName" xml:space="preserve">
-    <value>Atributo Clave</value>
-    <comment>PropertyDisplayName for DomainRole &apos;EstiloCampo&apos; on DomainRelationship &apos;AtributoClaveHasEstiloCampo&apos;</comment>
   </data>
   <data name="UPM_IPS.JCJAPGDRCDERAWebBD.RestriccionEnumHasValorEnumerado.Description" xml:space="preserve">
     <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.RestriccionEnumHasValorEnumerado</value>

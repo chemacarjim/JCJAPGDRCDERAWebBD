@@ -48,6 +48,93 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 		{
 		}
 		#endregion
+		#region Name domain property code
+		
+		/// <summary>
+		/// Name domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid NameDomainPropertyId = new global::System.Guid(0x1a4f7d5d, 0x6708, 0x43ed, 0xa1, 0x3e, 0x4e, 0xbe, 0x7a, 0x32, 0xbf, 0x81);
+		
+		/// <summary>
+		/// Storage for Name
+		/// </summary>
+		private global::System.String namePropertyStorage = string.Empty;
+		
+		/// <summary>
+		/// Gets or sets the value of Name domain property.
+		/// Description for UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModel.Name
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModel/Name.DisplayName", typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDDomainModel), "UPM_IPS.JCJAPGDRCDERAWebBD.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModel/Name.Description", typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDDomainModel), "UPM_IPS.JCJAPGDRCDERAWebBD.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("1a4f7d5d-6708-43ed-a13e-4ebe7a32bf81")]
+		public global::System.String Name
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return namePropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				NamePropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the DERAWebBDModel.Name domain property.
+		/// </summary>
+		internal sealed partial class NamePropertyHandler : DslModeling::DomainPropertyValueHandler<DERAWebBDModel, global::System.String>
+		{
+			private NamePropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the DERAWebBDModel.Name domain property value handler.
+			/// </summary>
+			public static readonly NamePropertyHandler Instance = new NamePropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the DERAWebBDModel.Name domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return NameDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(DERAWebBDModel element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.namePropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(DERAWebBDModel element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.namePropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
 		#region Entidades opposite domain role accessor
 		
 		/// <summary>
@@ -116,22 +203,6 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 			}
 		}
 		#endregion
-		#region AtributoClave opposite domain role accessor
-		
-		/// <summary>
-		/// Gets a list of AtributoClave.
-		/// Description for
-		/// UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasAtributoClave.DERAWebBDModel
-		/// </summary>
-		public virtual DslModeling::LinkedElementCollection<AtributoClave> AtributoClave
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<AtributoClave>, AtributoClave>(global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasAtributoClave.DERAWebBDModelDomainRoleId);
-			}
-		}
-		#endregion
 		#region ElementGroupPrototype Merge methods
 		/// <summary>
 		/// Returns a value indicating whether the source element represented by the
@@ -173,11 +244,6 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 				}
 				
 				if (rootElementDomainInfo.IsDerivedFrom(global::UPM_IPS.JCJAPGDRCDERAWebBD.Atributo.DomainClassId)) 
-				{
-					return true;
-				}
-				
-				if (rootElementDomainInfo.IsDerivedFrom(global::UPM_IPS.JCJAPGDRCDERAWebBD.AtributoClave.DomainClassId)) 
 				{
 					return true;
 				}
@@ -238,15 +304,6 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 			{
 				// Create link for path DERAWebBDModelHasAtributo.Atributo
 				this.Atributo.Add(sourceAtributo4);
-
-				return;
-			}
-				
-			global::UPM_IPS.JCJAPGDRCDERAWebBD.AtributoClave sourceAtributoClave5 = sourceElement as global::UPM_IPS.JCJAPGDRCDERAWebBD.AtributoClave;
-			if (sourceAtributoClave5 != null)
-			{
-				// Create link for path DERAWebBDModelHasAtributoClave.AtributoClave
-				this.AtributoClave.Add(sourceAtributoClave5);
 
 				return;
 			}
@@ -324,20 +381,6 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 				{
 					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
 					link.Delete(global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasAtributo.DERAWebBDModelDomainRoleId, global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasAtributo.AtributoDomainRoleId);
-				}
-
-				return;
-			}
-				
-			global::UPM_IPS.JCJAPGDRCDERAWebBD.AtributoClave sourceAtributoClave5 = sourceElement as global::UPM_IPS.JCJAPGDRCDERAWebBD.AtributoClave;
-			if (sourceAtributoClave5 != null)
-			{
-				// Delete link for path DERAWebBDModelHasAtributoClave.AtributoClave
-				
-				foreach (DslModeling::ElementLink link in global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasAtributoClave.GetLinks((global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModel)this, sourceAtributoClave5))
-				{
-					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
-					link.Delete(global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasAtributoClave.DERAWebBDModelDomainRoleId, global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasAtributoClave.AtributoClaveDomainRoleId);
 				}
 
 				return;
@@ -541,22 +584,6 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 			get
 			{
 				return GetRoleCollection<DslModeling::LinkedElementCollection<Atributo>, Atributo>(global::UPM_IPS.JCJAPGDRCDERAWebBD.EntidadReferencesAtributo.EntidadDomainRoleId);
-			}
-		}
-		#endregion
-		#region AtributoClave opposite domain role accessor
-		
-		/// <summary>
-		/// Gets a list of AtributoClave.
-		/// Description for
-		/// UPM_IPS.JCJAPGDRCDERAWebBD.EntidadReferencesAtributoClave.Entidad
-		/// </summary>
-		public virtual DslModeling::LinkedElementCollection<AtributoClave> AtributoClave
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<AtributoClave>, AtributoClave>(global::UPM_IPS.JCJAPGDRCDERAWebBD.EntidadReferencesAtributoClave.EntidadDomainRoleId);
 			}
 		}
 		#endregion
@@ -2118,7 +2145,7 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("c312c662-0068-4278-9381-250ba852955e")]
-	public partial class AtributoClave : DslModeling::ModelElement
+	public partial class AtributoClave : Atributo
 	{
 		#region Constructors, domain class Id
 	
@@ -2144,251 +2171,6 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 		public AtributoClave(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
 			: base(partition, propertyAssignments)
 		{
-		}
-		#endregion
-		#region Name domain property code
-		
-		/// <summary>
-		/// Name domain property Id.
-		/// </summary>
-		public static readonly global::System.Guid NameDomainPropertyId = new global::System.Guid(0xfe5c5157, 0x3ef0, 0x47bc, 0x8d, 0x84, 0x78, 0xc1, 0x5f, 0x54, 0x6d, 0x8c);
-		
-		/// <summary>
-		/// Storage for Name
-		/// </summary>
-		private global::System.String namePropertyStorage = string.Empty;
-		
-		/// <summary>
-		/// Gets or sets the value of Name domain property.
-		/// Description for UPM_IPS.JCJAPGDRCDERAWebBD.AtributoClave.Name
-		/// </summary>
-		[DslDesign::DisplayNameResource("UPM_IPS.JCJAPGDRCDERAWebBD.AtributoClave/Name.DisplayName", typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDDomainModel), "UPM_IPS.JCJAPGDRCDERAWebBD.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("UPM_IPS.JCJAPGDRCDERAWebBD.AtributoClave/Name.Description", typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDDomainModel), "UPM_IPS.JCJAPGDRCDERAWebBD.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainObjectId("fe5c5157-3ef0-47bc-8d84-78c15f546d8c")]
-		public global::System.String Name
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return namePropertyStorage;
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				NamePropertyHandler.Instance.SetValue(this, value);
-			}
-		}
-		/// <summary>
-		/// Value handler for the AtributoClave.Name domain property.
-		/// </summary>
-		internal sealed partial class NamePropertyHandler : DslModeling::DomainPropertyValueHandler<AtributoClave, global::System.String>
-		{
-			private NamePropertyHandler() { }
-		
-			/// <summary>
-			/// Gets the singleton instance of the AtributoClave.Name domain property value handler.
-			/// </summary>
-			public static readonly NamePropertyHandler Instance = new NamePropertyHandler();
-		
-			/// <summary>
-			/// Gets the Id of the AtributoClave.Name domain property.
-			/// </summary>
-			public sealed override global::System.Guid DomainPropertyId
-			{
-				[global::System.Diagnostics.DebuggerStepThrough]
-				get
-				{
-					return NameDomainPropertyId;
-				}
-			}
-			
-			/// <summary>
-			/// Gets a strongly-typed value of the property on specified element.
-			/// </summary>
-			/// <param name="element">Element which owns the property.</param>
-			/// <returns>Property value.</returns>
-			public override sealed global::System.String GetValue(AtributoClave element)
-			{
-				if (element == null) throw new global::System.ArgumentNullException("element");
-				return element.namePropertyStorage;
-			}
-		
-			/// <summary>
-			/// Sets property value on an element.
-			/// </summary>
-			/// <param name="element">Element which owns the property.</param>
-			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(AtributoClave element, global::System.String newValue)
-			{
-				if (element == null) throw new global::System.ArgumentNullException("element");
-		
-				global::System.String oldValue = GetValue(element);
-				if (newValue != oldValue)
-				{
-					ValueChanging(element, oldValue, newValue);
-					element.namePropertyStorage = newValue;
-					ValueChanged(element, oldValue, newValue);
-				}
-			}
-		}
-		
-		#endregion
-		#region DERAWebBDModel opposite domain role accessor
-		/// <summary>
-		/// Gets or sets DERAWebBDModel.
-		/// Description for
-		/// UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasAtributoClave.AtributoClave
-		/// </summary>
-		public virtual DERAWebBDModel DERAWebBDModel
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasAtributoClave.AtributoClaveDomainRoleId) as DERAWebBDModel;
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasAtributoClave.AtributoClaveDomainRoleId, value);
-			}
-		}
-		#endregion
-		#region Entidad opposite domain role accessor
-		
-		/// <summary>
-		/// Gets a list of Entidad.
-		/// Description for
-		/// UPM_IPS.JCJAPGDRCDERAWebBD.EntidadReferencesAtributoClave.AtributoClave
-		/// </summary>
-		public virtual DslModeling::LinkedElementCollection<Entidad> Entidad
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<Entidad>, Entidad>(global::UPM_IPS.JCJAPGDRCDERAWebBD.EntidadReferencesAtributoClave.AtributoClaveDomainRoleId);
-			}
-		}
-		#endregion
-		#region EstiloCampo opposite domain role accessor
-		/// <summary>
-		/// Gets or sets EstiloCampo.
-		/// Description for
-		/// UPM_IPS.JCJAPGDRCDERAWebBD.AtributoClaveHasEstiloCampo.AtributoClave
-		/// </summary>
-		public virtual EstiloCampo EstiloCampo
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::UPM_IPS.JCJAPGDRCDERAWebBD.AtributoClaveHasEstiloCampo.AtributoClaveDomainRoleId) as EstiloCampo;
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::UPM_IPS.JCJAPGDRCDERAWebBD.AtributoClaveHasEstiloCampo.AtributoClaveDomainRoleId, value);
-			}
-		}
-		#endregion
-		#region ElementGroupPrototype Merge methods
-		/// <summary>
-		/// Returns a value indicating whether the source element represented by the
-		/// specified root ProtoElement can be added to this element.
-		/// </summary>
-		/// <param name="rootElement">
-		/// The root ProtoElement representing a source element.  This can be null, 
-		/// in which case the ElementGroupPrototype does not contain an ProtoElements
-		/// and the code should inspect the ElementGroupPrototype context information.
-		/// </param>
-		/// <param name="elementGroupPrototype">The ElementGroupPrototype that contains the root ProtoElement.</param>
-		/// <returns>true if the source element represented by the ProtoElement can be added to this target element.</returns>
-		protected override bool CanMerge(DslModeling::ProtoElementBase rootElement, DslModeling::ElementGroupPrototype elementGroupPrototype)
-		{
-			if ( elementGroupPrototype == null ) throw new global::System.ArgumentNullException("elementGroupPrototype");
-			
-			if (rootElement != null)
-			{
-				DslModeling::DomainClassInfo rootElementDomainInfo = this.Partition.DomainDataDirectory.GetDomainClass(rootElement.DomainClassId);
-				
-				if (rootElementDomainInfo.IsDerivedFrom(global::UPM_IPS.JCJAPGDRCDERAWebBD.EstiloCampo.DomainClassId)) 
-				{
-					// Check that creating a link with this path doesn't cause multiplicity overflow: AtributoClaveHasEstiloCampo.EstiloCampo
-					if (this.EstiloCampo != null)
-					{
-						return false;
-					}
-					return true;
-				}
-			}
-			return base.CanMerge(rootElement, elementGroupPrototype);
-		}
-		
-		/// <summary>
-		/// Called by the Merge process to create a relationship between 
-		/// this target element and the specified source element. 
-		/// Typically, a parent-child relationship is established
-		/// between the target element (the parent) and the source element 
-		/// (the child), but any relationship can be established.
-		/// </summary>
-		/// <param name="sourceElement">The element that is to be related to this model element.</param>
-		/// <param name="elementGroup">The group of source ModelElements that have been rehydrated into the target store.</param>
-		/// <remarks>
-		/// This method is overriden to create the relationship between the target element and the specified source element.
-		/// The base method does nothing.
-		/// </remarks>
-		protected override void MergeRelate(DslModeling::ModelElement sourceElement, DslModeling::ElementGroup elementGroup)
-		{
-			// In general, sourceElement is allowed to be null, meaning that the elementGroup must be parsed for special cases.
-			// However this is not supported in generated code.  Use double-deriving on this class and then override MergeRelate completely if you 
-			// need to support this case.
-			if ( sourceElement == null ) throw new global::System.ArgumentNullException("sourceElement");
-		
-				
-			global::UPM_IPS.JCJAPGDRCDERAWebBD.EstiloCampo sourceEstiloCampo1 = sourceElement as global::UPM_IPS.JCJAPGDRCDERAWebBD.EstiloCampo;
-			if (sourceEstiloCampo1 != null)
-			{
-				// Create link for path AtributoClaveHasEstiloCampo.EstiloCampo
-				this.EstiloCampo = sourceEstiloCampo1;
-
-				return;
-			}
-		
-			// Sdk workaround to runtime bug #879350 (DSL: can't copy and paste a MEL that has a MEX). Avoid MergeRelate on ModelElementExtension
-			// during a "Paste".
-			if (sourceElement is DslModeling::ExtensionElement
-				&& sourceElement.Store.TransactionManager.CurrentTransaction.TopLevelTransaction.Context.ContextInfo.ContainsKey("{9DAFD42A-DC0E-4d78-8C3F-8266B2CF8B33}"))
-			{
-				return;
-			}
-		
-			// Fall through to base class if this class hasn't handled the merge.
-			base.MergeRelate(sourceElement, elementGroup);
-		}
-		
-		/// <summary>
-		/// Performs operation opposite to MergeRelate - i.e. disconnects a given
-		/// element from the current one (removes links created by MergeRelate).
-		/// </summary>
-		/// <param name="sourceElement">Element to be unmerged/disconnected.</param>
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
-		protected override void MergeDisconnect(DslModeling::ModelElement sourceElement)
-		{
-			if (sourceElement == null) throw new global::System.ArgumentNullException("sourceElement");
-				
-			global::UPM_IPS.JCJAPGDRCDERAWebBD.EstiloCampo sourceEstiloCampo1 = sourceElement as global::UPM_IPS.JCJAPGDRCDERAWebBD.EstiloCampo;
-			if (sourceEstiloCampo1 != null)
-			{
-				// Delete link for path AtributoClaveHasEstiloCampo.EstiloCampo
-				
-				foreach (DslModeling::ElementLink link in global::UPM_IPS.JCJAPGDRCDERAWebBD.AtributoClaveHasEstiloCampo.GetLinks((global::UPM_IPS.JCJAPGDRCDERAWebBD.AtributoClave)this, sourceEstiloCampo1))
-				{
-					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
-					link.Delete(global::UPM_IPS.JCJAPGDRCDERAWebBD.AtributoClaveHasEstiloCampo.AtributoClaveDomainRoleId, global::UPM_IPS.JCJAPGDRCDERAWebBD.AtributoClaveHasEstiloCampo.EstiloCampoDomainRoleId);
-				}
-
-				return;
-			}
-			// Fall through to base class if this class hasn't handled the unmerge.
-			base.MergeDisconnect(sourceElement);
 		}
 		#endregion
 	}
@@ -2535,26 +2317,6 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 			set
 			{
 				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::UPM_IPS.JCJAPGDRCDERAWebBD.AtributoHasEstiloCampo.EstiloCampoDomainRoleId, value);
-			}
-		}
-		#endregion
-		#region AtributoClave opposite domain role accessor
-		/// <summary>
-		/// Gets or sets AtributoClave.
-		/// Description for
-		/// UPM_IPS.JCJAPGDRCDERAWebBD.AtributoClaveHasEstiloCampo.EstiloCampo
-		/// </summary>
-		public virtual AtributoClave AtributoClave
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::UPM_IPS.JCJAPGDRCDERAWebBD.AtributoClaveHasEstiloCampo.EstiloCampoDomainRoleId) as AtributoClave;
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::UPM_IPS.JCJAPGDRCDERAWebBD.AtributoClaveHasEstiloCampo.EstiloCampoDomainRoleId, value);
 			}
 		}
 		#endregion

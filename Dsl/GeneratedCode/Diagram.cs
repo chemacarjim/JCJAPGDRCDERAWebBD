@@ -267,18 +267,28 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 		}
 		
 		/// <summary>
+		/// Most connectors are mapped to element links, but there can be exceptions. This method tell if a connector should be
+		/// mapped to an element link.
+		/// </summary>
+		public override bool IsConnectorMappedToLink(DslDiagrams::BinaryLinkShape connector)
+		{
+			#region Check Parameters
+			global::System.Diagnostics.Debug.Assert(connector != null);
+			if (connector == null)
+				throw new global::System.ArgumentNullException("connector");
+			#endregion
+			if (connector.GetType() == typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.ConectaEstiloCampo))
+				return false;
+			return base.IsConnectorMappedToLink(connector);
+		}
+		
+		/// <summary>
 		/// Creates a new shape for the given model element as part of view fixup
 		/// </summary>
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily", Justification = "Generated code.")]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Generated code.")]
 		protected override DslDiagrams::ShapeElement CreateChildShape(DslModeling::ModelElement element)
 		{
-			if(element is global::UPM_IPS.JCJAPGDRCDERAWebBD.RestriccionEnum)
-			{
-				global::UPM_IPS.JCJAPGDRCDERAWebBD.RestriccionEnumShape newShape = new global::UPM_IPS.JCJAPGDRCDERAWebBD.RestriccionEnumShape(this.Partition);
-				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
-				return newShape;
-			}
 			if(element is global::UPM_IPS.JCJAPGDRCDERAWebBD.EstiloPagina)
 			{
 				global::UPM_IPS.JCJAPGDRCDERAWebBD.EstiloPaginaShape newShape = new global::UPM_IPS.JCJAPGDRCDERAWebBD.EstiloPaginaShape(this.Partition);
@@ -288,6 +298,12 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 			if(element is global::UPM_IPS.JCJAPGDRCDERAWebBD.EstiloPortal)
 			{
 				global::UPM_IPS.JCJAPGDRCDERAWebBD.EstiloPortalShape newShape = new global::UPM_IPS.JCJAPGDRCDERAWebBD.EstiloPortalShape(this.Partition);
+				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
+				return newShape;
+			}
+			if(element is global::UPM_IPS.JCJAPGDRCDERAWebBD.AtributoClave)
+			{
+				global::UPM_IPS.JCJAPGDRCDERAWebBD.AtrClaveShape newShape = new global::UPM_IPS.JCJAPGDRCDERAWebBD.AtrClaveShape(this.Partition);
 				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
 				return newShape;
 			}
@@ -303,6 +319,18 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
 				return newShape;
 			}
+			if(element is global::UPM_IPS.JCJAPGDRCDERAWebBD.RestriccionEnum)
+			{
+				global::UPM_IPS.JCJAPGDRCDERAWebBD.RestriccionEnumShape newShape = new global::UPM_IPS.JCJAPGDRCDERAWebBD.RestriccionEnumShape(this.Partition);
+				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
+				return newShape;
+			}
+			if(element is global::UPM_IPS.JCJAPGDRCDERAWebBD.Entidad)
+			{
+				global::UPM_IPS.JCJAPGDRCDERAWebBD.EntidadShape newShape = new global::UPM_IPS.JCJAPGDRCDERAWebBD.EntidadShape(this.Partition);
+				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
+				return newShape;
+			}
 			if(element is global::UPM_IPS.JCJAPGDRCDERAWebBD.Relacion)
 			{
 				global::UPM_IPS.JCJAPGDRCDERAWebBD.RelacionShape newShape = new global::UPM_IPS.JCJAPGDRCDERAWebBD.RelacionShape(this.Partition);
@@ -315,35 +343,18 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
 				return newShape;
 			}
-			if(element is global::UPM_IPS.JCJAPGDRCDERAWebBD.AtributoClave)
-			{
-				global::UPM_IPS.JCJAPGDRCDERAWebBD.AtrClaveShape newShape = new global::UPM_IPS.JCJAPGDRCDERAWebBD.AtrClaveShape(this.Partition);
-				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
-				return newShape;
-			}
-			if(element is global::UPM_IPS.JCJAPGDRCDERAWebBD.AtributoClaveHasEstiloCampo)
-			{
-				global::UPM_IPS.JCJAPGDRCDERAWebBD.ConectaEstiloCampo newShape = new global::UPM_IPS.JCJAPGDRCDERAWebBD.ConectaEstiloCampo(this.Partition);
-				return newShape;
-			}
-			if(element is global::UPM_IPS.JCJAPGDRCDERAWebBD.Entidad)
-			{
-				global::UPM_IPS.JCJAPGDRCDERAWebBD.EntidadShape newShape = new global::UPM_IPS.JCJAPGDRCDERAWebBD.EntidadShape(this.Partition);
-				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
-				return newShape;
-			}
-			if(element is global::UPM_IPS.JCJAPGDRCDERAWebBD.EntidadReferencesAtributo)
-			{
-				global::UPM_IPS.JCJAPGDRCDERAWebBD.ConectaAtributo newShape = new global::UPM_IPS.JCJAPGDRCDERAWebBD.ConectaAtributo(this.Partition);
-				return newShape;
-			}
 			if(element is global::UPM_IPS.JCJAPGDRCDERAWebBD.ValorEnumerado)
 			{
 				global::UPM_IPS.JCJAPGDRCDERAWebBD.ValoresEnumShape newShape = new global::UPM_IPS.JCJAPGDRCDERAWebBD.ValoresEnumShape(this.Partition);
 				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
 				return newShape;
 			}
-			if(element is global::UPM_IPS.JCJAPGDRCDERAWebBD.EntidadReferencesAtributoClave)
+			if(element is global::UPM_IPS.JCJAPGDRCDERAWebBD.RelacionReferencesEntidad)
+			{
+				global::UPM_IPS.JCJAPGDRCDERAWebBD.EntidadRelacionConnector newShape = new global::UPM_IPS.JCJAPGDRCDERAWebBD.EntidadRelacionConnector(this.Partition);
+				return newShape;
+			}
+			if(element is global::UPM_IPS.JCJAPGDRCDERAWebBD.EntidadReferencesAtributo)
 			{
 				global::UPM_IPS.JCJAPGDRCDERAWebBD.ConectaAtributo newShape = new global::UPM_IPS.JCJAPGDRCDERAWebBD.ConectaAtributo(this.Partition);
 				return newShape;
@@ -356,11 +367,6 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 			if(element is global::UPM_IPS.JCJAPGDRCDERAWebBD.EntidadHasEstiloPagina)
 			{
 				global::UPM_IPS.JCJAPGDRCDERAWebBD.ConectaEstiloPagina newShape = new global::UPM_IPS.JCJAPGDRCDERAWebBD.ConectaEstiloPagina(this.Partition);
-				return newShape;
-			}
-			if(element is global::UPM_IPS.JCJAPGDRCDERAWebBD.RelacionReferencesEntidad)
-			{
-				global::UPM_IPS.JCJAPGDRCDERAWebBD.EntidadRelacionConnector newShape = new global::UPM_IPS.JCJAPGDRCDERAWebBD.EntidadRelacionConnector(this.Partition);
 				return newShape;
 			}
 			if(element is global::UPM_IPS.JCJAPGDRCDERAWebBD.AtributoHasRestriccion)
@@ -495,8 +501,47 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
 				DslDiagrams::AssociatedPropertyInfo propertyInfo;
 				
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.JCJAPGDRCDERAWebBD.AtributoClave.NameDomainPropertyId);
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.JCJAPGDRCDERAWebBD.Atributo.NameDomainPropertyId);
+				propertyInfo.PresentationDomainNavigator = new DslDiagrams::PresentationDomainNavigator(NamedecoratorPresentationToDomain);
+				propertyInfo.DomainPresentationNavigator = new DslDiagrams::DomainPresentationNavigator(NamedecoratorDomainToPresentation);
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "Namedecorator").AssociateValueWith(shape.Store, propertyInfo);
+			}
+			public static DslModeling::ModelElement NamedecoratorPresentationToDomain(DslDiagrams::PresentationElement presentation)
+			{
+				global::UPM_IPS.JCJAPGDRCDERAWebBD.Atributo modelElement = presentation.ModelElement as global::UPM_IPS.JCJAPGDRCDERAWebBD.Atributo;
+				if(modelElement != null)
+				{
+					return mappedElement;
+				}
+				return null;
+			}
+			public static global::System.Collections.Generic.ICollection<DslDiagrams::PresentationElement> NamedecoratorDomainToPresentation(DslModeling::ModelElement modelElement)
+			{
+				global::UPM_IPS.JCJAPGDRCDERAWebBD.Atributo typedElement = modelElement as global::UPM_IPS.JCJAPGDRCDERAWebBD.Atributo;
+				if(typedElement != null)
+				{
+					if(typedElement.IsDeleted)
+					{
+						// We cannot navigate back along a path containing deleted elements, best we can do is return the diagram
+						// to ensure all visible shapes are invalidated.
+						global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDDiagram> diagramCollection = modelElement.Store.ElementDirectory.FindElements<global::UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDDiagram>(true);
+						global::UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDDiagram[] diagramArray = new global::UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDDiagram[diagramCollection.Count];
+						diagramCollection.CopyTo(diagramArray, 0);
+						return diagramArray;
+					}
+					// Segments 3 and 2
+					global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModel typedElement1 = typedElement.DERAWebBDModel;
+					if ( typedElement1 == null ) return null;
+					// Segments 1 and 0
+					DslModeling::ReadOnlyLinkedElementCollection<global::UPM_IPS.JCJAPGDRCDERAWebBD.Atributo> mappedElements = typedElement1.Atributo;
+					global::System.Collections.Generic.List<DslDiagrams::PresentationElement> presentationList = new global::System.Collections.Generic.List<DslDiagrams::PresentationElement>();
+					foreach(DslModeling::ModelElement mappedElement in mappedElements)
+					{
+						presentationList.AddRange(DslDiagrams::PresentationViewsSubject.GetPresentation(mappedElement));
+					}
+					return presentationList;
+				}
+				return null;
 			}
 		}
 		
@@ -787,22 +832,20 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 		/// <summary>
 		/// Rule that initiates view fixup when an element that has an associated shape is added to the model. 
 		/// </summary>
-		[DslModeling::RuleOn(typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.RestriccionEnum), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.EstiloPagina), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.EstiloPortal), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.AtributoClave), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.EstiloCampo), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.RestriccionRango), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.EntidadHasEstiloPagina), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.RelacionReferencesAtributo), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.EntidadReferencesAtributoClave), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.EntidadReferencesAtributo), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.RelacionReferencesEntidad), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.RestriccionEnum), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.Entidad), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.AtributoClaveHasEstiloCampo), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.AtributoClave), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.Atributo), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.Relacion), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.Atributo), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.ValorEnumerado), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.RelacionReferencesEntidad), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.EntidadReferencesAtributo), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.RelacionReferencesAtributo), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.EntidadHasEstiloPagina), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.AtributoHasRestriccion), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		internal sealed partial class FixUpDiagram : FixUpDiagramBase
 		{
@@ -819,10 +862,6 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 				{
 					parentElement = GetParentForRelationship((DslModeling::ElementLink)childElement);
 				} else
-				if(childElement is global::UPM_IPS.JCJAPGDRCDERAWebBD.RestriccionEnum)
-				{
-					parentElement = GetParentForRestriccionEnum((global::UPM_IPS.JCJAPGDRCDERAWebBD.RestriccionEnum)childElement);
-				} else
 				if(childElement is global::UPM_IPS.JCJAPGDRCDERAWebBD.EstiloPagina)
 				{
 					parentElement = GetParentForEstiloPagina((global::UPM_IPS.JCJAPGDRCDERAWebBD.EstiloPagina)childElement);
@@ -830,6 +869,10 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 				if(childElement is global::UPM_IPS.JCJAPGDRCDERAWebBD.EstiloPortal)
 				{
 					parentElement = GetParentForEstiloPortal((global::UPM_IPS.JCJAPGDRCDERAWebBD.EstiloPortal)childElement);
+				} else
+				if(childElement is global::UPM_IPS.JCJAPGDRCDERAWebBD.AtributoClave)
+				{
+					parentElement = GetParentForAtributoClave((global::UPM_IPS.JCJAPGDRCDERAWebBD.AtributoClave)childElement);
 				} else
 				if(childElement is global::UPM_IPS.JCJAPGDRCDERAWebBD.EstiloCampo)
 				{
@@ -839,21 +882,21 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 				{
 					parentElement = GetParentForRestriccionRango((global::UPM_IPS.JCJAPGDRCDERAWebBD.RestriccionRango)childElement);
 				} else
+				if(childElement is global::UPM_IPS.JCJAPGDRCDERAWebBD.RestriccionEnum)
+				{
+					parentElement = GetParentForRestriccionEnum((global::UPM_IPS.JCJAPGDRCDERAWebBD.RestriccionEnum)childElement);
+				} else
 				if(childElement is global::UPM_IPS.JCJAPGDRCDERAWebBD.Entidad)
 				{
 					parentElement = GetParentForEntidad((global::UPM_IPS.JCJAPGDRCDERAWebBD.Entidad)childElement);
 				} else
-				if(childElement is global::UPM_IPS.JCJAPGDRCDERAWebBD.AtributoClave)
+				if(childElement is global::UPM_IPS.JCJAPGDRCDERAWebBD.Relacion)
 				{
-					parentElement = GetParentForAtributoClave((global::UPM_IPS.JCJAPGDRCDERAWebBD.AtributoClave)childElement);
+					parentElement = GetParentForRelacion((global::UPM_IPS.JCJAPGDRCDERAWebBD.Relacion)childElement);
 				} else
 				if(childElement is global::UPM_IPS.JCJAPGDRCDERAWebBD.Atributo)
 				{
 					parentElement = GetParentForAtributo((global::UPM_IPS.JCJAPGDRCDERAWebBD.Atributo)childElement);
-				} else
-				if(childElement is global::UPM_IPS.JCJAPGDRCDERAWebBD.Relacion)
-				{
-					parentElement = GetParentForRelacion((global::UPM_IPS.JCJAPGDRCDERAWebBD.Relacion)childElement);
 				} else
 				if(childElement is global::UPM_IPS.JCJAPGDRCDERAWebBD.ValorEnumerado)
 				{
@@ -906,7 +949,7 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 				if ( result == null ) return null;
 				return result;
 			}
-			public static global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModel GetParentForAtributoClave( global::UPM_IPS.JCJAPGDRCDERAWebBD.AtributoClave root )
+			public static global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModel GetParentForAtributoClave( global::UPM_IPS.JCJAPGDRCDERAWebBD.Atributo root )
 			{
 				// Segments 0 and 1
 				global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModel result = root.DERAWebBDModel;
@@ -1282,10 +1325,8 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 		/// </summary>
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.RelacionReferencesEntidad), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.EntidadReferencesAtributo), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.EntidadReferencesAtributoClave), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.RelacionReferencesAtributo), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.EntidadHasEstiloPagina), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.AtributoClaveHasEstiloCampo), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.AtributoHasRestriccion), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		internal sealed class ConnectorRolePlayerChanged : DslModeling::RolePlayerChangeRule
 		{
