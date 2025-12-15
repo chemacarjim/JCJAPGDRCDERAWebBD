@@ -207,27 +207,11 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 						new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require) 
 						});
 					break;
-				case "UPM_IPS.JCJAPGDRCDERAWebBD.EstiloPortalToolToolboxItem":
-					// Add EstiloPortalTool shape tool.
-					result = new DslDesign::ModelingToolboxItem(
-						"UPM_IPS.JCJAPGDRCDERAWebBD.EstiloPortalToolToolboxItem", // Unique identifier (non-localized) for the toolbox item.
-						3, // Position relative to other items in the same toolbox tab.
-						resourceManager.GetString("EstiloPortalToolToolboxItem", resourceCulture), // Localized display name for the item.
-						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("EstiloPortalToolToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.
-						"UPM_IPS.JCJAPGDRCDERAWebBD.CrearToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
-						resourceManager.GetString("CrearToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
-						"EstiloPortalTool", // F1 help keyword for the toolbox item.
-						resourceManager.GetString("EstiloPortalToolToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
-						CreateElementToolPrototype(store, global::UPM_IPS.JCJAPGDRCDERAWebBD.EstiloPortal.DomainClassId), // ElementGroupPrototype (data object) representing model element on the toolbox.
-						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
-						new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require) 
-						});
-					break;
 				case "UPM_IPS.JCJAPGDRCDERAWebBD.AtributoEntToolboxItem":
 					// Add AtributoEnt shape tool.
 					result = new DslDesign::ModelingToolboxItem(
 						"UPM_IPS.JCJAPGDRCDERAWebBD.AtributoEntToolboxItem", // Unique identifier (non-localized) for the toolbox item.
-						4, // Position relative to other items in the same toolbox tab.
+						3, // Position relative to other items in the same toolbox tab.
 						resourceManager.GetString("AtributoEntToolboxItem", resourceCulture), // Localized display name for the item.
 						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("AtributoEntToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.
 						"UPM_IPS.JCJAPGDRCDERAWebBD.CrearToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
@@ -243,7 +227,7 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 					// Add EstiloPaginaTool shape tool.
 					result = new DslDesign::ModelingToolboxItem(
 						"UPM_IPS.JCJAPGDRCDERAWebBD.EstiloPaginaToolToolboxItem", // Unique identifier (non-localized) for the toolbox item.
-						5, // Position relative to other items in the same toolbox tab.
+						4, // Position relative to other items in the same toolbox tab.
 						resourceManager.GetString("EstiloPaginaToolToolboxItem", resourceCulture), // Localized display name for the item.
 						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("EstiloPaginaToolToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.
 						"UPM_IPS.JCJAPGDRCDERAWebBD.CrearToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
@@ -259,7 +243,7 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 					// Add EstiloCampoTool shape tool.
 					result = new DslDesign::ModelingToolboxItem(
 						"UPM_IPS.JCJAPGDRCDERAWebBD.EstiloCampoToolToolboxItem", // Unique identifier (non-localized) for the toolbox item.
-						6, // Position relative to other items in the same toolbox tab.
+						5, // Position relative to other items in the same toolbox tab.
 						resourceManager.GetString("EstiloCampoToolToolboxItem", resourceCulture), // Localized display name for the item.
 						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("EstiloCampoToolToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.
 						"UPM_IPS.JCJAPGDRCDERAWebBD.CrearToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
@@ -275,7 +259,7 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 					// Add RestriccionRangoTool shape tool.
 					result = new DslDesign::ModelingToolboxItem(
 						"UPM_IPS.JCJAPGDRCDERAWebBD.RestriccionRangoToolToolboxItem", // Unique identifier (non-localized) for the toolbox item.
-						7, // Position relative to other items in the same toolbox tab.
+						6, // Position relative to other items in the same toolbox tab.
 						resourceManager.GetString("RestriccionRangoToolToolboxItem", resourceCulture), // Localized display name for the item.
 						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("RestriccionRangoToolToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.
 						"UPM_IPS.JCJAPGDRCDERAWebBD.CrearToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
@@ -291,7 +275,7 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 					// Add RestriccionEnumeradoTool shape tool.
 					result = new DslDesign::ModelingToolboxItem(
 						"UPM_IPS.JCJAPGDRCDERAWebBD.RestriccionEnumeradoToolToolboxItem", // Unique identifier (non-localized) for the toolbox item.
-						8, // Position relative to other items in the same toolbox tab.
+						7, // Position relative to other items in the same toolbox tab.
 						resourceManager.GetString("RestriccionEnumeradoToolToolboxItem", resourceCulture), // Localized display name for the item.
 						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("RestriccionEnumeradoToolToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.
 						"UPM_IPS.JCJAPGDRCDERAWebBD.CrearToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
@@ -307,7 +291,7 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 					// Add AtributoRelTool shape tool.
 					result = new DslDesign::ModelingToolboxItem(
 						"UPM_IPS.JCJAPGDRCDERAWebBD.AtributoRelToolToolboxItem", // Unique identifier (non-localized) for the toolbox item.
-						9, // Position relative to other items in the same toolbox tab.
+						8, // Position relative to other items in the same toolbox tab.
 						resourceManager.GetString("AtributoRelToolToolboxItem", resourceCulture), // Localized display name for the item.
 						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("AtributoRelToolToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.
 						"UPM_IPS.JCJAPGDRCDERAWebBD.CrearToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
@@ -315,6 +299,22 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 						"AtributoRelTool", // F1 help keyword for the toolbox item.
 						resourceManager.GetString("AtributoRelToolToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
 						CreateElementToolPrototype(store, global::UPM_IPS.JCJAPGDRCDERAWebBD.AtributoRel.DomainClassId), // ElementGroupPrototype (data object) representing model element on the toolbox.
+						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
+						new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require) 
+						});
+					break;
+				case "UPM_IPS.JCJAPGDRCDERAWebBD.EstiloPortalToolboxItem":
+					// Add EstiloPortal shape tool.
+					result = new DslDesign::ModelingToolboxItem(
+						"UPM_IPS.JCJAPGDRCDERAWebBD.EstiloPortalToolboxItem", // Unique identifier (non-localized) for the toolbox item.
+						9, // Position relative to other items in the same toolbox tab.
+						resourceManager.GetString("EstiloPortalToolboxItem", resourceCulture), // Localized display name for the item.
+						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("EstiloPortalToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.
+						"UPM_IPS.JCJAPGDRCDERAWebBD.CrearToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
+						resourceManager.GetString("CrearToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
+						"EstiloPortal", // F1 help keyword for the toolbox item.
+						resourceManager.GetString("EstiloPortalToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
+						CreateElementToolPrototype(store, global::UPM_IPS.JCJAPGDRCDERAWebBD.EstiloPortal.DomainClassId), // ElementGroupPrototype (data object) representing model element on the toolbox.
 						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
 						new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require) 
 						});

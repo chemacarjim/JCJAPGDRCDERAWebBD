@@ -46,21 +46,13 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 					0xff00ff,
 					Index = 1)]
 	[VSShell::ProvideStaticToolboxItem("UPM_IPS.JCJAPGDRCDERAWebBD.CrearToolboxTab",
-					"@EstiloPortalToolToolboxItem;UPM_IPS.JCJAPGDRCDERAWebBD.Dsl.dll", 
-					"UPM_IPS.JCJAPGDRCDERAWebBD.EstiloPortalToolToolboxItem", 
-					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
-					"EstiloPortalTool", 
-					"@EstiloPortalToolToolboxBitmap;UPM_IPS.JCJAPGDRCDERAWebBD.Dsl.dll", 
-					0xff00ff,
-					Index = 2)]
-	[VSShell::ProvideStaticToolboxItem("UPM_IPS.JCJAPGDRCDERAWebBD.CrearToolboxTab",
 					"@AtributoEntToolboxItem;UPM_IPS.JCJAPGDRCDERAWebBD.Dsl.dll", 
 					"UPM_IPS.JCJAPGDRCDERAWebBD.AtributoEntToolboxItem", 
 					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
 					"AtributoEnt", 
 					"@AtributoEntToolboxBitmap;UPM_IPS.JCJAPGDRCDERAWebBD.Dsl.dll", 
 					0xff00ff,
-					Index = 3)]
+					Index = 2)]
 	[VSShell::ProvideStaticToolboxItem("UPM_IPS.JCJAPGDRCDERAWebBD.CrearToolboxTab",
 					"@EstiloPaginaToolToolboxItem;UPM_IPS.JCJAPGDRCDERAWebBD.Dsl.dll", 
 					"UPM_IPS.JCJAPGDRCDERAWebBD.EstiloPaginaToolToolboxItem", 
@@ -68,7 +60,7 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 					"EstiloPaginaTool", 
 					"@EstiloPaginaToolToolboxBitmap;UPM_IPS.JCJAPGDRCDERAWebBD.Dsl.dll", 
 					0xff00ff,
-					Index = 4)]
+					Index = 3)]
 	[VSShell::ProvideStaticToolboxItem("UPM_IPS.JCJAPGDRCDERAWebBD.CrearToolboxTab",
 					"@EstiloCampoToolToolboxItem;UPM_IPS.JCJAPGDRCDERAWebBD.Dsl.dll", 
 					"UPM_IPS.JCJAPGDRCDERAWebBD.EstiloCampoToolToolboxItem", 
@@ -76,7 +68,7 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 					"EstiloCampoTool", 
 					"@EstiloCampoToolToolboxBitmap;UPM_IPS.JCJAPGDRCDERAWebBD.Dsl.dll", 
 					0xff00ff,
-					Index = 5)]
+					Index = 4)]
 	[VSShell::ProvideStaticToolboxItem("UPM_IPS.JCJAPGDRCDERAWebBD.CrearToolboxTab",
 					"@RestriccionRangoToolToolboxItem;UPM_IPS.JCJAPGDRCDERAWebBD.Dsl.dll", 
 					"UPM_IPS.JCJAPGDRCDERAWebBD.RestriccionRangoToolToolboxItem", 
@@ -84,7 +76,7 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 					"RestriccionRangoTool", 
 					"@RestriccionRangoToolToolboxBitmap;UPM_IPS.JCJAPGDRCDERAWebBD.Dsl.dll", 
 					0xff00ff,
-					Index = 6)]
+					Index = 5)]
 	[VSShell::ProvideStaticToolboxItem("UPM_IPS.JCJAPGDRCDERAWebBD.CrearToolboxTab",
 					"@RestriccionEnumeradoToolToolboxItem;UPM_IPS.JCJAPGDRCDERAWebBD.Dsl.dll", 
 					"UPM_IPS.JCJAPGDRCDERAWebBD.RestriccionEnumeradoToolToolboxItem", 
@@ -92,13 +84,21 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 					"RestriccionEnumeradoTool", 
 					"@RestriccionEnumeradoToolToolboxBitmap;UPM_IPS.JCJAPGDRCDERAWebBD.Dsl.dll", 
 					0xff00ff,
-					Index = 7)]
+					Index = 6)]
 	[VSShell::ProvideStaticToolboxItem("UPM_IPS.JCJAPGDRCDERAWebBD.CrearToolboxTab",
 					"@AtributoRelToolToolboxItem;UPM_IPS.JCJAPGDRCDERAWebBD.Dsl.dll", 
 					"UPM_IPS.JCJAPGDRCDERAWebBD.AtributoRelToolToolboxItem", 
 					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
 					"AtributoRelTool", 
 					"@AtributoRelToolToolboxBitmap;UPM_IPS.JCJAPGDRCDERAWebBD.Dsl.dll", 
+					0xff00ff,
+					Index = 7)]
+	[VSShell::ProvideStaticToolboxItem("UPM_IPS.JCJAPGDRCDERAWebBD.CrearToolboxTab",
+					"@EstiloPortalToolboxItem;UPM_IPS.JCJAPGDRCDERAWebBD.Dsl.dll", 
+					"UPM_IPS.JCJAPGDRCDERAWebBD.EstiloPortalToolboxItem", 
+					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
+					"EstiloPortal", 
+					"@EstiloPortalToolboxBitmap;UPM_IPS.JCJAPGDRCDERAWebBD.Dsl.dll", 
 					0xff00ff,
 					Index = 8)]
 	[VSShell::ProvideStaticToolboxGroup("@ConectarToolboxTab;UPM_IPS.JCJAPGDRCDERAWebBD.Dsl.dll", "UPM_IPS.JCJAPGDRCDERAWebBD.ConectarToolboxTab")]

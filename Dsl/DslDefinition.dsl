@@ -286,22 +286,6 @@
         </DomainRole>
       </Target>
     </DomainRelationship>
-    <DomainRelationship Id="543d7985-23b5-40b9-8b06-a4588f73408f" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasEstiloPortal" Name="DERAWebBDModelHasEstiloPortal" DisplayName="DERAWeb BDModel Has Estilo Portal" Namespace="UPM_IPS.JCJAPGDRCDERAWebBD" IsEmbedding="true">
-      <Source>
-        <DomainRole Id="be5a7db4-e94a-4748-b8ff-6f655e629325" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasEstiloPortal.DERAWebBDModel" Name="DERAWebBDModel" DisplayName="DERAWeb BDModel" PropertyName="EstiloPortal" Multiplicity="One" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Estilo Portal">
-          <RolePlayer>
-            <DomainClassMoniker Name="DERAWebBDModel" />
-          </RolePlayer>
-        </DomainRole>
-      </Source>
-      <Target>
-        <DomainRole Id="8fbe1d4d-5645-4023-abca-f8434bdef732" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasEstiloPortal.EstiloPortal" Name="EstiloPortal" DisplayName="Estilo Portal" PropertyName="DERAWebBDModel" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="DERAWeb BDModel">
-          <RolePlayer>
-            <DomainClassMoniker Name="EstiloPortal" />
-          </RolePlayer>
-        </DomainRole>
-      </Target>
-    </DomainRelationship>
     <DomainRelationship Id="5e6dc20e-8873-44bf-b49d-87840b40de1b" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.EntidadHasEstiloPagina" Name="EntidadHasEstiloPagina" DisplayName="Entidad Has Estilo Pagina" Namespace="UPM_IPS.JCJAPGDRCDERAWebBD" IsEmbedding="true">
       <Source>
         <DomainRole Id="c781e742-c4d3-4926-b52a-c57469425cc0" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.EntidadHasEstiloPagina.Entidad" Name="Entidad" DisplayName="Entidad" PropertyName="EstiloPagina" Multiplicity="ZeroOne" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Estilo Pagina">
@@ -437,6 +421,22 @@
         </DomainRole>
       </Target>
     </DomainRelationship>
+    <DomainRelationship Id="7a40657e-849a-4e6d-a847-56e8b5459795" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasEstiloPortal" Name="DERAWebBDModelHasEstiloPortal" DisplayName="DERAWeb BDModel Has Estilo Portal" Namespace="UPM_IPS.JCJAPGDRCDERAWebBD" IsEmbedding="true">
+      <Source>
+        <DomainRole Id="8563b3cf-269b-47f5-a294-3b4568c88835" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasEstiloPortal.DERAWebBDModel" Name="DERAWebBDModel" DisplayName="DERAWeb BDModel" PropertyName="EstiloPortal" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Estilo Portal">
+          <RolePlayer>
+            <DomainClassMoniker Name="DERAWebBDModel" />
+          </RolePlayer>
+        </DomainRole>
+      </Source>
+      <Target>
+        <DomainRole Id="efd2be60-6ac1-4821-864b-2a082d035d99" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasEstiloPortal.EstiloPortal" Name="EstiloPortal" DisplayName="Estilo Portal" PropertyName="DERAWebBDModel" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="DERAWeb BDModel">
+          <RolePlayer>
+            <DomainClassMoniker Name="EstiloPortal" />
+          </RolePlayer>
+        </DomainRole>
+      </Target>
+    </DomainRelationship>
   </Relationships>
   <Types>
     <ExternalType Name="DateTime" Namespace="System" />
@@ -524,11 +524,6 @@
         <TextDecorator Name="EnumDecorator" DisplayName="Enum Decorator" DefaultText="EnumDecorator" />
       </ShapeHasDecorators>
     </GeometryShape>
-    <GeometryShape Id="12beef6e-3d22-45f2-8247-21e892a166a3" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.EstiloPortalShape" Name="EstiloPortalShape" DisplayName="Estilo Portal Shape" Namespace="UPM_IPS.JCJAPGDRCDERAWebBD" FixedTooltipText="Estilo Portal Shape" FillColor="LightBlue" InitialHeight="1" Geometry="Rectangle">
-      <ShapeHasDecorators Position="Center" HorizontalOffset="0" VerticalOffset="0">
-        <TextDecorator Name="propertiesDecorator" DisplayName="Properties Decorator" DefaultText="propertiesDecorator" />
-      </ShapeHasDecorators>
-    </GeometryShape>
     <GeometryShape Id="1c1f705d-02f0-42a4-9b60-930d28eda407" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.EstiloPaginaShape" Name="EstiloPaginaShape" DisplayName="Estilo Pagina Shape" Namespace="UPM_IPS.JCJAPGDRCDERAWebBD" FixedTooltipText="Estilo Pagina Shape" FillColor="LightSalmon" InitialHeight="1" Geometry="Rectangle">
       <ShapeHasDecorators Position="Center" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="propertiesDecorator" DisplayName="Properties Decorator" DefaultText="propertiesDecorator" />
@@ -537,6 +532,11 @@
     <GeometryShape Id="f576724d-9dd9-4423-8f5b-2cc35f42e266" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.EstiloCampoShape" Name="EstiloCampoShape" DisplayName="Estilo Campo Shape" Namespace="UPM_IPS.JCJAPGDRCDERAWebBD" FixedTooltipText="Estilo Campo Shape" FillColor="LightGreen" InitialHeight="1" Geometry="Rectangle">
       <ShapeHasDecorators Position="Center" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="propertiesDecorator" DisplayName="Properties Decorator" DefaultText="propertiesDecorator" />
+      </ShapeHasDecorators>
+    </GeometryShape>
+    <GeometryShape Id="348e0564-a4db-4a29-84d5-df80cd6c86ca" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.estiloPortlShape" Name="estiloPortlShape" DisplayName="Estilo Portl Shape" Namespace="UPM_IPS.JCJAPGDRCDERAWebBD" FixedTooltipText="Estilo Portl Shape" FillColor="Gray" InitialHeight="1" Geometry="Rectangle">
+      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
+        <TextDecorator Name="TextDecorator1" DisplayName="Text Decorator1" DefaultText="TextDecorator1" />
       </ShapeHasDecorators>
     </GeometryShape>
   </Shapes>
@@ -558,12 +558,12 @@
           <XmlRelationshipData UseFullForm="true" RoleElementName="relaciones">
             <DomainRelationshipMoniker Name="DERAWebBDModelHasRelaciones" />
           </XmlRelationshipData>
-          <XmlRelationshipData UseFullForm="true" RoleElementName="estiloPortal">
-            <DomainRelationshipMoniker Name="DERAWebBDModelHasEstiloPortal" />
-          </XmlRelationshipData>
           <XmlPropertyData XmlName="name">
             <DomainPropertyMoniker Name="DERAWebBDModel/Name" />
           </XmlPropertyData>
+          <XmlRelationshipData UseFullForm="true" RoleElementName="estiloPortal">
+            <DomainRelationshipMoniker Name="DERAWebBDModelHasEstiloPortal" />
+          </XmlRelationshipData>
         </ElementData>
       </XmlClassData>
       <XmlClassData TypeName="JCJAPGDRCDERAWebBDDiagram" MonikerAttributeName="" SerializeId="true" MonikerElementName="jCJAPGDRCDERAWebBDDiagramMoniker" ElementName="jCJAPGDRCDERAWebBDDiagram" MonikerTypeName="JCJAPGDRCDERAWebBDDiagramMoniker">
@@ -616,9 +616,6 @@
       </XmlClassData>
       <XmlClassData TypeName="EstiloPagina" MonikerAttributeName="" SerializeId="true" MonikerElementName="estiloPaginaMoniker" ElementName="estiloPagina" MonikerTypeName="EstiloPaginaMoniker">
         <DomainClassMoniker Name="EstiloPagina" />
-      </XmlClassData>
-      <XmlClassData TypeName="DERAWebBDModelHasEstiloPortal" MonikerAttributeName="" SerializeId="true" MonikerElementName="dERAWebBDModelHasEstiloPortalMoniker" ElementName="dERAWebBDModelHasEstiloPortal" MonikerTypeName="DERAWebBDModelHasEstiloPortalMoniker">
-        <DomainRelationshipMoniker Name="DERAWebBDModelHasEstiloPortal" />
       </XmlClassData>
       <XmlClassData TypeName="EntidadHasEstiloPagina" MonikerAttributeName="" SerializeId="true" MonikerElementName="entidadHasEstiloPaginaMoniker" ElementName="entidadHasEstiloPagina" MonikerTypeName="EntidadHasEstiloPaginaMoniker">
         <DomainRelationshipMoniker Name="EntidadHasEstiloPagina" />
@@ -759,9 +756,6 @@
       <XmlClassData TypeName="RestriccionEnumShape" MonikerAttributeName="" SerializeId="true" MonikerElementName="restriccionEnumShapeMoniker" ElementName="restriccionEnumShape" MonikerTypeName="RestriccionEnumShapeMoniker">
         <GeometryShapeMoniker Name="RestriccionEnumShape" />
       </XmlClassData>
-      <XmlClassData TypeName="EstiloPortalShape" MonikerAttributeName="" SerializeId="true" MonikerElementName="estiloPortalShapeMoniker" ElementName="estiloPortalShape" MonikerTypeName="EstiloPortalShapeMoniker">
-        <GeometryShapeMoniker Name="EstiloPortalShape" />
-      </XmlClassData>
       <XmlClassData TypeName="EstiloPaginaShape" MonikerAttributeName="" SerializeId="true" MonikerElementName="estiloPaginaShapeMoniker" ElementName="estiloPaginaShape" MonikerTypeName="EstiloPaginaShapeMoniker">
         <GeometryShapeMoniker Name="EstiloPaginaShape" />
       </XmlClassData>
@@ -782,6 +776,12 @@
       </XmlClassData>
       <XmlClassData TypeName="ConnectorEstiloPagina" MonikerAttributeName="" SerializeId="true" MonikerElementName="connectorEstiloPaginaMoniker" ElementName="connectorEstiloPagina" MonikerTypeName="ConnectorEstiloPaginaMoniker">
         <ConnectorMoniker Name="ConnectorEstiloPagina" />
+      </XmlClassData>
+      <XmlClassData TypeName="EstiloPortlShape" MonikerAttributeName="" SerializeId="true" MonikerElementName="estiloPortlShapeMoniker" ElementName="estiloPortlShape" MonikerTypeName="EstiloPortlShapeMoniker">
+        <GeometryShapeMoniker Name="estiloPortlShape" />
+      </XmlClassData>
+      <XmlClassData TypeName="DERAWebBDModelHasEstiloPortal" MonikerAttributeName="" SerializeId="true" MonikerElementName="dERAWebBDModelHasEstiloPortalMoniker" ElementName="dERAWebBDModelHasEstiloPortal" MonikerTypeName="DERAWebBDModelHasEstiloPortalMoniker">
+        <DomainRelationshipMoniker Name="DERAWebBDModelHasEstiloPortal" />
       </XmlClassData>
     </ClassData>
   </XmlSerializationBehavior>
@@ -1026,21 +1026,6 @@
         <GeometryShapeMoniker Name="RestriccionEnumShape" />
       </ShapeMap>
       <ShapeMap>
-        <DomainClassMoniker Name="EstiloPortal" />
-        <ParentElementPath>
-          <DomainPath>DERAWebBDModelHasEstiloPortal.DERAWebBDModel/!DERAWebBDModel</DomainPath>
-        </ParentElementPath>
-        <DecoratorMap>
-          <TextDecoratorMoniker Name="EstiloPortalShape/propertiesDecorator" />
-          <PropertyDisplayed>
-            <PropertyPath>
-              <DomainPropertyMoniker Name="Estilos/Calculado" />
-            </PropertyPath>
-          </PropertyDisplayed>
-        </DecoratorMap>
-        <GeometryShapeMoniker Name="EstiloPortalShape" />
-      </ShapeMap>
-      <ShapeMap>
         <DomainClassMoniker Name="EstiloPagina" />
         <ParentElementPath>
           <DomainPath>EntidadHasEstiloPagina.Entidad/!Entidad/DERAWebBDModelHasEntidades.DERAWebBDModel/!DERAWebBDModel</DomainPath>
@@ -1069,6 +1054,21 @@
           </PropertyDisplayed>
         </DecoratorMap>
         <GeometryShapeMoniker Name="EstiloCampoShape" />
+      </ShapeMap>
+      <ShapeMap>
+        <DomainClassMoniker Name="EstiloPortal" />
+        <ParentElementPath>
+          <DomainPath>DERAWebBDModelHasEstiloPortal.DERAWebBDModel/!DERAWebBDModel</DomainPath>
+        </ParentElementPath>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="estiloPortlShape/TextDecorator1" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="Estilos/Calculado" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+        <GeometryShapeMoniker Name="estiloPortlShape" />
       </ShapeMap>
     </ShapeMaps>
     <ConnectorMaps>
@@ -1120,9 +1120,6 @@
       <ElementTool Name="RelacionTool" ToolboxIcon="Resources\relacion.bmp" Caption="Crear Relacion" Tooltip="Relacion Tool" HelpKeyword="RelacionTool">
         <DomainClassMoniker Name="Relacion" />
       </ElementTool>
-      <ElementTool Name="EstiloPortalTool" ToolboxIcon="Resources\estiloportal.bmp" Caption="Crear Estilo Portal" Tooltip="Estilo Portal Tool" HelpKeyword="EstiloPortalTool">
-        <DomainClassMoniker Name="EstiloPortal" />
-      </ElementTool>
       <ElementTool Name="AtributoEnt" ToolboxIcon="Resources\atributo.bmp" Caption="Crear Atributo Entidad" Tooltip="Atributo Ent" HelpKeyword="AtributoEnt">
         <DomainClassMoniker Name="AtributoEnt" />
       </ElementTool>
@@ -1140,6 +1137,9 @@
       </ElementTool>
       <ElementTool Name="AtributoRelTool" ToolboxIcon="Resources\atributo.bmp" Caption="Crear atributo Relacion" Tooltip="Atributo Rel Tool" HelpKeyword="AtributoRelTool">
         <DomainClassMoniker Name="AtributoRel" />
+      </ElementTool>
+      <ElementTool Name="EstiloPortal" ToolboxIcon="Resources\estiloportal.bmp" Caption="Crear Estilo Portal" Tooltip="Estilo Portal" HelpKeyword="EstiloPortal">
+        <DomainClassMoniker Name="EstiloPortal" />
       </ElementTool>
     </ToolboxTab>
     <ToolboxTab TabText="Conectar">

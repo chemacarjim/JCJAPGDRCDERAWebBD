@@ -41,13 +41,13 @@
             </xsd:complexType>
           </xsd:element>
           <!-- Relationship: DERAWebBDModelHasEstiloPortal -->
-          <xsd:element name="estiloPortal" minOccurs="1" maxOccurs="1">
+          <xsd:element name="estiloPortal" minOccurs="0" maxOccurs="1">
             <xsd:annotation>
-              <xsd:documentation>Instance of DERAWebBDModelHasEstiloPortal</xsd:documentation>
+              <xsd:documentation>Instances of DERAWebBDModelHasEstiloPortal</xsd:documentation>
             </xsd:annotation>
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element ref="dERAWebBDModelHasEstiloPortal" minOccurs="1" maxOccurs="1">
+                <xsd:element ref="dERAWebBDModelHasEstiloPortal" minOccurs="0" maxOccurs="unbounded">
                   <xsd:annotation>
                     <xsd:documentation>[Instance of DERAWebBDModelHasEstiloPortal needs to be serialized in full-form]</xsd:documentation>
                   </xsd:annotation>
@@ -680,46 +680,6 @@
     </xsd:complexContent>
   </xsd:complexType>
   
-  <!-- DERAWebBDModelHasEstiloPortal -->
-  <xsd:element name="dERAWebBDModelHasEstiloPortal" type="DERAWebBDModelHasEstiloPortal" substitutionGroup="core:modelElement" />
-  <xsd:complexType name="DERAWebBDModelHasEstiloPortal">
-    <xsd:complexContent>
-      <xsd:extension base="core:ModelElement">
-        <xsd:sequence minOccurs="0" maxOccurs="1">
-          <!-- Target end EstiloPortal -->
-          <xsd:element ref="estiloPortal" minOccurs="1" maxOccurs="1">
-            <xsd:annotation>
-              <xsd:documentation>[Target role-player]</xsd:documentation>
-            </xsd:annotation>
-          </xsd:element>
-        </xsd:sequence>
-        <!-- Id -->
-        <xsd:attribute name="Id" type="xsd:string">
-          <xsd:annotation>
-            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
-          </xsd:annotation>
-        </xsd:attribute>
-      </xsd:extension>
-    </xsd:complexContent>
-  </xsd:complexType>
-  
-  <!-- DERAWebBDModelHasEstiloPortal Moniker -->
-  <xsd:element name="dERAWebBDModelHasEstiloPortalMoniker" type="DERAWebBDModelHasEstiloPortalMoniker" substitutionGroup="core:modelElementMoniker" />
-  <xsd:complexType name="DERAWebBDModelHasEstiloPortalMoniker">
-    <xsd:annotation>
-      <xsd:documentation>Moniker for DERAWebBDModelHasEstiloPortal instance.</xsd:documentation>
-    </xsd:annotation>
-    <xsd:complexContent>
-      <xsd:extension base="core:ModelElementMoniker">
-        <xsd:attribute name="Id" type="xsd:string" >
-          <xsd:annotation>
-            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
-          </xsd:annotation>
-        </xsd:attribute>
-      </xsd:extension>
-    </xsd:complexContent>
-  </xsd:complexType>
-  
   <!-- EntidadHasEstiloPagina -->
   <xsd:element name="entidadHasEstiloPagina" type="EntidadHasEstiloPagina" substitutionGroup="core:modelElement" />
   <xsd:complexType name="EntidadHasEstiloPagina">
@@ -1030,6 +990,46 @@
   <xsd:complexType name="AtributoRelHasEstiloCampoMoniker">
     <xsd:annotation>
       <xsd:documentation>Moniker for AtributoRelHasEstiloCampo instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- DERAWebBDModelHasEstiloPortal -->
+  <xsd:element name="dERAWebBDModelHasEstiloPortal" type="DERAWebBDModelHasEstiloPortal" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="DERAWebBDModelHasEstiloPortal">
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Target end EstiloPortal -->
+          <xsd:element ref="estiloPortal" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>[Target role-player]</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- DERAWebBDModelHasEstiloPortal Moniker -->
+  <xsd:element name="dERAWebBDModelHasEstiloPortalMoniker" type="DERAWebBDModelHasEstiloPortalMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="DERAWebBDModelHasEstiloPortalMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for DERAWebBDModelHasEstiloPortal instance.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="core:ModelElementMoniker">

@@ -168,22 +168,18 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 		}
 		#endregion
 		#region EstiloPortal opposite domain role accessor
+		
 		/// <summary>
-		/// Gets or sets EstiloPortal.
+		/// Gets a list of EstiloPortal.
 		/// Description for
 		/// UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasEstiloPortal.DERAWebBDModel
 		/// </summary>
-		public virtual EstiloPortal EstiloPortal
+		public virtual DslModeling::LinkedElementCollection<EstiloPortal> EstiloPortal
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasEstiloPortal.DERAWebBDModelDomainRoleId) as EstiloPortal;
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasEstiloPortal.DERAWebBDModelDomainRoleId, value);
+				return GetRoleCollection<DslModeling::LinkedElementCollection<EstiloPortal>, EstiloPortal>(global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasEstiloPortal.DERAWebBDModelDomainRoleId);
 			}
 		}
 		#endregion
@@ -209,11 +205,6 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 				
 				if (rootElementDomainInfo.IsDerivedFrom(global::UPM_IPS.JCJAPGDRCDERAWebBD.EstiloPortal.DomainClassId)) 
 				{
-					// Check that creating a link with this path doesn't cause multiplicity overflow: DERAWebBDModelHasEstiloPortal.EstiloPortal
-					if (this.EstiloPortal != null)
-					{
-						return false;
-					}
 					return true;
 				}
 				
@@ -255,7 +246,7 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 			if (sourceEstiloPortal1 != null)
 			{
 				// Create link for path DERAWebBDModelHasEstiloPortal.EstiloPortal
-				this.EstiloPortal = sourceEstiloPortal1;
+				this.EstiloPortal.Add(sourceEstiloPortal1);
 
 				return;
 			}

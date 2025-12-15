@@ -226,6 +226,17 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 		#endregion
 		
 		#region Connector styles
+		/// <summary>
+		/// Gets the default line routing style for this connector.
+		/// </summary>
+		[global::System.CLSCompliant(false)]
+		protected override DslDiagrams::GraphObject.VGRoutingStyle DefaultRoutingStyle
+		{
+			get
+			{
+				return DslDiagrams::GraphObject.VGRoutingStyle.VGRouteStraight;
+			}
+		}
 		#endregion
 		
 		#region Constructors, domain class Id

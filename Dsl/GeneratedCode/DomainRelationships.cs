@@ -492,266 +492,6 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 namespace UPM_IPS.JCJAPGDRCDERAWebBD
 {
 	/// <summary>
-	/// DomainRelationship DERAWebBDModelHasEstiloPortal
-	/// Description for UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasEstiloPortal
-	/// </summary>
-	[DslDesign::DisplayNameResource("UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasEstiloPortal.DisplayName", typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDDomainModel), "UPM_IPS.JCJAPGDRCDERAWebBD.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasEstiloPortal.Description", typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDDomainModel), "UPM_IPS.JCJAPGDRCDERAWebBD.GeneratedCode.DomainModelResx")]
-	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDDomainModel))]
-	[global::System.CLSCompliant(true)]
-	[DslModeling::DomainRelationship(IsEmbedding=true)]
-	[DslModeling::DomainObjectId("543d7985-23b5-40b9-8b06-a4588f73408f")]
-	public partial class DERAWebBDModelHasEstiloPortal : DslModeling::ElementLink
-	{
-		#region Constructors, domain class Id
-		
-		/// <summary>
-		/// DERAWebBDModelHasEstiloPortal domain class Id.
-		/// </summary>
-		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x543d7985, 0x23b5, 0x40b9, 0x8b, 0x06, 0xa4, 0x58, 0x8f, 0x73, 0x40, 0x8f);
-	
-				
-		/// <summary>
-		/// Constructor
-		/// Creates a DERAWebBDModelHasEstiloPortal link in the same Partition as the given DERAWebBDModel
-		/// </summary>
-		/// <param name="source">DERAWebBDModel to use as the source of the relationship.</param>
-		/// <param name="target">EstiloPortal to use as the target of the relationship.</param>
-		public DERAWebBDModelHasEstiloPortal(DERAWebBDModel source, EstiloPortal target)
-			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(DERAWebBDModelHasEstiloPortal.DERAWebBDModelDomainRoleId, source), new DslModeling::RoleAssignment(DERAWebBDModelHasEstiloPortal.EstiloPortalDomainRoleId, target)}, null)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="store">Store where new link is to be created.</param>
-		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		public DERAWebBDModelHasEstiloPortal(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
-			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="store">Store where new link is to be created.</param>
-		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
-		public DERAWebBDModelHasEstiloPortal(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
-			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="partition">Partition where new link is to be created.</param>
-		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		public DERAWebBDModelHasEstiloPortal(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
-			: base(partition, roleAssignments, null)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="partition">Partition where new link is to be created.</param>
-		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
-		public DERAWebBDModelHasEstiloPortal(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
-			: base(partition, roleAssignments, propertyAssignments)
-		{
-		}
-		#endregion
-		#region DERAWebBDModel domain role code
-		
-		/// <summary>
-		/// DERAWebBDModel domain role Id.
-		/// </summary>
-		public static readonly global::System.Guid DERAWebBDModelDomainRoleId = new global::System.Guid(0xbe5a7db4, 0xe94a, 0x4748, 0xb8, 0xff, 0x6f, 0x65, 0x5e, 0x62, 0x93, 0x25);
-		
-		/// <summary>
-		/// DomainRole DERAWebBDModel
-		/// Description for
-		/// UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasEstiloPortal.DERAWebBDModel
-		/// </summary>
-		[DslDesign::DisplayNameResource("UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasEstiloPortal/DERAWebBDModel.DisplayName", typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDDomainModel), "UPM_IPS.JCJAPGDRCDERAWebBD.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasEstiloPortal/DERAWebBDModel.Description", typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDDomainModel), "UPM_IPS.JCJAPGDRCDERAWebBD.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "EstiloPortal", PropertyDisplayNameKey="UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasEstiloPortal/DERAWebBDModel.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.One)]
-		[DslModeling::DomainObjectId("be5a7db4-e94a-4748-b8ff-6f655e629325")]
-		public virtual DERAWebBDModel DERAWebBDModel
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return (DERAWebBDModel)DslModeling::DomainRoleInfo.GetRolePlayer(this, DERAWebBDModelDomainRoleId);
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				DslModeling::DomainRoleInfo.SetRolePlayer(this, DERAWebBDModelDomainRoleId, value);
-			}
-		}
-				
-		#endregion
-		#region Static methods to access DERAWebBDModel of a EstiloPortal
-		/// <summary>
-		/// Gets DERAWebBDModel.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static DERAWebBDModel GetDERAWebBDModel(EstiloPortal element)
-		{
-			return DslModeling::DomainRoleInfo.GetLinkedElement(element, EstiloPortalDomainRoleId) as DERAWebBDModel;
-		}
-		
-		/// <summary>
-		/// Sets DERAWebBDModel.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static void SetDERAWebBDModel(EstiloPortal element, DERAWebBDModel newDERAWebBDModel)
-		{
-			DslModeling::DomainRoleInfo.SetLinkedElement(element, EstiloPortalDomainRoleId, newDERAWebBDModel);
-		}
-		#endregion
-		#region EstiloPortal domain role code
-		
-		/// <summary>
-		/// EstiloPortal domain role Id.
-		/// </summary>
-		public static readonly global::System.Guid EstiloPortalDomainRoleId = new global::System.Guid(0x8fbe1d4d, 0x5645, 0x4023, 0xab, 0xca, 0xf8, 0x43, 0x4b, 0xde, 0xf7, 0x32);
-		
-		/// <summary>
-		/// DomainRole EstiloPortal
-		/// Description for
-		/// UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasEstiloPortal.EstiloPortal
-		/// </summary>
-		[DslDesign::DisplayNameResource("UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasEstiloPortal/EstiloPortal.DisplayName", typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDDomainModel), "UPM_IPS.JCJAPGDRCDERAWebBD.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasEstiloPortal/EstiloPortal.Description", typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDDomainModel), "UPM_IPS.JCJAPGDRCDERAWebBD.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "DERAWebBDModel", PropertyDisplayNameKey="UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasEstiloPortal/EstiloPortal.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
-		[DslModeling::DomainObjectId("8fbe1d4d-5645-4023-abca-f8434bdef732")]
-		public virtual EstiloPortal EstiloPortal
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return (EstiloPortal)DslModeling::DomainRoleInfo.GetRolePlayer(this, EstiloPortalDomainRoleId);
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				DslModeling::DomainRoleInfo.SetRolePlayer(this, EstiloPortalDomainRoleId, value);
-			}
-		}
-				
-		#endregion
-		#region Static methods to access EstiloPortal of a DERAWebBDModel
-		/// <summary>
-		/// Gets EstiloPortal.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static EstiloPortal GetEstiloPortal(DERAWebBDModel element)
-		{
-			return DslModeling::DomainRoleInfo.GetLinkedElement(element, DERAWebBDModelDomainRoleId) as EstiloPortal;
-		}
-		
-		/// <summary>
-		/// Sets EstiloPortal.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static void SetEstiloPortal(DERAWebBDModel element, EstiloPortal newEstiloPortal)
-		{
-			DslModeling::DomainRoleInfo.SetLinkedElement(element, DERAWebBDModelDomainRoleId, newEstiloPortal);
-		}
-		#endregion
-		#region DERAWebBDModel link accessor
-		/// <summary>
-		/// Get the DERAWebBDModelHasEstiloPortal link to a DERAWebBDModel.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasEstiloPortal GetLinkToEstiloPortal (global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModel dERAWebBDModelInstance)
-		{
-			global::System.Collections.Generic.IList<global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasEstiloPortal> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasEstiloPortal>(dERAWebBDModelInstance, global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasEstiloPortal.DERAWebBDModelDomainRoleId);
-			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of DERAWebBDModel not obeyed.");
-			if ( links.Count == 0 )
-			{
-				return null;
-			}
-			else
-			{
-				return links[0];
-			}
-		}
-		#endregion
-		#region EstiloPortal link accessor
-		/// <summary>
-		/// Get the DERAWebBDModelHasEstiloPortal link to a EstiloPortal.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasEstiloPortal GetLinkToDERAWebBDModel (global::UPM_IPS.JCJAPGDRCDERAWebBD.EstiloPortal estiloPortalInstance)
-		{
-			global::System.Collections.Generic.IList<global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasEstiloPortal> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasEstiloPortal>(estiloPortalInstance, global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasEstiloPortal.EstiloPortalDomainRoleId);
-			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of EstiloPortal not obeyed.");
-			if ( links.Count == 0 )
-			{
-				return null;
-			}
-			else
-			{
-				return links[0];
-			}
-		}
-		#endregion
-		#region DERAWebBDModelHasEstiloPortal instance accessors
-		
-		/// <summary>
-		/// Get any DERAWebBDModelHasEstiloPortal links between a given DERAWebBDModel and a EstiloPortal.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasEstiloPortal> GetLinks( global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModel source, global::UPM_IPS.JCJAPGDRCDERAWebBD.EstiloPortal target )
-		{
-			global::System.Collections.Generic.List<global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasEstiloPortal> outLinks = new global::System.Collections.Generic.List<global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasEstiloPortal>();
-			global::System.Collections.Generic.IList<global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasEstiloPortal> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasEstiloPortal>(source, global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasEstiloPortal.DERAWebBDModelDomainRoleId);
-			foreach ( global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasEstiloPortal link in links )
-			{
-				if ( target.Equals(link.EstiloPortal) )
-				{
-					outLinks.Add(link);
-				}
-			}
-			return outLinks.AsReadOnly();
-		}
-		/// <summary>
-		/// Get the one DERAWebBDModelHasEstiloPortal link between a given DERAWebBDModeland a EstiloPortal.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasEstiloPortal GetLink( global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModel source, global::UPM_IPS.JCJAPGDRCDERAWebBD.EstiloPortal target )
-		{
-			global::System.Collections.Generic.IList<global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasEstiloPortal> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasEstiloPortal>(source, global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasEstiloPortal.DERAWebBDModelDomainRoleId);
-			foreach ( global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasEstiloPortal link in links )
-			{
-				if ( target.Equals(link.EstiloPortal) )
-				{
-					return link;
-				}
-			}
-			return null;
-		}
-		
-		#endregion
-	}
-}
-namespace UPM_IPS.JCJAPGDRCDERAWebBD
-{
-	/// <summary>
 	/// DomainRelationship EntidadHasEstiloPagina
 	/// Description for UPM_IPS.JCJAPGDRCDERAWebBD.EntidadHasEstiloPagina
 	/// </summary>
@@ -2777,6 +2517,247 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 			foreach ( global::UPM_IPS.JCJAPGDRCDERAWebBD.AtributoRelHasEstiloCampo link in links )
 			{
 				if ( target.Equals(link.EstiloCampo) )
+				{
+					return link;
+				}
+			}
+			return null;
+		}
+		
+		#endregion
+	}
+}
+namespace UPM_IPS.JCJAPGDRCDERAWebBD
+{
+	/// <summary>
+	/// DomainRelationship DERAWebBDModelHasEstiloPortal
+	/// Description for UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasEstiloPortal
+	/// </summary>
+	[DslDesign::DisplayNameResource("UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasEstiloPortal.DisplayName", typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDDomainModel), "UPM_IPS.JCJAPGDRCDERAWebBD.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasEstiloPortal.Description", typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDDomainModel), "UPM_IPS.JCJAPGDRCDERAWebBD.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainRelationship(IsEmbedding=true)]
+	[DslModeling::DomainObjectId("7a40657e-849a-4e6d-a847-56e8b5459795")]
+	public partial class DERAWebBDModelHasEstiloPortal : DslModeling::ElementLink
+	{
+		#region Constructors, domain class Id
+		
+		/// <summary>
+		/// DERAWebBDModelHasEstiloPortal domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x7a40657e, 0x849a, 0x4e6d, 0xa8, 0x47, 0x56, 0xe8, 0xb5, 0x45, 0x97, 0x95);
+	
+				
+		/// <summary>
+		/// Constructor
+		/// Creates a DERAWebBDModelHasEstiloPortal link in the same Partition as the given DERAWebBDModel
+		/// </summary>
+		/// <param name="source">DERAWebBDModel to use as the source of the relationship.</param>
+		/// <param name="target">EstiloPortal to use as the target of the relationship.</param>
+		public DERAWebBDModelHasEstiloPortal(DERAWebBDModel source, EstiloPortal target)
+			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(DERAWebBDModelHasEstiloPortal.DERAWebBDModelDomainRoleId, source), new DslModeling::RoleAssignment(DERAWebBDModelHasEstiloPortal.EstiloPortalDomainRoleId, target)}, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public DERAWebBDModelHasEstiloPortal(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public DERAWebBDModelHasEstiloPortal(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public DERAWebBDModelHasEstiloPortal(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(partition, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public DERAWebBDModelHasEstiloPortal(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, roleAssignments, propertyAssignments)
+		{
+		}
+		#endregion
+		#region DERAWebBDModel domain role code
+		
+		/// <summary>
+		/// DERAWebBDModel domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid DERAWebBDModelDomainRoleId = new global::System.Guid(0x8563b3cf, 0x269b, 0x47f5, 0xa2, 0x94, 0x3b, 0x45, 0x68, 0xc8, 0x88, 0x35);
+		
+		/// <summary>
+		/// DomainRole DERAWebBDModel
+		/// Description for
+		/// UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasEstiloPortal.DERAWebBDModel
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasEstiloPortal/DERAWebBDModel.DisplayName", typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDDomainModel), "UPM_IPS.JCJAPGDRCDERAWebBD.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasEstiloPortal/DERAWebBDModel.Description", typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDDomainModel), "UPM_IPS.JCJAPGDRCDERAWebBD.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "EstiloPortal", PropertyDisplayNameKey="UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasEstiloPortal/DERAWebBDModel.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslModeling::DomainObjectId("8563b3cf-269b-47f5-a294-3b4568c88835")]
+		public virtual DERAWebBDModel DERAWebBDModel
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (DERAWebBDModel)DslModeling::DomainRoleInfo.GetRolePlayer(this, DERAWebBDModelDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, DERAWebBDModelDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access DERAWebBDModel of a EstiloPortal
+		/// <summary>
+		/// Gets DERAWebBDModel.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static DERAWebBDModel GetDERAWebBDModel(EstiloPortal element)
+		{
+			return DslModeling::DomainRoleInfo.GetLinkedElement(element, EstiloPortalDomainRoleId) as DERAWebBDModel;
+		}
+		
+		/// <summary>
+		/// Sets DERAWebBDModel.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static void SetDERAWebBDModel(EstiloPortal element, DERAWebBDModel newDERAWebBDModel)
+		{
+			DslModeling::DomainRoleInfo.SetLinkedElement(element, EstiloPortalDomainRoleId, newDERAWebBDModel);
+		}
+		#endregion
+		#region EstiloPortal domain role code
+		
+		/// <summary>
+		/// EstiloPortal domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid EstiloPortalDomainRoleId = new global::System.Guid(0xefd2be60, 0x6ac1, 0x4821, 0x86, 0x4b, 0x2a, 0x08, 0x2d, 0x03, 0x5d, 0x99);
+		
+		/// <summary>
+		/// DomainRole EstiloPortal
+		/// Description for
+		/// UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasEstiloPortal.EstiloPortal
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasEstiloPortal/EstiloPortal.DisplayName", typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDDomainModel), "UPM_IPS.JCJAPGDRCDERAWebBD.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasEstiloPortal/EstiloPortal.Description", typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDDomainModel), "UPM_IPS.JCJAPGDRCDERAWebBD.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "DERAWebBDModel", PropertyDisplayNameKey="UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasEstiloPortal/EstiloPortal.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
+		[DslModeling::DomainObjectId("efd2be60-6ac1-4821-864b-2a082d035d99")]
+		public virtual EstiloPortal EstiloPortal
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (EstiloPortal)DslModeling::DomainRoleInfo.GetRolePlayer(this, EstiloPortalDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, EstiloPortalDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access EstiloPortal of a DERAWebBDModel
+		/// <summary>
+		/// Gets a list of EstiloPortal.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static DslModeling::LinkedElementCollection<EstiloPortal> GetEstiloPortal(DERAWebBDModel element)
+		{
+			return GetRoleCollection<DslModeling::LinkedElementCollection<EstiloPortal>, EstiloPortal>(element, DERAWebBDModelDomainRoleId);
+		}
+		#endregion
+		#region DERAWebBDModel link accessor
+		/// <summary>
+		/// Get the list of DERAWebBDModelHasEstiloPortal links to a DERAWebBDModel.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasEstiloPortal> GetLinksToEstiloPortal ( global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModel dERAWebBDModelInstance )
+		{
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasEstiloPortal>(dERAWebBDModelInstance, global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasEstiloPortal.DERAWebBDModelDomainRoleId);
+		}
+		#endregion
+		#region EstiloPortal link accessor
+		/// <summary>
+		/// Get the DERAWebBDModelHasEstiloPortal link to a EstiloPortal.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasEstiloPortal GetLinkToDERAWebBDModel (global::UPM_IPS.JCJAPGDRCDERAWebBD.EstiloPortal estiloPortalInstance)
+		{
+			global::System.Collections.Generic.IList<global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasEstiloPortal> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasEstiloPortal>(estiloPortalInstance, global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasEstiloPortal.EstiloPortalDomainRoleId);
+			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of EstiloPortal not obeyed.");
+			if ( links.Count == 0 )
+			{
+				return null;
+			}
+			else
+			{
+				return links[0];
+			}
+		}
+		#endregion
+		#region DERAWebBDModelHasEstiloPortal instance accessors
+		
+		/// <summary>
+		/// Get any DERAWebBDModelHasEstiloPortal links between a given DERAWebBDModel and a EstiloPortal.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasEstiloPortal> GetLinks( global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModel source, global::UPM_IPS.JCJAPGDRCDERAWebBD.EstiloPortal target )
+		{
+			global::System.Collections.Generic.List<global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasEstiloPortal> outLinks = new global::System.Collections.Generic.List<global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasEstiloPortal>();
+			global::System.Collections.Generic.IList<global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasEstiloPortal> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasEstiloPortal>(source, global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasEstiloPortal.DERAWebBDModelDomainRoleId);
+			foreach ( global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasEstiloPortal link in links )
+			{
+				if ( target.Equals(link.EstiloPortal) )
+				{
+					outLinks.Add(link);
+				}
+			}
+			return outLinks.AsReadOnly();
+		}
+		/// <summary>
+		/// Get the one DERAWebBDModelHasEstiloPortal link between a given DERAWebBDModeland a EstiloPortal.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasEstiloPortal GetLink( global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModel source, global::UPM_IPS.JCJAPGDRCDERAWebBD.EstiloPortal target )
+		{
+			global::System.Collections.Generic.IList<global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasEstiloPortal> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasEstiloPortal>(source, global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasEstiloPortal.DERAWebBDModelDomainRoleId);
+			foreach ( global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasEstiloPortal link in links )
+			{
+				if ( target.Equals(link.EstiloPortal) )
 				{
 					return link;
 				}
