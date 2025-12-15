@@ -54,21 +54,13 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 					0xff00ff,
 					Index = 2)]
 	[VSShell::ProvideStaticToolboxItem("UPM_IPS.JCJAPGDRCDERAWebBD.CrearToolboxTab",
-					"@AtributoToolboxItem;UPM_IPS.JCJAPGDRCDERAWebBD.Dsl.dll", 
-					"UPM_IPS.JCJAPGDRCDERAWebBD.AtributoToolboxItem", 
+					"@AtributoEntToolboxItem;UPM_IPS.JCJAPGDRCDERAWebBD.Dsl.dll", 
+					"UPM_IPS.JCJAPGDRCDERAWebBD.AtributoEntToolboxItem", 
 					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
-					"Atributo", 
-					"@AtributoToolboxBitmap;UPM_IPS.JCJAPGDRCDERAWebBD.Dsl.dll", 
+					"AtributoEnt", 
+					"@AtributoEntToolboxBitmap;UPM_IPS.JCJAPGDRCDERAWebBD.Dsl.dll", 
 					0xff00ff,
 					Index = 3)]
-	[VSShell::ProvideStaticToolboxItem("UPM_IPS.JCJAPGDRCDERAWebBD.CrearToolboxTab",
-					"@ClavePrimariaToolToolboxItem;UPM_IPS.JCJAPGDRCDERAWebBD.Dsl.dll", 
-					"UPM_IPS.JCJAPGDRCDERAWebBD.ClavePrimariaToolToolboxItem", 
-					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
-					"ClavePrimariaTool", 
-					"@ClavePrimariaToolToolboxBitmap;UPM_IPS.JCJAPGDRCDERAWebBD.Dsl.dll", 
-					0xff00ff,
-					Index = 4)]
 	[VSShell::ProvideStaticToolboxItem("UPM_IPS.JCJAPGDRCDERAWebBD.CrearToolboxTab",
 					"@EstiloPaginaToolToolboxItem;UPM_IPS.JCJAPGDRCDERAWebBD.Dsl.dll", 
 					"UPM_IPS.JCJAPGDRCDERAWebBD.EstiloPaginaToolToolboxItem", 
@@ -76,7 +68,7 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 					"EstiloPaginaTool", 
 					"@EstiloPaginaToolToolboxBitmap;UPM_IPS.JCJAPGDRCDERAWebBD.Dsl.dll", 
 					0xff00ff,
-					Index = 5)]
+					Index = 4)]
 	[VSShell::ProvideStaticToolboxItem("UPM_IPS.JCJAPGDRCDERAWebBD.CrearToolboxTab",
 					"@EstiloCampoToolToolboxItem;UPM_IPS.JCJAPGDRCDERAWebBD.Dsl.dll", 
 					"UPM_IPS.JCJAPGDRCDERAWebBD.EstiloCampoToolToolboxItem", 
@@ -84,7 +76,7 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 					"EstiloCampoTool", 
 					"@EstiloCampoToolToolboxBitmap;UPM_IPS.JCJAPGDRCDERAWebBD.Dsl.dll", 
 					0xff00ff,
-					Index = 6)]
+					Index = 5)]
 	[VSShell::ProvideStaticToolboxItem("UPM_IPS.JCJAPGDRCDERAWebBD.CrearToolboxTab",
 					"@RestriccionRangoToolToolboxItem;UPM_IPS.JCJAPGDRCDERAWebBD.Dsl.dll", 
 					"UPM_IPS.JCJAPGDRCDERAWebBD.RestriccionRangoToolToolboxItem", 
@@ -92,7 +84,7 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 					"RestriccionRangoTool", 
 					"@RestriccionRangoToolToolboxBitmap;UPM_IPS.JCJAPGDRCDERAWebBD.Dsl.dll", 
 					0xff00ff,
-					Index = 7)]
+					Index = 6)]
 	[VSShell::ProvideStaticToolboxItem("UPM_IPS.JCJAPGDRCDERAWebBD.CrearToolboxTab",
 					"@RestriccionEnumeradoToolToolboxItem;UPM_IPS.JCJAPGDRCDERAWebBD.Dsl.dll", 
 					"UPM_IPS.JCJAPGDRCDERAWebBD.RestriccionEnumeradoToolToolboxItem", 
@@ -100,15 +92,15 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 					"RestriccionEnumeradoTool", 
 					"@RestriccionEnumeradoToolToolboxBitmap;UPM_IPS.JCJAPGDRCDERAWebBD.Dsl.dll", 
 					0xff00ff,
-					Index = 8)]
+					Index = 7)]
 	[VSShell::ProvideStaticToolboxItem("UPM_IPS.JCJAPGDRCDERAWebBD.CrearToolboxTab",
-					"@ValorEnumeradoToolToolboxItem;UPM_IPS.JCJAPGDRCDERAWebBD.Dsl.dll", 
-					"UPM_IPS.JCJAPGDRCDERAWebBD.ValorEnumeradoToolToolboxItem", 
+					"@AtributoRelToolToolboxItem;UPM_IPS.JCJAPGDRCDERAWebBD.Dsl.dll", 
+					"UPM_IPS.JCJAPGDRCDERAWebBD.AtributoRelToolToolboxItem", 
 					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
-					"ValorEnumeradoTool", 
-					"@ValorEnumeradoToolToolboxBitmap;UPM_IPS.JCJAPGDRCDERAWebBD.Dsl.dll", 
+					"AtributoRelTool", 
+					"@AtributoRelToolToolboxBitmap;UPM_IPS.JCJAPGDRCDERAWebBD.Dsl.dll", 
 					0xff00ff,
-					Index = 9)]
+					Index = 8)]
 	[VSShell::ProvideStaticToolboxGroup("@ConectarToolboxTab;UPM_IPS.JCJAPGDRCDERAWebBD.Dsl.dll", "UPM_IPS.JCJAPGDRCDERAWebBD.ConectarToolboxTab")]
 	[VSShell::ProvideStaticToolboxItem("UPM_IPS.JCJAPGDRCDERAWebBD.ConectarToolboxTab",
 					"@ConectarRelacionEntidadToolboxItem;UPM_IPS.JCJAPGDRCDERAWebBD.Dsl.dll", 
@@ -117,31 +109,63 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 					"ConectarRelacionEntidad", 
 					"@ConectarRelacionEntidadToolboxBitmap;UPM_IPS.JCJAPGDRCDERAWebBD.Dsl.dll", 
 					0xff00ff,
+					Index = 9)]
+	[VSShell::ProvideStaticToolboxItem("UPM_IPS.JCJAPGDRCDERAWebBD.ConectarToolboxTab",
+					"@AtributoEntidadToolToolboxItem;UPM_IPS.JCJAPGDRCDERAWebBD.Dsl.dll", 
+					"UPM_IPS.JCJAPGDRCDERAWebBD.AtributoEntidadToolToolboxItem", 
+					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
+					"AtributoEntidadTool", 
+					"@AtributoEntidadToolToolboxBitmap;UPM_IPS.JCJAPGDRCDERAWebBD.Dsl.dll", 
+					0xff00ff,
 					Index = 10)]
 	[VSShell::ProvideStaticToolboxItem("UPM_IPS.JCJAPGDRCDERAWebBD.ConectarToolboxTab",
-					"@EntidadAtributoToolToolboxItem;UPM_IPS.JCJAPGDRCDERAWebBD.Dsl.dll", 
-					"UPM_IPS.JCJAPGDRCDERAWebBD.EntidadAtributoToolToolboxItem", 
+					"@AtributoRelacionToolToolboxItem;UPM_IPS.JCJAPGDRCDERAWebBD.Dsl.dll", 
+					"UPM_IPS.JCJAPGDRCDERAWebBD.AtributoRelacionToolToolboxItem", 
 					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
-					"EntidadAtributoTool", 
-					"@EntidadAtributoToolToolboxBitmap;UPM_IPS.JCJAPGDRCDERAWebBD.Dsl.dll", 
+					"AtributoRelacionTool", 
+					"@AtributoRelacionToolToolboxBitmap;UPM_IPS.JCJAPGDRCDERAWebBD.Dsl.dll", 
 					0xff00ff,
 					Index = 11)]
 	[VSShell::ProvideStaticToolboxItem("UPM_IPS.JCJAPGDRCDERAWebBD.ConectarToolboxTab",
-					"@EntidadClaveToolToolboxItem;UPM_IPS.JCJAPGDRCDERAWebBD.Dsl.dll", 
-					"UPM_IPS.JCJAPGDRCDERAWebBD.EntidadClaveToolToolboxItem", 
+					"@EntidadEstiloPaginaToolToolboxItem;UPM_IPS.JCJAPGDRCDERAWebBD.Dsl.dll", 
+					"UPM_IPS.JCJAPGDRCDERAWebBD.EntidadEstiloPaginaToolToolboxItem", 
 					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
-					"EntidadClaveTool", 
-					"@EntidadClaveToolToolboxBitmap;UPM_IPS.JCJAPGDRCDERAWebBD.Dsl.dll", 
+					"EntidadEstiloPaginaTool", 
+					"@EntidadEstiloPaginaToolToolboxBitmap;UPM_IPS.JCJAPGDRCDERAWebBD.Dsl.dll", 
 					0xff00ff,
 					Index = 12)]
 	[VSShell::ProvideStaticToolboxItem("UPM_IPS.JCJAPGDRCDERAWebBD.ConectarToolboxTab",
-					"@RelacionAtributoToolToolboxItem;UPM_IPS.JCJAPGDRCDERAWebBD.Dsl.dll", 
-					"UPM_IPS.JCJAPGDRCDERAWebBD.RelacionAtributoToolToolboxItem", 
+					"@AtributoEntEstiloCampoToolboxItem;UPM_IPS.JCJAPGDRCDERAWebBD.Dsl.dll", 
+					"UPM_IPS.JCJAPGDRCDERAWebBD.AtributoEntEstiloCampoToolboxItem", 
 					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
-					"RelacionAtributoTool", 
-					"@RelacionAtributoToolToolboxBitmap;UPM_IPS.JCJAPGDRCDERAWebBD.Dsl.dll", 
+					"AtributoEntEstiloCampo", 
+					"@AtributoEntEstiloCampoToolboxBitmap;UPM_IPS.JCJAPGDRCDERAWebBD.Dsl.dll", 
 					0xff00ff,
 					Index = 13)]
+	[VSShell::ProvideStaticToolboxItem("UPM_IPS.JCJAPGDRCDERAWebBD.ConectarToolboxTab",
+					"@AtributoEntRestriccionToolboxItem;UPM_IPS.JCJAPGDRCDERAWebBD.Dsl.dll", 
+					"UPM_IPS.JCJAPGDRCDERAWebBD.AtributoEntRestriccionToolboxItem", 
+					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
+					"AtributoEntRestriccion", 
+					"@AtributoEntRestriccionToolboxBitmap;UPM_IPS.JCJAPGDRCDERAWebBD.Dsl.dll", 
+					0xff00ff,
+					Index = 14)]
+	[VSShell::ProvideStaticToolboxItem("UPM_IPS.JCJAPGDRCDERAWebBD.ConectarToolboxTab",
+					"@AtributoRelEstiloCampoToolboxItem;UPM_IPS.JCJAPGDRCDERAWebBD.Dsl.dll", 
+					"UPM_IPS.JCJAPGDRCDERAWebBD.AtributoRelEstiloCampoToolboxItem", 
+					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
+					"AtributoRelEstiloCampo", 
+					"@AtributoRelEstiloCampoToolboxBitmap;UPM_IPS.JCJAPGDRCDERAWebBD.Dsl.dll", 
+					0xff00ff,
+					Index = 15)]
+	[VSShell::ProvideStaticToolboxItem("UPM_IPS.JCJAPGDRCDERAWebBD.ConectarToolboxTab",
+					"@AtributoRelRestriccionToolboxItem;UPM_IPS.JCJAPGDRCDERAWebBD.Dsl.dll", 
+					"UPM_IPS.JCJAPGDRCDERAWebBD.AtributoRelRestriccionToolboxItem", 
+					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
+					"AtributoRelRestriccion", 
+					"@AtributoRelRestriccionToolboxBitmap;UPM_IPS.JCJAPGDRCDERAWebBD.Dsl.dll", 
+					0xff00ff,
+					Index = 16)]
 	[VSShell::ProvideEditorFactory(typeof(JCJAPGDRCDERAWebBDEditorFactory), 103, TrustLevel = VSShellInterop::__VSEDITORTRUSTLEVEL.ETL_AlwaysTrusted)]
 	[VSShell::ProvideEditorExtension(typeof(JCJAPGDRCDERAWebBDEditorFactory), "." + Constants.DesignerFileExtension, 50)]
 	[VSShell::ProvideEditorLogicalView(typeof(JCJAPGDRCDERAWebBDEditorFactory), "{7651A702-06E5-11D1-8EBD-00A0C90F26EA}")] // Designer logical view GUID i.e. VSConstants.LOGVIEWID_Designer

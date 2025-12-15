@@ -14,15 +14,15 @@ using DslDiagrams = global::Microsoft.VisualStudio.Modeling.Diagrams;
 namespace UPM_IPS.JCJAPGDRCDERAWebBD
 {
 	/// <summary>
-	/// DomainClass ConectaAtributo
-	/// Description for UPM_IPS.JCJAPGDRCDERAWebBD.ConectaAtributo
+	/// DomainClass ConnectorEntidadRelacion
+	/// Description for UPM_IPS.JCJAPGDRCDERAWebBD.ConnectorEntidadRelacion
 	/// </summary>
-	[DslDesign::DisplayNameResource("UPM_IPS.JCJAPGDRCDERAWebBD.ConectaAtributo.DisplayName", typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDDomainModel), "UPM_IPS.JCJAPGDRCDERAWebBD.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("UPM_IPS.JCJAPGDRCDERAWebBD.ConectaAtributo.Description", typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDDomainModel), "UPM_IPS.JCJAPGDRCDERAWebBD.GeneratedCode.DomainModelResx")]
+	[DslDesign::DisplayNameResource("UPM_IPS.JCJAPGDRCDERAWebBD.ConnectorEntidadRelacion.DisplayName", typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDDomainModel), "UPM_IPS.JCJAPGDRCDERAWebBD.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("UPM_IPS.JCJAPGDRCDERAWebBD.ConnectorEntidadRelacion.Description", typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDDomainModel), "UPM_IPS.JCJAPGDRCDERAWebBD.GeneratedCode.DomainModelResx")]
 	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDDomainModel))]
 	[global::System.CLSCompliant(true)]
-	[DslModeling::DomainObjectId("051b03fb-ce8e-46ab-9d12-4fe5735daf59")]
-	public partial class ConectaAtributo : DslDiagrams::BinaryLinkShape
+	[DslModeling::DomainObjectId("f18ef596-ed17-48e9-92ab-8bcfe22dbff6")]
+	public partial class ConnectorEntidadRelacion : DslDiagrams::BinaryLinkShape
 	{
 		#region DiagramElement boilerplate
 		private static DslDiagrams::StyleSet classStyleSet;
@@ -87,9 +87,9 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 		}
 		
 		/// <summary>
-		/// Finds a decorator associated with ConectaAtributo.
+		/// Finds a decorator associated with ConnectorEntidadRelacion.
 		/// </summary>
-		public static DslDiagrams::Decorator FindConectaAtributoDecorator(string decoratorName)
+		public static DslDiagrams::Decorator FindConnectorEntidadRelacionDecorator(string decoratorName)
 		{	
 			if(decorators == null) return null;
 			return DslDiagrams::ShapeElement.FindDecorator(decorators, decoratorName);
@@ -98,24 +98,6 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 		#endregion
 		
 		#region Connector styles
-		/// <summary>
-		/// Initializes style set resources for this shape type
-		/// </summary>
-		/// <param name="classStyleSet">The style set for this shape class</param>
-		protected override void InitializeResources(DslDiagrams::StyleSet classStyleSet)
-		{
-			base.InitializeResources(classStyleSet);
-			
-			// Line pen settings for this connector.
-			DslDiagrams::PenSettings linePen = new DslDiagrams::PenSettings();
-			linePen.Width = 0.015f;
-			classStyleSet.OverridePen(DslDiagrams::DiagramPens.ConnectionLine, linePen);
-			DslDiagrams::BrushSettings textBrush = new DslDiagrams::BrushSettings();
-			textBrush.Color = global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.Gold);
-			classStyleSet.OverrideBrush(DslDiagrams::DiagramBrushes.ShapeText, textBrush);
-		
-		}
-		
 		/// <summary>
 		/// Gets the default line routing style for this connector.
 		/// </summary>
@@ -132,15 +114,15 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 		#region Constructors, domain class Id
 	
 		/// <summary>
-		/// ConectaAtributo domain class Id.
+		/// ConnectorEntidadRelacion domain class Id.
 		/// </summary>
-		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x051b03fb, 0xce8e, 0x46ab, 0x9d, 0x12, 0x4f, 0xe5, 0x73, 0x5d, 0xaf, 0x59);
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xf18ef596, 0xed17, 0x48e9, 0x92, 0xab, 0x8b, 0xcf, 0xe2, 0x2d, 0xbf, 0xf6);
 		/// <summary>
 		/// Constructor
 		/// </summary>
 		/// <param name="store">Store where new element is to be created.</param>
 		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
-		public ConectaAtributo(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
+		public ConnectorEntidadRelacion(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
 			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
 		{
 		}
@@ -150,7 +132,7 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 		/// </summary>
 		/// <param name="partition">Partition where new element is to be created.</param>
 		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
-		public ConectaAtributo(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
+		public ConnectorEntidadRelacion(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
 			: base(partition, propertyAssignments)
 		{
 		}
@@ -160,15 +142,15 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 namespace UPM_IPS.JCJAPGDRCDERAWebBD
 {
 	/// <summary>
-	/// DomainClass EntidadRelacionConnector
-	/// Description for UPM_IPS.JCJAPGDRCDERAWebBD.EntidadRelacionConnector
+	/// DomainClass ConectorAtibuto
+	/// Description for UPM_IPS.JCJAPGDRCDERAWebBD.ConectorAtibuto
 	/// </summary>
-	[DslDesign::DisplayNameResource("UPM_IPS.JCJAPGDRCDERAWebBD.EntidadRelacionConnector.DisplayName", typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDDomainModel), "UPM_IPS.JCJAPGDRCDERAWebBD.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("UPM_IPS.JCJAPGDRCDERAWebBD.EntidadRelacionConnector.Description", typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDDomainModel), "UPM_IPS.JCJAPGDRCDERAWebBD.GeneratedCode.DomainModelResx")]
+	[DslDesign::DisplayNameResource("UPM_IPS.JCJAPGDRCDERAWebBD.ConectorAtibuto.DisplayName", typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDDomainModel), "UPM_IPS.JCJAPGDRCDERAWebBD.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("UPM_IPS.JCJAPGDRCDERAWebBD.ConectorAtibuto.Description", typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDDomainModel), "UPM_IPS.JCJAPGDRCDERAWebBD.GeneratedCode.DomainModelResx")]
 	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDDomainModel))]
 	[global::System.CLSCompliant(true)]
-	[DslModeling::DomainObjectId("efe33cc0-6ea4-4774-8863-181e862f45e9")]
-	public partial class EntidadRelacionConnector : DslDiagrams::BinaryLinkShape
+	[DslModeling::DomainObjectId("e854de42-cec3-49e9-b2f8-d34e0ed2e041")]
+	public partial class ConectorAtibuto : DslDiagrams::BinaryLinkShape
 	{
 		#region DiagramElement boilerplate
 		private static DslDiagrams::StyleSet classStyleSet;
@@ -233,81 +215,31 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 		}
 		
 		/// <summary>
-		/// Finds a decorator associated with EntidadRelacionConnector.
+		/// Finds a decorator associated with ConectorAtibuto.
 		/// </summary>
-		public static DslDiagrams::Decorator FindEntidadRelacionConnectorDecorator(string decoratorName)
+		public static DslDiagrams::Decorator FindConectorAtibutoDecorator(string decoratorName)
 		{	
 			if(decorators == null) return null;
 			return DslDiagrams::ShapeElement.FindDecorator(decorators, decoratorName);
 		}
 		
-		
-		/// <summary>
-		/// Shape instance initialization.
-		/// </summary>
-		public override void OnInitialize()
-		{
-			base.OnInitialize();
-			
-			// Create host shapes for outer decorators.
-			foreach(DslDiagrams::Decorator decorator in this.Decorators)
-			{
-				if(decorator.RequiresHost)
-				{
-					decorator.ConfigureHostShape(this);
-				}
-			}
-			
-		}
 		#endregion
 		
 		#region Connector styles
 		#endregion
 		
-		#region Decorators
-		/// <summary>
-		/// Initialize the collection of shape fields associated with this shape type.
-		/// </summary>
-		protected override void InitializeShapeFields(global::System.Collections.Generic.IList<DslDiagrams::ShapeField> shapeFields)
-		{
-			base.InitializeShapeFields(shapeFields);
-		}
-		
-		/// <summary>
-		/// Initialize the collection of decorators associated with this shape type.  This method also
-		/// creates shape fields for outer decorators, because these are not part of the shape fields collection
-		/// associated with the shape, so they must be created here rather than in InitializeShapeFields.
-		/// </summary>
-		protected override void InitializeDecorators(global::System.Collections.Generic.IList<DslDiagrams::ShapeField> shapeFields, global::System.Collections.Generic.IList<DslDiagrams::Decorator> decorators)
-		{
-			base.InitializeDecorators(shapeFields, decorators);
-			
-			DslDiagrams::TextField field1 = new DslDiagrams::TextField("CardDecorator");
-			field1.DefaultText = global::UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDDomainModel.SingletonResourceManager.GetString("EntidadRelacionConnectorCardDecoratorDefaultText");
-			field1.DefaultFocusable = true;
-			field1.DefaultAutoSize = true;
-			field1.AnchoringBehavior.MinimumHeightInLines = 1;
-			field1.AnchoringBehavior.MinimumWidthInCharacters = 1;
-			field1.DefaultAccessibleState = global::System.Windows.Forms.AccessibleStates.Invisible;
-			DslDiagrams::Decorator decorator1 = new DslDiagrams::ConnectorDecorator(field1, DslDiagrams::ConnectorDecoratorPosition.SourceTop, DslDiagrams::PointD.Empty);
-			decorators.Add(decorator1);
-				
-		}
-		
-		#endregion
-		
 		#region Constructors, domain class Id
 	
 		/// <summary>
-		/// EntidadRelacionConnector domain class Id.
+		/// ConectorAtibuto domain class Id.
 		/// </summary>
-		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xefe33cc0, 0x6ea4, 0x4774, 0x88, 0x63, 0x18, 0x1e, 0x86, 0x2f, 0x45, 0xe9);
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xe854de42, 0xcec3, 0x49e9, 0xb2, 0xf8, 0xd3, 0x4e, 0x0e, 0xd2, 0xe0, 0x41);
 		/// <summary>
 		/// Constructor
 		/// </summary>
 		/// <param name="store">Store where new element is to be created.</param>
 		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
-		public EntidadRelacionConnector(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
+		public ConectorAtibuto(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
 			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
 		{
 		}
@@ -317,7 +249,7 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 		/// </summary>
 		/// <param name="partition">Partition where new element is to be created.</param>
 		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
-		public EntidadRelacionConnector(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
+		public ConectorAtibuto(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
 			: base(partition, propertyAssignments)
 		{
 		}
@@ -327,15 +259,15 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 namespace UPM_IPS.JCJAPGDRCDERAWebBD
 {
 	/// <summary>
-	/// DomainClass ConectaEstiloPagina
-	/// Description for UPM_IPS.JCJAPGDRCDERAWebBD.ConectaEstiloPagina
+	/// DomainClass ConnectorRestricciones
+	/// Description for UPM_IPS.JCJAPGDRCDERAWebBD.ConnectorRestricciones
 	/// </summary>
-	[DslDesign::DisplayNameResource("UPM_IPS.JCJAPGDRCDERAWebBD.ConectaEstiloPagina.DisplayName", typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDDomainModel), "UPM_IPS.JCJAPGDRCDERAWebBD.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("UPM_IPS.JCJAPGDRCDERAWebBD.ConectaEstiloPagina.Description", typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDDomainModel), "UPM_IPS.JCJAPGDRCDERAWebBD.GeneratedCode.DomainModelResx")]
+	[DslDesign::DisplayNameResource("UPM_IPS.JCJAPGDRCDERAWebBD.ConnectorRestricciones.DisplayName", typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDDomainModel), "UPM_IPS.JCJAPGDRCDERAWebBD.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("UPM_IPS.JCJAPGDRCDERAWebBD.ConnectorRestricciones.Description", typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDDomainModel), "UPM_IPS.JCJAPGDRCDERAWebBD.GeneratedCode.DomainModelResx")]
 	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDDomainModel))]
 	[global::System.CLSCompliant(true)]
-	[DslModeling::DomainObjectId("b785c05d-86b3-4487-949b-7f805ab41e17")]
-	public partial class ConectaEstiloPagina : DslDiagrams::BinaryLinkShape
+	[DslModeling::DomainObjectId("a35444c3-330e-4f72-b6d6-647b5ff6a7c2")]
+	public partial class ConnectorRestricciones : DslDiagrams::BinaryLinkShape
 	{
 		#region DiagramElement boilerplate
 		private static DslDiagrams::StyleSet classStyleSet;
@@ -400,9 +332,9 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 		}
 		
 		/// <summary>
-		/// Finds a decorator associated with ConectaEstiloPagina.
+		/// Finds a decorator associated with ConnectorRestricciones.
 		/// </summary>
-		public static DslDiagrams::Decorator FindConectaEstiloPaginaDecorator(string decoratorName)
+		public static DslDiagrams::Decorator FindConnectorRestriccionesDecorator(string decoratorName)
 		{	
 			if(decorators == null) return null;
 			return DslDiagrams::ShapeElement.FindDecorator(decorators, decoratorName);
@@ -416,15 +348,15 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 		#region Constructors, domain class Id
 	
 		/// <summary>
-		/// ConectaEstiloPagina domain class Id.
+		/// ConnectorRestricciones domain class Id.
 		/// </summary>
-		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xb785c05d, 0x86b3, 0x4487, 0x94, 0x9b, 0x7f, 0x80, 0x5a, 0xb4, 0x1e, 0x17);
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xa35444c3, 0x330e, 0x4f72, 0xb6, 0xd6, 0x64, 0x7b, 0x5f, 0xf6, 0xa7, 0xc2);
 		/// <summary>
 		/// Constructor
 		/// </summary>
 		/// <param name="store">Store where new element is to be created.</param>
 		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
-		public ConectaEstiloPagina(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
+		public ConnectorRestricciones(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
 			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
 		{
 		}
@@ -434,7 +366,7 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 		/// </summary>
 		/// <param name="partition">Partition where new element is to be created.</param>
 		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
-		public ConectaEstiloPagina(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
+		public ConnectorRestricciones(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
 			: base(partition, propertyAssignments)
 		{
 		}
@@ -444,15 +376,15 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 namespace UPM_IPS.JCJAPGDRCDERAWebBD
 {
 	/// <summary>
-	/// DomainClass ConectaEstiloCampo
-	/// Description for UPM_IPS.JCJAPGDRCDERAWebBD.ConectaEstiloCampo
+	/// DomainClass ConnectorEstiloCampo
+	/// Description for UPM_IPS.JCJAPGDRCDERAWebBD.ConnectorEstiloCampo
 	/// </summary>
-	[DslDesign::DisplayNameResource("UPM_IPS.JCJAPGDRCDERAWebBD.ConectaEstiloCampo.DisplayName", typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDDomainModel), "UPM_IPS.JCJAPGDRCDERAWebBD.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("UPM_IPS.JCJAPGDRCDERAWebBD.ConectaEstiloCampo.Description", typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDDomainModel), "UPM_IPS.JCJAPGDRCDERAWebBD.GeneratedCode.DomainModelResx")]
+	[DslDesign::DisplayNameResource("UPM_IPS.JCJAPGDRCDERAWebBD.ConnectorEstiloCampo.DisplayName", typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDDomainModel), "UPM_IPS.JCJAPGDRCDERAWebBD.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("UPM_IPS.JCJAPGDRCDERAWebBD.ConnectorEstiloCampo.Description", typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDDomainModel), "UPM_IPS.JCJAPGDRCDERAWebBD.GeneratedCode.DomainModelResx")]
 	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDDomainModel))]
 	[global::System.CLSCompliant(true)]
-	[DslModeling::DomainObjectId("d27eed12-bd11-4071-be97-6dc0f9d1ba8d")]
-	public partial class ConectaEstiloCampo : DslDiagrams::BinaryLinkShape
+	[DslModeling::DomainObjectId("976f9322-3c3d-4908-aff8-fde802f713c7")]
+	public partial class ConnectorEstiloCampo : DslDiagrams::BinaryLinkShape
 	{
 		#region DiagramElement boilerplate
 		private static DslDiagrams::StyleSet classStyleSet;
@@ -517,9 +449,9 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 		}
 		
 		/// <summary>
-		/// Finds a decorator associated with ConectaEstiloCampo.
+		/// Finds a decorator associated with ConnectorEstiloCampo.
 		/// </summary>
-		public static DslDiagrams::Decorator FindConectaEstiloCampoDecorator(string decoratorName)
+		public static DslDiagrams::Decorator FindConnectorEstiloCampoDecorator(string decoratorName)
 		{	
 			if(decorators == null) return null;
 			return DslDiagrams::ShapeElement.FindDecorator(decorators, decoratorName);
@@ -528,34 +460,20 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 		#endregion
 		
 		#region Connector styles
-		/// <summary>
-		/// Initializes style set resources for this shape type
-		/// </summary>
-		/// <param name="classStyleSet">The style set for this shape class</param>
-		protected override void InitializeResources(DslDiagrams::StyleSet classStyleSet)
-		{
-			base.InitializeResources(classStyleSet);
-			
-			// Line pen settings for this connector.
-			DslDiagrams::PenSettings linePen = new DslDiagrams::PenSettings();
-			linePen.DashStyle = global::System.Drawing.Drawing2D.DashStyle.Dot;
-			classStyleSet.OverridePen(DslDiagrams::DiagramPens.ConnectionLine, linePen);
-		}
-		
 		#endregion
 		
 		#region Constructors, domain class Id
 	
 		/// <summary>
-		/// ConectaEstiloCampo domain class Id.
+		/// ConnectorEstiloCampo domain class Id.
 		/// </summary>
-		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xd27eed12, 0xbd11, 0x4071, 0xbe, 0x97, 0x6d, 0xc0, 0xf9, 0xd1, 0xba, 0x8d);
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x976f9322, 0x3c3d, 0x4908, 0xaf, 0xf8, 0xfd, 0xe8, 0x02, 0xf7, 0x13, 0xc7);
 		/// <summary>
 		/// Constructor
 		/// </summary>
 		/// <param name="store">Store where new element is to be created.</param>
 		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
-		public ConectaEstiloCampo(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
+		public ConnectorEstiloCampo(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
 			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
 		{
 		}
@@ -565,7 +483,7 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 		/// </summary>
 		/// <param name="partition">Partition where new element is to be created.</param>
 		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
-		public ConectaEstiloCampo(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
+		public ConnectorEstiloCampo(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
 			: base(partition, propertyAssignments)
 		{
 		}
@@ -575,15 +493,15 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 namespace UPM_IPS.JCJAPGDRCDERAWebBD
 {
 	/// <summary>
-	/// DomainClass ConectaAtributoRestriccion
-	/// Description for UPM_IPS.JCJAPGDRCDERAWebBD.ConectaAtributoRestriccion
+	/// DomainClass ConnectorEstiloPagina
+	/// Description for UPM_IPS.JCJAPGDRCDERAWebBD.ConnectorEstiloPagina
 	/// </summary>
-	[DslDesign::DisplayNameResource("UPM_IPS.JCJAPGDRCDERAWebBD.ConectaAtributoRestriccion.DisplayName", typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDDomainModel), "UPM_IPS.JCJAPGDRCDERAWebBD.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("UPM_IPS.JCJAPGDRCDERAWebBD.ConectaAtributoRestriccion.Description", typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDDomainModel), "UPM_IPS.JCJAPGDRCDERAWebBD.GeneratedCode.DomainModelResx")]
+	[DslDesign::DisplayNameResource("UPM_IPS.JCJAPGDRCDERAWebBD.ConnectorEstiloPagina.DisplayName", typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDDomainModel), "UPM_IPS.JCJAPGDRCDERAWebBD.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("UPM_IPS.JCJAPGDRCDERAWebBD.ConnectorEstiloPagina.Description", typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDDomainModel), "UPM_IPS.JCJAPGDRCDERAWebBD.GeneratedCode.DomainModelResx")]
 	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDDomainModel))]
 	[global::System.CLSCompliant(true)]
-	[DslModeling::DomainObjectId("bcdc7b2c-57f9-45bc-b669-cca5147cf7aa")]
-	public partial class ConectaAtributoRestriccion : DslDiagrams::BinaryLinkShape
+	[DslModeling::DomainObjectId("85bc09af-928f-4d0b-9dd7-e2695fdd68d1")]
+	public partial class ConnectorEstiloPagina : DslDiagrams::BinaryLinkShape
 	{
 		#region DiagramElement boilerplate
 		private static DslDiagrams::StyleSet classStyleSet;
@@ -648,9 +566,9 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 		}
 		
 		/// <summary>
-		/// Finds a decorator associated with ConectaAtributoRestriccion.
+		/// Finds a decorator associated with ConnectorEstiloPagina.
 		/// </summary>
-		public static DslDiagrams::Decorator FindConectaAtributoRestriccionDecorator(string decoratorName)
+		public static DslDiagrams::Decorator FindConnectorEstiloPaginaDecorator(string decoratorName)
 		{	
 			if(decorators == null) return null;
 			return DslDiagrams::ShapeElement.FindDecorator(decorators, decoratorName);
@@ -659,34 +577,20 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 		#endregion
 		
 		#region Connector styles
-		/// <summary>
-		/// Initializes style set resources for this shape type
-		/// </summary>
-		/// <param name="classStyleSet">The style set for this shape class</param>
-		protected override void InitializeResources(DslDiagrams::StyleSet classStyleSet)
-		{
-			base.InitializeResources(classStyleSet);
-			
-			// Line pen settings for this connector.
-			DslDiagrams::PenSettings linePen = new DslDiagrams::PenSettings();
-			linePen.DashStyle = global::System.Drawing.Drawing2D.DashStyle.Dash;
-			classStyleSet.OverridePen(DslDiagrams::DiagramPens.ConnectionLine, linePen);
-		}
-		
 		#endregion
 		
 		#region Constructors, domain class Id
 	
 		/// <summary>
-		/// ConectaAtributoRestriccion domain class Id.
+		/// ConnectorEstiloPagina domain class Id.
 		/// </summary>
-		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xbcdc7b2c, 0x57f9, 0x45bc, 0xb6, 0x69, 0xcc, 0xa5, 0x14, 0x7c, 0xf7, 0xaa);
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x85bc09af, 0x928f, 0x4d0b, 0x9d, 0xd7, 0xe2, 0x69, 0x5f, 0xdd, 0x68, 0xd1);
 		/// <summary>
 		/// Constructor
 		/// </summary>
 		/// <param name="store">Store where new element is to be created.</param>
 		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
-		public ConectaAtributoRestriccion(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
+		public ConnectorEstiloPagina(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
 			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
 		{
 		}
@@ -696,7 +600,7 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 		/// </summary>
 		/// <param name="partition">Partition where new element is to be created.</param>
 		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
-		public ConectaAtributoRestriccion(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
+		public ConnectorEstiloPagina(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
 			: base(partition, propertyAssignments)
 		{
 		}

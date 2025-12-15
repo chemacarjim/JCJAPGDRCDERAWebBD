@@ -133,6 +133,14 @@
     <value>DERAWeb BDModel</value>
     <comment>DisplayName for DomainClass &apos;DERAWebBDModel&apos;</comment>
   </data>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModel/Name.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModel.Name</value>
+    <comment>Description for DomainProperty &apos;Name&apos; on DomainClass &apos;DERAWebBDModel&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModel/Name.DisplayName" xml:space="preserve">
+    <value>Name</value>
+    <comment>DisplayName for DomainProperty &apos;Name&apos; on DomainClass &apos;DERAWebBDModel&apos;</comment>
+  </data>
   <data name="UPM_IPS.JCJAPGDRCDERAWebBD.Entidad.Description" xml:space="preserve">
     <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.Entidad</value>
     <comment>Description for DomainClass &apos;Entidad&apos;</comment>
@@ -277,22 +285,6 @@
     <value>Longitud</value>
     <comment>DisplayName for DomainProperty &apos;Longitud&apos; on DomainClass &apos;Atributo&apos;</comment>
   </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.AtributoClave.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.AtributoClave</value>
-    <comment>Description for DomainClass &apos;AtributoClave&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.AtributoClave.DisplayName" xml:space="preserve">
-    <value>Atributo Clave</value>
-    <comment>DisplayName for DomainClass &apos;AtributoClave&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.AtributoClave/Name.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.AtributoClave.Name</value>
-    <comment>Description for DomainProperty &apos;Name&apos; on DomainClass &apos;AtributoClave&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.AtributoClave/Name.DisplayName" xml:space="preserve">
-    <value>Name</value>
-    <comment>DisplayName for DomainProperty &apos;Name&apos; on DomainClass &apos;AtributoClave&apos;</comment>
-  </data>
   <data name="UPM_IPS.JCJAPGDRCDERAWebBD.EstiloCampo.Description" xml:space="preserve">
     <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.EstiloCampo</value>
     <comment>Description for DomainClass &apos;EstiloCampo&apos;</comment>
@@ -357,29 +349,37 @@
     <value>Restriccion Enum</value>
     <comment>DisplayName for DomainClass &apos;RestriccionEnum&apos;</comment>
   </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.RestriccionEnum/NombreEnumerado.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.RestriccionEnum.Nombre Enumerado</value>
-    <comment>Description for DomainProperty &apos;NombreEnumerado&apos; on DomainClass &apos;RestriccionEnum&apos;</comment>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.RestriccionEnum/Valores.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.RestriccionEnum.Valores</value>
+    <comment>Description for DomainProperty &apos;Valores&apos; on DomainClass &apos;RestriccionEnum&apos;</comment>
   </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.RestriccionEnum/NombreEnumerado.DisplayName" xml:space="preserve">
-    <value>Nombre Enumerado</value>
-    <comment>DisplayName for DomainProperty &apos;NombreEnumerado&apos; on DomainClass &apos;RestriccionEnum&apos;</comment>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.RestriccionEnum/Valores.DisplayName" xml:space="preserve">
+    <value>Valores</value>
+    <comment>DisplayName for DomainProperty &apos;Valores&apos; on DomainClass &apos;RestriccionEnum&apos;</comment>
   </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.ValorEnumerado.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.ValorEnumerado</value>
-    <comment>Description for DomainClass &apos;ValorEnumerado&apos;</comment>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.AtributoEnt.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.AtributoEnt</value>
+    <comment>Description for DomainClass &apos;AtributoEnt&apos;</comment>
   </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.ValorEnumerado.DisplayName" xml:space="preserve">
-    <value>Valor Enumerado</value>
-    <comment>DisplayName for DomainClass &apos;ValorEnumerado&apos;</comment>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.AtributoEnt.DisplayName" xml:space="preserve">
+    <value>Atributo Ent</value>
+    <comment>DisplayName for DomainClass &apos;AtributoEnt&apos;</comment>
   </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.ValorEnumerado/Nombre.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.ValorEnumerado.Nombre</value>
-    <comment>Description for DomainProperty &apos;Nombre&apos; on DomainClass &apos;ValorEnumerado&apos;</comment>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.AtributoEnt/keyAtr.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.AtributoEnt.Key Atr</value>
+    <comment>Description for DomainProperty &apos;keyAtr&apos; on DomainClass &apos;AtributoEnt&apos;</comment>
   </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.ValorEnumerado/Nombre.DisplayName" xml:space="preserve">
-    <value>Nombre</value>
-    <comment>DisplayName for DomainProperty &apos;Nombre&apos; on DomainClass &apos;ValorEnumerado&apos;</comment>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.AtributoEnt/keyAtr.DisplayName" xml:space="preserve">
+    <value>Key Atr</value>
+    <comment>DisplayName for DomainProperty &apos;keyAtr&apos; on DomainClass &apos;AtributoEnt&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.AtributoRel.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.AtributoRel</value>
+    <comment>Description for DomainClass &apos;AtributoRel&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.AtributoRel.DisplayName" xml:space="preserve">
+    <value>Atributo Rel</value>
+    <comment>DisplayName for DomainClass &apos;AtributoRel&apos;</comment>
   </data>
   <data name="UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasEntidades.Description" xml:space="preserve">
     <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasEntidades</value>
@@ -549,293 +549,197 @@
     <value>Relacion</value>
     <comment>PropertyDisplayName for DomainRole &apos;Entidad&apos; on DomainRelationship &apos;RelacionReferencesEntidad&apos;</comment>
   </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasAtributo.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasAtributo</value>
-    <comment>Description for DomainClass &apos;DERAWebBDModelHasAtributo&apos;</comment>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.EntidadHasAtributoEnt.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.EntidadHasAtributoEnt</value>
+    <comment>Description for DomainClass &apos;EntidadHasAtributoEnt&apos;</comment>
   </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasAtributo.DisplayName" xml:space="preserve">
-    <value>DERAWeb BDModel Has Atributo</value>
-    <comment>DisplayName for DomainClass &apos;DERAWebBDModelHasAtributo&apos;</comment>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.EntidadHasAtributoEnt.DisplayName" xml:space="preserve">
+    <value>Entidad Has Atributo Ent</value>
+    <comment>DisplayName for DomainClass &apos;EntidadHasAtributoEnt&apos;</comment>
   </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasAtributo/DERAWebBDModel.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasAtributo.DERAWebBDModel</value>
-    <comment>Description for DomainRole &apos;DERAWebBDModel&apos; on DomainRelationship &apos;DERAWebBDModelHasAtributo&apos;</comment>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.EntidadHasAtributoEnt/Entidad.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.EntidadHasAtributoEnt.Entidad</value>
+    <comment>Description for DomainRole &apos;Entidad&apos; on DomainRelationship &apos;EntidadHasAtributoEnt&apos;</comment>
   </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasAtributo/DERAWebBDModel.DisplayName" xml:space="preserve">
-    <value>DERAWeb BDModel</value>
-    <comment>DisplayName for DomainRole &apos;DERAWebBDModel&apos; on DomainRelationship &apos;DERAWebBDModelHasAtributo&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasAtributo/DERAWebBDModel.PropertyDisplayName" xml:space="preserve">
-    <value>Atributo</value>
-    <comment>PropertyDisplayName for DomainRole &apos;DERAWebBDModel&apos; on DomainRelationship &apos;DERAWebBDModelHasAtributo&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasAtributo/Atributo.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasAtributo.Atributo</value>
-    <comment>Description for DomainRole &apos;Atributo&apos; on DomainRelationship &apos;DERAWebBDModelHasAtributo&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasAtributo/Atributo.DisplayName" xml:space="preserve">
-    <value>Atributo</value>
-    <comment>DisplayName for DomainRole &apos;Atributo&apos; on DomainRelationship &apos;DERAWebBDModelHasAtributo&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasAtributo/Atributo.PropertyDisplayName" xml:space="preserve">
-    <value>DERAWeb BDModel</value>
-    <comment>PropertyDisplayName for DomainRole &apos;Atributo&apos; on DomainRelationship &apos;DERAWebBDModelHasAtributo&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasAtributoClave.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasAtributoClave</value>
-    <comment>Description for DomainClass &apos;DERAWebBDModelHasAtributoClave&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasAtributoClave.DisplayName" xml:space="preserve">
-    <value>DERAWeb BDModel Has Atributo Clave</value>
-    <comment>DisplayName for DomainClass &apos;DERAWebBDModelHasAtributoClave&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasAtributoClave/DERAWebBDModel.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasAtributoClave.DERAWebBDModel</value>
-    <comment>Description for DomainRole &apos;DERAWebBDModel&apos; on DomainRelationship &apos;DERAWebBDModelHasAtributoClave&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasAtributoClave/DERAWebBDModel.DisplayName" xml:space="preserve">
-    <value>DERAWeb BDModel</value>
-    <comment>DisplayName for DomainRole &apos;DERAWebBDModel&apos; on DomainRelationship &apos;DERAWebBDModelHasAtributoClave&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasAtributoClave/DERAWebBDModel.PropertyDisplayName" xml:space="preserve">
-    <value>Atributo Clave</value>
-    <comment>PropertyDisplayName for DomainRole &apos;DERAWebBDModel&apos; on DomainRelationship &apos;DERAWebBDModelHasAtributoClave&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasAtributoClave/AtributoClave.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasAtributoClave.AtributoClave</value>
-    <comment>Description for DomainRole &apos;AtributoClave&apos; on DomainRelationship &apos;DERAWebBDModelHasAtributoClave&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasAtributoClave/AtributoClave.DisplayName" xml:space="preserve">
-    <value>Atributo Clave</value>
-    <comment>DisplayName for DomainRole &apos;AtributoClave&apos; on DomainRelationship &apos;DERAWebBDModelHasAtributoClave&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasAtributoClave/AtributoClave.PropertyDisplayName" xml:space="preserve">
-    <value>DERAWeb BDModel</value>
-    <comment>PropertyDisplayName for DomainRole &apos;AtributoClave&apos; on DomainRelationship &apos;DERAWebBDModelHasAtributoClave&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.EntidadReferencesAtributo.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.EntidadReferencesAtributo</value>
-    <comment>Description for DomainClass &apos;EntidadReferencesAtributo&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.EntidadReferencesAtributo.DisplayName" xml:space="preserve">
-    <value>Entidad References Atributo</value>
-    <comment>DisplayName for DomainClass &apos;EntidadReferencesAtributo&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.EntidadReferencesAtributo/Entidad.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.EntidadReferencesAtributo.Entidad</value>
-    <comment>Description for DomainRole &apos;Entidad&apos; on DomainRelationship &apos;EntidadReferencesAtributo&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.EntidadReferencesAtributo/Entidad.DisplayName" xml:space="preserve">
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.EntidadHasAtributoEnt/Entidad.DisplayName" xml:space="preserve">
     <value>Entidad</value>
-    <comment>DisplayName for DomainRole &apos;Entidad&apos; on DomainRelationship &apos;EntidadReferencesAtributo&apos;</comment>
+    <comment>DisplayName for DomainRole &apos;Entidad&apos; on DomainRelationship &apos;EntidadHasAtributoEnt&apos;</comment>
   </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.EntidadReferencesAtributo/Entidad.PropertyDisplayName" xml:space="preserve">
-    <value>Atributo</value>
-    <comment>PropertyDisplayName for DomainRole &apos;Entidad&apos; on DomainRelationship &apos;EntidadReferencesAtributo&apos;</comment>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.EntidadHasAtributoEnt/Entidad.PropertyDisplayName" xml:space="preserve">
+    <value>Atributo Ent</value>
+    <comment>PropertyDisplayName for DomainRole &apos;Entidad&apos; on DomainRelationship &apos;EntidadHasAtributoEnt&apos;</comment>
   </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.EntidadReferencesAtributo/Atributo.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.EntidadReferencesAtributo.Atributo</value>
-    <comment>Description for DomainRole &apos;Atributo&apos; on DomainRelationship &apos;EntidadReferencesAtributo&apos;</comment>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.EntidadHasAtributoEnt/AtributoEnt.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.EntidadHasAtributoEnt.AtributoEnt</value>
+    <comment>Description for DomainRole &apos;AtributoEnt&apos; on DomainRelationship &apos;EntidadHasAtributoEnt&apos;</comment>
   </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.EntidadReferencesAtributo/Atributo.DisplayName" xml:space="preserve">
-    <value>Atributo</value>
-    <comment>DisplayName for DomainRole &apos;Atributo&apos; on DomainRelationship &apos;EntidadReferencesAtributo&apos;</comment>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.EntidadHasAtributoEnt/AtributoEnt.DisplayName" xml:space="preserve">
+    <value>Atributo Ent</value>
+    <comment>DisplayName for DomainRole &apos;AtributoEnt&apos; on DomainRelationship &apos;EntidadHasAtributoEnt&apos;</comment>
   </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.EntidadReferencesAtributo/Atributo.PropertyDisplayName" xml:space="preserve">
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.EntidadHasAtributoEnt/AtributoEnt.PropertyDisplayName" xml:space="preserve">
     <value>Entidad</value>
-    <comment>PropertyDisplayName for DomainRole &apos;Atributo&apos; on DomainRelationship &apos;EntidadReferencesAtributo&apos;</comment>
+    <comment>PropertyDisplayName for DomainRole &apos;AtributoEnt&apos; on DomainRelationship &apos;EntidadHasAtributoEnt&apos;</comment>
   </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.EntidadReferencesAtributoClave.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.EntidadReferencesAtributoClave</value>
-    <comment>Description for DomainClass &apos;EntidadReferencesAtributoClave&apos;</comment>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.RelacionHasAtributoRel.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.RelacionHasAtributoRel</value>
+    <comment>Description for DomainClass &apos;RelacionHasAtributoRel&apos;</comment>
   </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.EntidadReferencesAtributoClave.DisplayName" xml:space="preserve">
-    <value>Entidad References Atributo Clave</value>
-    <comment>DisplayName for DomainClass &apos;EntidadReferencesAtributoClave&apos;</comment>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.RelacionHasAtributoRel.DisplayName" xml:space="preserve">
+    <value>Relacion Has Atributo Rel</value>
+    <comment>DisplayName for DomainClass &apos;RelacionHasAtributoRel&apos;</comment>
   </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.EntidadReferencesAtributoClave/Entidad.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.EntidadReferencesAtributoClave.Entidad</value>
-    <comment>Description for DomainRole &apos;Entidad&apos; on DomainRelationship &apos;EntidadReferencesAtributoClave&apos;</comment>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.RelacionHasAtributoRel/Relacion.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.RelacionHasAtributoRel.Relacion</value>
+    <comment>Description for DomainRole &apos;Relacion&apos; on DomainRelationship &apos;RelacionHasAtributoRel&apos;</comment>
   </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.EntidadReferencesAtributoClave/Entidad.DisplayName" xml:space="preserve">
-    <value>Entidad</value>
-    <comment>DisplayName for DomainRole &apos;Entidad&apos; on DomainRelationship &apos;EntidadReferencesAtributoClave&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.EntidadReferencesAtributoClave/Entidad.PropertyDisplayName" xml:space="preserve">
-    <value>Atributo Clave</value>
-    <comment>PropertyDisplayName for DomainRole &apos;Entidad&apos; on DomainRelationship &apos;EntidadReferencesAtributoClave&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.EntidadReferencesAtributoClave/AtributoClave.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.EntidadReferencesAtributoClave.AtributoClave</value>
-    <comment>Description for DomainRole &apos;AtributoClave&apos; on DomainRelationship &apos;EntidadReferencesAtributoClave&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.EntidadReferencesAtributoClave/AtributoClave.DisplayName" xml:space="preserve">
-    <value>Atributo Clave</value>
-    <comment>DisplayName for DomainRole &apos;AtributoClave&apos; on DomainRelationship &apos;EntidadReferencesAtributoClave&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.EntidadReferencesAtributoClave/AtributoClave.PropertyDisplayName" xml:space="preserve">
-    <value>Entidad</value>
-    <comment>PropertyDisplayName for DomainRole &apos;AtributoClave&apos; on DomainRelationship &apos;EntidadReferencesAtributoClave&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.RelacionReferencesAtributo.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.RelacionReferencesAtributo</value>
-    <comment>Description for DomainClass &apos;RelacionReferencesAtributo&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.RelacionReferencesAtributo.DisplayName" xml:space="preserve">
-    <value>Relacion References Atributo</value>
-    <comment>DisplayName for DomainClass &apos;RelacionReferencesAtributo&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.RelacionReferencesAtributo/Relacion.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.RelacionReferencesAtributo.Relacion</value>
-    <comment>Description for DomainRole &apos;Relacion&apos; on DomainRelationship &apos;RelacionReferencesAtributo&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.RelacionReferencesAtributo/Relacion.DisplayName" xml:space="preserve">
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.RelacionHasAtributoRel/Relacion.DisplayName" xml:space="preserve">
     <value>Relacion</value>
-    <comment>DisplayName for DomainRole &apos;Relacion&apos; on DomainRelationship &apos;RelacionReferencesAtributo&apos;</comment>
+    <comment>DisplayName for DomainRole &apos;Relacion&apos; on DomainRelationship &apos;RelacionHasAtributoRel&apos;</comment>
   </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.RelacionReferencesAtributo/Relacion.PropertyDisplayName" xml:space="preserve">
-    <value>Atributo</value>
-    <comment>PropertyDisplayName for DomainRole &apos;Relacion&apos; on DomainRelationship &apos;RelacionReferencesAtributo&apos;</comment>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.RelacionHasAtributoRel/Relacion.PropertyDisplayName" xml:space="preserve">
+    <value>Atributo Rel</value>
+    <comment>PropertyDisplayName for DomainRole &apos;Relacion&apos; on DomainRelationship &apos;RelacionHasAtributoRel&apos;</comment>
   </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.RelacionReferencesAtributo/Atributo.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.RelacionReferencesAtributo.Atributo</value>
-    <comment>Description for DomainRole &apos;Atributo&apos; on DomainRelationship &apos;RelacionReferencesAtributo&apos;</comment>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.RelacionHasAtributoRel/AtributoRel.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.RelacionHasAtributoRel.AtributoRel</value>
+    <comment>Description for DomainRole &apos;AtributoRel&apos; on DomainRelationship &apos;RelacionHasAtributoRel&apos;</comment>
   </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.RelacionReferencesAtributo/Atributo.DisplayName" xml:space="preserve">
-    <value>Atributo</value>
-    <comment>DisplayName for DomainRole &apos;Atributo&apos; on DomainRelationship &apos;RelacionReferencesAtributo&apos;</comment>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.RelacionHasAtributoRel/AtributoRel.DisplayName" xml:space="preserve">
+    <value>Atributo Rel</value>
+    <comment>DisplayName for DomainRole &apos;AtributoRel&apos; on DomainRelationship &apos;RelacionHasAtributoRel&apos;</comment>
   </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.RelacionReferencesAtributo/Atributo.PropertyDisplayName" xml:space="preserve">
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.RelacionHasAtributoRel/AtributoRel.PropertyDisplayName" xml:space="preserve">
     <value>Relacion</value>
-    <comment>PropertyDisplayName for DomainRole &apos;Atributo&apos; on DomainRelationship &apos;RelacionReferencesAtributo&apos;</comment>
+    <comment>PropertyDisplayName for DomainRole &apos;AtributoRel&apos; on DomainRelationship &apos;RelacionHasAtributoRel&apos;</comment>
   </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.AtributoHasEstiloCampo.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.AtributoHasEstiloCampo</value>
-    <comment>Description for DomainClass &apos;AtributoHasEstiloCampo&apos;</comment>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.AtributoEntHasRestriccion.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.AtributoEntHasRestriccion</value>
+    <comment>Description for DomainClass &apos;AtributoEntHasRestriccion&apos;</comment>
   </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.AtributoHasEstiloCampo.DisplayName" xml:space="preserve">
-    <value>Atributo Has Estilo Campo</value>
-    <comment>DisplayName for DomainClass &apos;AtributoHasEstiloCampo&apos;</comment>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.AtributoEntHasRestriccion.DisplayName" xml:space="preserve">
+    <value>Atributo Ent Has Restriccion</value>
+    <comment>DisplayName for DomainClass &apos;AtributoEntHasRestriccion&apos;</comment>
   </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.AtributoHasEstiloCampo/Atributo.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.AtributoHasEstiloCampo.Atributo</value>
-    <comment>Description for DomainRole &apos;Atributo&apos; on DomainRelationship &apos;AtributoHasEstiloCampo&apos;</comment>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.AtributoEntHasRestriccion/AtributoEnt.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.AtributoEntHasRestriccion.AtributoEnt</value>
+    <comment>Description for DomainRole &apos;AtributoEnt&apos; on DomainRelationship &apos;AtributoEntHasRestriccion&apos;</comment>
   </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.AtributoHasEstiloCampo/Atributo.DisplayName" xml:space="preserve">
-    <value>Atributo</value>
-    <comment>DisplayName for DomainRole &apos;Atributo&apos; on DomainRelationship &apos;AtributoHasEstiloCampo&apos;</comment>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.AtributoEntHasRestriccion/AtributoEnt.DisplayName" xml:space="preserve">
+    <value>Atributo Ent</value>
+    <comment>DisplayName for DomainRole &apos;AtributoEnt&apos; on DomainRelationship &apos;AtributoEntHasRestriccion&apos;</comment>
   </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.AtributoHasEstiloCampo/Atributo.PropertyDisplayName" xml:space="preserve">
-    <value>Estilo Campo</value>
-    <comment>PropertyDisplayName for DomainRole &apos;Atributo&apos; on DomainRelationship &apos;AtributoHasEstiloCampo&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.AtributoHasEstiloCampo/EstiloCampo.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.AtributoHasEstiloCampo.EstiloCampo</value>
-    <comment>Description for DomainRole &apos;EstiloCampo&apos; on DomainRelationship &apos;AtributoHasEstiloCampo&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.AtributoHasEstiloCampo/EstiloCampo.DisplayName" xml:space="preserve">
-    <value>Estilo Campo</value>
-    <comment>DisplayName for DomainRole &apos;EstiloCampo&apos; on DomainRelationship &apos;AtributoHasEstiloCampo&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.AtributoHasEstiloCampo/EstiloCampo.PropertyDisplayName" xml:space="preserve">
-    <value>Atributo</value>
-    <comment>PropertyDisplayName for DomainRole &apos;EstiloCampo&apos; on DomainRelationship &apos;AtributoHasEstiloCampo&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.AtributoClaveHasEstiloCampo.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.AtributoClaveHasEstiloCampo</value>
-    <comment>Description for DomainClass &apos;AtributoClaveHasEstiloCampo&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.AtributoClaveHasEstiloCampo.DisplayName" xml:space="preserve">
-    <value>Atributo Clave Has Estilo Campo</value>
-    <comment>DisplayName for DomainClass &apos;AtributoClaveHasEstiloCampo&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.AtributoClaveHasEstiloCampo/AtributoClave.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.AtributoClaveHasEstiloCampo.AtributoClave</value>
-    <comment>Description for DomainRole &apos;AtributoClave&apos; on DomainRelationship &apos;AtributoClaveHasEstiloCampo&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.AtributoClaveHasEstiloCampo/AtributoClave.DisplayName" xml:space="preserve">
-    <value>Atributo Clave</value>
-    <comment>DisplayName for DomainRole &apos;AtributoClave&apos; on DomainRelationship &apos;AtributoClaveHasEstiloCampo&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.AtributoClaveHasEstiloCampo/AtributoClave.PropertyDisplayName" xml:space="preserve">
-    <value>Estilo Campo</value>
-    <comment>PropertyDisplayName for DomainRole &apos;AtributoClave&apos; on DomainRelationship &apos;AtributoClaveHasEstiloCampo&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.AtributoClaveHasEstiloCampo/EstiloCampo.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.AtributoClaveHasEstiloCampo.EstiloCampo</value>
-    <comment>Description for DomainRole &apos;EstiloCampo&apos; on DomainRelationship &apos;AtributoClaveHasEstiloCampo&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.AtributoClaveHasEstiloCampo/EstiloCampo.DisplayName" xml:space="preserve">
-    <value>Estilo Campo</value>
-    <comment>DisplayName for DomainRole &apos;EstiloCampo&apos; on DomainRelationship &apos;AtributoClaveHasEstiloCampo&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.AtributoClaveHasEstiloCampo/EstiloCampo.PropertyDisplayName" xml:space="preserve">
-    <value>Atributo Clave</value>
-    <comment>PropertyDisplayName for DomainRole &apos;EstiloCampo&apos; on DomainRelationship &apos;AtributoClaveHasEstiloCampo&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.RestriccionEnumHasValorEnumerado.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.RestriccionEnumHasValorEnumerado</value>
-    <comment>Description for DomainClass &apos;RestriccionEnumHasValorEnumerado&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.RestriccionEnumHasValorEnumerado.DisplayName" xml:space="preserve">
-    <value>Restriccion Enum Has Valor Enumerado</value>
-    <comment>DisplayName for DomainClass &apos;RestriccionEnumHasValorEnumerado&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.RestriccionEnumHasValorEnumerado/RestriccionEnum.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.RestriccionEnumHasValorEnumerado.RestriccionEnum</value>
-    <comment>Description for DomainRole &apos;RestriccionEnum&apos; on DomainRelationship &apos;RestriccionEnumHasValorEnumerado&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.RestriccionEnumHasValorEnumerado/RestriccionEnum.DisplayName" xml:space="preserve">
-    <value>Restriccion Enum</value>
-    <comment>DisplayName for DomainRole &apos;RestriccionEnum&apos; on DomainRelationship &apos;RestriccionEnumHasValorEnumerado&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.RestriccionEnumHasValorEnumerado/RestriccionEnum.PropertyDisplayName" xml:space="preserve">
-    <value>Valor Enumerado</value>
-    <comment>PropertyDisplayName for DomainRole &apos;RestriccionEnum&apos; on DomainRelationship &apos;RestriccionEnumHasValorEnumerado&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.RestriccionEnumHasValorEnumerado/ValorEnumerado.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.RestriccionEnumHasValorEnumerado.ValorEnumerado</value>
-    <comment>Description for DomainRole &apos;ValorEnumerado&apos; on DomainRelationship &apos;RestriccionEnumHasValorEnumerado&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.RestriccionEnumHasValorEnumerado/ValorEnumerado.DisplayName" xml:space="preserve">
-    <value>Valor Enumerado</value>
-    <comment>DisplayName for DomainRole &apos;ValorEnumerado&apos; on DomainRelationship &apos;RestriccionEnumHasValorEnumerado&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.RestriccionEnumHasValorEnumerado/ValorEnumerado.PropertyDisplayName" xml:space="preserve">
-    <value>Restriccion Enum</value>
-    <comment>PropertyDisplayName for DomainRole &apos;ValorEnumerado&apos; on DomainRelationship &apos;RestriccionEnumHasValorEnumerado&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.AtributoHasRestriccion.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.AtributoHasRestriccion</value>
-    <comment>Description for DomainClass &apos;AtributoHasRestriccion&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.AtributoHasRestriccion.DisplayName" xml:space="preserve">
-    <value>Atributo Has Restriccion</value>
-    <comment>DisplayName for DomainClass &apos;AtributoHasRestriccion&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.AtributoHasRestriccion/Atributo.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.AtributoHasRestriccion.Atributo</value>
-    <comment>Description for DomainRole &apos;Atributo&apos; on DomainRelationship &apos;AtributoHasRestriccion&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.AtributoHasRestriccion/Atributo.DisplayName" xml:space="preserve">
-    <value>Atributo</value>
-    <comment>DisplayName for DomainRole &apos;Atributo&apos; on DomainRelationship &apos;AtributoHasRestriccion&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.AtributoHasRestriccion/Atributo.PropertyDisplayName" xml:space="preserve">
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.AtributoEntHasRestriccion/AtributoEnt.PropertyDisplayName" xml:space="preserve">
     <value>Restriccion</value>
-    <comment>PropertyDisplayName for DomainRole &apos;Atributo&apos; on DomainRelationship &apos;AtributoHasRestriccion&apos;</comment>
+    <comment>PropertyDisplayName for DomainRole &apos;AtributoEnt&apos; on DomainRelationship &apos;AtributoEntHasRestriccion&apos;</comment>
   </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.AtributoHasRestriccion/Restriccion.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.AtributoHasRestriccion.Restriccion</value>
-    <comment>Description for DomainRole &apos;Restriccion&apos; on DomainRelationship &apos;AtributoHasRestriccion&apos;</comment>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.AtributoEntHasRestriccion/Restriccion.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.AtributoEntHasRestriccion.Restriccion</value>
+    <comment>Description for DomainRole &apos;Restriccion&apos; on DomainRelationship &apos;AtributoEntHasRestriccion&apos;</comment>
   </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.AtributoHasRestriccion/Restriccion.DisplayName" xml:space="preserve">
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.AtributoEntHasRestriccion/Restriccion.DisplayName" xml:space="preserve">
     <value>Restriccion</value>
-    <comment>DisplayName for DomainRole &apos;Restriccion&apos; on DomainRelationship &apos;AtributoHasRestriccion&apos;</comment>
+    <comment>DisplayName for DomainRole &apos;Restriccion&apos; on DomainRelationship &apos;AtributoEntHasRestriccion&apos;</comment>
   </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.AtributoHasRestriccion/Restriccion.PropertyDisplayName" xml:space="preserve">
-    <value>Atributo</value>
-    <comment>PropertyDisplayName for DomainRole &apos;Restriccion&apos; on DomainRelationship &apos;AtributoHasRestriccion&apos;</comment>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.AtributoEntHasRestriccion/Restriccion.PropertyDisplayName" xml:space="preserve">
+    <value>Atributo Ent</value>
+    <comment>PropertyDisplayName for DomainRole &apos;Restriccion&apos; on DomainRelationship &apos;AtributoEntHasRestriccion&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.AtributoEntHasEstiloCampo.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.AtributoEntHasEstiloCampo</value>
+    <comment>Description for DomainClass &apos;AtributoEntHasEstiloCampo&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.AtributoEntHasEstiloCampo.DisplayName" xml:space="preserve">
+    <value>Atributo Ent Has Estilo Campo</value>
+    <comment>DisplayName for DomainClass &apos;AtributoEntHasEstiloCampo&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.AtributoEntHasEstiloCampo/AtributoEnt.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.AtributoEntHasEstiloCampo.AtributoEnt</value>
+    <comment>Description for DomainRole &apos;AtributoEnt&apos; on DomainRelationship &apos;AtributoEntHasEstiloCampo&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.AtributoEntHasEstiloCampo/AtributoEnt.DisplayName" xml:space="preserve">
+    <value>Atributo Ent</value>
+    <comment>DisplayName for DomainRole &apos;AtributoEnt&apos; on DomainRelationship &apos;AtributoEntHasEstiloCampo&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.AtributoEntHasEstiloCampo/AtributoEnt.PropertyDisplayName" xml:space="preserve">
+    <value>Estilo Campo</value>
+    <comment>PropertyDisplayName for DomainRole &apos;AtributoEnt&apos; on DomainRelationship &apos;AtributoEntHasEstiloCampo&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.AtributoEntHasEstiloCampo/EstiloCampo.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.AtributoEntHasEstiloCampo.EstiloCampo</value>
+    <comment>Description for DomainRole &apos;EstiloCampo&apos; on DomainRelationship &apos;AtributoEntHasEstiloCampo&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.AtributoEntHasEstiloCampo/EstiloCampo.DisplayName" xml:space="preserve">
+    <value>Estilo Campo</value>
+    <comment>DisplayName for DomainRole &apos;EstiloCampo&apos; on DomainRelationship &apos;AtributoEntHasEstiloCampo&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.AtributoEntHasEstiloCampo/EstiloCampo.PropertyDisplayName" xml:space="preserve">
+    <value>Atributo Ent</value>
+    <comment>PropertyDisplayName for DomainRole &apos;EstiloCampo&apos; on DomainRelationship &apos;AtributoEntHasEstiloCampo&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.AtributoRelHasRestriccion.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.AtributoRelHasRestriccion</value>
+    <comment>Description for DomainClass &apos;AtributoRelHasRestriccion&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.AtributoRelHasRestriccion.DisplayName" xml:space="preserve">
+    <value>Atributo Rel Has Restriccion</value>
+    <comment>DisplayName for DomainClass &apos;AtributoRelHasRestriccion&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.AtributoRelHasRestriccion/AtributoRel.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.AtributoRelHasRestriccion.AtributoRel</value>
+    <comment>Description for DomainRole &apos;AtributoRel&apos; on DomainRelationship &apos;AtributoRelHasRestriccion&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.AtributoRelHasRestriccion/AtributoRel.DisplayName" xml:space="preserve">
+    <value>Atributo Rel</value>
+    <comment>DisplayName for DomainRole &apos;AtributoRel&apos; on DomainRelationship &apos;AtributoRelHasRestriccion&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.AtributoRelHasRestriccion/AtributoRel.PropertyDisplayName" xml:space="preserve">
+    <value>Restriccion</value>
+    <comment>PropertyDisplayName for DomainRole &apos;AtributoRel&apos; on DomainRelationship &apos;AtributoRelHasRestriccion&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.AtributoRelHasRestriccion/Restriccion.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.AtributoRelHasRestriccion.Restriccion</value>
+    <comment>Description for DomainRole &apos;Restriccion&apos; on DomainRelationship &apos;AtributoRelHasRestriccion&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.AtributoRelHasRestriccion/Restriccion.DisplayName" xml:space="preserve">
+    <value>Restriccion</value>
+    <comment>DisplayName for DomainRole &apos;Restriccion&apos; on DomainRelationship &apos;AtributoRelHasRestriccion&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.AtributoRelHasRestriccion/Restriccion.PropertyDisplayName" xml:space="preserve">
+    <value>Atributo Rel</value>
+    <comment>PropertyDisplayName for DomainRole &apos;Restriccion&apos; on DomainRelationship &apos;AtributoRelHasRestriccion&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.AtributoRelHasEstiloCampo.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.AtributoRelHasEstiloCampo</value>
+    <comment>Description for DomainClass &apos;AtributoRelHasEstiloCampo&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.AtributoRelHasEstiloCampo.DisplayName" xml:space="preserve">
+    <value>Atributo Rel Has Estilo Campo</value>
+    <comment>DisplayName for DomainClass &apos;AtributoRelHasEstiloCampo&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.AtributoRelHasEstiloCampo/AtributoRel.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.AtributoRelHasEstiloCampo.AtributoRel</value>
+    <comment>Description for DomainRole &apos;AtributoRel&apos; on DomainRelationship &apos;AtributoRelHasEstiloCampo&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.AtributoRelHasEstiloCampo/AtributoRel.DisplayName" xml:space="preserve">
+    <value>Atributo Rel</value>
+    <comment>DisplayName for DomainRole &apos;AtributoRel&apos; on DomainRelationship &apos;AtributoRelHasEstiloCampo&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.AtributoRelHasEstiloCampo/AtributoRel.PropertyDisplayName" xml:space="preserve">
+    <value>Estilo Campo</value>
+    <comment>PropertyDisplayName for DomainRole &apos;AtributoRel&apos; on DomainRelationship &apos;AtributoRelHasEstiloCampo&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.AtributoRelHasEstiloCampo/EstiloCampo.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.AtributoRelHasEstiloCampo.EstiloCampo</value>
+    <comment>Description for DomainRole &apos;EstiloCampo&apos; on DomainRelationship &apos;AtributoRelHasEstiloCampo&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.AtributoRelHasEstiloCampo/EstiloCampo.DisplayName" xml:space="preserve">
+    <value>Estilo Campo</value>
+    <comment>DisplayName for DomainRole &apos;EstiloCampo&apos; on DomainRelationship &apos;AtributoRelHasEstiloCampo&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.AtributoRelHasEstiloCampo/EstiloCampo.PropertyDisplayName" xml:space="preserve">
+    <value>Atributo Rel</value>
+    <comment>PropertyDisplayName for DomainRole &apos;EstiloCampo&apos; on DomainRelationship &apos;AtributoRelHasEstiloCampo&apos;</comment>
   </data>
   <data name="UPM_IPS.JCJAPGDRCDERAWebBD.TipoDato/Entero.DisplayName" xml:space="preserve">
     <value>Entero</value>
@@ -969,70 +873,6 @@
     <value>NameDecorator</value>
     <comment>Text decorator default text</comment>
   </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.RestriccionRangoShape.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.RestriccionRangoShape</value>
-    <comment>Description for DomainClass &apos;RestriccionRangoShape&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.RestriccionRangoShape.DisplayName" xml:space="preserve">
-    <value>Restriccion Rango Shape</value>
-    <comment>DisplayName for DomainClass &apos;RestriccionRangoShape&apos;</comment>
-  </data>
-  <data name="RestriccionRangoShapeNameDecoratorDefaultText" xml:space="preserve">
-    <value>NameDecorator</value>
-    <comment>Text decorator default text</comment>
-  </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.RestriccionEnumShape.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.RestriccionEnumShape</value>
-    <comment>Description for DomainClass &apos;RestriccionEnumShape&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.RestriccionEnumShape.DisplayName" xml:space="preserve">
-    <value>Restriccion Enum Shape</value>
-    <comment>DisplayName for DomainClass &apos;RestriccionEnumShape&apos;</comment>
-  </data>
-  <data name="RestriccionEnumShapeEnumValoresTitle" xml:space="preserve">
-    <value></value>
-    <comment>Compartment title</comment>
-  </data>
-  <data name="RestriccionEnumShapeNameDecoratorDefaultText" xml:space="preserve">
-    <value>NameDecorator</value>
-    <comment>Text decorator default text</comment>
-  </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.ValoresEnumShape.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.ValoresEnumShape</value>
-    <comment>Description for DomainClass &apos;ValoresEnumShape&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.ValoresEnumShape.DisplayName" xml:space="preserve">
-    <value>Valores Enum Shape</value>
-    <comment>DisplayName for DomainClass &apos;ValoresEnumShape&apos;</comment>
-  </data>
-  <data name="ValoresEnumShapeNameDecoratorDefaultText" xml:space="preserve">
-    <value>NameDecorator</value>
-    <comment>Text decorator default text</comment>
-  </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.EstiloCampoShape.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.EstiloCampoShape</value>
-    <comment>Description for DomainClass &apos;EstiloCampoShape&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.EstiloCampoShape.DisplayName" xml:space="preserve">
-    <value>Estilo Campo Shape</value>
-    <comment>DisplayName for DomainClass &apos;EstiloCampoShape&apos;</comment>
-  </data>
-  <data name="EstiloCampoShapeNameDecoratorDefaultText" xml:space="preserve">
-    <value>NameDecorator</value>
-    <comment>Text decorator default text</comment>
-  </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.EstiloPaginaShape.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.EstiloPaginaShape</value>
-    <comment>Description for DomainClass &apos;EstiloPaginaShape&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.EstiloPaginaShape.DisplayName" xml:space="preserve">
-    <value>Estilo Pagina Shape</value>
-    <comment>DisplayName for DomainClass &apos;EstiloPaginaShape&apos;</comment>
-  </data>
-  <data name="EstiloPaginaShapeNameDecoratorDefaultText" xml:space="preserve">
-    <value>NameDecorator</value>
-    <comment>Text decorator default text</comment>
-  </data>
   <data name="UPM_IPS.JCJAPGDRCDERAWebBD.RelacionShape.Description" xml:space="preserve">
     <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.RelacionShape</value>
     <comment>Description for DomainClass &apos;RelacionShape&apos;</comment>
@@ -1045,6 +885,54 @@
     <value>NameDecorator</value>
     <comment>Text decorator default text</comment>
   </data>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.AtributoEntShape.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.AtributoEntShape</value>
+    <comment>Description for DomainClass &apos;AtributoEntShape&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.AtributoEntShape.DisplayName" xml:space="preserve">
+    <value>Atributo Ent Shape</value>
+    <comment>DisplayName for DomainClass &apos;AtributoEntShape&apos;</comment>
+  </data>
+  <data name="AtributoEntShapeNameDecoratorDefaultText" xml:space="preserve">
+    <value>NameDecorator</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.AtributoRelShape.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.AtributoRelShape</value>
+    <comment>Description for DomainClass &apos;AtributoRelShape&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.AtributoRelShape.DisplayName" xml:space="preserve">
+    <value>Atributo Rel Shape</value>
+    <comment>DisplayName for DomainClass &apos;AtributoRelShape&apos;</comment>
+  </data>
+  <data name="AtributoRelShapeNameDecoratorDefaultText" xml:space="preserve">
+    <value>NameDecorator</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.RestriccionRangoShape.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.RestriccionRangoShape</value>
+    <comment>Description for DomainClass &apos;RestriccionRangoShape&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.RestriccionRangoShape.DisplayName" xml:space="preserve">
+    <value>Restriccion Rango Shape</value>
+    <comment>DisplayName for DomainClass &apos;RestriccionRangoShape&apos;</comment>
+  </data>
+  <data name="RestriccionRangoShapeRangoDecoratorDefaultText" xml:space="preserve">
+    <value>RangoDecorator</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.RestriccionEnumShape.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.RestriccionEnumShape</value>
+    <comment>Description for DomainClass &apos;RestriccionEnumShape&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.RestriccionEnumShape.DisplayName" xml:space="preserve">
+    <value>Restriccion Enum Shape</value>
+    <comment>DisplayName for DomainClass &apos;RestriccionEnumShape&apos;</comment>
+  </data>
+  <data name="RestriccionEnumShapeEnumDecoratorDefaultText" xml:space="preserve">
+    <value>EnumDecorator</value>
+    <comment>Text decorator default text</comment>
+  </data>
   <data name="UPM_IPS.JCJAPGDRCDERAWebBD.EstiloPortalShape.Description" xml:space="preserve">
     <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.EstiloPortalShape</value>
     <comment>Description for DomainClass &apos;EstiloPortalShape&apos;</comment>
@@ -1053,77 +941,73 @@
     <value>Estilo Portal Shape</value>
     <comment>DisplayName for DomainClass &apos;EstiloPortalShape&apos;</comment>
   </data>
-  <data name="EstiloPortalShapeNameDecoratorDefaultText" xml:space="preserve">
-    <value>NameDecorator</value>
+  <data name="EstiloPortalShapepropertiesDecoratorDefaultText" xml:space="preserve">
+    <value>propertiesDecorator</value>
     <comment>Text decorator default text</comment>
   </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.AtributoShape.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.AtributoShape</value>
-    <comment>Description for DomainClass &apos;AtributoShape&apos;</comment>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.EstiloPaginaShape.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.EstiloPaginaShape</value>
+    <comment>Description for DomainClass &apos;EstiloPaginaShape&apos;</comment>
   </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.AtributoShape.DisplayName" xml:space="preserve">
-    <value>Atributo Shape</value>
-    <comment>DisplayName for DomainClass &apos;AtributoShape&apos;</comment>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.EstiloPaginaShape.DisplayName" xml:space="preserve">
+    <value>Estilo Pagina Shape</value>
+    <comment>DisplayName for DomainClass &apos;EstiloPaginaShape&apos;</comment>
   </data>
-  <data name="AtributoShapeNameDecoratorDefaultText" xml:space="preserve">
-    <value>NameDecorator</value>
+  <data name="EstiloPaginaShapepropertiesDecoratorDefaultText" xml:space="preserve">
+    <value>propertiesDecorator</value>
     <comment>Text decorator default text</comment>
   </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.AtrClaveShape.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.AtrClaveShape</value>
-    <comment>Description for DomainClass &apos;AtrClaveShape&apos;</comment>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.EstiloCampoShape.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.EstiloCampoShape</value>
+    <comment>Description for DomainClass &apos;EstiloCampoShape&apos;</comment>
   </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.AtrClaveShape.DisplayName" xml:space="preserve">
-    <value>Atr Clave Shape</value>
-    <comment>DisplayName for DomainClass &apos;AtrClaveShape&apos;</comment>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.EstiloCampoShape.DisplayName" xml:space="preserve">
+    <value>Estilo Campo Shape</value>
+    <comment>DisplayName for DomainClass &apos;EstiloCampoShape&apos;</comment>
   </data>
-  <data name="AtrClaveShapeNamedecoratorDefaultText" xml:space="preserve">
-    <value>Namedecorator</value>
+  <data name="EstiloCampoShapepropertiesDecoratorDefaultText" xml:space="preserve">
+    <value>propertiesDecorator</value>
     <comment>Text decorator default text</comment>
   </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.ConectaAtributo.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.ConectaAtributo</value>
-    <comment>Description for DomainClass &apos;ConectaAtributo&apos;</comment>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.ConnectorEntidadRelacion.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.ConnectorEntidadRelacion</value>
+    <comment>Description for DomainClass &apos;ConnectorEntidadRelacion&apos;</comment>
   </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.ConectaAtributo.DisplayName" xml:space="preserve">
-    <value>Conecta Atributo</value>
-    <comment>DisplayName for DomainClass &apos;ConectaAtributo&apos;</comment>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.ConnectorEntidadRelacion.DisplayName" xml:space="preserve">
+    <value>Connector Entidad Relacion</value>
+    <comment>DisplayName for DomainClass &apos;ConnectorEntidadRelacion&apos;</comment>
   </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.EntidadRelacionConnector.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.EntidadRelacionConnector</value>
-    <comment>Description for DomainClass &apos;EntidadRelacionConnector&apos;</comment>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.ConectorAtibuto.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.ConectorAtibuto</value>
+    <comment>Description for DomainClass &apos;ConectorAtibuto&apos;</comment>
   </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.EntidadRelacionConnector.DisplayName" xml:space="preserve">
-    <value>Entidad Relacion Connector</value>
-    <comment>DisplayName for DomainClass &apos;EntidadRelacionConnector&apos;</comment>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.ConectorAtibuto.DisplayName" xml:space="preserve">
+    <value>Conector Atibuto</value>
+    <comment>DisplayName for DomainClass &apos;ConectorAtibuto&apos;</comment>
   </data>
-  <data name="EntidadRelacionConnectorCardDecoratorDefaultText" xml:space="preserve">
-    <value>CardDecorator</value>
-    <comment>Text decorator default text</comment>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.ConnectorRestricciones.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.ConnectorRestricciones</value>
+    <comment>Description for DomainClass &apos;ConnectorRestricciones&apos;</comment>
   </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.ConectaEstiloPagina.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.ConectaEstiloPagina</value>
-    <comment>Description for DomainClass &apos;ConectaEstiloPagina&apos;</comment>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.ConnectorRestricciones.DisplayName" xml:space="preserve">
+    <value>Connector Restricciones</value>
+    <comment>DisplayName for DomainClass &apos;ConnectorRestricciones&apos;</comment>
   </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.ConectaEstiloPagina.DisplayName" xml:space="preserve">
-    <value>Conecta Estilo Pagina</value>
-    <comment>DisplayName for DomainClass &apos;ConectaEstiloPagina&apos;</comment>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.ConnectorEstiloCampo.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.ConnectorEstiloCampo</value>
+    <comment>Description for DomainClass &apos;ConnectorEstiloCampo&apos;</comment>
   </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.ConectaEstiloCampo.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.ConectaEstiloCampo</value>
-    <comment>Description for DomainClass &apos;ConectaEstiloCampo&apos;</comment>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.ConnectorEstiloCampo.DisplayName" xml:space="preserve">
+    <value>Connector Estilo Campo</value>
+    <comment>DisplayName for DomainClass &apos;ConnectorEstiloCampo&apos;</comment>
   </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.ConectaEstiloCampo.DisplayName" xml:space="preserve">
-    <value>Conecta Estilo Campo</value>
-    <comment>DisplayName for DomainClass &apos;ConectaEstiloCampo&apos;</comment>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.ConnectorEstiloPagina.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.ConnectorEstiloPagina</value>
+    <comment>Description for DomainClass &apos;ConnectorEstiloPagina&apos;</comment>
   </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.ConectaAtributoRestriccion.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.ConectaAtributoRestriccion</value>
-    <comment>Description for DomainClass &apos;ConectaAtributoRestriccion&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.ConectaAtributoRestriccion.DisplayName" xml:space="preserve">
-    <value>Conecta Atributo Restriccion</value>
-    <comment>DisplayName for DomainClass &apos;ConectaAtributoRestriccion&apos;</comment>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.ConnectorEstiloPagina.DisplayName" xml:space="preserve">
+    <value>Connector Estilo Pagina</value>
+    <comment>DisplayName for DomainClass &apos;ConnectorEstiloPagina&apos;</comment>
   </data>
   <data name="FormatList" xml:space="preserve">
     <value>JCJAPGDRCDERAWebBD (*.JCJAPGDRC_DSLDERAWebBD)|*.JCJAPGDRC_DSLDERAWebBD</value>
@@ -1169,20 +1053,12 @@
     <value>Estilo Portal Tool</value>
     <comment>Toolbox tooltip text</comment>
   </data>
-  <data name="AtributoToolboxItem" xml:space="preserve">
-    <value>Crear Atributo</value>
+  <data name="AtributoEntToolboxItem" xml:space="preserve">
+    <value>Crear Atributo Entidad</value>
     <comment>Toolbox item name</comment>
   </data>
-  <data name="AtributoToolboxTooltip" xml:space="preserve">
-    <value>Atributo</value>
-    <comment>Toolbox tooltip text</comment>
-  </data>
-  <data name="ClavePrimariaToolToolboxItem" xml:space="preserve">
-    <value>Crear Clave Primaria</value>
-    <comment>Toolbox item name</comment>
-  </data>
-  <data name="ClavePrimariaToolToolboxTooltip" xml:space="preserve">
-    <value>Clave Primaria Tool</value>
+  <data name="AtributoEntToolboxTooltip" xml:space="preserve">
+    <value>Atributo Ent</value>
     <comment>Toolbox tooltip text</comment>
   </data>
   <data name="EstiloPaginaToolToolboxItem" xml:space="preserve">
@@ -1217,12 +1093,12 @@
     <value>Restriccion Enumerado Tool</value>
     <comment>Toolbox tooltip text</comment>
   </data>
-  <data name="ValorEnumeradoToolToolboxItem" xml:space="preserve">
-    <value>Crear Valor Enumerado</value>
+  <data name="AtributoRelToolToolboxItem" xml:space="preserve">
+    <value>Crear atributo Relacion</value>
     <comment>Toolbox item name</comment>
   </data>
-  <data name="ValorEnumeradoToolToolboxTooltip" xml:space="preserve">
-    <value>Valor Enumerado Tool</value>
+  <data name="AtributoRelToolToolboxTooltip" xml:space="preserve">
+    <value>Atributo Rel Tool</value>
     <comment>Toolbox tooltip text</comment>
   </data>
   <data name="ConectarToolboxTab" xml:space="preserve">
@@ -1237,28 +1113,60 @@
     <value>Conectar Relacion Entidad</value>
     <comment>Toolbox tooltip text</comment>
   </data>
-  <data name="EntidadAtributoToolToolboxItem" xml:space="preserve">
-    <value>Entidad--Atributo</value>
+  <data name="AtributoEntidadToolToolboxItem" xml:space="preserve">
+    <value>Conectar Atributo entidad</value>
     <comment>Toolbox item name</comment>
   </data>
-  <data name="EntidadAtributoToolToolboxTooltip" xml:space="preserve">
-    <value>Entidad Atributo Tool</value>
+  <data name="AtributoEntidadToolToolboxTooltip" xml:space="preserve">
+    <value>Atributo Entidad Tool</value>
     <comment>Toolbox tooltip text</comment>
   </data>
-  <data name="EntidadClaveToolToolboxItem" xml:space="preserve">
-    <value>Entidad--Clave</value>
+  <data name="AtributoRelacionToolToolboxItem" xml:space="preserve">
+    <value>Conectar Atributo Relacion</value>
     <comment>Toolbox item name</comment>
   </data>
-  <data name="EntidadClaveToolToolboxTooltip" xml:space="preserve">
-    <value>Entidad Clave Tool</value>
+  <data name="AtributoRelacionToolToolboxTooltip" xml:space="preserve">
+    <value>Atributo Relacion Tool</value>
     <comment>Toolbox tooltip text</comment>
   </data>
-  <data name="RelacionAtributoToolToolboxItem" xml:space="preserve">
-    <value>Relacion--Atributo</value>
+  <data name="EntidadEstiloPaginaToolToolboxItem" xml:space="preserve">
+    <value>Conectar Estilo Pagina</value>
     <comment>Toolbox item name</comment>
   </data>
-  <data name="RelacionAtributoToolToolboxTooltip" xml:space="preserve">
-    <value>Relacion Atributo Tool</value>
+  <data name="EntidadEstiloPaginaToolToolboxTooltip" xml:space="preserve">
+    <value>Entidad Estilo Pagina Tool</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="AtributoEntEstiloCampoToolboxItem" xml:space="preserve">
+    <value>Conectar estilo campo atributoEntidad</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="AtributoEntEstiloCampoToolboxTooltip" xml:space="preserve">
+    <value>Atributo Ent Estilo Campo</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="AtributoEntRestriccionToolboxItem" xml:space="preserve">
+    <value>Conectar Restriccion atributoEntidad</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="AtributoEntRestriccionToolboxTooltip" xml:space="preserve">
+    <value>Atributo Ent Restriccion</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="AtributoRelEstiloCampoToolboxItem" xml:space="preserve">
+    <value>Conectar estilo campo atributo relacion</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="AtributoRelEstiloCampoToolboxTooltip" xml:space="preserve">
+    <value>Atributo Rel Estilo Campo</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="AtributoRelRestriccionToolboxItem" xml:space="preserve">
+    <value>Conectar Restriccion AtributoRel</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="AtributoRelRestriccionToolboxTooltip" xml:space="preserve">
+    <value>Atributo Rel Restriccion</value>
     <comment>Toolbox tooltip text</comment>
   </data>
   <data name="UnresolvedToolboxItem" xml:space="preserve">
@@ -1390,6 +1298,10 @@ A DomainClass can be serialized as a moniker only if
     <value>..\Resources\rombo.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>RelacionShape shape image</comment>
   </data>
+  <data name="AtributoEntShapeKeyIconDecoratorDefaultImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\candado.bmp;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Icon decorator default image</comment>
+  </data>
   <data name="EntidadToolToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
     <value>..\Resources\entidad.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
@@ -1402,12 +1314,8 @@ A DomainClass can be serialized as a moniker only if
     <value>..\Resources\estiloportal.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
   </data>
-  <data name="AtributoToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+  <data name="AtributoEntToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
     <value>..\Resources\atributo.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-    <comment>Toolbox item image</comment>
-  </data>
-  <data name="ClavePrimariaToolToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
-    <value>..\Resources\candado.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
   </data>
   <data name="EstiloPaginaToolToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
@@ -1426,23 +1334,39 @@ A DomainClass can be serialized as a moniker only if
     <value>..\Resources\evaluacion.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
   </data>
-  <data name="ValorEnumeradoToolToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
-    <value>..\Resources\comprobado.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="AtributoRelToolToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\atributo.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
   </data>
   <data name="ConectarRelacionEntidadToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
     <value>..\Resources\conectar-_1_.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
   </data>
-  <data name="EntidadAtributoToolToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+  <data name="AtributoEntidadToolToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
     <value>..\Resources\conectar-_1_.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
   </data>
-  <data name="EntidadClaveToolToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+  <data name="AtributoRelacionToolToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
     <value>..\Resources\conectar-_1_.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
   </data>
-  <data name="RelacionAtributoToolToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+  <data name="EntidadEstiloPaginaToolToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\conectar-_1_.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="AtributoEntEstiloCampoToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\conectar-_1_.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="AtributoEntRestriccionToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\conectar-_1_.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="AtributoRelEstiloCampoToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\conectar-_1_.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="AtributoRelRestriccionToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
     <value>..\Resources\conectar-_1_.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
   </data>
