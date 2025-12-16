@@ -150,6 +150,11 @@
             <ExternalTypeMoniker Name="/System/Int16" />
           </Type>
         </DomainProperty>
+        <DomainProperty Id="1aca9e19-f674-4158-afcf-405f9176b89e" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.Atributo.Nulo" Name="Nulo" DisplayName="Nulo">
+          <Type>
+            <ExternalTypeMoniker Name="/System/Boolean" />
+          </Type>
+        </DomainProperty>
       </Properties>
     </DomainClass>
     <DomainClass Id="4ba57cb2-13a5-4fd7-a5c9-92ebea46581a" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.EstiloCampo" Name="EstiloCampo" DisplayName="Estilo Campo" Namespace="UPM_IPS.JCJAPGDRCDERAWebBD">
@@ -234,14 +239,6 @@
         <DomainClassMoniker Name="Atributo" />
       </BaseClass>
       <ElementMergeDirectives>
-        <ElementMergeDirective>
-          <Index>
-            <DomainClassMoniker Name="Restriccion" />
-          </Index>
-          <LinkCreationPaths>
-            <DomainPath>AtributoRelHasRestriccion.Restriccion</DomainPath>
-          </LinkCreationPaths>
-        </ElementMergeDirective>
         <ElementMergeDirective>
           <Index>
             <DomainClassMoniker Name="EstiloCampo" />
@@ -389,22 +386,6 @@
         </DomainRole>
       </Target>
     </DomainRelationship>
-    <DomainRelationship Id="5b935b7b-3b82-44df-96cf-90a25b956382" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.AtributoRelHasRestriccion" Name="AtributoRelHasRestriccion" DisplayName="Atributo Rel Has Restriccion" Namespace="UPM_IPS.JCJAPGDRCDERAWebBD" IsEmbedding="true">
-      <Source>
-        <DomainRole Id="5629cfa6-e825-4fb0-be05-9a0b66f56b06" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.AtributoRelHasRestriccion.AtributoRel" Name="AtributoRel" DisplayName="Atributo Rel" PropertyName="Restriccion" Multiplicity="ZeroOne" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Restriccion">
-          <RolePlayer>
-            <DomainClassMoniker Name="AtributoRel" />
-          </RolePlayer>
-        </DomainRole>
-      </Source>
-      <Target>
-        <DomainRole Id="01f89e9b-af3b-4bd5-84f6-602579baa234" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.AtributoRelHasRestriccion.Restriccion" Name="Restriccion" DisplayName="Restriccion" PropertyName="AtributoRel" Multiplicity="ZeroOne" PropagatesDelete="true" PropertyDisplayName="Atributo Rel">
-          <RolePlayer>
-            <DomainClassMoniker Name="Restriccion" />
-          </RolePlayer>
-        </DomainRole>
-      </Target>
-    </DomainRelationship>
     <DomainRelationship Id="a13a751a-3294-4a56-aa1e-f154ae182f5d" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.AtributoRelHasEstiloCampo" Name="AtributoRelHasEstiloCampo" DisplayName="Atributo Rel Has Estilo Campo" Namespace="UPM_IPS.JCJAPGDRCDERAWebBD" IsEmbedding="true">
       <Source>
         <DomainRole Id="02bbd55d-e106-4df5-96f9-b12c097232d3" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.AtributoRelHasEstiloCampo.AtributoRel" Name="AtributoRel" DisplayName="Atributo Rel" PropertyName="EstiloCampo" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Estilo Campo">
@@ -423,7 +404,7 @@
     </DomainRelationship>
     <DomainRelationship Id="7a40657e-849a-4e6d-a847-56e8b5459795" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasEstiloPortal" Name="DERAWebBDModelHasEstiloPortal" DisplayName="DERAWeb BDModel Has Estilo Portal" Namespace="UPM_IPS.JCJAPGDRCDERAWebBD" IsEmbedding="true">
       <Source>
-        <DomainRole Id="8563b3cf-269b-47f5-a294-3b4568c88835" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasEstiloPortal.DERAWebBDModel" Name="DERAWebBDModel" DisplayName="DERAWeb BDModel" PropertyName="EstiloPortal" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Estilo Portal">
+        <DomainRole Id="8563b3cf-269b-47f5-a294-3b4568c88835" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasEstiloPortal.DERAWebBDModel" Name="DERAWebBDModel" DisplayName="DERAWeb BDModel" PropertyName="EstiloPortal" Multiplicity="One" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Estilo Portal">
           <RolePlayer>
             <DomainClassMoniker Name="DERAWebBDModel" />
           </RolePlayer>
@@ -541,7 +522,11 @@
     </GeometryShape>
   </Shapes>
   <Connectors>
-    <Connector Id="f18ef596-ed17-48e9-92ab-8bcfe22dbff6" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.ConnectorEntidadRelacion" Name="ConnectorEntidadRelacion" DisplayName="Connector Entidad Relacion" Namespace="UPM_IPS.JCJAPGDRCDERAWebBD" FixedTooltipText="Connector Entidad Relacion" RoutingStyle="Straight" />
+    <Connector Id="f18ef596-ed17-48e9-92ab-8bcfe22dbff6" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.ConnectorEntidadRelacion" Name="ConnectorEntidadRelacion" DisplayName="Connector Entidad Relacion" Namespace="UPM_IPS.JCJAPGDRCDERAWebBD" FixedTooltipText="Connector Entidad Relacion" RoutingStyle="Straight">
+      <ConnectorHasDecorators Position="SourceTop" OffsetFromShape="0" OffsetFromLine="0">
+        <TextDecorator Name="NameDecorator" DisplayName="Name Decorator" DefaultText="NameDecorator" />
+      </ConnectorHasDecorators>
+    </Connector>
     <Connector Id="e854de42-cec3-49e9-b2f8-d34e0ed2e041" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.ConectorAtibuto" Name="ConectorAtibuto" DisplayName="Conector Atibuto" Namespace="UPM_IPS.JCJAPGDRCDERAWebBD" FixedTooltipText="Conector Atibuto" RoutingStyle="Straight" />
     <Connector Id="a35444c3-330e-4f72-b6d6-647b5ff6a7c2" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.ConnectorRestricciones" Name="ConnectorRestricciones" DisplayName="Connector Restricciones" Namespace="UPM_IPS.JCJAPGDRCDERAWebBD" FixedTooltipText="Connector Restricciones" />
     <Connector Id="976f9322-3c3d-4908-aff8-fde802f713c7" Description="Description for UPM_IPS.JCJAPGDRCDERAWebBD.ConnectorEstiloCampo" Name="ConnectorEstiloCampo" DisplayName="Connector Estilo Campo" Namespace="UPM_IPS.JCJAPGDRCDERAWebBD" FixedTooltipText="Connector Estilo Campo" />
@@ -666,6 +651,9 @@
           <XmlPropertyData XmlName="longitud">
             <DomainPropertyMoniker Name="Atributo/Longitud" />
           </XmlPropertyData>
+          <XmlPropertyData XmlName="nulo">
+            <DomainPropertyMoniker Name="Atributo/Nulo" />
+          </XmlPropertyData>
         </ElementData>
       </XmlClassData>
       <XmlClassData TypeName="EstiloCampo" MonikerAttributeName="" SerializeId="true" MonikerElementName="estiloCampoMoniker" ElementName="estiloCampo" MonikerTypeName="EstiloCampoMoniker">
@@ -718,9 +706,6 @@
       <XmlClassData TypeName="AtributoRel" MonikerAttributeName="" SerializeId="true" MonikerElementName="atributoRelMoniker" ElementName="atributoRel" MonikerTypeName="AtributoRelMoniker">
         <DomainClassMoniker Name="AtributoRel" />
         <ElementData>
-          <XmlRelationshipData UseFullForm="true" RoleElementName="restriccion">
-            <DomainRelationshipMoniker Name="AtributoRelHasRestriccion" />
-          </XmlRelationshipData>
           <XmlRelationshipData UseFullForm="true" RoleElementName="estiloCampo">
             <DomainRelationshipMoniker Name="AtributoRelHasEstiloCampo" />
           </XmlRelationshipData>
@@ -737,9 +722,6 @@
       </XmlClassData>
       <XmlClassData TypeName="AtributoEntHasEstiloCampo" MonikerAttributeName="" SerializeId="true" MonikerElementName="atributoEntHasEstiloCampoMoniker" ElementName="atributoEntHasEstiloCampo" MonikerTypeName="AtributoEntHasEstiloCampoMoniker">
         <DomainRelationshipMoniker Name="AtributoEntHasEstiloCampo" />
-      </XmlClassData>
-      <XmlClassData TypeName="AtributoRelHasRestriccion" MonikerAttributeName="" SerializeId="true" MonikerElementName="atributoRelHasRestriccionMoniker" ElementName="atributoRelHasRestriccion" MonikerTypeName="AtributoRelHasRestriccionMoniker">
-        <DomainRelationshipMoniker Name="AtributoRelHasRestriccion" />
       </XmlClassData>
       <XmlClassData TypeName="AtributoRelHasEstiloCampo" MonikerAttributeName="" SerializeId="true" MonikerElementName="atributoRelHasEstiloCampoMoniker" ElementName="atributoRelHasEstiloCampo" MonikerTypeName="AtributoRelHasEstiloCampoMoniker">
         <DomainRelationshipMoniker Name="AtributoRelHasEstiloCampo" />
@@ -851,25 +833,6 @@
           <RolePlayerConnectDirective>
             <AcceptingClass>
               <DomainClassMoniker Name="AtributoEnt" />
-            </AcceptingClass>
-          </RolePlayerConnectDirective>
-        </SourceDirectives>
-        <TargetDirectives>
-          <RolePlayerConnectDirective>
-            <AcceptingClass>
-              <DomainClassMoniker Name="Restriccion" />
-            </AcceptingClass>
-          </RolePlayerConnectDirective>
-        </TargetDirectives>
-      </LinkConnectDirective>
-    </ConnectionBuilder>
-    <ConnectionBuilder Name="AtributoRestriccionRelBuilder">
-      <LinkConnectDirective>
-        <DomainRelationshipMoniker Name="AtributoRelHasRestriccion" />
-        <SourceDirectives>
-          <RolePlayerConnectDirective>
-            <AcceptingClass>
-              <DomainClassMoniker Name="AtributoRel" />
             </AcceptingClass>
           </RolePlayerConnectDirective>
         </SourceDirectives>
@@ -1075,6 +1038,14 @@
       <ConnectorMap>
         <ConnectorMoniker Name="ConnectorEntidadRelacion" />
         <DomainRelationshipMoniker Name="RelacionReferencesEntidad" />
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="ConnectorEntidadRelacion/NameDecorator" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="RelacionReferencesEntidad/cardinalidad" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
       </ConnectorMap>
       <ConnectorMap>
         <ConnectorMoniker Name="ConectorAtibuto" />
@@ -1087,10 +1058,6 @@
       <ConnectorMap>
         <ConnectorMoniker Name="ConnectorRestricciones" />
         <DomainRelationshipMoniker Name="AtributoEntHasRestriccion" />
-      </ConnectorMap>
-      <ConnectorMap>
-        <ConnectorMoniker Name="ConnectorRestricciones" />
-        <DomainRelationshipMoniker Name="AtributoRelHasRestriccion" />
       </ConnectorMap>
       <ConnectorMap>
         <ConnectorMoniker Name="ConnectorEstiloCampo" />
@@ -1163,9 +1130,6 @@
       </ConnectionTool>
       <ConnectionTool Name="AtributoRelEstiloCampo" ToolboxIcon="Resources\conectar-_1_.bmp" Caption="Conectar estilo campo atributo relacion" Tooltip="Atributo Rel Estilo Campo" HelpKeyword="AtributoRelEstiloCampo">
         <ConnectionBuilderMoniker Name="JCJAPGDRCDERAWebBD/AtributoRelEstiloCampo" />
-      </ConnectionTool>
-      <ConnectionTool Name="AtributoRelRestriccion" ToolboxIcon="Resources\conectar-_1_.bmp" Caption="Conectar Restriccion AtributoRel" Tooltip="Atributo Rel Restriccion" HelpKeyword="AtributoRelRestriccion">
-        <ConnectionBuilderMoniker Name="JCJAPGDRCDERAWebBD/AtributoRestriccionRelBuilder" />
       </ConnectionTool>
     </ToolboxTab>
     <Validation UsesMenu="true" UsesOpen="true" UsesSave="true" UsesLoad="false" />

@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.10318</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{b8543c0f-eb2f-484f-a879-8efb96b3ee42}</ProjectGuid>
+    <ProjectGuid>{B8543C0F-EB2F-484F-A879-8EFB96B3EE42}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Debugging</RootNamespace>
@@ -65,6 +65,15 @@
     <Service Include="{508349B6-6B84-4df5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="GeneracionSQL.sql">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GeneracionSQL.tt</DependentUpon>
+    </Content>
+    <Content Include="GeneracionSQL.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>GeneracionSQL.sql</LastGenOutput>
+    </Content>
     <Content Include="JCJAPGDRCDERAWebBDReport.txt">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

@@ -13,7 +13,6 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
             ValidationCategories.Menu)]
         private void ParticipacionEntidad(ValidationContext context)
         {
-            // La propiedad Relacion devuelve las relaciones que enlazan esta entidad
             if (this.Relacion.Count == 0)
             {
                 context.LogError(

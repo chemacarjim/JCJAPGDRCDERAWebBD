@@ -168,18 +168,22 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 		}
 		#endregion
 		#region EstiloPortal opposite domain role accessor
-		
 		/// <summary>
-		/// Gets a list of EstiloPortal.
+		/// Gets or sets EstiloPortal.
 		/// Description for
 		/// UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasEstiloPortal.DERAWebBDModel
 		/// </summary>
-		public virtual DslModeling::LinkedElementCollection<EstiloPortal> EstiloPortal
+		public virtual EstiloPortal EstiloPortal
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<EstiloPortal>, EstiloPortal>(global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasEstiloPortal.DERAWebBDModelDomainRoleId);
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasEstiloPortal.DERAWebBDModelDomainRoleId) as EstiloPortal;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasEstiloPortal.DERAWebBDModelDomainRoleId, value);
 			}
 		}
 		#endregion
@@ -205,6 +209,11 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 				
 				if (rootElementDomainInfo.IsDerivedFrom(global::UPM_IPS.JCJAPGDRCDERAWebBD.EstiloPortal.DomainClassId)) 
 				{
+					// Check that creating a link with this path doesn't cause multiplicity overflow: DERAWebBDModelHasEstiloPortal.EstiloPortal
+					if (this.EstiloPortal != null)
+					{
+						return false;
+					}
 					return true;
 				}
 				
@@ -246,7 +255,7 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 			if (sourceEstiloPortal1 != null)
 			{
 				// Create link for path DERAWebBDModelHasEstiloPortal.EstiloPortal
-				this.EstiloPortal.Add(sourceEstiloPortal1);
+				this.EstiloPortal = sourceEstiloPortal1;
 
 				return;
 			}
@@ -1982,6 +1991,93 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 		}
 		
 		#endregion
+		#region Nulo domain property code
+		
+		/// <summary>
+		/// Nulo domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid NuloDomainPropertyId = new global::System.Guid(0x1aca9e19, 0xf674, 0x4158, 0xaf, 0xcf, 0x40, 0x5f, 0x91, 0x76, 0xb8, 0x9e);
+		
+		/// <summary>
+		/// Storage for Nulo
+		/// </summary>
+		private global::System.Boolean nuloPropertyStorage;
+		
+		/// <summary>
+		/// Gets or sets the value of Nulo domain property.
+		/// Description for UPM_IPS.JCJAPGDRCDERAWebBD.Atributo.Nulo
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.JCJAPGDRCDERAWebBD.Atributo/Nulo.DisplayName", typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDDomainModel), "UPM_IPS.JCJAPGDRCDERAWebBD.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.JCJAPGDRCDERAWebBD.Atributo/Nulo.Description", typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDDomainModel), "UPM_IPS.JCJAPGDRCDERAWebBD.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("1aca9e19-f674-4158-afcf-405f9176b89e")]
+		public global::System.Boolean Nulo
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return nuloPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				NuloPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the Atributo.Nulo domain property.
+		/// </summary>
+		internal sealed partial class NuloPropertyHandler : DslModeling::DomainPropertyValueHandler<Atributo, global::System.Boolean>
+		{
+			private NuloPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the Atributo.Nulo domain property value handler.
+			/// </summary>
+			public static readonly NuloPropertyHandler Instance = new NuloPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the Atributo.Nulo domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return NuloDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.Boolean GetValue(Atributo element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.nuloPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(Atributo element, global::System.Boolean newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.Boolean oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.nuloPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
 	}
 }
 namespace UPM_IPS.JCJAPGDRCDERAWebBD
@@ -2195,25 +2291,6 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 			set
 			{
 				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::UPM_IPS.JCJAPGDRCDERAWebBD.AtributoEntHasRestriccion.RestriccionDomainRoleId, value);
-			}
-		}
-		#endregion
-		#region AtributoRel opposite domain role accessor
-		/// <summary>
-		/// Gets or sets AtributoRel.
-		/// Description for UPM_IPS.JCJAPGDRCDERAWebBD.AtributoRelHasRestriccion.Restriccion
-		/// </summary>
-		public virtual AtributoRel AtributoRel
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::UPM_IPS.JCJAPGDRCDERAWebBD.AtributoRelHasRestriccion.RestriccionDomainRoleId) as AtributoRel;
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::UPM_IPS.JCJAPGDRCDERAWebBD.AtributoRelHasRestriccion.RestriccionDomainRoleId, value);
 			}
 		}
 		#endregion
@@ -2996,25 +3073,6 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 			}
 		}
 		#endregion
-		#region Restriccion opposite domain role accessor
-		/// <summary>
-		/// Gets or sets Restriccion.
-		/// Description for UPM_IPS.JCJAPGDRCDERAWebBD.AtributoRelHasRestriccion.AtributoRel
-		/// </summary>
-		public virtual Restriccion Restriccion
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::UPM_IPS.JCJAPGDRCDERAWebBD.AtributoRelHasRestriccion.AtributoRelDomainRoleId) as Restriccion;
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::UPM_IPS.JCJAPGDRCDERAWebBD.AtributoRelHasRestriccion.AtributoRelDomainRoleId, value);
-			}
-		}
-		#endregion
 		#region EstiloCampo opposite domain role accessor
 		
 		/// <summary>
@@ -3054,16 +3112,6 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 				{
 					return true;
 				}
-				
-				if (rootElementDomainInfo.IsDerivedFrom(global::UPM_IPS.JCJAPGDRCDERAWebBD.Restriccion.DomainClassId)) 
-				{
-					// Check that creating a link with this path doesn't cause multiplicity overflow: AtributoRelHasRestriccion.Restriccion
-					if (this.Restriccion != null)
-					{
-						return false;
-					}
-					return true;
-				}
 			}
 			return base.CanMerge(rootElement, elementGroupPrototype);
 		}
@@ -3094,15 +3142,6 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 			{
 				// Create link for path AtributoRelHasEstiloCampo.EstiloCampo
 				this.EstiloCampo.Add(sourceEstiloCampo1);
-
-				return;
-			}
-				
-			global::UPM_IPS.JCJAPGDRCDERAWebBD.Restriccion sourceRestriccion2 = sourceElement as global::UPM_IPS.JCJAPGDRCDERAWebBD.Restriccion;
-			if (sourceRestriccion2 != null)
-			{
-				// Create link for path AtributoRelHasRestriccion.Restriccion
-				this.Restriccion = sourceRestriccion2;
 
 				return;
 			}
@@ -3138,20 +3177,6 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 				{
 					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
 					link.Delete(global::UPM_IPS.JCJAPGDRCDERAWebBD.AtributoRelHasEstiloCampo.AtributoRelDomainRoleId, global::UPM_IPS.JCJAPGDRCDERAWebBD.AtributoRelHasEstiloCampo.EstiloCampoDomainRoleId);
-				}
-
-				return;
-			}
-				
-			global::UPM_IPS.JCJAPGDRCDERAWebBD.Restriccion sourceRestriccion2 = sourceElement as global::UPM_IPS.JCJAPGDRCDERAWebBD.Restriccion;
-			if (sourceRestriccion2 != null)
-			{
-				// Delete link for path AtributoRelHasRestriccion.Restriccion
-				
-				foreach (DslModeling::ElementLink link in global::UPM_IPS.JCJAPGDRCDERAWebBD.AtributoRelHasRestriccion.GetLinks((global::UPM_IPS.JCJAPGDRCDERAWebBD.AtributoRel)this, sourceRestriccion2))
-				{
-					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
-					link.Delete(global::UPM_IPS.JCJAPGDRCDERAWebBD.AtributoRelHasRestriccion.AtributoRelDomainRoleId, global::UPM_IPS.JCJAPGDRCDERAWebBD.AtributoRelHasRestriccion.RestriccionDomainRoleId);
 				}
 
 				return;

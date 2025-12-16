@@ -2033,264 +2033,6 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 namespace UPM_IPS.JCJAPGDRCDERAWebBD
 {
 	/// <summary>
-	/// DomainRelationship AtributoRelHasRestriccion
-	/// Description for UPM_IPS.JCJAPGDRCDERAWebBD.AtributoRelHasRestriccion
-	/// </summary>
-	[DslDesign::DisplayNameResource("UPM_IPS.JCJAPGDRCDERAWebBD.AtributoRelHasRestriccion.DisplayName", typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDDomainModel), "UPM_IPS.JCJAPGDRCDERAWebBD.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("UPM_IPS.JCJAPGDRCDERAWebBD.AtributoRelHasRestriccion.Description", typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDDomainModel), "UPM_IPS.JCJAPGDRCDERAWebBD.GeneratedCode.DomainModelResx")]
-	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDDomainModel))]
-	[global::System.CLSCompliant(true)]
-	[DslModeling::DomainRelationship(IsEmbedding=true)]
-	[DslModeling::DomainObjectId("5b935b7b-3b82-44df-96cf-90a25b956382")]
-	public partial class AtributoRelHasRestriccion : DslModeling::ElementLink
-	{
-		#region Constructors, domain class Id
-		
-		/// <summary>
-		/// AtributoRelHasRestriccion domain class Id.
-		/// </summary>
-		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x5b935b7b, 0x3b82, 0x44df, 0x96, 0xcf, 0x90, 0xa2, 0x5b, 0x95, 0x63, 0x82);
-	
-				
-		/// <summary>
-		/// Constructor
-		/// Creates a AtributoRelHasRestriccion link in the same Partition as the given AtributoRel
-		/// </summary>
-		/// <param name="source">AtributoRel to use as the source of the relationship.</param>
-		/// <param name="target">Restriccion to use as the target of the relationship.</param>
-		public AtributoRelHasRestriccion(AtributoRel source, Restriccion target)
-			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(AtributoRelHasRestriccion.AtributoRelDomainRoleId, source), new DslModeling::RoleAssignment(AtributoRelHasRestriccion.RestriccionDomainRoleId, target)}, null)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="store">Store where new link is to be created.</param>
-		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		public AtributoRelHasRestriccion(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
-			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="store">Store where new link is to be created.</param>
-		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
-		public AtributoRelHasRestriccion(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
-			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="partition">Partition where new link is to be created.</param>
-		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		public AtributoRelHasRestriccion(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
-			: base(partition, roleAssignments, null)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="partition">Partition where new link is to be created.</param>
-		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
-		public AtributoRelHasRestriccion(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
-			: base(partition, roleAssignments, propertyAssignments)
-		{
-		}
-		#endregion
-		#region AtributoRel domain role code
-		
-		/// <summary>
-		/// AtributoRel domain role Id.
-		/// </summary>
-		public static readonly global::System.Guid AtributoRelDomainRoleId = new global::System.Guid(0x5629cfa6, 0xe825, 0x4fb0, 0xbe, 0x05, 0x9a, 0x0b, 0x66, 0xf5, 0x6b, 0x06);
-		
-		/// <summary>
-		/// DomainRole AtributoRel
-		/// Description for UPM_IPS.JCJAPGDRCDERAWebBD.AtributoRelHasRestriccion.AtributoRel
-		/// </summary>
-		[DslDesign::DisplayNameResource("UPM_IPS.JCJAPGDRCDERAWebBD.AtributoRelHasRestriccion/AtributoRel.DisplayName", typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDDomainModel), "UPM_IPS.JCJAPGDRCDERAWebBD.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("UPM_IPS.JCJAPGDRCDERAWebBD.AtributoRelHasRestriccion/AtributoRel.Description", typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDDomainModel), "UPM_IPS.JCJAPGDRCDERAWebBD.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Restriccion", PropertyDisplayNameKey="UPM_IPS.JCJAPGDRCDERAWebBD.AtributoRelHasRestriccion/AtributoRel.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroOne)]
-		[DslModeling::DomainObjectId("5629cfa6-e825-4fb0-be05-9a0b66f56b06")]
-		public virtual AtributoRel AtributoRel
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return (AtributoRel)DslModeling::DomainRoleInfo.GetRolePlayer(this, AtributoRelDomainRoleId);
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				DslModeling::DomainRoleInfo.SetRolePlayer(this, AtributoRelDomainRoleId, value);
-			}
-		}
-				
-		#endregion
-		#region Static methods to access AtributoRel of a Restriccion
-		/// <summary>
-		/// Gets AtributoRel.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static AtributoRel GetAtributoRel(Restriccion element)
-		{
-			return DslModeling::DomainRoleInfo.GetLinkedElement(element, RestriccionDomainRoleId) as AtributoRel;
-		}
-		
-		/// <summary>
-		/// Sets AtributoRel.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static void SetAtributoRel(Restriccion element, AtributoRel newAtributoRel)
-		{
-			DslModeling::DomainRoleInfo.SetLinkedElement(element, RestriccionDomainRoleId, newAtributoRel);
-		}
-		#endregion
-		#region Restriccion domain role code
-		
-		/// <summary>
-		/// Restriccion domain role Id.
-		/// </summary>
-		public static readonly global::System.Guid RestriccionDomainRoleId = new global::System.Guid(0x01f89e9b, 0xaf3b, 0x4bd5, 0x84, 0xf6, 0x60, 0x25, 0x79, 0xba, 0xa2, 0x34);
-		
-		/// <summary>
-		/// DomainRole Restriccion
-		/// Description for UPM_IPS.JCJAPGDRCDERAWebBD.AtributoRelHasRestriccion.Restriccion
-		/// </summary>
-		[DslDesign::DisplayNameResource("UPM_IPS.JCJAPGDRCDERAWebBD.AtributoRelHasRestriccion/Restriccion.DisplayName", typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDDomainModel), "UPM_IPS.JCJAPGDRCDERAWebBD.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("UPM_IPS.JCJAPGDRCDERAWebBD.AtributoRelHasRestriccion/Restriccion.Description", typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDDomainModel), "UPM_IPS.JCJAPGDRCDERAWebBD.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "AtributoRel", PropertyDisplayNameKey="UPM_IPS.JCJAPGDRCDERAWebBD.AtributoRelHasRestriccion/Restriccion.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroOne)]
-		[DslModeling::DomainObjectId("01f89e9b-af3b-4bd5-84f6-602579baa234")]
-		public virtual Restriccion Restriccion
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return (Restriccion)DslModeling::DomainRoleInfo.GetRolePlayer(this, RestriccionDomainRoleId);
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				DslModeling::DomainRoleInfo.SetRolePlayer(this, RestriccionDomainRoleId, value);
-			}
-		}
-				
-		#endregion
-		#region Static methods to access Restriccion of a AtributoRel
-		/// <summary>
-		/// Gets Restriccion.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static Restriccion GetRestriccion(AtributoRel element)
-		{
-			return DslModeling::DomainRoleInfo.GetLinkedElement(element, AtributoRelDomainRoleId) as Restriccion;
-		}
-		
-		/// <summary>
-		/// Sets Restriccion.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static void SetRestriccion(AtributoRel element, Restriccion newRestriccion)
-		{
-			DslModeling::DomainRoleInfo.SetLinkedElement(element, AtributoRelDomainRoleId, newRestriccion);
-		}
-		#endregion
-		#region AtributoRel link accessor
-		/// <summary>
-		/// Get the AtributoRelHasRestriccion link to a AtributoRel.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::UPM_IPS.JCJAPGDRCDERAWebBD.AtributoRelHasRestriccion GetLinkToRestriccion (global::UPM_IPS.JCJAPGDRCDERAWebBD.AtributoRel atributoRelInstance)
-		{
-			global::System.Collections.Generic.IList<global::UPM_IPS.JCJAPGDRCDERAWebBD.AtributoRelHasRestriccion> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.JCJAPGDRCDERAWebBD.AtributoRelHasRestriccion>(atributoRelInstance, global::UPM_IPS.JCJAPGDRCDERAWebBD.AtributoRelHasRestriccion.AtributoRelDomainRoleId);
-			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of AtributoRel not obeyed.");
-			if ( links.Count == 0 )
-			{
-				return null;
-			}
-			else
-			{
-				return links[0];
-			}
-		}
-		#endregion
-		#region Restriccion link accessor
-		/// <summary>
-		/// Get the AtributoRelHasRestriccion link to a Restriccion.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::UPM_IPS.JCJAPGDRCDERAWebBD.AtributoRelHasRestriccion GetLinkToAtributoRel (global::UPM_IPS.JCJAPGDRCDERAWebBD.Restriccion restriccionInstance)
-		{
-			global::System.Collections.Generic.IList<global::UPM_IPS.JCJAPGDRCDERAWebBD.AtributoRelHasRestriccion> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.JCJAPGDRCDERAWebBD.AtributoRelHasRestriccion>(restriccionInstance, global::UPM_IPS.JCJAPGDRCDERAWebBD.AtributoRelHasRestriccion.RestriccionDomainRoleId);
-			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of Restriccion not obeyed.");
-			if ( links.Count == 0 )
-			{
-				return null;
-			}
-			else
-			{
-				return links[0];
-			}
-		}
-		#endregion
-		#region AtributoRelHasRestriccion instance accessors
-		
-		/// <summary>
-		/// Get any AtributoRelHasRestriccion links between a given AtributoRel and a Restriccion.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.JCJAPGDRCDERAWebBD.AtributoRelHasRestriccion> GetLinks( global::UPM_IPS.JCJAPGDRCDERAWebBD.AtributoRel source, global::UPM_IPS.JCJAPGDRCDERAWebBD.Restriccion target )
-		{
-			global::System.Collections.Generic.List<global::UPM_IPS.JCJAPGDRCDERAWebBD.AtributoRelHasRestriccion> outLinks = new global::System.Collections.Generic.List<global::UPM_IPS.JCJAPGDRCDERAWebBD.AtributoRelHasRestriccion>();
-			global::System.Collections.Generic.IList<global::UPM_IPS.JCJAPGDRCDERAWebBD.AtributoRelHasRestriccion> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.JCJAPGDRCDERAWebBD.AtributoRelHasRestriccion>(source, global::UPM_IPS.JCJAPGDRCDERAWebBD.AtributoRelHasRestriccion.AtributoRelDomainRoleId);
-			foreach ( global::UPM_IPS.JCJAPGDRCDERAWebBD.AtributoRelHasRestriccion link in links )
-			{
-				if ( target.Equals(link.Restriccion) )
-				{
-					outLinks.Add(link);
-				}
-			}
-			return outLinks.AsReadOnly();
-		}
-		/// <summary>
-		/// Get the one AtributoRelHasRestriccion link between a given AtributoReland a Restriccion.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::UPM_IPS.JCJAPGDRCDERAWebBD.AtributoRelHasRestriccion GetLink( global::UPM_IPS.JCJAPGDRCDERAWebBD.AtributoRel source, global::UPM_IPS.JCJAPGDRCDERAWebBD.Restriccion target )
-		{
-			global::System.Collections.Generic.IList<global::UPM_IPS.JCJAPGDRCDERAWebBD.AtributoRelHasRestriccion> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.JCJAPGDRCDERAWebBD.AtributoRelHasRestriccion>(source, global::UPM_IPS.JCJAPGDRCDERAWebBD.AtributoRelHasRestriccion.AtributoRelDomainRoleId);
-			foreach ( global::UPM_IPS.JCJAPGDRCDERAWebBD.AtributoRelHasRestriccion link in links )
-			{
-				if ( target.Equals(link.Restriccion) )
-				{
-					return link;
-				}
-			}
-			return null;
-		}
-		
-		#endregion
-	}
-}
-namespace UPM_IPS.JCJAPGDRCDERAWebBD
-{
-	/// <summary>
 	/// DomainRelationship AtributoRelHasEstiloCampo
 	/// Description for UPM_IPS.JCJAPGDRCDERAWebBD.AtributoRelHasEstiloCampo
 	/// </summary>
@@ -2616,7 +2358,7 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 		/// </summary>
 		[DslDesign::DisplayNameResource("UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasEstiloPortal/DERAWebBDModel.DisplayName", typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDDomainModel), "UPM_IPS.JCJAPGDRCDERAWebBD.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasEstiloPortal/DERAWebBDModel.Description", typeof(global::UPM_IPS.JCJAPGDRCDERAWebBD.JCJAPGDRCDERAWebBDDomainModel), "UPM_IPS.JCJAPGDRCDERAWebBD.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "EstiloPortal", PropertyDisplayNameKey="UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasEstiloPortal/DERAWebBDModel.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "EstiloPortal", PropertyDisplayNameKey="UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasEstiloPortal/DERAWebBDModel.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.One)]
 		[DslModeling::DomainObjectId("8563b3cf-269b-47f5-a294-3b4568c88835")]
 		public virtual DERAWebBDModel DERAWebBDModel
 		{
@@ -2687,24 +2429,43 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 		#endregion
 		#region Static methods to access EstiloPortal of a DERAWebBDModel
 		/// <summary>
-		/// Gets a list of EstiloPortal.
+		/// Gets EstiloPortal.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static DslModeling::LinkedElementCollection<EstiloPortal> GetEstiloPortal(DERAWebBDModel element)
+		public static EstiloPortal GetEstiloPortal(DERAWebBDModel element)
 		{
-			return GetRoleCollection<DslModeling::LinkedElementCollection<EstiloPortal>, EstiloPortal>(element, DERAWebBDModelDomainRoleId);
+			return DslModeling::DomainRoleInfo.GetLinkedElement(element, DERAWebBDModelDomainRoleId) as EstiloPortal;
+		}
+		
+		/// <summary>
+		/// Sets EstiloPortal.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static void SetEstiloPortal(DERAWebBDModel element, EstiloPortal newEstiloPortal)
+		{
+			DslModeling::DomainRoleInfo.SetLinkedElement(element, DERAWebBDModelDomainRoleId, newEstiloPortal);
 		}
 		#endregion
 		#region DERAWebBDModel link accessor
 		/// <summary>
-		/// Get the list of DERAWebBDModelHasEstiloPortal links to a DERAWebBDModel.
+		/// Get the DERAWebBDModelHasEstiloPortal link to a DERAWebBDModel.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasEstiloPortal> GetLinksToEstiloPortal ( global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModel dERAWebBDModelInstance )
+		public static global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasEstiloPortal GetLinkToEstiloPortal (global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModel dERAWebBDModelInstance)
 		{
-			return DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasEstiloPortal>(dERAWebBDModelInstance, global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasEstiloPortal.DERAWebBDModelDomainRoleId);
+			global::System.Collections.Generic.IList<global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasEstiloPortal> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasEstiloPortal>(dERAWebBDModelInstance, global::UPM_IPS.JCJAPGDRCDERAWebBD.DERAWebBDModelHasEstiloPortal.DERAWebBDModelDomainRoleId);
+			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of DERAWebBDModel not obeyed.");
+			if ( links.Count == 0 )
+			{
+				return null;
+			}
+			else
+			{
+				return links[0];
+			}
 		}
 		#endregion
 		#region EstiloPortal link accessor

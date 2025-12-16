@@ -285,6 +285,14 @@
     <value>Longitud</value>
     <comment>DisplayName for DomainProperty &apos;Longitud&apos; on DomainClass &apos;Atributo&apos;</comment>
   </data>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.Atributo/Nulo.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.Atributo.Nulo</value>
+    <comment>Description for DomainProperty &apos;Nulo&apos; on DomainClass &apos;Atributo&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.Atributo/Nulo.DisplayName" xml:space="preserve">
+    <value>Nulo</value>
+    <comment>DisplayName for DomainProperty &apos;Nulo&apos; on DomainClass &apos;Atributo&apos;</comment>
+  </data>
   <data name="UPM_IPS.JCJAPGDRCDERAWebBD.EstiloCampo.Description" xml:space="preserve">
     <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.EstiloCampo</value>
     <comment>Description for DomainClass &apos;EstiloCampo&apos;</comment>
@@ -645,38 +653,6 @@
     <value>Atributo Ent</value>
     <comment>PropertyDisplayName for DomainRole &apos;EstiloCampo&apos; on DomainRelationship &apos;AtributoEntHasEstiloCampo&apos;</comment>
   </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.AtributoRelHasRestriccion.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.AtributoRelHasRestriccion</value>
-    <comment>Description for DomainClass &apos;AtributoRelHasRestriccion&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.AtributoRelHasRestriccion.DisplayName" xml:space="preserve">
-    <value>Atributo Rel Has Restriccion</value>
-    <comment>DisplayName for DomainClass &apos;AtributoRelHasRestriccion&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.AtributoRelHasRestriccion/AtributoRel.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.AtributoRelHasRestriccion.AtributoRel</value>
-    <comment>Description for DomainRole &apos;AtributoRel&apos; on DomainRelationship &apos;AtributoRelHasRestriccion&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.AtributoRelHasRestriccion/AtributoRel.DisplayName" xml:space="preserve">
-    <value>Atributo Rel</value>
-    <comment>DisplayName for DomainRole &apos;AtributoRel&apos; on DomainRelationship &apos;AtributoRelHasRestriccion&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.AtributoRelHasRestriccion/AtributoRel.PropertyDisplayName" xml:space="preserve">
-    <value>Restriccion</value>
-    <comment>PropertyDisplayName for DomainRole &apos;AtributoRel&apos; on DomainRelationship &apos;AtributoRelHasRestriccion&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.AtributoRelHasRestriccion/Restriccion.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.AtributoRelHasRestriccion.Restriccion</value>
-    <comment>Description for DomainRole &apos;Restriccion&apos; on DomainRelationship &apos;AtributoRelHasRestriccion&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.AtributoRelHasRestriccion/Restriccion.DisplayName" xml:space="preserve">
-    <value>Restriccion</value>
-    <comment>DisplayName for DomainRole &apos;Restriccion&apos; on DomainRelationship &apos;AtributoRelHasRestriccion&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JCJAPGDRCDERAWebBD.AtributoRelHasRestriccion/Restriccion.PropertyDisplayName" xml:space="preserve">
-    <value>Atributo Rel</value>
-    <comment>PropertyDisplayName for DomainRole &apos;Restriccion&apos; on DomainRelationship &apos;AtributoRelHasRestriccion&apos;</comment>
-  </data>
   <data name="UPM_IPS.JCJAPGDRCDERAWebBD.AtributoRelHasEstiloCampo.Description" xml:space="preserve">
     <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.AtributoRelHasEstiloCampo</value>
     <comment>Description for DomainClass &apos;AtributoRelHasEstiloCampo&apos;</comment>
@@ -977,6 +953,10 @@
     <value>Connector Entidad Relacion</value>
     <comment>DisplayName for DomainClass &apos;ConnectorEntidadRelacion&apos;</comment>
   </data>
+  <data name="ConnectorEntidadRelacionNameDecoratorDefaultText" xml:space="preserve">
+    <value>NameDecorator</value>
+    <comment>Text decorator default text</comment>
+  </data>
   <data name="UPM_IPS.JCJAPGDRCDERAWebBD.ConectorAtibuto.Description" xml:space="preserve">
     <value>Description for UPM_IPS.JCJAPGDRCDERAWebBD.ConectorAtibuto</value>
     <comment>Description for DomainClass &apos;ConectorAtibuto&apos;</comment>
@@ -1159,14 +1139,6 @@
   </data>
   <data name="AtributoRelEstiloCampoToolboxTooltip" xml:space="preserve">
     <value>Atributo Rel Estilo Campo</value>
-    <comment>Toolbox tooltip text</comment>
-  </data>
-  <data name="AtributoRelRestriccionToolboxItem" xml:space="preserve">
-    <value>Conectar Restriccion AtributoRel</value>
-    <comment>Toolbox item name</comment>
-  </data>
-  <data name="AtributoRelRestriccionToolboxTooltip" xml:space="preserve">
-    <value>Atributo Rel Restriccion</value>
     <comment>Toolbox tooltip text</comment>
   </data>
   <data name="UnresolvedToolboxItem" xml:space="preserve">
@@ -1363,10 +1335,6 @@ A DomainClass can be serialized as a moniker only if
     <comment>Toolbox item image</comment>
   </data>
   <data name="AtributoRelEstiloCampoToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
-    <value>..\Resources\conectar-_1_.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-    <comment>Toolbox item image</comment>
-  </data>
-  <data name="AtributoRelRestriccionToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
     <value>..\Resources\conectar-_1_.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
   </data>

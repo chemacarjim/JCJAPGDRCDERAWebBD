@@ -75,10 +75,6 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 		/// Toolbox item filter string used to identify AtributoRelEstiloCampo connector tool.
 		/// </summary>
 		public const string AtributoRelEstiloCampoFilterString = "AtributoRelEstiloCampo.1.0";
-		/// <summary>
-		/// Toolbox item filter string used to identify AtributoRelRestriccion connector tool.
-		/// </summary>
-		public const string AtributoRelRestriccionFilterString = "AtributoRelRestriccion.1.0";
 
 	
 		private global::System.Collections.Generic.Dictionary<string, DslDesign::ModelingToolboxItem> toolboxItemCache = new global::System.Collections.Generic.Dictionary<string, DslDesign::ModelingToolboxItem>();
@@ -443,24 +439,6 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
 							new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require), 
 							new global::System.ComponentModel.ToolboxItemFilterAttribute(AtributoRelEstiloCampoFilterString)
-						});
-					break;
-				case "UPM_IPS.JCJAPGDRCDERAWebBD.AtributoRelRestriccionToolboxItem":
-
-					// Add AtributoRelRestriccion connector tool.
-					result = new DslDesign::ModelingToolboxItem(
-						"UPM_IPS.JCJAPGDRCDERAWebBD.AtributoRelRestriccionToolboxItem", // Unique identifier (non-localized) for the toolbox item.
-						8, // Position relative to other items in the same toolbox tab.
-						resourceManager.GetString("AtributoRelRestriccionToolboxItem", resourceCulture), // Localized display name for the item.
-						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("AtributoRelRestriccionToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.				
-						"UPM_IPS.JCJAPGDRCDERAWebBD.ConectarToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
-						resourceManager.GetString("ConectarToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
-						"AtributoRelRestriccion", // F1 help keyword for the toolbox item.
-						resourceManager.GetString("AtributoRelRestriccionToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
-						null, // Connector toolbox items do not have an underlying data object.
-						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
-							new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require), 
-							new global::System.ComponentModel.ToolboxItemFilterAttribute(AtributoRelRestriccionFilterString)
 						});
 					break;
 				default:

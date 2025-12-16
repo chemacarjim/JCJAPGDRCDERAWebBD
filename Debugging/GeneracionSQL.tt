@@ -1,0 +1,84 @@
+﻿<#@ template inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation" #>
+<#@ output extension=".sql" #>
+<#@ JCJAPGDRCDERAWebBD processor="JCJAPGDRCDERAWebBDDirectiveProcessor" requires="fileName='Sample.JCJAPGDRC_DSLDERAWebBD'" #>
+
+<#@ assembly name ="System.Core" #>
+<#@ import namespace="System.Linq" #>
+
+CREATE DATABASE <#= this.DERAWebBDModel.Name#>;
+USE <#= this.DERAWebBDModel.Name#>;
+
+<#
+foreach (Entidad entidad in this.DERAWebBDModel.Entidades)
+{
+	AtributoEnt clave = null;
+	WriteLine("CREATE TABLE IF NOT EXISTS " + entidad.Name);
+	WriteLine("( ");
+	
+	foreach (AtributoEnt atributo in entidad.AtributoEnt)
+	{
+		string final = esNulo(atributo) ?? "";
+		final += ",";
+		WriteLine(atributo.Name + " " + comprobarTipoDato(atributo) + " " + final);
+		if (atributo.Restriccion != null)
+		{
+			if (atributo.Restriccion is RestriccionRango) 
+			{
+				RestriccionRango rest = (RestriccionRango)atributo.Restriccion;
+				WriteLine("CONSTRAINT CHK_" + atributo.Name + " CHECK (" + atributo.Name + " >=" + rest.Minimo + " AND " + atributo.Name + " <=" + rest.Maximo + "),");
+			}
+			else
+			{
+				RestriccionEnum rest = (RestriccionEnum)atributo.Restriccion;
+				var lista = rest.Valores ?? "";
+				var valores = lista
+					.Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries)
+					.Select(v => v.Trim())
+					.Where(v => v.Length > 0)
+					.ToList();
+
+				String listaSQL = "('" + string.Join("', '", valores) + "')";
+				WriteLine("CONSTRAINT CHK_" + atributo.Name + " CHECK (" + atributo.Name + " IN " + listaSQL + "),");
+			}
+		}
+		if (atributo.keyAtr)
+		{
+			clave = atributo;
+		}
+	}
+	if (clave == null)
+	{
+		WriteLine(");");
+	}
+	else
+	{
+		WriteLine("PRIMARY KEY (" + clave.Name + "));");
+	}
+}
+#>
+
+<#+
+private string comprobarTipoDato (AtributoEnt atributo)
+{
+	String tipo = atributo.TipoDato.ToString();
+	if (tipo.CompareTo("Alfanumerico") != 0) return "CHAR(" + atributo.Longitud + ")";
+	if (tipo.CompareTo("Real") != 0) return "DOUBLE";
+	if (tipo.CompareTo("Entero") != 0) return "INTEGER";
+	if (tipo.CompareTo("Fecha") != 0) return "DATE";
+	return "";
+}
+#>
+
+<#+
+private string esNulo(AtributoEnt atributo)
+{
+	if (atributo.Nulo == false)
+	{
+		return "NOT NULL";
+	}
+	else
+	{
+		return null;
+	}
+}
+#>

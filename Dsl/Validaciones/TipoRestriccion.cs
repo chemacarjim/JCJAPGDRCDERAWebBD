@@ -1,12 +1,13 @@
 ﻿using Microsoft.VisualStudio.Modeling;
 using Microsoft.VisualStudio.Modeling.Validation;
 using System;
+using System.Linq;
 using UPM_IPS.JCJAPGDRCDERAWebBD;
 
 namespace UPM_IPS.JCJAPGDRCDERAWebBD
 {
     [ValidationState(ValidationState.Enabled)]
-    public partial class Atributo
+    public partial class AtributoEnt
     {
         [ValidationMethod(
             ValidationCategories.Open |
@@ -29,14 +30,7 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
                         this);
                 }
 
-                if (rango.Minimo == null || rango.Maximo == null)
-                {
-                    context.LogError(
-                        $"La restricción de rango debe tener valores mínimo y máximo.",
-                        "RESTRICCION_RANGO_SIN_VALORES",
-                        this.Restriccion);
-                }
-                else if (string.Compare(rango.Minimo.ToString(), rango.Maximo.ToString()) > 0)
+                if (string.Compare(rango.Minimo.ToString(), rango.Maximo.ToString()) > 0)
                 {
                     context.LogError(
                         $"En la restricción de rango, el valor mínimo no puede ser mayor que el máximo.",
@@ -54,12 +48,15 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
                         this);
                 }
 
-                if (enumeracion.ValorEnumerado == null)
+                var listaValores = enumeracion.Valores ?? string.Empty;
+                
+                var valores = listaValores.Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries).Select(v => v.Trim()).Where(v => v.Length > 0).ToList();
+                if (valores.Count < 2)
                 {
                     context.LogError(
-                        $"La restricción de enumeración debe contener al menos un valor permitido.",
-                        "RESTRICCION_ENUM_SIN_VALORES",
-                        this.Restriccion);
+                        $"La restricción de enumeración debe tener al menos 2 valores.",
+                        "RESTRICCION_ENUM_POCOS_VALORES",
+                        this);
                 }
             }
         }

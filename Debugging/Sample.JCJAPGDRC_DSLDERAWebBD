@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<dERAWebBDModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="824b8638-e2c0-46fc-aa80-550e676d6392" name="oN,OFF" xmlns="http://schemas.microsoft.com/dsltools/JCJAPGDRCDERAWebBD">
+<dERAWebBDModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="824b8638-e2c0-46fc-aa80-550e676d6392" name="Escuela" xmlns="http://schemas.microsoft.com/dsltools/JCJAPGDRCDERAWebBD">
   <entidades>
     <dERAWebBDModelHasEntidades Id="7ca4955f-b5c4-4d8e-b7f1-4d8fcb722be6">
       <entidad Id="36352b14-7dc9-437d-a343-737e2bc3fce0" name="Alumno">
@@ -23,33 +23,9 @@
             <estiloPagina Id="196106e8-2c37-4826-ac3b-117afa37e710" color="Azul" tamanio="20" fuente="Arial" alineacion="Center" />
           </entidadHasEstiloPagina>
         </estiloPagina>
-      </entidad>
-    </dERAWebBDModelHasEntidades>
-    <dERAWebBDModelHasEntidades Id="ef39a382-bd7a-4421-99f5-c4cf00946383">
-      <entidad Id="0f024501-b6a0-463c-a1d5-04d4bff9764e" name="Entidad1">
-        <estiloPagina>
-          <entidadHasEstiloPagina Id="c16bd47e-51d0-45a7-aba1-083a0bb199b7">
-            <estiloPagina Id="b8d1572c-e821-4eda-bfbf-7d3447d1a668" color="mierda" tamanio="sss" fuente="as" alineacion="Center" />
-          </entidadHasEstiloPagina>
-        </estiloPagina>
         <atributoEnt>
-          <entidadHasAtributoEnt Id="8e2e0e70-e439-407f-89fe-28297d842f01">
-            <atributoEnt Id="ae8940bc-bde5-4a49-97a3-8ac4f8124179" tipoDato="Alfanumerico" longitud="0" keyAtr="true">
-              <restriccion>
-                <atributoEntHasRestriccion Id="08b9e03a-8518-448a-bfc5-f03457c5f1b9">
-                  <restriccionRango Id="fd73bc6b-dae2-42f9-92ce-1b8cc6c8afc8" minimo="1" maximo="10" />
-                </atributoEntHasRestriccion>
-              </restriccion>
-            </atributoEnt>
-          </entidadHasAtributoEnt>
-          <entidadHasAtributoEnt Id="5d8d978d-d592-49b1-9b19-c6fed3b9f04c">
-            <atributoEnt Id="91c0f745-dd0a-4de1-9130-be82674dc039" tipoDato="Alfanumerico" longitud="0" keyAtr="false">
-              <restriccion>
-                <atributoEntHasRestriccion Id="c99bfb70-9bbf-4c26-a237-2e4c204eed52">
-                  <restriccionEnum Id="8609bef0-7378-4577-83bf-6c1b1dc526e0" valores="ON,OFF" />
-                </atributoEntHasRestriccion>
-              </restriccion>
-            </atributoEnt>
+          <entidadHasAtributoEnt Id="31924c51-44ad-455b-8a1d-1bafc7beced6">
+            <atributoEnt Id="3b1d1505-bc8f-4646-8212-448fb6ded49a" name="ProfesorId" tipoDato="Alfanumerico" longitud="0" keyAtr="true" />
           </entidadHasAtributoEnt>
         </atributoEnt>
       </entidad>
@@ -102,26 +78,6 @@
             <entidadMoniker name="/824b8638-e2c0-46fc-aa80-550e676d6392/Alumno" />
           </relacionReferencesEntidad>
         </entidad>
-      </relacion>
-    </dERAWebBDModelHasRelaciones>
-    <dERAWebBDModelHasRelaciones Id="e9685ab0-53d9-4b51-9725-5e3c3401661c">
-      <relacion Id="31b3d19d-7bc1-4358-81d3-6d724f319f5b" name="Relacion1">
-        <entidad>
-          <relacionReferencesEntidad Id="87082335-bca1-405e-955a-7d7b373a191c">
-            <entidadMoniker name="/824b8638-e2c0-46fc-aa80-550e676d6392/Entidad1" />
-          </relacionReferencesEntidad>
-        </entidad>
-        <atributoRel>
-          <relacionHasAtributoRel Id="9a5fb505-ea67-496d-a9de-48c157962450">
-            <atributoRel Id="47d2c9ef-be20-41df-b7c4-5952b058a655" tipoDato="Alfanumerico" longitud="0">
-              <restriccion>
-                <atributoRelHasRestriccion Id="b64c8217-76eb-4abd-9162-116d583c856e">
-                  <restriccionRango Id="f99af30a-4d06-43cf-a59a-5125a7263572" minimo="0" maximo="0" />
-                </atributoRelHasRestriccion>
-              </restriccion>
-            </atributoRel>
-          </relacionHasAtributoRel>
-        </atributoRel>
       </relacion>
     </dERAWebBDModelHasRelaciones>
   </relaciones>

@@ -41,13 +41,13 @@
             </xsd:complexType>
           </xsd:element>
           <!-- Relationship: DERAWebBDModelHasEstiloPortal -->
-          <xsd:element name="estiloPortal" minOccurs="0" maxOccurs="1">
+          <xsd:element name="estiloPortal" minOccurs="1" maxOccurs="1">
             <xsd:annotation>
-              <xsd:documentation>Instances of DERAWebBDModelHasEstiloPortal</xsd:documentation>
+              <xsd:documentation>Instance of DERAWebBDModelHasEstiloPortal</xsd:documentation>
             </xsd:annotation>
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element ref="dERAWebBDModelHasEstiloPortal" minOccurs="0" maxOccurs="unbounded">
+                <xsd:element ref="dERAWebBDModelHasEstiloPortal" minOccurs="1" maxOccurs="1">
                   <xsd:annotation>
                     <xsd:documentation>[Instance of DERAWebBDModelHasEstiloPortal needs to be serialized in full-form]</xsd:documentation>
                   </xsd:annotation>
@@ -338,6 +338,8 @@
         <xsd:attribute name="tipoDato" type="TipoDato" />
         <!-- Property: Longitud -->
         <xsd:attribute name="longitud" type="xsd:string" />
+        <!-- Property: Nulo -->
+        <xsd:attribute name="nulo" type="xsd:boolean" />
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
@@ -547,21 +549,6 @@
     <xsd:complexContent>
       <xsd:extension base="Atributo">
         <xsd:sequence minOccurs="0" maxOccurs="1">
-          <!-- Relationship: AtributoRelHasRestriccion -->
-          <xsd:element name="restriccion" minOccurs="0" maxOccurs="1">
-            <xsd:annotation>
-              <xsd:documentation>Instance of AtributoRelHasRestriccion</xsd:documentation>
-            </xsd:annotation>
-            <xsd:complexType>
-              <xsd:sequence>
-                <xsd:element ref="atributoRelHasRestriccion" minOccurs="0" maxOccurs="1">
-                  <xsd:annotation>
-                    <xsd:documentation>[Instance of AtributoRelHasRestriccion needs to be serialized in full-form]</xsd:documentation>
-                  </xsd:annotation>
-                </xsd:element>
-              </xsd:sequence>
-            </xsd:complexType>
-          </xsd:element>
           <!-- Relationship: AtributoRelHasEstiloCampo -->
           <xsd:element name="estiloCampo" minOccurs="0" maxOccurs="1">
             <xsd:annotation>
@@ -910,46 +897,6 @@
   <xsd:complexType name="AtributoEntHasEstiloCampoMoniker">
     <xsd:annotation>
       <xsd:documentation>Moniker for AtributoEntHasEstiloCampo instance.</xsd:documentation>
-    </xsd:annotation>
-    <xsd:complexContent>
-      <xsd:extension base="core:ModelElementMoniker">
-        <xsd:attribute name="Id" type="xsd:string" >
-          <xsd:annotation>
-            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
-          </xsd:annotation>
-        </xsd:attribute>
-      </xsd:extension>
-    </xsd:complexContent>
-  </xsd:complexType>
-  
-  <!-- AtributoRelHasRestriccion -->
-  <xsd:element name="atributoRelHasRestriccion" type="AtributoRelHasRestriccion" substitutionGroup="core:modelElement" />
-  <xsd:complexType name="AtributoRelHasRestriccion">
-    <xsd:complexContent>
-      <xsd:extension base="core:ModelElement">
-        <xsd:sequence minOccurs="0" maxOccurs="1">
-          <!-- Target end Restriccion -->
-          <xsd:element ref="restriccion" minOccurs="1" maxOccurs="1">
-            <xsd:annotation>
-              <xsd:documentation>[Target role-player]</xsd:documentation>
-            </xsd:annotation>
-          </xsd:element>
-        </xsd:sequence>
-        <!-- Id -->
-        <xsd:attribute name="Id" type="xsd:string">
-          <xsd:annotation>
-            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
-          </xsd:annotation>
-        </xsd:attribute>
-      </xsd:extension>
-    </xsd:complexContent>
-  </xsd:complexType>
-  
-  <!-- AtributoRelHasRestriccion Moniker -->
-  <xsd:element name="atributoRelHasRestriccionMoniker" type="AtributoRelHasRestriccionMoniker" substitutionGroup="core:modelElementMoniker" />
-  <xsd:complexType name="AtributoRelHasRestriccionMoniker">
-    <xsd:annotation>
-      <xsd:documentation>Moniker for AtributoRelHasRestriccion instance.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="core:ModelElementMoniker">

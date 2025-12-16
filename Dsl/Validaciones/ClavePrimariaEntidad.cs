@@ -14,7 +14,7 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
             ValidationCategories.Menu)]
         private void ClavePrimariaUnica(ValidationContext context)
         {
-            bool tieneAtributos = this.Atributo.Count + this.AtributoClave.Count > 0;
+            bool tieneAtributos = this.AtributoEnt.Count > 0;
             if (!tieneAtributos)
             {
                 context.LogError(
@@ -23,36 +23,25 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
                     this);
             }
 
-            if (this.AtributoClave.Count == 0)
+            var atributos = this.AtributoEnt.ToList();
+            int contador = 0;
+            foreach (AtributoEnt atributo in atributos)
+            {
+                if(atributo.keyAtr == true) contador++;
+            }
+            if (contador == 0)
             {
                 context.LogError(
-                    $"La entidad '{this.Name}' debe definir una clave primaria.",
-                    "ENTIDAD_SIN_CLAVE_PRIMARIA",
+                    $"La entidad '{this.Name}' debe tener un atributo clave.",
+                    "ENTIDAD_SIN_ATRIBUTOS",
                     this);
             }
-            else if (this.AtributoClave.Count > 1)
+            else if (contador > 1)
             {
                 context.LogError(
-                    $"La entidad '{this.Name}' no puede tener más de una clave primaria.",
-                    "ENTIDAD_MULTIPLES_CLAVES",
+                    $"La entidad '{this.Name}' debe tener unicamente un atributo.",
+                    "ENTIDAD_SIN_ATRIBUTOS",
                     this);
-            }
-
-            if (this.AtributoClave.Count == 1)
-            {
-                var clave = this.AtributoClave.First();
-                var nuloProp = clave.GetType().GetProperty("Nulo");
-                if (nuloProp != null)
-                {
-                    bool permiteNulos = (bool)nuloProp.GetValue(clave, null);
-                    if (permiteNulos)
-                    {
-                        context.LogError(
-                            $"La clave primaria '{clave.Name}' en la entidad '{this.Name}' no puede permitir valores nulos.",
-                            "CLAVE_PRIMARIA_NULA",
-                            clave);
-                    }
-                }
             }
         }
     }

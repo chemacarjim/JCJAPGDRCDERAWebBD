@@ -18,7 +18,7 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
         {
             if(this.TipoDato.ToString().Equals("Alfanumerico"))
             {
-                if(this.Longitud == null)
+                if(this.Longitud == 0)
                 {
                     context.LogError(
                         $"En el atributo '{this.Name}' se debe especificar la longitud, ya que es un dato alfanumerico.",

@@ -1,0 +1,19 @@
+﻿
+
+CREATE DATABASE Escuela;
+USE Escuela;
+
+CREATE TABLE IF NOT EXISTS Alumno
+( 
+);
+CREATE TABLE IF NOT EXISTS Asignatura
+( 
+);
+CREATE TABLE IF NOT EXISTS Clase
+( 
+);
+CREATE TABLE IF NOT EXISTS Profesor
+( 
+ProfesorId DOUBLE NOT NULL,
+PRIMARY KEY (ProfesorId));
+
