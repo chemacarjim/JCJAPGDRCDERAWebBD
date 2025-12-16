@@ -44,6 +44,20 @@
       <SubType>
       </SubType>
     </None>
+    <None Include="Alumno.php">
+      <DependentUpon>GeneradorPHP.tt</DependentUpon>
+    </None>
+    <None Include="Asignatura.php">
+      <DependentUpon>GeneradorPHP.tt</DependentUpon>
+    </None>
+    <None Include="Clase.php">
+      <DependentUpon>GeneradorPHP.tt</DependentUpon>
+    </None>
+    <None Include="GeneradorPHP.php">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GeneradorPHP.tt</DependentUpon>
+    </None>
     <None Include="JCJAPGDRCDERAWebBDReport.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>JCJAPGDRCDERAWebBDReport.txt</LastGenOutput>
@@ -51,6 +65,9 @@
     <None Include="JCJAPGDRCDERAWebBDReportVB.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>JCJAPGDRCDERAWebBDReportVB.txt</LastGenOutput>
+    </None>
+    <None Include="Profesor.php">
+      <DependentUpon>GeneradorPHP.tt</DependentUpon>
     </None>
     <None Include="Sample.JCJAPGDRC_DSLDERAWebBD" />
     <None Include="Sample.JCJAPGDRC_DSLDERAWebBD.diagram">
@@ -73,6 +90,10 @@
     <Content Include="GeneracionSQL.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>GeneracionSQL.sql</LastGenOutput>
+    </Content>
+    <Content Include="GeneradorPHP.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>GeneradorPHP.php</LastGenOutput>
     </Content>
     <Content Include="JCJAPGDRCDERAWebBDReport.txt">
       <AutoGen>True</AutoGen>
