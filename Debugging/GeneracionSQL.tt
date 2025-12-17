@@ -1,9 +1,11 @@
 ﻿<#@ template inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation" #>
-<#@ output extension=".sql" #>
+<#@ output extension=".mysql" #>
 <#@ JCJAPGDRCDERAWebBD processor="JCJAPGDRCDERAWebBDDirectiveProcessor" requires="fileName='Sample.JCJAPGDRC_DSLDERAWebBD'" #>
 
 <#@ assembly name ="System.Core" #>
 <#@ import namespace="System.Linq" #>
+<#@ import namespace="System" #>
+<#@ import namespace="System.Collections.Generic" #>
 
 CREATE DATABASE <#= this.DERAWebBDModel.Name#>;
 USE <#= this.DERAWebBDModel.Name#>;
@@ -19,7 +21,7 @@ foreach (Entidad entidad in this.DERAWebBDModel.Entidades)
 	{
 		string final = esNulo(atributo) ?? "";
 		final += ",";
-		WriteLine(atributo.Name + " " + comprobarTipoDato(atributo) + " " + final);
+		WriteLine(atributo.Name + " " + comprobarTipoDato(atributo) + final);
 		if (atributo.Restriccion != null)
 		{
 			if (atributo.Restriccion is RestriccionRango) 
@@ -54,6 +56,52 @@ foreach (Entidad entidad in this.DERAWebBDModel.Entidades)
 	{
 		WriteLine("PRIMARY KEY (" + clave.Name + "));");
 	}
+	WriteLine("");
+	WriteLine("");
+}
+
+foreach (Relacion relacion in this.DERAWebBDModel.Relaciones)
+{
+	var enlaces = RelacionReferencesEntidad.GetLinksToEntidad(relacion);
+    var extremosN = enlaces
+        .Where(l => !string.IsNullOrEmpty(l.cardinalidad) &&
+                    l.cardinalidad.Split(new string[] { ".." }, StringSplitOptions.None)[1]
+                        .Equals("N", StringComparison.OrdinalIgnoreCase))
+        .ToList();
+
+    if (extremosN.Count > 1)
+    {
+		List<string> colum = new List<string>();
+		List<string> foran = new List<string>();
+		foreach (var link in extremosN)
+		{
+			Entidad ent = link.Entidad;
+			foreach (AtributoEnt at in ent.AtributoEnt)
+			{
+				if(at.keyAtr)
+				{
+					string final = esNulo(at) ?? "";
+					final += ",";
+					colum.Add($"{at.Name} {comprobarTipoDato(at)} {esNulo(at) ?? ""}".Trim());
+					foran.Add($"FOREIGN KEY ({at.Name}) REFERENCES {ent.Name} ({at.Name})");
+				}
+			}
+		}
+        WriteLine("CREATE TABLE IF NOT EXISTS " + relacion.Name);
+        WriteLine("(");
+		if (relacion.AtributoRel.Count > 0)
+		{
+			foreach (AtributoRel at in relacion.AtributoRel)
+			{
+				string final = esNuloRel(at) ?? "";
+				final += ",";
+				WriteLine(at.Name + " " + comprobarTipoDatoRel(at) + final);
+			}
+		}
+        WriteLine(string.Join(",\n", colum));
+		WriteLine(string.Join(",\n", foran));
+		WriteLine(");");
+    }
 }
 #>
 
@@ -61,10 +109,22 @@ foreach (Entidad entidad in this.DERAWebBDModel.Entidades)
 private string comprobarTipoDato (AtributoEnt atributo)
 {
 	String tipo = atributo.TipoDato.ToString();
-	if (tipo.CompareTo("Alfanumerico") != 0) return "CHAR(" + atributo.Longitud + ")";
-	if (tipo.CompareTo("Real") != 0) return "DOUBLE";
-	if (tipo.CompareTo("Entero") != 0) return "INTEGER";
-	if (tipo.CompareTo("Fecha") != 0) return "DATE";
+	if (tipo == "Alfanumerico") return "CHAR(" + atributo.Longitud + ")";
+	if (tipo == "Real") return "DOUBLE";
+	if (tipo == "Entero") return "INTEGER";
+	if (tipo == "Fecha") return "DATE";
+	return "";
+}
+#>
+
+<#+
+private string comprobarTipoDatoRel (AtributoRel atributo)
+{
+	String tipo = atributo.TipoDato.ToString();
+	if (tipo == "Alfanumerico") return "CHAR(" + atributo.Longitud + ")";
+	if (tipo == "Real") return "DOUBLE";
+	if (tipo == "Entero") return "INTEGER";
+	if (tipo == "Fecha") return "DATE";
 	return "";
 }
 #>
@@ -74,11 +134,25 @@ private string esNulo(AtributoEnt atributo)
 {
 	if (atributo.Nulo == false)
 	{
-		return "NOT NULL";
+		return " NOT NULL";
 	}
 	else
 	{
-		return null;
+		return "";
+	}
+}
+#>
+
+<#+
+private string esNuloRel(AtributoRel atributo)
+{
+	if (atributo.Nulo == false)
+	{
+		return " NOT NULL";
+	}
+	else
+	{
+		return "";
 	}
 }
 #>

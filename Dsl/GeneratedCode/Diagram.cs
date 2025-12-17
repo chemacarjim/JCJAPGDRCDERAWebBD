@@ -353,6 +353,9 @@ namespace UPM_IPS.JCJAPGDRCDERAWebBD
 		
 				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.JCJAPGDRCDERAWebBD.AtributoEnt.keyAtrDomainPropertyId);
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "KeyIconDecorator").AssociateVisibilityWith(shape.Store, propertyInfo);
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.JCJAPGDRCDERAWebBD.Atributo.NameDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "NameDecorator").AssociateValueWith(shape.Store, propertyInfo);
 			}
 		}
 		

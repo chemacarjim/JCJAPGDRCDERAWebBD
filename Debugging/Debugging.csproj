@@ -53,6 +53,11 @@
     <None Include="Clase.php">
       <DependentUpon>GeneradorPHP.tt</DependentUpon>
     </None>
+    <None Include="GeneracionSQL.mysql">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GeneracionSQL.tt</DependentUpon>
+    </None>
     <None Include="GeneradorPHP.php">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -82,14 +87,9 @@
     <Service Include="{508349B6-6B84-4df5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="GeneracionSQL.sql">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>GeneracionSQL.tt</DependentUpon>
-    </Content>
     <Content Include="GeneracionSQL.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>GeneracionSQL.sql</LastGenOutput>
+      <LastGenOutput>GeneracionSQL.mysql</LastGenOutput>
     </Content>
     <Content Include="GeneradorPHP.tt">
       <Generator>TextTemplatingFileGenerator</Generator>

@@ -949,6 +949,14 @@
             <DomainPropertyMoniker Name="AtributoEnt/keyAtr" />
           </VisibilityPropertyPath>
         </DecoratorMap>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="AtributoEntShape/NameDecorator" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="Atributo/Name" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
         <GeometryShapeMoniker Name="AtributoEntShape" />
       </ShapeMap>
       <ShapeMap>

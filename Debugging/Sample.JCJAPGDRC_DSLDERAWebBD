@@ -8,13 +8,30 @@
             <estiloPagina Id="119529b0-7b97-407f-b95a-7ed3d3b2a4b7" color="Blanco" tamanio="20" fuente="Calibri" alineacion="Center" />
           </entidadHasEstiloPagina>
         </estiloPagina>
+        <atributoEnt>
+          <entidadHasAtributoEnt Id="cb15b5b2-3db2-4202-be75-5b69c84742f6">
+            <atributoEnt Id="fe061fc0-2db7-4c48-a3c9-5159b3de2b2c" name="AlumnoId" tipoDato="Alfanumerico" longitud="10" nulo="false" keyAtr="true" />
+          </entidadHasAtributoEnt>
+        </atributoEnt>
       </entidad>
     </dERAWebBDModelHasEntidades>
     <dERAWebBDModelHasEntidades Id="e04eddbb-6528-4818-8a63-eef81c54b269">
-      <entidad Id="5382aeb8-6e0e-4be6-aa41-0516059f5f6e" name="Asignatura" />
+      <entidad Id="5382aeb8-6e0e-4be6-aa41-0516059f5f6e" name="Asignatura">
+        <atributoEnt>
+          <entidadHasAtributoEnt Id="cbe0f7b8-2fc1-4f2b-9ba3-11d8f68cf932">
+            <atributoEnt Id="5f6848fc-3efc-4e70-9618-60d94d656216" name="AsignaturaId" tipoDato="Alfanumerico" longitud="10" nulo="false" keyAtr="true" />
+          </entidadHasAtributoEnt>
+        </atributoEnt>
+      </entidad>
     </dERAWebBDModelHasEntidades>
     <dERAWebBDModelHasEntidades Id="79d18256-635a-4221-bd7a-f36559b73ae7">
-      <entidad Id="bb625163-151b-4a6e-ae2e-c2312f0dcc64" name="Clase" />
+      <entidad Id="bb625163-151b-4a6e-ae2e-c2312f0dcc64" name="Clase">
+        <atributoEnt>
+          <entidadHasAtributoEnt Id="0500cb41-019b-4d25-936b-b10f02ebdb56">
+            <atributoEnt Id="cd78dccf-f719-4478-9c9e-c4187fdcafe9" name="ClaseId" tipoDato="Alfanumerico" longitud="10" nulo="true" keyAtr="true" />
+          </entidadHasAtributoEnt>
+        </atributoEnt>
+      </entidad>
     </dERAWebBDModelHasEntidades>
     <dERAWebBDModelHasEntidades Id="e9e7a884-693d-4b1d-ad45-86e0bdd24ae9">
       <entidad Id="2869043b-fd64-498b-8fb7-5ce74d832936" name="Profesor">
@@ -25,7 +42,10 @@
         </estiloPagina>
         <atributoEnt>
           <entidadHasAtributoEnt Id="31924c51-44ad-455b-8a1d-1bafc7beced6">
-            <atributoEnt Id="3b1d1505-bc8f-4646-8212-448fb6ded49a" name="ProfesorId" tipoDato="Alfanumerico" longitud="0" keyAtr="true" />
+            <atributoEnt Id="3b1d1505-bc8f-4646-8212-448fb6ded49a" name="ProfesorId" tipoDato="Alfanumerico" longitud="10" nulo="false" keyAtr="true" />
+          </entidadHasAtributoEnt>
+          <entidadHasAtributoEnt Id="7d40497b-449e-40ff-a713-bffdca3c6df9">
+            <atributoEnt Id="9da65457-dd89-407b-96bc-dc2260d78aa9" name="Edad" tipoDato="Entero" longitud="0" nulo="true" keyAtr="false" />
           </entidadHasAtributoEnt>
         </atributoEnt>
       </entidad>
