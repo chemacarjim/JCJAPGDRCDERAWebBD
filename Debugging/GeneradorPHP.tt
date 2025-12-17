@@ -187,7 +187,7 @@ foreach (Entidad entidad in modelo.Entidades)
     <!-- LOGICA PHP -->
     <?php
     if(isset($_POST['enviar'])) {
-        $conn = new mysqli("localhost", "root", "", "DERAWebBD");
+        $conn = new mysqli("localhost", "root", "", "<#= this.DERAWebBDModel.Name #>");
         if ($conn->connect_error) { die("Error: " . $conn->connect_error); }
 
         $sql = "INSERT INTO <#= entidad.Name #> VALUES (";

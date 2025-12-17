@@ -54,6 +54,15 @@
         <form action="Clase.php" method="POST">
             
             
+            <div class="campo">
+                <label for="ClaseId">
+                    ClaseId <span class="pk-indicator">(*PK)</span>:
+                </label>
+                
+                                    <input type="text" name="ClaseId" id="ClaseId" required>
+                            </div>
+
+            
             <button type="submit" name="enviar">Guardar</button>
         </form>
     </div>
@@ -61,11 +70,13 @@
     <!-- LOGICA PHP -->
     <?php
     if(isset($_POST['enviar'])) {
-        $conn = new mysqli("localhost", "root", "", "DERAWebBD");
+        $conn = new mysqli("localhost", "root", "", "Escuela");
         if ($conn->connect_error) { die("Error: " . $conn->connect_error); }
 
         $sql = "INSERT INTO Clase VALUES (";
-                $sql .= ")";
+                     $val = isset($_POST['ClaseId']) ? $_POST['ClaseId'] : '';
+             $sql .= "'" . $conn->real_escape_string($val) . "'";
+                     $sql .= ")";
 
         if ($conn->query($sql) === TRUE) echo "<script>alert('Guardado');</script>";
         else echo "<p>Error: " . $conn->error . "</p>";

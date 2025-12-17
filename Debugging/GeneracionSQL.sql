@@ -31,7 +31,7 @@ PRIMARY KEY (ProfesorId));
 CREATE TABLE IF NOT EXISTS matriculado
 (
 AlumnoId CHAR(10)  NOT NULL,
-AsignaturaId CHAR(10)  NOT NULL
+AsignaturaId CHAR(10)  NOT NULL,
 FOREIGN KEY (AlumnoId) REFERENCES Alumno (AlumnoId),
 FOREIGN KEY (AsignaturaId) REFERENCES Asignatura (AsignaturaId)
 );

@@ -63,6 +63,15 @@
                             </div>
 
             
+            <div class="campo">
+                <label for="Edad">
+                    Edad :
+                </label>
+                
+                                    <input type="text" name="Edad" id="Edad" >
+                            </div>
+
+            
             <button type="submit" name="enviar">Guardar</button>
         </form>
     </div>
@@ -70,11 +79,13 @@
     <!-- LOGICA PHP -->
     <?php
     if(isset($_POST['enviar'])) {
-        $conn = new mysqli("localhost", "root", "", "DERAWebBD");
+        $conn = new mysqli("localhost", "root", "", "Escuela");
         if ($conn->connect_error) { die("Error: " . $conn->connect_error); }
 
         $sql = "INSERT INTO Profesor VALUES (";
                      $val = isset($_POST['ProfesorId']) ? $_POST['ProfesorId'] : '';
+             $sql .= "'" . $conn->real_escape_string($val) . "'";
+              $sql .= ", ";              $val = isset($_POST['Edad']) ? $_POST['Edad'] : '';
              $sql .= "'" . $conn->real_escape_string($val) . "'";
                      $sql .= ")";
 

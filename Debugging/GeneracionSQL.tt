@@ -1,5 +1,5 @@
 ﻿<#@ template inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation" #>
-<#@ output extension=".mysql" #>
+<#@ output extension=".sql" #>
 <#@ JCJAPGDRCDERAWebBD processor="JCJAPGDRCDERAWebBDDirectiveProcessor" requires="fileName='Sample.JCJAPGDRC_DSLDERAWebBD'" #>
 
 <#@ assembly name ="System.Core" #>
@@ -98,7 +98,7 @@ foreach (Relacion relacion in this.DERAWebBDModel.Relaciones)
 				WriteLine(at.Name + " " + comprobarTipoDatoRel(at) + final);
 			}
 		}
-        WriteLine(string.Join(",\n", colum));
+        WriteLine(string.Join(",\n", colum) + ",");
 		WriteLine(string.Join(",\n", foran));
 		WriteLine(");");
     }
